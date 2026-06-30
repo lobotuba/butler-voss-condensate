@@ -300,3 +300,20 @@ current positions every few steps. Question: does winding survive when nodes
 - **Verdict: Phase 2 = GO** (charge robust to medium motion while the medium
   stays solid). Remaining: Phase 3 — two-way coupling (field ↔ node density) for
   **gravity-by-density**.
+
+### Integration Phase 3a/3b (`integration_phase3ab.py`)
+The two halves of the gravity-by-density loop, validated in isolation with an
+**imposed** field (no feedback) — cheap, stable, and they fix the sign.
+- **3a — Coupling B (medium → field) works, sign confirmed.** A massless test
+  wave-packet flown past an imposed dense region (wave speed `c²·g(ρ)`,
+  `g=1/(1+βρ)`) **refracts toward the mass when denser = slower** (impact
+  parameter 5.0 → −1.75, i.e. bends across the mass line; control stays +5.0), and
+  **away** when the sign is flipped (→ +8.0). So the lensing mechanism and the
+  attractive sign (**denser ⇒ slower**) are pinned.
+- **3b — Coupling A (field → medium) works.** Pushing mobile nodes up the gradient
+  of an imposed field-energy blob (`F += α·∇e`) **compresses the medium**: central
+  node count rises +22–24% (spacing 1.105 → 1.05) as `α` increases; `α=0` is flat.
+- **Takeaway:** both halves are sound with the correct sign → the closed loop
+  (3c: self-focusing of one lump; 3d: two lumps drifting together = gravity) has a
+  validated foundation. The open risk is the feedback **stability** when the loop
+  is closed.

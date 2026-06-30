@@ -32,7 +32,7 @@ topological winding**, **spin is a Noether charge**; the localized structures si
 | **H10** | self-cohering medium | ✅ self-assembles to isotropic close packing, sets spacing |
 | **P0–P1** | field on a self-assembled medium | ✅ charge survives (needs LSQ operator) |
 | **P2** | field on a *moving* medium | ✅ charge survives reconnections; lost at melting |
-| **P3** | gravity-by-density | 📋 scoped, not yet built |
+| **P3** | gravity-by-density | 🟡 both halves validated (3a refraction + sign, 3b compression); full loop next |
 
 ## The three bodies of work
 
@@ -80,12 +80,20 @@ reconnecting* under it (~308 reconnections), failing only when the medium
 **melts** (P2). The core shape is under-resolved on the irregular mesh — an open
 quality issue, not a topological one.
 
-### Next: Phase 3 — gravity-by-density (scoped)
+### Phase 3 — gravity-by-density (in progress)
 Close the loop two-way: field energy compresses the medium → denser nodes slow
 the local waves → other excitations refract toward the mass = attraction. This is
 the non-leaky replacement for H2's tension-advection gravity, and the project's
-headline open problem. See the scope discussion; sub-phases 3a/3b validate the
-mechanism and sign before the unstable full loop.
+headline open problem.
+
+```bash
+python integration_phase3ab.py   # 3a refraction (sign check) + 3b compression, in isolation
+```
+Sub-phases **3a/3b are done**: a test wave-packet refracts *toward* an imposed
+dense region (confirming the sign **denser ⇒ slower**), and an imposed field-energy
+blob compresses the node medium. Both halves of the loop work with the right sign.
+Remaining: **3c** (close the loop on one lump → self-focusing) and **3d** (two
+lumps → do they drift together?), where the feedback stability is the open risk.
 
 ## Install
 
@@ -105,6 +113,7 @@ Requires Python 3.11+.
 | `prototype_mobile_nodes.py` | Self-cohering medium of mobile nodes (H10) |
 | `integration_field_medium.py` | Field on a self-assembled medium; meshfree operators (Phases 0–1) |
 | `integration_phase2.py` | Field on a moving, rearranging medium (Phase 2) |
+| `integration_phase3ab.py` | Gravity-by-density, the two halves in isolation (Phases 3a/3b) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 `Simulation - Cheat Sheet.docx` is a personal copy — left untouched.
