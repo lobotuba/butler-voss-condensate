@@ -391,3 +391,20 @@ of the same E and energy is conserved by construction (the 3c leakage fix).
   self-trapping) needs a **structure-preserving / implicit integrator** so β can be
   pushed into the trapping regime while keeping conservation. Then **3d** (two
   lumps → mutual drift = gravity) becomes the decisive test.
+
+**`dt`-check + β-sweep diagnostics (deciding the integrator):**
+- **The residual drift is not `dt` error.** Shrinking `dt` 6× barely moved it
+  (3.13%→2.58%, plateauing ~2.5%); both forces are FD-verified gradients of
+  `energy()` to ~1e-9. So the system *is* Hamiltonian — the residual is **symplectic
+  shadow-energy error of a very stiff system**, which an *energy-conserving*
+  (discrete-gradient / AVF) integrator removes but an implicit *symplectic* one
+  would not. (The LJ force-cap was ruled out: clipped == unclipped.)
+- **The coupling is more than strong enough.** β-sweep (damping=1): β=10 disperses
+  (sub-critical), but **β≥20 strongly compresses the lump** (width ~4 → minW
+  1.1–1.3) then **blows up**. So a *critical* β giving a stable bound state lies
+  between dispersal and collapse — the mechanism works; the regime just needs
+  controlling.
+- **Refined plan = a package of three:** (1) a `g(ρ)` **bounded on both sides**
+  (the `exp` form explodes for rarefied nodes when the centre compresses), (2) an
+  **energy-conserving (AVF/discrete-gradient) integrator** for the stiff dynamics,
+  (3) the **LJ floor** as the collapse-halting mechanism → finite-width soliton.
