@@ -210,7 +210,7 @@ parameter `psi`), not yet in `simulation.py`. Requires a symmetry-broken
 | **H6** | **Charge = topological winding** of the field through the between-space (charge from the *shape* of space) | integer winding `n = (1/2π)·Σ plaquette phase` — quantized & conserved | prototype: `n=0,±1,±2` conserved exactly |
 | **H7** | **Spin / charge from symmetry** — internal field-space rotation gives a continuous conserved charge (a Q-ball; precursor of spin/angular momentum) | Noether charge `Q = Im Σ conj(psi)·psi_dot` | prototype: Q conserved (Q-ball) |
 | **H8** | **The particle zoo is finite (≈3–5)** — distinct fundamental species = distinct stable sectors `(n, Q)` | census count of long-lived `(charge, energy)` types | prototype shows `n=0, ±1, ±2` + Q-ball family |
-| **H9** | **Sub-quantum hierarchy** — these solitons sit below quantum particles; higher layers form by **confluence/binding** | binding energy `E_bound < ΣE_free`; **scale gap** (size/energy ratio) between base solitons and bound states | not yet tested |
+| **H9** | **Sub-quantum hierarchy** — these solitons sit below quantum particles; higher layers form by **confluence/binding** | binding energy `E_bound < ΣE_free`; **scale gap** (size/energy ratio) between base solitons and bound states | prototype: `+/-` bind (ΔE≈4) & annihilate, `n=2` splits→composite, gap ≈6.6× size |
 | **H10** | **Self-cohering medium** — nodes attract (with short-range repulsion); this *sets* the inter-node spacing, **self-selects close-packed/isotropic** geometry, and stabilizes structures | equilibrium spacing; emergent lattice = fcc/hcp; longer lifetimes | not yet tested (needs mobile nodes) |
 
 **Why H6/H7 need a complex field:** a real scalar `u` has no orientation to
@@ -227,7 +227,22 @@ repulsion. A self-assembling medium relaxes to close packing (the isotropic
 
 ### Prototype CLI
 ```bash
-python prototype_complex.py     # runs the H8 census: conserved charges + persistence
+python prototype_complex.py     # H8 census: conserved charges + persistence
+python h9_binding.py            # H9: binding curve, annihilation, n=2 splitting, scale gap
 ```
-Columns: `topo0/topoF` (winding, start/end) · `Noether0/F` (U(1) charge) ·
-`E0/EF` (energy) · `loc%F` (fraction of excess energy still localized).
+`prototype_complex.py` columns: `topo0/topoF` (winding, start/end) ·
+`Noether0/F` (U(1) charge) · `E0/EF` (energy) · `loc%F` (excess energy still localized).
+
+### H9 first results (`h9_binding.py`)
+- **Opposite charges bind, like charges repel.** Static interaction energy *rises*
+  with separation for `+/-` (attractive, binding energy ≈ 4) and *falls* for `+/+`
+  (repulsive). Released at rest, a `+/-` pair spirals in and **annihilates**
+  (core depth `min|psi|/v0`: 0.21 → 0.95).
+- **`n=2` is a composite, not a fundamental.** Two like vortices fly apart
+  (charge spread 4 → 8), so higher windings are *not* new species — refining the
+  H8 zoo to `n=0, ±1` plus the Noether (Q-ball) family.
+- **Scale gap.** A bound `+/-` "molecule" is ≈6.6× the size and ≈1.6× the energy
+  of a single base vortex — a first quantitative handle on the layer separation.
+- **Caveat:** single-charge (`+/+`, `n=2`) configs have net winding, so their
+  absolute energy is box-dependent; the quantitative binding uses the neutral
+  `+/-` pair, whose far field cancels.
