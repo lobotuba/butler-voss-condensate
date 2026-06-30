@@ -614,6 +614,8 @@ def main():
     p.add_argument("--nonlinear", type=float, default=None, help="strength for potential=soft")
     p.add_argument("--gravity", type=float, default=None)
     p.add_argument("--damping", type=float, default=None)
+    p.add_argument("--dt", type=float, default=None, help="integration time step (default 0.06)")
+    p.add_argument("--wave-speed", type=float, default=None, help="base ripple speed c (default 1.0)")
     p.add_argument("--out", type=str, default=None)
     mode = p.add_mutually_exclusive_group()
     mode.add_argument("--live", action="store_true")
@@ -635,6 +637,10 @@ def main():
         cfg.gravity_strength = args.gravity
     if args.damping is not None:
         cfg.damping = args.damping
+    if args.dt is not None:
+        cfg.dt = args.dt
+    if args.wave_speed is not None:
+        cfg.base_wave_speed = args.wave_speed
 
     fab = Fabric(cfg)
     EXPERIMENTS[args.experiment](fab)

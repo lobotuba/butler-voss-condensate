@@ -131,7 +131,7 @@ up to integrator error — a built-in correctness check.
 --experiment {lump,collide,gravity,travel} --steps N   --seed N
 --potential {oscillon,soft,wave}
 --mass m²   --focus β   --saturation γ   --nonlinear k
---gravity G   --damping D
+--gravity G   --damping D   --dt T   --wave-speed c
 --live | --headless   --out DIR
 ```
 
