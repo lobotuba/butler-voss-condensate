@@ -266,3 +266,21 @@ repel at short range), velocity-Verlet with cooling, on a free 2D cluster.
   long-run-stability motivation.
 - **Caveat:** finite droplet, so edge nodes lower the *average* coordination
   below 6 (interior is 6); a periodic box would give a clean 6 throughout.
+
+### Integration Phases 0–1 (`integration_field_medium.py`)
+First de-risking of "complex field **on** the self-assembled medium" (field
+attached to nodes, Lagrangian).
+- **Phase 0 — the operator is the crux.** A plain weighted-graph Laplacian is
+  fine on a perfect lattice (≈4% error) but **degrades ~16× on the irregular
+  self-assembled cloud (≈60%)**; a **least-squares (LSQ) meshfree Laplacian stays
+  robust (~13%)**. So accurate field dynamics on a self-organised medium *require*
+  the LSQ operator — the cheap graph operator re-introduces the artifact class.
+- **Phase 1 — charge survives, shape degrades.** A seeded `n=+1` vortex keeps its
+  winding **conserved start→end on the self-assembled medium** (it is
+  topologically protected — the integer can't change unless the zero exits or
+  pair-annihilates). What the irregular mesh degrades is the vortex *core* (it
+  wanders and fills in / is under-resolved); LSQ preserves it better than graph.
+- **Takeaway:** feasibility is **GO for the conserved quantum number**; the open
+  quality issue is core resolution (denser medium near cores, or relax the vortex
+  to equilibrium on the actual mesh before testing). Next: Phase 2 (let the medium
+  move) then Phase 3 (two-way coupling = gravity-by-density).
