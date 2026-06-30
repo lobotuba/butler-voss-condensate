@@ -3,12 +3,14 @@
 Reference for `simulation.py` (the Butler-Voss Condensate research engine,
 formerly the "Grain Fabric Model").
 This is a physics-INSPIRED toy model, not a claim about the real universe.
+A **node** here is a physical locus (it carries `u`, `v`, and a local tension),
+not a bare graph vertex; edges are real tension-bearing relations, not mere adjacency.
 
 ---
 
 ## 1. Governing equations
 
-**Per-step update** (semi-implicit / symplectic Euler) for every grain *i*:
+**Per-step update** (semi-implicit / symplectic Euler) for every node *i*:
 
 ```
 a_i   = c²·tension_i·L(u)_i  +  F_pot(u_i)          # acceleration
@@ -38,14 +40,14 @@ up to integrator error — a built-in correctness check.
 
 | Name | Shape | Meaning |
 |---|---|---|
-| `u` | (N,) | Fabric **displacement** at each grain (the field) |
+| `u` | (N,) | Fabric **displacement** at each node (the field) |
 | `v` | (N,) | **Velocity** (rate of change of `u`) |
 | `tension` | (N,) | Local **string tension** (the gravity field) |
-| `pos` | (N, D) | Grain coordinates; `D` = 2 or 3 |
-| `neighbor_idx`, `valid` | (N, K) | Who each grain's neighbors are, and a 0/1 mask |
+| `pos` | (N, D) | Node coordinates; `D` = 2 or 3 |
+| `neighbor_idx`, `valid` | (N, K) | Who each node's neighbors are, and a 0/1 mask |
 | `deg_norm` | scalar | Max neighbor count; normalizes the Laplacian symmetrically |
 | `dvec`, `Minv` | — | Geometry for the least-squares spatial gradient `∇` |
-| `N`, `D` | scalars | Number of grains; number of dimensions |
+| `N`, `D` | scalars | Number of nodes; number of dimensions |
 | `step_count`, `time` | scalars | Steps taken; simulated time = `step_count·dt` |
 
 ---
@@ -81,7 +83,7 @@ up to integrator error — a built-in correctness check.
 ### Particle detection & tracking
 | Param | Default | Description |
 |---|---|---|
-| `energy_threshold` | 0.20 | Energy above which a grain counts as "in a particle" |
+| `energy_threshold` | 0.20 | Energy above which a node counts as "in a particle" |
 | `min_blob_cells` | 3 | Ignore blobs smaller than this (kills flicker noise) |
 | `match_radius` | 4.0 | Max centroid movement to keep the same particle ID across frames |
 | `steps_per_measure` | 5 | Simulate this many steps between each measurement / log |
@@ -108,7 +110,7 @@ up to integrator error — a built-in correctness check.
 | `lump` | One centered lump | **H1** — does a single oscillon persist? |
 | `collide` | Three overlapping ripples | H1 — does overlap birth particles? |
 | `gravity` | Two lumps placed apart | **H2** — does separation shrink? |
-| `travel` | One lump + sideways push | **H3** — pattern moves while grains don't |
+| `travel` | One lump + sideways push | **H3** — pattern moves while nodes don't |
 
 ---
 
@@ -176,7 +178,7 @@ Written to `--out` dir (default `condensate_runs/<experiment>_<lattice>_seed<see
 |---|---|---|---|
 | **H1** | Overlap/focusing makes persistent particles | passes | `max_lifetime` |
 | **H2** | Tightened strings attract masses (gravity) | advection stable but disruptive | `separation` |
-| **H3** | A particle is a pattern that moves through grains | testable | particle `speed` |
+| **H3** | A particle is a pattern that moves through nodes | testable | particle `speed` |
 | **H4** | Results are the same across lattices | testable | compare runs |
 | **H5** | 2D vs 3D differ | oscillons survive both | compare runs |
 
@@ -184,7 +186,7 @@ Written to `--out` dir (default `condensate_runs/<experiment>_<lattice>_seed<see
 
 ## 10. Quick interpretation guide
 
-- **Particle = blob** of grains with energy above `energy_threshold`, tracked across frames.
+- **Particle = blob** of nodes with energy above `energy_threshold`, tracked across frames.
 - **Mass** = total energy bound in the blob (no separate mass variable exists).
 - **A real effect should survive changing `--lattice`.** If a result flips between
   hex / square / cubic / fcc, suspect a lattice artifact, not physics.

@@ -4,8 +4,10 @@ Butler-Voss Condensate  —  Research Engine (lattice- and dimension-agnostic)
 
 Concept (Robert Voss "Butler-Voss Condensate", formerly the "Grain Fabric Model")
 ---------------------------------------------------------------------------------
-- Space is a network of grains. Each grain has a scalar displacement u and a
-  velocity v, and is joined to its neighbors by tension-bearing "strings."
+- Space is a network of nodes. A node here is NOT a bare graph vertex but a
+  physical locus: it carries a scalar displacement u, a velocity v, and a local
+  tension, and is joined to its neighbors by tension-bearing "strings" -- the
+  edges are real relations, not mere adjacency.
 - Disturbances propagate as ripples (a wave equation on the lattice graph).
 - A nonlinear term lets strong overlaps behave differently from small ripples,
   so localized structures ("particles") can in principle form.
@@ -42,7 +44,7 @@ Hypotheses
 H1 PARTICLE FORMATION   nonlinear overlap creates lumps that persist far longer
                         than linear ripples disperse.  (compare --nonlinear 0.0)
 H2 GRAVITY              two compression regions drift together. (separation down)
-H3 MOTION THROUGH MEDIUM a particle is a moving pattern; grains only oscillate.
+H3 MOTION THROUGH MEDIUM a particle is a moving pattern; nodes only oscillate.
 H4 LATTICE INDEPENDENCE the H1-H3 results are the SAME across --lattice choices.
 H5 DIMENSIONALITY        2D vs 3D change the results (esp. particle stability).
 

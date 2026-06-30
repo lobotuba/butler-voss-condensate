@@ -3,8 +3,10 @@
 A lattice- and dimension-agnostic research engine for the **Butler-Voss Condensate**
 (Robert Voss, formerly the "Grain Fabric Model").
 
-Space is modeled as a network of **grains**, each carrying a scalar displacement `u`
-and velocity `v`, joined to neighbors by tension-bearing "strings." Disturbances
+Space is modeled as a network of **nodes** — not bare graph vertices but physical
+loci, each carrying a scalar displacement `u`, a velocity `v`, and a local tension,
+joined to neighbors by tension-bearing "strings" (the edges are real relations, not
+mere adjacency). Disturbances
 propagate as ripples (a wave equation on the lattice graph); a nonlinear potential
 lets strong overlaps self-trap into long-lived localized structures ("particles"),
 and high-energy regions tighten their strings — the candidate mechanism for gravity.
