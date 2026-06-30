@@ -284,3 +284,19 @@ attached to nodes, Lagrangian).
   quality issue is core resolution (denser medium near cores, or relax the vortex
   to equilibrium on the actual mesh before testing). Next: Phase 2 (let the medium
   move) then Phase 3 (two-way coupling = gravity-by-density).
+
+### Integration Phase 2 (`integration_phase2.py`)
+One-way coupling: the medium MOVES (Lennard-Jones MD + thermostat), the field is
+Lagrangian (`psi` attached to nodes), and the LSQ operator is rebuilt from the
+current positions every few steps. Question: does winding survive when nodes
+**reconnect** (swap neighbors)?
+- **Solid but rearranging medium → charge survives.** At moderate temperature the
+  medium underwent **~308 neighbor reconnections** (15× the frozen control) while
+  staying cohesive, and the `n=+1` winding stayed **conserved throughout**. The
+  topological charge is robust to the lattice moving and reconnecting under it.
+- **Melting is the limit.** Near melting (~1587 reconnections) the winding is
+  lost — destroying the medium's order destroys the hosted particle. So there is
+  effectively a **melting threshold above which particles cease to exist.**
+- **Verdict: Phase 2 = GO** (charge robust to medium motion while the medium
+  stays solid). Remaining: Phase 3 — two-way coupling (field ↔ node density) for
+  **gravity-by-density**.
