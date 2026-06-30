@@ -334,3 +334,22 @@ Both couplings ON at once, with a real evolving field, on one lump. Honest resul
   self-trapped state (and 3d) needs a *stabilized/symmetric* field operator and a
   *deeper/more-sensitive* density→speed coupling — ideally both couplings derived
   from one Lagrangian so energy is conserved by construction.
+
+### Symmetric field-operator scorecard (`operator_scorecard.py`)
+Quantifies field operators on: symmetry `‖A−Aᵀ‖`, stability `max Re(eig)` (≤0
+required — it *is* the blow-up growth rate), accuracy RMS vs an analytic
+Laplacian, and an end-to-end energy-drift run.
+- **The LSQ operator is the 3c blocker, measured:** asymmetric (0.81), indefinite
+  (`max Re(eig)=+0.31`) → in a `damping=1` run it blows up (|u|→1011, energy drift
+  −13000%).
+- **Stability is solvable.** A symmetric SPH **Brookshaw** Laplacian and a
+  spectrally-clipped LSQ both have `max Re(eig)=0`, a real spectrum, and run
+  **bounded with ~0% energy drift** — the field no longer explodes.
+- **Accuracy is the cost.** Symmetric operators are ~2× less accurate than LSQ
+  (Brookshaw 43%, clipped-LSQ 66% vs LSQ 24% shape-RMS): removing the spurious
+  modes sacrifices the first-derivative cancellation LSQ gets from asymmetry.
+- **Path:** Brookshaw is the better symmetric candidate; being stable, it lets the
+  gravity coupling be pushed far harder than LSQ allowed (good enough to retry 3c
+  self-trapping, at a smaller CFL `dt`). Matching LSQ accuracy *and* staying
+  symmetric needs a consistency-corrected operator (renormalized SPH / constrained
+  symmetric MLS).
