@@ -27,29 +27,7 @@ from __future__ import annotations
 import math
 import numpy as np
 
-
-# ---------------------------------------------------------------- lattice ----
-def square_lattice(rows, cols):
-    """4-neighbor square grid; returns pos, neighbor_idx, valid, plaquettes."""
-    N = rows * cols
-    idx = lambda r, c: r * cols + c
-    pos = np.array([(c, r) for r in range(rows) for c in range(cols)], float)
-    nidx = np.zeros((N, 4), np.int64)
-    valid = np.zeros((N, 4), float)
-    offs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-    for r in range(rows):
-        for c in range(cols):
-            i = idx(r, c)
-            for k, (dr, dc) in enumerate(offs):
-                rr, cc = r + dr, c + dc
-                if 0 <= rr < rows and 0 <= cc < cols:
-                    nidx[i, k] = idx(rr, cc); valid[i, k] = 1.0
-                else:
-                    nidx[i, k] = i
-    # plaquettes: the 4 corners of each unit cell, in loop order (CCW)
-    plaq = [(idx(r, c), idx(r, c + 1), idx(r + 1, c + 1), idx(r + 1, c))
-            for r in range(rows - 1) for c in range(cols - 1)]
-    return pos, nidx, valid, np.array(plaq, np.int64)
+from bvc_core import square_lattice
 
 
 # ------------------------------------------------------------------ field ----

@@ -24,8 +24,7 @@ unwind it.  Phase 2 tests that numerically.
 from __future__ import annotations
 import math
 import numpy as np
-from prototype_mobile_nodes import lj_forces_energy
-from integration_field_medium import relax_medium, lsq_laplacian_matrix, _pairwise, R0
+from bvc_core import lj_forces_energy, relax_medium, lsq_laplacian_matrix, pairwise, R0
 
 
 class MovingMediumField:
@@ -53,7 +52,7 @@ class MovingMediumField:
 
     # -- medium bookkeeping --------------------------------------------------
     def _bond_matrix(self):
-        _, r2 = _pairwise(self.X)
+        _, r2 = pairwise(self.X)
         return (r2 > 1e-12) & (r2 < self.rcut_bond ** 2)
 
     def _thermostat(self):

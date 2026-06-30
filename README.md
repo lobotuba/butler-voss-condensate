@@ -98,6 +98,7 @@ Requires Python 3.11+.
 
 | File | Purpose |
 |---|---|
+| `bvc_core.py` | Shared primitives: LJ medium + self-assembly, meshfree operators, lattice builders |
 | `simulation.py` | Base scalar engine — lattices, dynamics, particle tracking, CLI (H1–H5) |
 | `prototype_complex.py` | Complex order parameter; topological + Noether charge; species census (H6–H8) |
 | `h9_binding.py` | Binding / confluence study (H9) |

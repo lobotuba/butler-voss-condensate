@@ -5,124 +5,26 @@ Integration Phases 0-1 : a field on a self-assembled medium
 PROTOTYPE.  Brings the H10 mobile-node medium together with the H6-H9 complex
 field, in two de-risking steps:
 
-  PHASE 0  Infrastructure + the central go/no-go test.  Build the meshfree
-           operators on an irregular point cloud and MEASURE how badly the
-           Laplacian degrades off a perfect lattice -- weighted-graph vs a
-           least-squares (LSQ) reference, on a perfect hex lattice vs a relaxed
-           (self-assembled) cloud.  If the weighted-graph Laplacian holds up,
-           the whole integration is viable on the cheap operator.
+  PHASE 0  Infrastructure + the central go/no-go test.  MEASURE how badly the
+           meshfree Laplacian degrades off a perfect lattice -- weighted-graph vs
+           a least-squares (LSQ) reference, on a perfect hex lattice vs a relaxed
+           (self-assembled) cloud.  If the cheap graph Laplacian holds up, the
+           whole integration is viable on it; if not, the field needs LSQ.
 
   PHASE 1  Freeze a self-assembled medium and run the complex field on it.
            Seed a vortex and check it PERSISTS with a quantized, conserved
            winding -- i.e. a topological particle can live on a medium the nodes
            built themselves (vs the same test on a perfect hex lattice).
 
-Pure numpy (no scipy).  Reuses the Lennard-Jones medium from
-prototype_mobile_nodes and the field ideas from prototype_complex.
+Pure numpy (no scipy).  Shared medium + operators come from bvc_core.
 """
 from __future__ import annotations
 import math
 import numpy as np
-from prototype_mobile_nodes import lj_forces_energy, R0, RCUT
 
-
-# ============================================================ medium / cloud ==
-def relax_medium(N=300, steps=6000, dt=0.005, cool=0.999, seed=1):
-    """Self-assemble a cooled LJ droplet; return its node positions (quiet)."""
-    rng = np.random.default_rng(seed)
-    area_per, = (1.7,)
-    R = math.sqrt(N * area_per / math.pi)
-    X = []
-    while len(X) < N:
-        p = (rng.random(2) * 2 - 1) * R
-        if math.hypot(*p) <= R and all(math.hypot(*(p - q)) > 0.95 for q in X):
-            X.append(p)
-    X = np.array(X)
-    V = np.zeros_like(X)
-    F, _ = lj_forces_energy(X)
-    for _ in range(steps):
-        X += V * dt + 0.5 * F * dt ** 2
-        Fn, _ = lj_forces_energy(X)
-        V += 0.5 * (F + Fn) * dt
-        V *= cool
-        F = Fn
-    return X - X.mean(0)
-
-
-def perfect_hex(radius_cells=9, a=R0):
-    """Triangular (hex) lattice clipped to a disk; the isotropic control."""
-    pts, Rmax = [], radius_cells * a
-    for j in range(-2 * radius_cells, 2 * radius_cells + 1):
-        for i in range(-2 * radius_cells, 2 * radius_cells + 1):
-            x = a * (i + 0.5 * (j & 1))
-            y = a * math.sqrt(3) / 2 * j
-            if x * x + y * y <= Rmax * Rmax:
-                pts.append((x, y))
-    X = np.array(pts)
-    return X - X.mean(0)
-
-
-# ===================================================== meshfree operators =====
-def _pairwise(X):
-    d = X[:, None, :] - X[None, :, :]            # d[i,j] = X_i - X_j
-    return d, (d ** 2).sum(-1)
-
-
-def laplacian_matrix(X, rcut):
-    """Consistent weighted-graph Laplacian as a matrix A (so L f = A @ f).
-    Normalised by 2D / sum_j w_ij |r_ij|^2 so it reproduces div-grad for smooth
-    f on an isotropic neighbourhood (D = 2)."""
-    d, r2 = _pairwise(X)
-    N = len(X)
-    W = ((r2 > 1e-12) & (r2 < rcut ** 2)).astype(float)
-    swr2 = (W * r2).sum(1)
-    norm = (2 * 2) / np.where(swr2 > 0, swr2, 1.0)
-    A = norm[:, None] * W
-    A[np.arange(N), np.arange(N)] = -A.sum(1)
-    return A
-
-
-def lsq_laplacian_values(X, f, rcut):
-    """Least-squares quadratic-fit Laplacian (the accurate reference)."""
-    d, r2 = _pairwise(X)
-    out = np.full(len(X), np.nan)
-    for i in range(len(X)):
-        sel = np.where((r2[i] > 1e-12) & (r2[i] < rcut ** 2))[0]
-        if len(sel) < 6:
-            continue
-        dl = X[sel] - X[i]                        # delta = X_j - X_i
-        B = np.stack([dl[:, 0], dl[:, 1],
-                      0.5 * dl[:, 0] ** 2, dl[:, 0] * dl[:, 1], 0.5 * dl[:, 1] ** 2], 1)
-        c, *_ = np.linalg.lstsq(B, f[sel] - f[i], rcond=None)
-        out[i] = c[2] + c[4]                      # Hxx + Hyy = trace(Hessian)
-    return out
-
-
-def lsq_laplacian_matrix(X, rcut):
-    """The LSQ Laplacian as a matrix A (L f = A @ f).  Each row is the linear
-    functional that extracts trace(Hessian) from the local quadratic fit, so it
-    stays accurate on irregular meshes (it removes the spurious gradient term
-    that wrecks the plain graph Laplacian)."""
-    d, r2 = _pairwise(X)
-    N = len(X)
-    A = np.zeros((N, N))
-    for i in range(N):
-        sel = np.where((r2[i] > 1e-12) & (r2[i] < rcut ** 2))[0]
-        if len(sel) < 6:
-            continue
-        dl = X[sel] - X[i]
-        B = np.stack([dl[:, 0], dl[:, 1],
-                      0.5 * dl[:, 0] ** 2, dl[:, 0] * dl[:, 1], 0.5 * dl[:, 1] ** 2], 1)
-        M = np.linalg.pinv(B)                     # (5, m) = (B^T B)^-1 B^T
-        row = M[2] + M[4]                         # trace functional over neighbours
-        A[i, sel] += row
-        A[i, i] -= row.sum()
-    return A
-
-
-def interior_mask(X, frac=0.62):
-    r = np.linalg.norm(X - X.mean(0), axis=1)
-    return r < frac * r.max()
+from bvc_core import (R0, relax_medium, perfect_hex, pairwise,
+                      laplacian_matrix, lsq_laplacian_values, lsq_laplacian_matrix,
+                      interior_mask)
 
 
 # ============================================================ PHASE 0 =========
@@ -141,7 +43,7 @@ def phase0():
         Ll = lsq_laplacian_values(X, f, rcut=1.9 * R0)
         m = interior_mask(X) & np.isfinite(Ll)
         rms = lambda L: math.sqrt(np.mean((L[m] - ana[m]) ** 2) / np.mean(ana[m] ** 2))
-        nn = np.sqrt(np.sort(_pairwise(X)[1], axis=1)[:, 1]).mean()
+        nn = np.sqrt(np.sort(pairwise(X)[1], axis=1)[:, 1]).mean()
         print(f"  {label:16} N={len(X):4d}  mean-spacing={nn:5.3f}  "
               f"graph-RMS={rms(Lg)*100:6.2f}%   LSQ-RMS={rms(Ll)*100:6.2f}%")
         return rms(Lg)
