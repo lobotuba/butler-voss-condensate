@@ -317,3 +317,20 @@ The two halves of the gravity-by-density loop, validated in isolation with an
   (3c: self-focusing of one lump; 3d: two lumps drifting together = gravity) has a
   validated foundation. The open risk is the feedback **stability** when the loop
   is closed.
+
+### Integration Phase 3c (`integration_phase3c.py`) — partial
+Both couplings ON at once, with a real evolving field, on one lump. Honest result:
+- **Stable run achieved (milestone 1).** The naive loop blew up — `∇e` of the
+  rough mesh field ejected nodes. **Smoothing the field energy before
+  differentiating it** fixed that: the coupled run stays bounded, medium intact.
+- **Directional effect, correct sign.** The lump's energy compresses the medium
+  *persistently* (central ρ 1.06 → 1.10 vs flat ~1.05 control) and the slowed
+  waves make it **spread ~60% less** (Δwidth 0.93 vs 2.26 over the run).
+- **But NOT self-focusing.** Width still grows (4.9 vs 6.23) — the density well is
+  too shallow (ρ~1.1 ⇒ g≈0.94) to halt dispersion. Pushing harder is capped by a
+  **field-operator instability**: the LSQ Laplacian has spurious positive
+  eigenvalues that blow up weakly-restored fields.
+- **Verdict: 3c partial** — stable, correctly signed, sub-critical. A true
+  self-trapped state (and 3d) needs a *stabilized/symmetric* field operator and a
+  *deeper/more-sensitive* density→speed coupling — ideally both couplings derived
+  from one Lagrangian so energy is conserved by construction.
