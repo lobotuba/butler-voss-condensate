@@ -1,0 +1,19 @@
+# Simulation output
+condensate_runs/
+grain_runs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temp office lock files
+~$*.docx
