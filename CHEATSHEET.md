@@ -193,3 +193,41 @@ Written to `--out` dir (default `condensate_runs/<experiment>_<lattice>_seed<see
 - **2D cannot test realistic gravity** (force falls off as ~1/r in 2D, 1/r² only in 3D).
 - **Oscillons are time-dependent**, which is why they persist in 3D even though
   *static* solitons cannot (Derrick's theorem).
+
+---
+
+## 11. Layer-below program — H6–H10 (complex-field extension)
+
+These target the **sub-quantum layer**: the structures here are *not* quantum
+particles but the material a layer (or more) below them — and the medium itself
+(the "space between nodes") is taken as **active**, its texture carrying the
+elementary quantum numbers. Tested in `prototype_complex.py` (complex order
+parameter `psi`), not yet in `simulation.py`. Requires a symmetry-broken
+(`mexicanhat`) vacuum `|psi| = v0 > 0` so phase windings are protected.
+
+| | Claim | Key observable | Status |
+|---|---|---|---|
+| **H6** | **Charge = topological winding** of the field through the between-space (charge from the *shape* of space) | integer winding `n = (1/2π)·Σ plaquette phase` — quantized & conserved | prototype: `n=0,±1,±2` conserved exactly |
+| **H7** | **Spin / charge from symmetry** — internal field-space rotation gives a continuous conserved charge (a Q-ball; precursor of spin/angular momentum) | Noether charge `Q = Im Σ conj(psi)·psi_dot` | prototype: Q conserved (Q-ball) |
+| **H8** | **The particle zoo is finite (≈3–5)** — distinct fundamental species = distinct stable sectors `(n, Q)` | census count of long-lived `(charge, energy)` types | prototype shows `n=0, ±1, ±2` + Q-ball family |
+| **H9** | **Sub-quantum hierarchy** — these solitons sit below quantum particles; higher layers form by **confluence/binding** | binding energy `E_bound < ΣE_free`; **scale gap** (size/energy ratio) between base solitons and bound states | not yet tested |
+| **H10** | **Self-cohering medium** — nodes attract (with short-range repulsion); this *sets* the inter-node spacing, **self-selects close-packed/isotropic** geometry, and stabilizes structures | equilibrium spacing; emergent lattice = fcc/hcp; longer lifetimes | not yet tested (needs mobile nodes) |
+
+**Why H6/H7 need a complex field:** a real scalar `u` has no orientation to
+rotate (no spin) and no symmetry to conserve (no charge). Promoting `u → psi`
+(complex / director) gives both — exactly the **condensate order parameter** the
+project is named for. This is the Skyrme-model lineage: a "particle" one layer
+down is a *texture in a medium*, not a point.
+
+**Why H10 matters:** it answers "how much space exists between nodes?" — the
+spacing is no longer a free knob but the equilibrium of attraction vs. short-range
+repulsion. A self-assembling medium relaxes to close packing (the isotropic
+`fcc3d` we already found stable), so the `cubic3d` anisotropy artifact would
+**solve itself**.
+
+### Prototype CLI
+```bash
+python prototype_complex.py     # runs the H8 census: conserved charges + persistence
+```
+Columns: `topo0/topoF` (winding, start/end) · `Noether0/F` (U(1) charge) ·
+`E0/EF` (energy) · `loc%F` (fraction of excess energy still localized).
