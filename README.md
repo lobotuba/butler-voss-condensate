@@ -32,7 +32,7 @@ topological winding**, **spin is a Noether charge**; the localized structures si
 | **H10** | self-cohering medium | ✅ self-assembles to isotropic close packing, sets spacing |
 | **P0–P1** | field on a self-assembled medium | ✅ charge survives (needs LSQ operator) |
 | **P2** | field on a *moving* medium | ✅ charge survives reconnections; lost at melting |
-| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); closed loop (3c) stable + correctly-signed but sub-critical (no self-trapping yet) |
+| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); closed loop (3c) self-traps with a stable symmetric (Brookshaw) operator — lump holds its width + a persistent density well; not yet a clean stationary soliton |
 
 ## The three bodies of work
 

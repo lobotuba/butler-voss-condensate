@@ -26,7 +26,7 @@ from the coupling, not the potential.
 from __future__ import annotations
 import numpy as np
 
-from bvc_core import lj_forces_energy, relax_medium, pairwise, R0
+from bvc_core import lj_forces_energy, relax_medium, pairwise, R0, brookshaw_laplacian
 
 
 # ----------------------------------------------- meshfree Laplacian + gradient -
@@ -56,14 +56,18 @@ def sph_density(X, h):
 
 class CoupledLump:
     def __init__(self, X, alpha=0.0, beta=0.0, c=1.0, m2=1.0, h=None,
-                 dt=0.01, field_damping=0.999, cool=0.999,
-                 rcut=1.9 * R0, rebuild_every=20):
+                 dt=0.005, field_damping=0.999, cool=0.999, g_min=0.08,
+                 rcut=1.9 * R0, rebuild_every=25):
         self.X = X.copy(); self.V = np.zeros_like(X); self.N = len(X)
         self.alpha, self.beta, self.c, self.m2 = alpha, beta, c, m2
         self.h = h or R0
         self.dt, self.field_damping, self.cool = dt, field_damping, cool
+        self.g_min = g_min
         self.rcut, self.rebuild_every = rcut, rebuild_every
-        self.A, self.Gx, self.Gy = lsq_operators(self.X, rcut)
+        # Brookshaw (symmetric, stable) for the FIELD Laplacian; LSQ gradient
+        # (Gx,Gy) for the node force (applied to smoothed energy, so it's fine).
+        _, self.Gx, self.Gy = lsq_operators(self.X, rcut)
+        self.A = brookshaw_laplacian(self.X, rcut=rcut)
         self.rho0 = float(np.median(sph_density(self.X, self.h)))
         self.u = np.zeros(self.N); self.ud = np.zeros(self.N)
         self.Fmed, _ = lj_forces_energy(self.X)
@@ -80,7 +84,7 @@ class CoupledLump:
     def g_factor(self):
         rho = sph_density(self.X, self.h)
         g = 1.0 / (1.0 + self.beta * (rho / self.rho0 - 1.0))
-        return np.clip(g, 0.2, 2.0)
+        return np.clip(g, self.g_min, 2.0)
 
     def smooth_energy(self, e):
         """Kernel-average the field energy so its gradient (the node force) is
@@ -102,7 +106,8 @@ class CoupledLump:
         self.V += 0.5 * (Ftot + Fmed_new + Ffield) * self.dt
         self.V *= self.cool
         if k % self.rebuild_every == 0:
-            self.A, self.Gx, self.Gy = lsq_operators(self.X, self.rcut)
+            _, self.Gx, self.Gy = lsq_operators(self.X, self.rcut)
+            self.A = brookshaw_laplacian(self.X, rcut=self.rcut)
         # Coupling B: field on the current geometry, wave speed slowed where dense
         g = self.g_factor()
         udd = self.c ** 2 * g * (self.A @ self.u) - self.m2 * self.u
@@ -129,9 +134,9 @@ class CoupledLump:
         return float(self.energy_density().sum())
 
 
-def run(alpha, beta, label, steps=2500, m2=1.0, cool=0.999):
+def run(alpha, beta, label, steps=4000, m2=1.0, cool=0.999, fd=0.999):
     cloud = relax_medium(N=260, seed=3)
-    f = CoupledLump(cloud, alpha=alpha, beta=beta, m2=m2, cool=cool)
+    f = CoupledLump(cloud, alpha=alpha, beta=beta, m2=m2, cool=cool, field_damping=fd)
     f.seed_lump()
     w0 = f.lump_width()
     traj = []
@@ -153,7 +158,8 @@ def run(alpha, beta, label, steps=2500, m2=1.0, cool=0.999):
 if __name__ == "__main__":
     print("=== Phase 3c : close the loop on one lump (self-focusing?) ===")
     print("  width = energy-weighted RMS radius; dens = central node density / rho0\n")
-    # m2=1.0 keeps the meshfree field operator stable (lighter fields excite the
-    # LSQ Laplacian's spurious positive modes); node force is smoothed, well deep.
-    run(0.0, 0.0, "control (no coupling)", m2=1.0)
-    run(8.0, 6.0, "coupled A+B (smoothed, deep well)", m2=1.0, cool=0.99)
+    # Brookshaw field operator is stable, so beta (well depth) can be pushed hard
+    # AND the field run near-conservatively (fd~1) -- both impossible with LSQ.
+    # Near-conservative is the decisive self-trapping test: width AND |u| holding.
+    run(0.0, 0.0, "control (fd~1, no coupling)", fd=0.9998)
+    run(10.0, 60.0, "Brookshaw coupled beta=60 (fd~1)", cool=0.99, fd=0.9998)

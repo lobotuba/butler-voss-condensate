@@ -209,3 +209,26 @@ def lsq_laplacian_matrix(X, rcut):
 def interior_mask(X, frac=0.62):
     r = np.linalg.norm(X - X.mean(0), axis=1)
     return r < frac * r.max()
+
+
+def brookshaw_laplacian(X, h=None, rcut=None):
+    """Symmetric SPH (Brookshaw) Laplacian: L f|_i = sum_j w_ij (f_j - f_i),
+    w_ij = (2/h^2) * Vij * W(r_ij), symmetric node volumes Vij=(V_i+V_j)/2,
+    V_i = 1/rho_i.  Symmetric (real spectrum) and negative-semidefinite (stable)
+    by construction -- unlike the LSQ Laplacian, which is accurate but indefinite.
+    A single global scale enforces consistency (reproduces lap(x^2+y^2)=4)."""
+    h = h or R0
+    rcut = rcut or 1.9 * R0
+    _, r2 = pairwise(X)
+    within = (r2 > 1e-12) & (r2 < rcut ** 2)
+    W = np.exp(-r2 / (2 * h ** 2)) * within
+    rho = W.sum(1) + 1.0
+    V = 1.0 / rho
+    Vij = 0.5 * (V[:, None] + V[None, :])
+    w = (2.0 / h ** 2) * Vij * W
+    L = w.copy()
+    np.fill_diagonal(L, -w.sum(1))
+    q = (X ** 2).sum(1)
+    r = np.linalg.norm(X - X.mean(0), axis=1)
+    m = r < 0.6 * r.max()
+    return L * (4.0 / np.mean((L @ q)[m]))

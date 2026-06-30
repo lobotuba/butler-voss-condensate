@@ -353,3 +353,20 @@ Laplacian, and an end-to-end energy-drift run.
   self-trapping, at a smaller CFL `dt`). Matching LSQ accuracy *and* staying
   symmetric needs a consistency-corrected operator (renormalized SPH / constrained
   symmetric MLS).
+
+### 3c revisited with the Brookshaw operator — self-trapping signature
+Swapping the field Laplacian to **Brookshaw** (stable) and keeping the LSQ
+*gradient* for the node force unlocked the regime LSQ couldn't reach: deep wells
+(β up to 60) run **without blow-up**, and the field can run **near-conservatively**
+(`field_damping≈1`).
+- **The lump now HOLDS its width** instead of dispersing: width 3.97 → **4.13**
+  (β=60, fd≈1) vs the uncoupled control's 3.97 → **7.96** — ~96% less spreading,
+  with a **persistent density well** under it (ρ 1.06 → 1.10, held). A clear
+  gravity-by-density **self-focusing signature**.
+- **Not yet a clean stationary soliton:** the peak amplitude still decays faster
+  than damping → residual energy leakage (radiation; the ad-hoc couplings aren't
+  exactly energy-conserving on a moving mesh).
+- **Net:** the operator fix moved 3c from "disperses ~60% less, sub-critical" to
+  "stops dispersing (self-traps) with a stable persistent well." Remaining for a
+  true bound state: a variational (single-Lagrangian) coupling + radiation
+  handling — then **3d** (two lumps → drift together) becomes meaningful.
