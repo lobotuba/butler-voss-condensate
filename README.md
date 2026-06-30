@@ -32,7 +32,7 @@ topological winding**, **spin is a Noether charge**; the localized structures si
 | **H10** | self-cohering medium | ✅ self-assembles to isotropic close packing, sets spacing |
 | **P0–P1** | field on a self-assembled medium | ✅ charge survives (needs LSQ operator) |
 | **P2** | field on a *moving* medium | ✅ charge survives reconnections; lost at melting |
-| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); two partial closed-loop results — Brookshaw 3c *self-traps but leaks energy*; variational coupling *conserves energy by construction but is too stiff/gentle to self-trap*. Combining them (energy-conserving self-trapping) is the frontier |
+| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); variational coupling is now energy-conserving + stable (bounded `g`). No single-lump self-bound soliton — the medium is nearly incompressible, so gravity-by-density is real but *weak*. Next: **3d** (two lumps → do they drift together?), which only needs the weak force |
 
 ## The three bodies of work
 

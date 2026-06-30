@@ -418,3 +418,17 @@ of the same E and energy is conserved by construction (the 3c leakage fix).
   *stability*) or (b) **controlled collapse** (let it collapse; the LJ floor halts
   it at finite width). The seed-near-a-bound-state *existence test* is the cheaper
   next probe.
+- **Existence test result: NO self-bound soliton (and why).** Pre-compressing the
+  medium under a field lump (relax nodes with the field frozen) then releasing
+  conservatively: the lump still **disperses**. The cause is decisive — the LJ
+  medium is **nearly incompressible**: the central density well **saturates at
+  ~1.09** (≈9%) *regardless of source strength* (amp 1→3.5, β 30→60 all give the
+  same shallow well), because the steep LJ repulsive core balances the field's pull
+  at modest compression. So **gravity-by-density is real but weak** — too weak for a
+  single lump to self-bind against the rigid medium. (Physically apt: gravity is the
+  weakest force; self-binding needs enormous mass.)
+- **Redirect to 3d.** Self-binding needs *strong* gravity; mutual attraction needs
+  only the *weak* force already confirmed (3a refraction). So **3d — do two lumps
+  drift together? — is the right decisive gravity test**, and it does NOT require a
+  bound state. With energy now conserved (bounded `g`), a clean 3d run is feasible:
+  seed two lumps, measure whether their separation shrinks.
