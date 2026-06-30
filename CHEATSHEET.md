@@ -211,7 +211,7 @@ parameter `psi`), not yet in `simulation.py`. Requires a symmetry-broken
 | **H7** | **Spin / charge from symmetry** — internal field-space rotation gives a continuous conserved charge (a Q-ball; precursor of spin/angular momentum) | Noether charge `Q = Im Σ conj(psi)·psi_dot` | prototype: Q conserved (Q-ball) |
 | **H8** | **The particle zoo is finite (≈3–5)** — distinct fundamental species = distinct stable sectors `(n, Q)` | census count of long-lived `(charge, energy)` types | prototype shows `n=0, ±1, ±2` + Q-ball family |
 | **H9** | **Sub-quantum hierarchy** — these solitons sit below quantum particles; higher layers form by **confluence/binding** | binding energy `E_bound < ΣE_free`; **scale gap** (size/energy ratio) between base solitons and bound states | prototype: `+/-` bind (ΔE≈4) & annihilate, `n=2` splits→composite, gap ≈6.6× size |
-| **H10** | **Self-cohering medium** — nodes attract (with short-range repulsion); this *sets* the inter-node spacing, **self-selects close-packed/isotropic** geometry, and stabilizes structures | equilibrium spacing; emergent lattice = fcc/hcp; longer lifetimes | not yet tested (needs mobile nodes) |
+| **H10** | **Self-cohering medium** — nodes attract (with short-range repulsion); this *sets* the inter-node spacing, **self-selects close-packed/isotropic** geometry, and stabilizes structures | equilibrium spacing; emergent lattice = fcc/hcp; longer lifetimes | prototype: cloud self-assembles to hex (psi6 0.10→1.00, coord→6) at spacing≈r0; hex energy < square |
 
 **Why H6/H7 need a complex field:** a real scalar `u` has no orientation to
 rotate (no spin) and no symmetry to conserve (no charge). Promoting `u → psi`
@@ -229,6 +229,7 @@ repulsion. A self-assembling medium relaxes to close packing (the isotropic
 ```bash
 python prototype_complex.py     # H8 census: conserved charges + persistence
 python h9_binding.py            # H9: binding curve, annihilation, n=2 splitting, scale gap
+python prototype_mobile_nodes.py # H10: self-assembly, spacing, isotropy selection
 ```
 `prototype_complex.py` columns: `topo0/topoF` (winding, start/end) ·
 `Noether0/F` (U(1) charge) · `E0/EF` (energy) · `loc%F` (excess energy still localized).
@@ -246,3 +247,22 @@ python h9_binding.py            # H9: binding curve, annihilation, n=2 splitting
 - **Caveat:** single-charge (`+/+`, `n=2`) configs have net winding, so their
   absolute energy is box-dependent; the quantitative binding uses the neutral
   `+/-` pair, whose far field cancels.
+
+### H10 first results (`prototype_mobile_nodes.py`)
+Mobile nodes interacting by a Lennard-Jones pair potential (attract at mid-range,
+repel at short range), velocity-Verlet with cooling, on a free 2D cluster.
+- **Spacing is set, not chosen.** A disordered cloud settles to mean spacing
+  ≈ `r0 = 2^(1/6)σ` (the potential minimum) — answering "how much space exists
+  between nodes" dynamically.
+- **Isotropy self-selects.** Bond order `psi6` rises 0.10 → 1.00 and coordination
+  → 6: the medium freezes into a **hexagonal** lattice. Static check: energy/node
+  is lower for triangular/hex (−6.64) than square (−5.27), so the anisotropic
+  arrangement is energetically rejected. **In 3D the same logic selects fcc/hcp —
+  i.e. the isotropic `fcc3d` we found stable — so a self-organizing medium would
+  never adopt the `cubic3d` arrangement that blew up.** The artifact dissolves at
+  the level of the medium itself.
+- **Cohesion = stability.** Mutual attraction binds the cloud into a stable
+  droplet (kinetic energy cools to ~0) instead of dispersing — confirming the
+  long-run-stability motivation.
+- **Caveat:** finite droplet, so edge nodes lower the *average* coordination
+  below 6 (interior is 6); a periodic box would give a clean 6 throughout.
