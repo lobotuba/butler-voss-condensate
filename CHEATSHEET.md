@@ -404,7 +404,17 @@ of the same E and energy is conserved by construction (the 3c leakage fix).
   1.1–1.3) then **blows up**. So a *critical* β giving a stable bound state lies
   between dispersal and collapse — the mechanism works; the regime just needs
   controlling.
-- **Refined plan = a package of three:** (1) a `g(ρ)` **bounded on both sides**
-  (the `exp` form explodes for rarefied nodes when the centre compresses), (2) an
-  **energy-conserving (AVF/discrete-gradient) integrator** for the stiff dynamics,
-  (3) the **LJ floor** as the collapse-halting mechanism → finite-width soliton.
+- **Bounded `g(ρ)` (done) — logistic `g∈[g_min,g_max]`** caps the field-operator
+  stiffness so β only sets the *sharpness* of the density→speed response, not its
+  magnitude. This **cured the blow-up AND restored energy conservation** (dE ≈
+  0.00% even at β=40, dt=0.002) — confirming the dt-independent ~2.5% drift was the
+  rarefied-region stiffness, so the **AVF integrator is no longer needed for
+  conservation**. (FD-verified the bounded `g` keeps forces = exact gradients.)
+- **But the bounded coupling is too gentle to trap from a dispersing seed:**
+  `minW` ≈ initial for all β ≤ 80 (even deep wells `g_min=0.02` and slow fields
+  `m2=6`). Trapping happened *only* in the violent unbounded-collapse regime
+  (which blew up). So a stable bound state — if it exists — must be reached by
+  (a) **seeding near it** (pre-compressed medium + concentrated field, then test
+  *stability*) or (b) **controlled collapse** (let it collapse; the LJ floor halts
+  it at finite width). The seed-near-a-bound-state *existence test* is the cheaper
+  next probe.

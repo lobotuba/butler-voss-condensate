@@ -30,9 +30,11 @@ from bvc_core import lj_forces_energy, relax_medium, R0
 
 
 class VariationalCoupled:
-    def __init__(self, X, beta=0.0, m2=1.0, h=None, rcut=None, dt=0.004, damping=1.0):
+    def __init__(self, X, beta=0.0, m2=1.0, h=None, rcut=None, dt=0.004, damping=1.0,
+                 g_min=0.05, g_max=1.95):
         self.X = X.copy(); self.Wn = np.zeros_like(X); self.N = len(X)
         self.beta, self.m2 = beta, m2
+        self.g_min, self.g_max = g_min, g_max
         self.h = h or R0
         self.rcut = rcut or 2.0 * R0
         self.dt, self.damping = dt, damping
@@ -49,10 +51,13 @@ class VariationalCoupled:
         return d, W, rho
 
     def _gamma(self, rho):
-        # exp form: bounded & positive for all rho (denser=>slower), no singularity
-        # the 1/(1+b(rho/rho0-1)) form blows up for rarefied nodes at large beta.
-        g = np.exp(-self.beta * (rho / self.rho0 - 1.0))
-        gp = -(self.beta / self.rho0) * g               # dg/drho
+        # logistic form: g in [g_min, g_max], monotone decreasing (denser=>slower),
+        # BOUNDED ON BOTH SIDES so rarefied nodes can't explode the stiffness and
+        # beta only sets the sharpness of the response, not its magnitude.
+        # g(rho0) = (g_min+g_max)/2 (=1 for the default 0.05/1.95).
+        s = 1.0 / (1.0 + np.exp(self.beta * (rho / self.rho0 - 1.0)))   # in (0,1)
+        g = self.g_min + (self.g_max - self.g_min) * s
+        gp = (self.g_max - self.g_min) * (-s * (1.0 - s)) * (self.beta / self.rho0)
         return g, gp
 
     def forces(self):
@@ -124,6 +129,9 @@ def run(beta, label, steps=4000, damping=1.0, dt=0.004):
 if __name__ == "__main__":
     print("=== Phase 3 variational : one energy functional, conserved by construction ===")
     print("  key check: energy drift dE near 0 (vs 3c's leakage); then width behaviour\n")
-    run(0.0, "control (beta=0)", dt=0.003, steps=6000)
-    run(10.0, "coupled beta=10 (damping=1: energy check)", dt=0.003, steps=6000)
-    run(10.0, "coupled beta=10 (mild damping: settle)", dt=0.003, steps=6000, damping=0.999)
+    # Bounded both-sides g(rho) caps the field-operator stiffness, so the coupled
+    # loop is STABLE and ENERGY-CONSERVING at any beta (the exp form blew up for
+    # rarefied nodes). beta sets the sharpness of the density->speed response.
+    run(0.0, "control (beta=0)", dt=0.002, steps=5000)
+    run(20.0, "bounded-g beta=20 (stable + conserved)", dt=0.002, steps=5000)
+    run(40.0, "bounded-g beta=40 (stable + conserved)", dt=0.002, steps=5000)
