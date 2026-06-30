@@ -32,7 +32,7 @@ topological winding**, **spin is a Noether charge**; the localized structures si
 | **H10** | self-cohering medium | ✅ self-assembles to isotropic close packing, sets spacing |
 | **P0–P1** | field on a self-assembled medium | ✅ charge survives (needs LSQ operator) |
 | **P2** | field on a *moving* medium | ✅ charge survives reconnections; lost at melting |
-| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); closed loop (3c) self-traps with a stable symmetric (Brookshaw) operator — lump holds its width + a persistent density well; not yet a clean stationary soliton |
+| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); two partial closed-loop results — Brookshaw 3c *self-traps but leaks energy*; variational coupling *conserves energy by construction but is too stiff/gentle to self-trap*. Combining them (energy-conserving self-trapping) is the frontier |
 
 ## The three bodies of work
 
@@ -121,6 +121,8 @@ Requires Python 3.11+.
 | `integration_phase2.py` | Field on a moving, rearranging medium (Phase 2) |
 | `integration_phase3ab.py` | Gravity-by-density, the two halves in isolation (Phases 3a/3b) |
 | `integration_phase3c.py` | Gravity-by-density, closed loop on one lump (Phase 3c) |
+| `integration_phase3_variational.py` | Gravity-by-density from one energy functional (energy-conserving) |
+| `operator_scorecard.py` | Symmetric field-operator candidates scored (symmetry/stability/accuracy) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 `Simulation - Cheat Sheet.docx` is a personal copy — left untouched.

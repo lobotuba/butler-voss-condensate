@@ -370,3 +370,24 @@ Swapping the field Laplacian to **Brookshaw** (stable) and keeping the LSQ
   "stops dispersing (self-traps) with a stable persistent well." Remaining for a
   true bound state: a variational (single-Lagrangian) coupling + radiation
   handling — then **3d** (two lumps → drift together) becomes meaningful.
+
+### Variational coupling (`integration_phase3_variational.py`)
+Both gravity-by-density couplings derived from ONE energy functional
+`U = ¼ Σ_ij (γ_i+γ_j) W(r_ij)(u_i−u_j)²`, `γ=g(ρ)` — so they are exact gradients
+of the same E and energy is conserved by construction (the 3c leakage fix).
+- **Construction verified.** The analytic node force matches `−∇E` to **1e-9**
+  (finite-difference), and at β=0 energy drifts **−0.02%** (machine precision).
+  The field force is automatically a *symmetric* Laplacian (stable), with
+  density-dependent weights = Coupling B; the node force = Coupling A, and the
+  radial sign is **inward (compression) = gravitational**, not anti-gravity.
+- **Singularity found & fixed.** `g=1/(1+β(ρ/ρ0−1))` diverges for rarefied nodes
+  (denominator→0) → +10⁹% blow-up; replaced with bounded `g=exp(−β(ρ/ρ0−1))`.
+- **Residual obstacle = stiffness.** With coupling on (β=10) the *explicit*
+  integrator shows ~7% energy drift at `dt=0.003` (grows; shrinks with `dt`), and
+  the bounded coupling is too gentle to self-focus.
+- **State of the program — two partial results that don't yet combine:**
+  Brookshaw-3c *self-traps but leaks energy*; the variational form *conserves
+  energy but is too gentle/stiff to self-trap*. Getting **both** (energy-conserving
+  self-trapping) needs a **structure-preserving / implicit integrator** so β can be
+  pushed into the trapping regime while keeping conservation. Then **3d** (two
+  lumps → mutual drift = gravity) becomes the decisive test.
