@@ -124,6 +124,7 @@ Requires Python 3.11+.
 | `integration_phase3_variational.py` | Gravity-by-density from one energy functional (energy-conserving) |
 | `integration_phase3d.py` | The gravity test: two masses drift together (Phase 3d) |
 | `operator_scorecard.py` | Symmetric field-operator candidates scored (symmetry/stability/accuracy) |
+| `figures.py` | Renders the headline results to `figures/` (self-assembly, vortex/charge, gravity) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 `Simulation - Cheat Sheet.docx` is a personal copy — left untouched.
