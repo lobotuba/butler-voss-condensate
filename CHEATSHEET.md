@@ -466,6 +466,21 @@ over long time — *increased* with d (merging/dispersion artifact, wrong sign);
   strain tail). A definitive F(d) needs a dedicated build (clean controllable well +
   proper force probe); no exponent is claimed.
 
+**Resolved by the static density-response test (the clean method).** Instead of
+chasing a dynamic drift, measure the medium's static density perturbation `Δρ(r)`
+around one **gentle** frozen mass (angle-averaged, large medium, relaxed with vs
+without the source). Result: `Δρ(r)` is a small (~5%) **local** perturbation — a
+rarefied core + a compression ring at r≈(source size) — that **falls to the noise
+floor (~±0.01) by r≈5–6**, with **no measurable tail** (both exp and power-law fits
+are meaningless — it's noise beyond the core). Two amplitudes give the same-shape
+profile (linear response). **Conclusion (final): there is NO long-range force law.**
+A mass's density perturbation is confined to ~its own size, so two masses attract
+only when their perturbations **overlap** — a **contact-range / screened**
+attraction (screening length ≈ mass size), not Newtonian `1/r` or `1/r²`. So this
+model's gravity is a real, weak, energy-conserving, **short-range** attraction.
+(Optional follow-up: the adiabatic `U(d)=E(d)−E(∞)` energy curve could quantify the
+contact-interaction *strength*, but the *range* question is settled.)
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
