@@ -481,6 +481,25 @@ model's gravity is a real, weak, energy-conserving, **short-range** attraction.
 (Optional follow-up: the adiabatic `U(d)=E(d)−E(∞)` energy curve could quantify the
 contact-interaction *strength*, but the *range* question is settled.)
 
+**Contact strength quantified (`interaction_energy.py`).** The adiabatic method —
+freeze two gentle masses at separation d, relax the medium, and isolate the
+medium-mediated energy `U(d)` by subtracting the frozen-medium (direct-overlap)
+baseline — gives a clean, monotonic **attractive well** (N=400, β=60):
+
+| d | 4 | 5 | 6 | 7 | 8 | 10 |
+|---|---|---|---|---|---|---|
+| `U(d)` | **−0.921** | −0.255 | +0.069 | +0.071 | +0.056 | 0.000 |
+| `F=−dU/dd` | | −0.50 | −0.16 | +0.01 | +0.02 | |
+
+- **Contact binding energy ≈ 0.92** (model units) at d=4 — ~25% of the single-mass
+  medium-response energy (~−3 to −4): a substantial contact interaction.
+- **Peak force ≈ 0.5 at contact** (d≈5), comparable to the LJ medium forces (~1),
+  **vanishing by d≈6–7**.
+- `U→0` for d≥6 → **screening range ≈ 5–6 = the mass size**, matching Δρ(r).
+- The static energy method is what worked (clean, monotonic) where every *dynamic*
+  drift probe failed. Full characterization: **short-range attractive well, depth
+  ≈0.9, peak force ≈0.5, screening length ≈5–6 — not a power law.**
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive

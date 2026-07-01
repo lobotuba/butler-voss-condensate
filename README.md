@@ -125,6 +125,7 @@ Requires Python 3.11+.
 | `integration_phase3d.py` | The gravity test: two masses drift together (Phase 3d) |
 | `operator_scorecard.py` | Symmetric field-operator candidates scored (symmetry/stability/accuracy) |
 | `figures.py` | Renders the headline results to `figures/` (self-assembly, vortex/charge, gravity) |
+| `interaction_energy.py` | Quantifies the gravitational contact strength: the interaction well `U(d)` |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to
