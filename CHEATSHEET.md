@@ -449,6 +449,23 @@ so it's real dynamics, not drift). This is the decisive positive result of the
 whole program: **gravity emerges from the medium**, as a genuine (weak) attractive
 force between mass-energy concentrations — not the leaky advection hack of H2.
 
+### Force law F(d) — not cleanly resolvable; tentatively SHORT-RANGE
+Three probes tried to extract how the attraction scales with separation:
+(1) two dispersing lumps (separation) — noisy, non-monotonic; (2) core-tracking
+over long time — *increased* with d (merging/dispersion artifact, wrong sign);
+(3) cleanest — a test lump released at distance d on a **frozen dug well**.
+- All three are confounded by weak gravity + field dispersion, and (3) also by the
+  well itself: a steep heavy source *rarefies* its center (ρ/ρ0≈0.84) rather than
+  compressing — the medium's response is **sign-sensitive to the source profile**.
+- The test-lump drift is strong at small d (~0.95 at d=4) and falls to the **noise
+  floor by d≈6**; the density perturbation is **local** (within r≈5). A `d^-2` fit
+  appears but is an artifact of fitting a fast drop + noise — **not trustworthy**.
+- **Defensible conclusion:** the emergent gravity is **short-range / screened**
+  (dies within ~5–6 lattice units), *not* a long-range power law — consistent with a
+  nearly-incompressible medium localizing the density perturbation (no long-range
+  strain tail). A definitive F(d) needs a dedicated build (clean controllable well +
+  proper force probe); no exponent is claimed.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
