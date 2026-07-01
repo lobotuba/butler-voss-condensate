@@ -432,3 +432,19 @@ of the same E and energy is conserved by construction (the 3c leakage fix).
   drift together? — is the right decisive gravity test**, and it does NOT require a
   bound state. With energy now conserved (bounded `g`), a clean 3d run is feasible:
   seed two lumps, measure whether their separation shrinks.
+
+### 3d result — GRAVITY (`integration_phase3d.py`)
+Two field lumps seeded at ±4.5 on the medium, energy-conserving variational
+coupling, separation tracked to t=8:
+| β | separation | net | dE |
+|---|---|---|---|
+| **0** (control) | 9.33 → 10.85 | **+1.51** (drift apart) | −0.12% |
+| **40** | 9.33 → 7.78 | **−1.56** (drift together) | −0.17% |
+| **60** | 9.33 → 7.48 | **−1.85** (stronger) | −0.08% |
+
+**Two masses attract via the emergent medium force** — the gravitational
+signature is unambiguous: *no* attraction without the coupling (β=0 drifts apart),
+attraction *with* it, **stronger at higher β**, and **energy conserved** (~0.1%,
+so it's real dynamics, not drift). This is the decisive positive result of the
+whole program: **gravity emerges from the medium**, as a genuine (weak) attractive
+force between mass-energy concentrations — not the leaky advection hack of H2.

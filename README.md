@@ -32,7 +32,7 @@ topological winding**, **spin is a Noether charge**; the localized structures si
 | **H10** | self-cohering medium | ✅ self-assembles to isotropic close packing, sets spacing |
 | **P0–P1** | field on a self-assembled medium | ✅ charge survives (needs LSQ operator) |
 | **P2** | field on a *moving* medium | ✅ charge survives reconnections; lost at melting |
-| **P3** | gravity-by-density | 🟡 halves validated (3a/3b); variational coupling is now energy-conserving + stable (bounded `g`). No single-lump self-bound soliton — the medium is nearly incompressible, so gravity-by-density is real but *weak*. Next: **3d** (two lumps → do they drift together?), which only needs the weak force |
+| **P3** | gravity-by-density | ✅ **two masses attract** (3d): energy-conserving variational coupling makes two lumps drift together (sep 9.3→7.5), no attraction at β=0, stronger at higher β. Halves validated (3a/3b), coupling energy-conserving (bounded `g`). No single-lump self-bound soliton (medium nearly incompressible → gravity is real but weak) |
 
 ## The three bodies of work
 
@@ -80,26 +80,26 @@ reconnecting* under it (~308 reconnections), failing only when the medium
 **melts** (P2). The core shape is under-resolved on the irregular mesh — an open
 quality issue, not a topological one.
 
-### Phase 3 — gravity-by-density (in progress)
+### Phase 3 — gravity-by-density (✅ two masses attract)
 Close the loop two-way: field energy compresses the medium → denser nodes slow
-the local waves → other excitations refract toward the mass = attraction. This is
-the non-leaky replacement for H2's tension-advection gravity, and the project's
-headline open problem.
+the local waves → other excitations refract toward the mass = attraction. The
+non-leaky replacement for H2's tension-advection gravity.
 
 ```bash
-python integration_phase3ab.py   # 3a refraction (sign check) + 3b compression, in isolation
+python integration_phase3ab.py          # 3a refraction (sign) + 3b compression, in isolation
+python integration_phase3c.py           # close the loop on one lump
+python integration_phase3_variational.py # both couplings from one energy functional (conserving)
+python integration_phase3d.py           # THE gravity test: two masses drift together
 ```
-```bash
-python integration_phase3c.py    # close the loop on one lump (both couplings on)
-```
-Sub-phases **3a/3b** are done: a test wave-packet refracts *toward* an imposed
-dense region (confirming the sign **denser ⇒ slower**), and an imposed field-energy
-blob compresses the node medium. **3c** closes the loop on one lump: it now runs
-**stably** (after smoothing the node force) and shows the **correctly-signed**
-effect — the lump compresses the medium and spreads ~60% less than uncoupled — but
-is **sub-critical**: it does not yet self-trap. Reaching a bound state (and **3d**,
-two lumps drifting together) needs a stabilized field operator and a deeper
-density→speed coupling, ideally from a single Lagrangian.
+The arc: **3a/3b** validated the two halves and the sign (waves refract *toward* a
+dense region). **3c** closed the loop on one lump (self-focuses but leaks with the
+hand-tuned coupling). The **variational** form derives both couplings from one
+energy functional (energy-conserving by construction); a bounded `g(ρ)` then cured
+a blow-up and fixed conservation. A single lump does **not** self-bind — the medium
+is nearly incompressible, so gravity-by-density is real but *weak*. But self-binding
+isn't needed: **3d shows two masses drift together** (separation 9.3 → 7.5),
+with **no attraction at β=0** and stronger attraction at higher β, energy conserved
+— gravitational attraction emerging from the medium.
 
 ## Install
 
@@ -122,6 +122,7 @@ Requires Python 3.11+.
 | `integration_phase3ab.py` | Gravity-by-density, the two halves in isolation (Phases 3a/3b) |
 | `integration_phase3c.py` | Gravity-by-density, closed loop on one lump (Phase 3c) |
 | `integration_phase3_variational.py` | Gravity-by-density from one energy functional (energy-conserving) |
+| `integration_phase3d.py` | The gravity test: two masses drift together (Phase 3d) |
 | `operator_scorecard.py` | Symmetric field-operator candidates scored (symmetry/stability/accuracy) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
