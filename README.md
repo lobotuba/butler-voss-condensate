@@ -127,5 +127,5 @@ Requires Python 3.11+.
 | `figures.py` | Renders the headline results to `figures/` (self-assembly, vortex/charge, gravity) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
-`Simulation - Cheat Sheet.docx` is a personal copy — left untouched.
-Simulation output goes to `condensate_runs/` (git-ignored).
+Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to
+`figures/` (git-ignored). Personal documents (`*.docx`) are git-ignored.
