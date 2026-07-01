@@ -500,6 +500,27 @@ baseline — gives a clean, monotonic **attractive well** (N=400, β=60):
   drift probe failed. Full characterization: **short-range attractive well, depth
   ≈0.9, peak force ≈0.5, screening length ≈5–6 — not a power law.**
 
+### Order lengthens & cleans the force (disorder was screening it)
+Redoing `Δρ(r)` on a **perfect hex lattice** (defect-free) instead of the
+self-assembled cloud changes the picture:
+| r | 0.5 | 2.5 | 4.5 | 6.5 | 8.5 | 10.5 | 11.5 |
+|---|---|---|---|---|---|---|---|
+| `Δρ` | .0010 | .0010 | .0009 | .0006 | .0004 | .0003 | .0002 |
+- **Clean, monotone, and ~2× longer-range** — best fit `exp(−r/λ)`, **λ ≈ 5.7**, a
+  real tail out past r=11 — vs the disordered medium's *noisy, local* blob (peak
+  ~5%, screened by r≈5). The perfect lattice's response is ~50× smaller in
+  amplitude (~0.1%) but coherent and long-range.
+- **Interpretation:** disorder *masks* the true force with large **local plastic
+  rearrangements** (defects absorbing compression); order reveals the genuine
+  **coherent elastic strain**. So the "short-range" result was **partly a disorder
+  artifact — order/rigidity is a real lever on the force range.**
+- **Still screened** (finite λ), not yet a power law. **Levers for truly
+  long-range gravity: (1) 3D** (a point dilatation gives `1/r²` strain — Newtonian
+  territory; 2D screens harder), **(2) an ordered, rigid lattice.** A pure
+  tetrahedral (z=4) lattice is floppy under central forces (3D rigidity needs
+  z≥6); the useful "tetrahedral" geometry is the close-packed **fcc** (z=12, built
+  from tetrahedra+octahedra), reached by ordering.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
