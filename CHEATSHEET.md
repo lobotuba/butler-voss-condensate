@@ -448,3 +448,18 @@ attraction *with* it, **stronger at higher β**, and **energy conserved** (~0.1%
 so it's real dynamics, not drift). This is the decisive positive result of the
 whole program: **gravity emerges from the medium**, as a genuine (weak) attractive
 force between mass-energy concentrations — not the leaky advection hack of H2.
+
+### Self-binding on a compressible medium — NOT achieved (artifact caught)
+Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
+see if a single lump could self-bind. **A cautionary result:** with a naive
+Morse cutoff (force truncated, energy not shifted) the lump appeared to **self-trap**
+(width 3.9→2.8) — but that was a **numerical artifact**: the inconsistent cutoff
+leaked **~80% of the energy**, letting the system cool into a compressed state.
+Fixing the cutoff (shifted-force Morse) **removed the trapping** — the lump
+disperses at every β (β>0 disperses *less* than β=0, consistent with weak gravity,
+but no bound state). Takeaway: **no self-bound soliton even on a compressible
+medium** in the energy-conserving regime; the gravity force is too weak to overcome
+dispersion. (Caveat: the soft-Morse+coupling energy accounting is itself imperfect
+here (±15–34%), so a *definitive* compressible-medium test needs a properly
+conservative soft potential — a real build. The clean, conserved result remains 3d:
+mutual attraction on the LJ medium.)
