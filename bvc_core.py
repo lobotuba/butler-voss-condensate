@@ -123,6 +123,20 @@ def perfect_hex(radius_cells=9, a=R0):
     return X - X.mean(0)
 
 
+def perfect_fcc(radius=9.0, a=None):
+    """FCC lattice (z=12, close-packed, rigid, ~isotropic) clipped to a ball;
+    nearest-neighbour spacing = a (default R0). The 3D counterpart of perfect_hex
+    (fcc = even-sum cubic sites)."""
+    a = a or R0
+    s = a / math.sqrt(2)                          # nn distance = a
+    m = int(radius / s) + 2
+    pts = [(i*s, j*s, k*s)
+           for i in range(-m, m+1) for j in range(-m, m+1) for k in range(-m, m+1)
+           if (i+j+k) % 2 == 0 and (i*s)**2 + (j*s)**2 + (k*s)**2 <= radius**2]
+    X = np.array(pts, float)
+    return X - X.mean(0)
+
+
 def square_lattice(rows, cols):
     """4-neighbor square grid; returns pos, neighbor_idx, valid, plaquettes."""
     N = rows * cols

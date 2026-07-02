@@ -521,6 +521,25 @@ self-assembled cloud changes the picture:
   z≥6); the useful "tetrahedral" geometry is the close-packed **fcc** (z=12, built
   from tetrahedra+octahedra), reached by ordering.
 
+### 3D (ordered fcc) is MUCH less screened — long-range signal (`density_response_3d.py`)
+The variational engine is dimension-agnostic, so it runs in 3D unchanged
+(Phase 3D-0: fcc N≈3055, energy drift −2.2%, stable). On an **ordered fcc** medium
+(z=12, rigid, isotropic) the density response `Δρ(r)` **barely decays**:
+| r | 0.4 | 2.0 | 3.6 | 5.2 | 6.8 |
+|---|---|---|---|---|---|
+| `Δρ` | .0189 | .0179 | .0157 | .0143 | .0117 |
+- Only a **factor ~1.6 drop out to r=6.8** (vs 2D hex's factor ~5). Fit gives
+  **screening length λ ≈ 14 (~2.4× the 2D 5.7)**, and over this window a **power law
+  is not excluded**. So **3D is dramatically less screened than 2D** — the
+  hoped-for direction, and notable because the *wave-mediated* coupling evades the
+  Bitter–Crum suppression that kills a pure elastic dilatation-center interaction.
+- **Caveat (why 3D-2 is needed):** radius-9 medium → r=6.8 is < half a screening
+  length *and* near the free surface, so **long-λ vs power-law vs finite-size can't
+  be distinguished** here. All three fit. The qualitative signal (3D lengthens the
+  force a lot) is solid; the *form* needs the scale-up.
+- **Next: 3D-2** — cell-list/sparse operators to reach radius ~15–20 (N~5k–10k),
+  measure `Δρ(r)`/`U(d)` far from source and surface, and settle `1/r²` vs screened.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
