@@ -130,6 +130,7 @@ Requires Python 3.11+.
 | `density_response_3d_large.py` | 3D sparse scale-up (3D-2): gravity is screened (λ≈3.3), not Newtonian |
 | `screening_diagnosis.py` | Screen-0: coupling strength β is not a lever — screening is intrinsic |
 | `screening_gauss.py` | Screen-1: existence proof — the medium carries unscreened 1/r iff the mediating field is massless (screening = a mass term) |
+| `screening_topocharge.py` | Screen-2: a conserved topological charge sources a long-range (2D-Coulomb log) force — the model hosts EM-like *and* nuclear-like forces |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to

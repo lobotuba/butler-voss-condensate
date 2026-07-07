@@ -592,6 +592,34 @@ the box** (a massless 1/r field has *no* intrinsic length; a Yukawa field pins a
   prediction being a long-range force for conserved charge (EM-like) alongside the
   short-range force for energy (nuclear-like).
 
+**Screen-2 — the payoff: a CONSERVED charge sources a LONG-RANGE force (`screening_topocharge.py`).**
+The model already owns a conserved source: the H6 topological winding. Its mediator
+is the **phase** of the Mexican-hat complex field — a **Goldstone mode, massless by
+symmetry** (not by choice), and the winding is conserved by topology. Both together
+forbid the mass term that screens gravity. Test in 2D (where U(1) winding is a point
+vortex): seed a neutral +1/−1 vortex pair at separation `d`, measure the pair
+formation energy `E(d)` straight from the energy functional (no dynamics — an
+opposite pair would annihilate). A massless phase gives the 2D-Coulomb **log** law
+`E ~ 2πρ_s ln d` that never saturates; a massive phase would flatten at `d~λ`.
+Boundary-honest discriminator = **scale the lattice** (100→140→200):
+| box | 100 | 140 | 200 |
+|---|---|---|---|
+| log slope A | 2.75 | 2.83 | **2.84** (stable → genuine log) |
+| best-saturating λ | 20 | 25 | **33** (grows ∝ box → no intrinsic length) |
+- `E(d)` rises logarithmically with a **box-independent slope** and **keeps climbing
+  at every box edge**; the best exponential-saturation fit degrades catastrophically
+  as the box grows (SS 0.0→0.2→3.1) and its λ just tracks ~⅕ of the box. So the
+  interaction is a **genuine unscreened 2D-Coulomb log** (force ~1/d).
+- **The result:** the condensate hosts **two force classes at once** — **long-range
+  for a conserved (topological) charge** (EM-like, unscreened, massless Goldstone
+  mediator) and **short-range for energy** (nuclear/gravity-like, screened λ≈3–6,
+  the medium's R₀-pinning acts as a mass). Masslessness here is **emergent** (Goldstone),
+  unlike Screen-1 where it was imposed. Force range is set by *what conserves the
+  source*, not by dimension or coupling strength.
+- **Open (future):** the natural "massive control" is to **gauge the U(1)** (a
+  Higgs/Meissner mechanism), which should screen the vortex interaction to short
+  range — the direct emergent analog of Screen-1's massless→massive knob. Bigger build.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
