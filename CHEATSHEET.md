@@ -616,9 +616,48 @@ Boundary-honest discriminator = **scale the lattice** (100→140→200):
   the medium's R₀-pinning acts as a mass). Masslessness here is **emergent** (Goldstone),
   unlike Screen-1 where it was imposed. Force range is set by *what conserves the
   source*, not by dimension or coupling strength.
-- **Open (future):** the natural "massive control" is to **gauge the U(1)** (a
-  Higgs/Meissner mechanism), which should screen the vortex interaction to short
-  range — the direct emergent analog of Screen-1's massless→massive knob. Bigger build.
+- **Massive control, now built:** the natural "massive control" is to **gauge the
+  U(1)** — see the gauged-U(1) section below.
+
+### Gauging the U(1) screens the force — the massive control (`screening_gauged.py`)
+The last piece: if the long-range force in Screen-2 is really the massless Goldstone
+phase, then **gauging** the symmetry (adding a gauge field on the lattice links →
+the **Abelian Higgs model**, i.e. a superconductor) should destroy it. The gauge
+field eats the Goldstone; the **Meissner effect** gives the photon a mass
+`m_A = e·v₀` (penetration depth `λ_L ~ 1/(e v₀)`), turning the vortices into
+Abrikosov vortices with a **short-range** interaction. This is Screen-1's
+massless→massive knob, but the mass is now **dynamical** (from the gauge coupling
+`e`), not imposed. Gauge-invariant lattice energy: covariant hopping
+`Σ|ψ_j e^{-iθ_ij}−ψ_i|²` + compact Maxwell `(1/e²)Σ(1−cos B)` + Mexican-hat.
+
+- **G-0 (correctness gates, both pass):** energy invariant under a lattice gauge
+  transform `ψ_i→ψ_i e^{iα_i}, θ_ij→θ_ij+α_j−α_i` to machine zero (dE=0); analytic
+  `dE/dθ` matches finite differences (rel-err 7e-8). (Relaxation of the gauge field
+  needs a stiffness-scaled step `η~e²` + momentum — the Maxwell term's `1/e²` makes
+  naive fixed-step descent diverge for small `e`.)
+- **G-1 (single vortex — the smoking gun):** the **global** vortex energy grows with
+  the box (19.9→22.4→24.2 at L=40/60/80 = the `ln L` divergence / long-range tail),
+  while the **relaxed gauged** energy is *exactly* box-independent (7.346 at every L)
+  and the magnetic flux **quantizes to one quantum** (ΣB/2π = 1.000). Gauging cut off
+  the long-range tail at the one-body level.
+- **G-2 (pair E(d) vs coupling e — the screening length):**
+  | e | 0.15 | 0.20 | 0.30 |
+  |---|---|---|---|
+  | λ_L | 4.14 | 3.13 | 1.94 |
+  | e·λ_L | 0.62 | 0.63 | 0.58 |
+  `E(d)` **saturates** at the plateau `2·E_single` (vortices stop interacting beyond
+  λ_L), and **`e·λ_L ≈ const → λ_L ~ 1/e`** = the Meissner penetration depth. Crucially
+  **λ_L is box-independent** (1.94 at box 70 *and* 110) — a genuine *intrinsic*
+  screening length, the opposite of Screen-2's apparent-λ that grew with the box
+  (20→25→33). (For e≳0.45, λ_L<2 lattice units — screened below resolution.)
+- **Conclusion — the arc closes.** Force range is governed by the **symmetry
+  structure of the source**: a **global** conserved charge → massless Goldstone →
+  **long-range** (Screen-2); **gauging** it → Meissner mass → **short-range** (here),
+  with the crossover controlled by `e`. The condensate reproduces, from one complex
+  field on the medium, the qualitative menu of real forces — long-range (unscreened),
+  short-range-by-mass (screened), and short-range-by-gauging (Meissner) — and in every
+  case the range is set by *what protects the mediator from a mass term*, exactly as
+  Screen-1 diagnosed.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
