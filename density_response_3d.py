@@ -13,10 +13,12 @@ dimension-agnostic (pairwise ops + an inline symmetric operator), so it runs in
         3D radial shells, fit exp vs power-law; compare to 2D hex (lambda~5.7).
 
 Result (fcc radius 9, N~3055): Drho(r) barely decays over the measurable range
-(factor ~1.6 to r=6.8, vs 2D's factor ~5) -- 3D is MUCH less screened
-(lambda~14, ~2.4x 2D; power-law not excluded). Caveat: radius 9 is < half a
-screening length and near the surface, so long-lambda vs power-law vs finite-size
-can't be distinguished here -> motivates 3D-2 (sparse scale-up to radius ~15-20).
+(factor ~1.6 to r=6.8), which fit to lambda~14 and looked much less screened than
+2D. *** This was a finite-size illusion. *** radius 9 only reaches the inner,
+barely-curved part of the response, near the free surface. The scale-up
+(density_response_3d_large.py, 3D-2, radius 13 N~9213) shows the tail curls over:
+3D is EXPONENTIAL/screened, lambda~3.3 -- comparable to 2D hex (5.7), NOT Newtonian.
+Keep this script for the 3D-0 stability check; trust 3D-2 for the force form.
 """
 from __future__ import annotations
 import numpy as np
