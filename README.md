@@ -128,6 +128,8 @@ Requires Python 3.11+.
 | `interaction_energy.py` | Quantifies the gravitational contact strength: the interaction well `U(d)` |
 | `density_response_3d.py` | 3D (ordered fcc) density response, small medium (3D-0/3D-1) |
 | `density_response_3d_large.py` | 3D sparse scale-up (3D-2): gravity is screened (λ≈3.3), not Newtonian |
+| `screening_diagnosis.py` | Screen-0: coupling strength β is not a lever — screening is intrinsic |
+| `screening_gauss.py` | Screen-1: existence proof — the medium carries unscreened 1/r iff the mediating field is massless (screening = a mass term) |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 
 Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to

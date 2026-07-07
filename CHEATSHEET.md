@@ -552,6 +552,46 @@ sparse coupling force is verified against the dense variational engine to
   contact-like force, not `1/r²`. Getting a truly long-range force would require a
   different coupling mechanism, not merely more dimensions.
 
+### Attacking the screening — why it screens, and the route out (`screening_diagnosis.py`, `screening_gauss.py`)
+The screened result raised the real question: *why* is it screened, and is the
+screening escapable? Two experiments pin it down.
+
+**Screen-0 — the coupling dial is not a lever (`screening_diagnosis.py`).** Sweep
+the coupling sharpness β on the large fcc and measure `Δρ(r)`:
+| β | 20 | 40 | 60 | 100 |
+|---|---|---|---|---|
+| λ | 3.2 | 3.7 | 4.3 | 5.8 |
+| peak amp | .073 | .059 | .036 | .016 |
+| integrated Σ`Δρ` | 103 | 96 | 63 | 32 |
+- λ creeps up with β, but the **amplitude *and* the total integrated compression
+  collapse together** — at high β the logistic `g'(ρ)` saturates to zero except in a
+  thin shell at ρ≈ρ₀, so the whole response fades. You can trade strength for a
+  slightly longer reach, **never a strong long-range force**. Intrinsic elastic
+  screening (weak-coupling limit) is **λ≈3**. There is **no conserved, un-screenable
+  flux** in this coupling — exactly what a long-range force needs.
+
+**Screen-1 — existence proof: screening IS a mass term (`screening_gauss.py`).**
+On the *same* fcc node machinery, solve a discrete Poisson equation for a point
+source (sparse nn Laplacian scaled to `lap(r²)=6`, pure-numpy CG, Dirichlet wall):
+massless `∇²Φ=−s` vs massive `(∇²−m²)Φ=−s`. Boundary-honest discriminator — **scale
+the box** (a massless 1/r field has *no* intrinsic length; a Yukawa field pins at
+λ=1/m):
+| box radius | 10 | 14 | 20 |
+|---|---|---|---|
+| massless λ_apparent | 2.45 | 3.18 | **4.24** (grows) |
+| massive m=1/3 λ | 1.86 | 2.02 | 2.18 (pins) |
+- The **massless field's range grows without bound with the box** (`Φ·r` declines
+  *linearly* `A(1−r/R_b)` = bounded Coulomb, not concave-exp) → genuine **1/r,
+  unscreened**. Add a mass term and it becomes **Yukawa exp(−r/λ), λ≈1/m**.
+- **Conclusion:** the node machinery *can* carry an unscreened `1/r²` force — it does
+  so **iff the mediating field is massless**. Gravity-by-density screens precisely
+  because the medium's **pinning to its rest spacing R₀ acts as a mass term**. The
+  escape is a **conserved source that forbids a mass term** (a Gauss law), *not* a
+  bigger coupling or more dimensions. → **Screen-2:** couple the potential to the
+  **conserved topological charge (H6)** and test for emergent long-range — the
+  prediction being a long-range force for conserved charge (EM-like) alongside the
+  short-range force for energy (nuclear-like).
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
