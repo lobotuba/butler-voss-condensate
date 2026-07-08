@@ -659,6 +659,35 @@ massless→massive knob, but the mass is now **dynamical** (from the gauge coupl
   case the range is set by *what protects the mediator from a mass term*, exactly as
   Screen-1 diagnosed.
 
+### The 3D topological defect: long-range survives into 3D as a vortex line (`screening_topocharge_3d.py`)
+Screen-2 used a 2D point vortex — the U(1) defect in 2D. In 3D a single complex
+field's defect is a **line** (π₂(S¹)=0, so no point charge from one field; a 3D
+point charge needs a larger target space, S² hedgehog, or gauging). The direct 3D
+continuation of Screen-2 is therefore the **vortex-line** interaction, built on a
+cubic lattice (topology is a property of the field's target space, not the medium;
+a cubic grid gives clean transverse plaquettes, and every quantity is a *static*
+energy so cubic wave-anisotropy is irrelevant).
+- **Correctness gate:** winding is an exact integer and conserved along the line —
+  +1 in every z-slab for a single line, +2 for n=2, net 0 with two nonzero cores for
+  a ±pair; vacuum energy 0. (Caught a real bug: a vortex centred *on a lattice site*
+  splits its winding across four plaquette corners and miscounts as 0 — cores must
+  sit at plaquette midpoints. Energy is computed from ψ directly and was unaffected.)
+- **L-0 (a line, not stacked points):** energy is **strictly proportional to length**
+  (E/L_z = 13.30 at L_z = 4, 8, 16) and the winding threads every slab — a genuine
+  3D line with a tension.
+- **L-1 (long-range in 3D):** two antiparallel lines, E(d)/L_z vs separation, transverse
+  box-scaling 60/90/120:
+  | box | 60 | 90 | 120 |
+  |---|---|---|---|
+  | log slope | 5.45 | 5.73 | **5.77** (stable, 2.6% → genuine log) |
+  | best-sat. λ | 12 | 16 | **20** (∝ box → no intrinsic length) |
+  The vortex-line interaction is a **long-range 2D-Coulomb log per unit length**;
+  the conserved topological charge sources a long-range force in 3D as it did in 2D,
+  with energy-gravity (screened, λ≈3) the short-range contrast. **Open (Routes B/C):**
+  a genuine 3D *point*-charge 1/r needs an S² hedgehog field (π₂(S²)=ℤ; but the global
+  hedgehog's energy diverges linearly and its interaction is not clean 1/r) or a gauged
+  monopole in the Coulomb phase (massless photon → true 1/r; larger build).
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
