@@ -133,6 +133,7 @@ Requires Python 3.11+.
 | `screening_topocharge.py` | Screen-2: a conserved topological charge sources a long-range (2D-Coulomb log) force — the model hosts EM-like *and* nuclear-like forces |
 | `screening_topocharge_3d.py` | The 3D topological defect (Route A): long-range survives into 3D as a vortex-line interaction (log per unit length); vortex ring is a closed 3D line (E = tension × circumference) |
 | `route_b_hedgehog.py` | Route B: the S² hedgehog — a genuine 3D **point** topological charge (integer); bare self-energy diverges linearly (global monopole); the pair interaction is short-ranged, not 1/r |
+| `route_c_monopole.py` | Route C: the gauged monopole (compact U(1), Coulomb phase) — **EM-in-3D**: finite deconfined self-energy and a genuine 1/r² Coulomb field between quantized topological point charges |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 

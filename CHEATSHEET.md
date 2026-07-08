@@ -726,7 +726,29 @@ the map from an enclosing surface to S², computed as the flux of the topologica
 - **Verdict / Route C:** Route B delivers a genuine 3D *point* charge, but the *global* charge
   gives no long-range force (short-range pair, linearly-divergent bare self-energy). The clean
   1/r EM-in-3D requires **Route C** — a *gauged* monopole in the Coulomb phase, whose massless
-  photon both makes the isolated charge finite-energy and gives a true 1/r.
+  photon both makes the isolated charge finite-energy and gives a true 1/r (below).
+
+### Route C — the gauged monopole: EM-in-3D, a genuine 1/r² point charge (`route_c_monopole.py`)
+The capstone. Gauge the charge: a **compact U(1)** gauge field on the 3D lattice links in its
+**Coulomb (deconfined) phase** — no Higgs, so the photon stays massless. The topological charge
+is a magnetic **monopole** (quantized flux out of a cube, DeGrand–Toussaint count), and minimizing
+the Maxwell energy `E = (1/e²)Σ(1−cos B)` at fixed monopole content is exactly Screen-1's massless
+Gauss law → a genuine 1/r Coulomb.
+- **C-0 (gates):** gauge invariance to machine zero (`dE=0`, monopole count invariant); the Wu–Yang
+  seeded monopole is a **single cube of charge +1** (antimonopole −1, vacuum 0) — a clean quantized
+  topological charge; the Maxwell force matches finite differences to `1.2e-7`.
+- **C-1 (deconfined — finite self-energy):** the relaxed single-monopole energy is **box-independent**
+  (`9.16 → 9.28` over box 16→34, charge stays +1). Unlike Route B's global hedgehog (`E ∝ L`,
+  divergent), the gauged charge has a **finite** self-energy — the massless photon deconfines it.
+- **C-2 (the 1/r² Coulomb):** the relaxed monopole's radial field is **`|B| ~ 1/r^{2.03}`** in the
+  clean interior (`3 < r < 10.5`; |B| flattens past r≈13 = finite-box floor) — textbook Coulomb,
+  the direct field-law test (boundary-robust, unlike the pair-energy fit which the finite box
+  confounds). The monopole–antimonopole pair energy rises and saturates (an attractive Coulomb well).
+- **Result — EM-in-3D.** A genuine **1/r² force between quantized topological point charges**,
+  deconfined. Route C is the counterpart of Route B (global hedgehog → divergent, short-range) and
+  the **3D closure of the 2D gauged story**: there the *broken* phase gave Meissner **screening**;
+  here the *Coulomb* phase gives an unscreened **1/r**. The full arc now spans, from one medium, the
+  whole menu of forces and both gauge phases.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
