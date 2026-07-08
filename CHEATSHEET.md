@@ -693,10 +693,30 @@ energy so cubic wave-anisotropy is irrelevant).
   (small tight rings pay extra curvature energy per length), approaching the straight-line
   tension (L-0: 13.3). Same defect, same stiffness scale — a genuine closed 3D topological
   object.
-- **Open (Routes B/C):** a genuine 3D *point*-charge 1/r needs an S² hedgehog field
-  (π₂(S²)=ℤ; but the global hedgehog's energy diverges linearly and its interaction is not
-  clean 1/r) or a gauged monopole in the Coulomb phase (massless photon → true 1/r; larger
-  build).
+- **Next (Routes B/C):** a genuine 3D *point*-charge needs an S² hedgehog field
+  (π₂(S²)=ℤ; Route B, below) or a gauged monopole in the Coulomb phase (Route C;
+  massless photon → true 1/r; larger build).
+
+### Route B — the S² hedgehog: a genuine 3D point charge (global monopole) (`route_b_hedgehog.py`)
+A single complex field can't give a 3D point charge (its defects are lines), so Route
+B upgrades the field to a **3-component unit vector** n̂ ∈ S² (the O(3)/Heisenberg
+model), where **π₂(S²)=ℤ** classifies point defects. The **hedgehog** n̂ = r̂ is the
+charge-+1 point defect — the "particle" the project has been after. Charge = degree of
+the map from an enclosing surface to S², computed as the flux of the topological current
+`jⁱ = (1/4π) n̂·(∂ⱼn̂ × ∂ₖn̂)` (no per-plaquette orientation bookkeeping).
+- **H-0 (gate — a clean integer point charge):** hedgehog **Q = +1.04**, antihedgehog
+  **−1.04**, vacuum **0** — integer and localized (the 0.04 is central-difference
+  discretization; it tightens to +1.03 as the lattice grows). The model hosts a genuine
+  3D *point* topological charge.
+- **H-1 (the global monopole — linear self-energy):** a single hedgehog's energy diverges
+  **linearly** with box size (`E/L ≈ 7.1 → 7.5`, `dE/dL ≈ 7.7`), the 3D point-charge analog
+  of the 2D-vortex log and the 3D-line tension. A *bare* topological charge has no finite
+  energy; only neutral combinations do — which is exactly why a clean 1/r point charge
+  needs a screening/gauge field.
+- **Open — H-2 (the interaction) + Route C:** hedgehog–antihedgehog `E(d)` is expected to
+  be **not** a clean 1/r (the global charge doesn't screen; likely confining/linear — a
+  strong-force-like flavour). The genuine 1/r EM-in-3D is Route C: a gauged monopole in the
+  Coulomb phase, whose massless photon deconfines the charge.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
