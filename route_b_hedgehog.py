@@ -107,7 +107,95 @@ def h1_self_energy():
     print("     A clean 1/r point charge needs a screening/gauge field -> Route C.\n")
 
 
+def _unit(v):
+    return v / (np.linalg.norm(v, axis=-1, keepdims=True) + 1e-12)
+
+
+def seed_pair(L, a, b, pin_r=2.6):
+    """Hedgehog (+1) at a, antihedgehog (-1) at b, on a uniform z-hat far field.
+    Returns (n, pinned): cores pinned to +/- r-hat, box boundary pinned to z-hat."""
+    X, Y, Z = grid(L)
+    def disp(c):
+        d = np.stack([X - (c[0] + 0.5), Y - (c[1] + 0.5), Z - (c[2] + 0.5)], -1)
+        r = np.linalg.norm(d, axis=-1, keepdims=True) + 1e-9
+        return d, r
+    da, ra = disp(a); db, rb = disp(b)
+    V = da / ra ** 3 - db / rb ** 3                 # dipole field: +r-hat at a, -r-hat at b
+    n = _unit(V)
+    zc = np.zeros_like(n); zc[..., 2] = 1.0
+    pin = np.zeros(n.shape[:3], bool)
+    # boundary faces -> z-hat
+    pin[0] = pin[-1] = pin[:, 0] = pin[:, -1] = pin[:, :, 0] = pin[:, :, -1] = True
+    n = np.where(pin[..., None], zc, n)
+    # cores -> pure +/- r-hat
+    na = _unit(da); nb = -_unit(db)
+    ca = (ra[..., 0] < pin_r); cb = (rb[..., 0] < pin_r)
+    n = np.where(ca[..., None], na, n); n = np.where(cb[..., None], nb, n)
+    pin |= ca | cb
+    return _unit(n), pin
+
+
+def relax(n, pin, iters):
+    """O(3) energy relaxation: align each free spin with its 6 neighbours
+    (n_i -> normalize(sum_j n_j)). Monotonically lowers exchange energy."""
+    free = ~pin[..., None]
+    for _ in range(iters):
+        h = (np.roll(n, 1, 0) + np.roll(n, -1, 0) + np.roll(n, 1, 1) + np.roll(n, -1, 1)
+             + np.roll(n, 1, 2) + np.roll(n, -1, 2))
+        n = np.where(free, _unit(h), n)
+    return n
+
+
+# ================================================================ H-2 ==========
+def _pair_energy(L, d, iters):
+    a = (L/2 - d/2, L/2, L/2); b = (L/2 + d/2, L/2, L/2)
+    n, pin = seed_pair(L, a, b)
+    return energy(relax(n, pin, iters)), topo_charge(n)
+
+
+def h2_interaction():
+    print("H-2  hedgehog-antihedgehog interaction E(d): a neutral pair CAN heal to vacuum")
+    print("     (O(3) hedgehogs are not confined), so is the interaction Coulomb, screened,")
+    print("     or confining? Cores pinned; box boundary pinned to z-hat; O(3) relaxation.")
+    L = 48; iters = 9000
+    # convergence check on one separation
+    a, b = (L/2 - 6, L/2, L/2), (L/2 + 6, L/2, L/2)
+    n, pin = seed_pair(L, a, b); q0 = topo_charge(n)
+    checks = []
+    for k in (2000, 2000, 5000):
+        n = relax(n, pin, k); checks.append(energy(n))
+    print(f"  converge (net Q={q0:+.2f}): E @2k/4k/9k = "
+          f"{checks[0]:.1f} / {checks[1]:.1f} / {checks[2]:.1f} "
+          f"(last dE={100*(checks[2]-checks[1])/checks[1]:+.2f}%)\n")
+
+    ds = np.array([6, 8, 10, 12, 14, 16, 18], float)   # d=4 dropped (pinned cores overlap)
+    E = np.array([_pair_energy(L, d, iters)[0] for d in ds])
+    print("   d   :", " ".join(f"{x:6.0f}" for x in ds))
+    print("   E(d):", " ".join(f"{x:6.1f}" for x in E))
+    lin = np.polyfit(ds, E, 1); ss_lin = np.sum((E - np.polyval(lin, ds)) ** 2)
+    best = (np.inf, np.nan)
+    for lam in np.arange(2.0, 30.1, 1.0):
+        M = np.stack([np.ones_like(ds), -np.exp(-ds / lam)], 1)
+        c, *_ = np.linalg.lstsq(M, E, rcond=None); ss = float(np.sum((E - M @ c) ** 2))
+        if ss < best[0]:
+            best = (ss, lam)
+    print(f"\n  linear (confining) fit: slope {lin[0]:+.2f}/step  SS={ss_lin:.2f}")
+    print(f"  saturating fit: plateau, lambda~{best[1]:.0f}  SS={best[0]:.2f}")
+
+    # is the large-d pair energy FINITE (box-independent) or does it grow with the box?
+    print("\n  box-scaling the plateau at d=12 (finite/localized => box-independent):")
+    for Lb in (40, 56, 72):
+        e, _ = _pair_energy(Lb, 12, iters)
+        print(f"   box {Lb:>3}: E = {e:.1f}")
+    print("\n  => a neutral hedgehog pair has FINITE energy and its interaction SATURATES")
+    print("     with separation -- short-ranged (texture-overlap attraction), NOT confining")
+    print("     and NOT a clean 1/r Coulomb. Consistent with global O(3) hedgehogs, which")
+    print("     attract weakly and annihilate. The genuine long-range 1/r point charge")
+    print("     needs a gauge field (deconfined Coulomb phase) -> Route C.\n")
+
+
 if __name__ == "__main__":
-    print("=== Route B: the S^2 hedgehog point charge :: H-0 gate + H-1 ===\n")
+    print("=== Route B: the S^2 hedgehog point charge :: H-0 gate + H-1 + H-2 ===\n")
     h0_gate()
     h1_self_energy()
+    h2_interaction()

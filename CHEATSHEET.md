@@ -713,10 +713,20 @@ the map from an enclosing surface to S², computed as the flux of the topologica
   of the 2D-vortex log and the 3D-line tension. A *bare* topological charge has no finite
   energy; only neutral combinations do — which is exactly why a clean 1/r point charge
   needs a screening/gauge field.
-- **Open — H-2 (the interaction) + Route C:** hedgehog–antihedgehog `E(d)` is expected to
-  be **not** a clean 1/r (the global charge doesn't screen; likely confining/linear — a
-  strong-force-like flavour). The genuine 1/r EM-in-3D is Route C: a gauged monopole in the
-  Coulomb phase, whose massless photon deconfines the charge.
+- **H-2 (the interaction — short-ranged, not 1/r):** an opposite pair attracts and would
+  annihilate, so both cores are pinned and the box boundary pinned to a uniform ẑ (a single
+  hedgehog *can't* sit in a uniform vacuum — degree mismatch — but the net-0 pair can), then
+  the texture is relaxed by O(3) neighbour-alignment. Result (converged to ΔE≈0): `E(d)` rises
+  only ~207.6→210.1 over d=6…18 and **saturates** (a saturating fit, λ≈7, beats linear 5:1),
+  and the plateau is **box-independent** (209.5/209.4/209.3 at box 40/56/72). So a neutral
+  hedgehog pair has **finite, localized energy** and its interaction is a **weak, short-ranged
+  texture-overlap attraction — NOT confining and NOT a clean 1/r**. (An earlier guess of
+  linear *confinement* was wrong: unlike a gauge monopole, global O(3) hedgehogs are not
+  confined — they attract weakly and annihilate.)
+- **Verdict / Route C:** Route B delivers a genuine 3D *point* charge, but the *global* charge
+  gives no long-range force (short-range pair, linearly-divergent bare self-energy). The clean
+  1/r EM-in-3D requires **Route C** — a *gauged* monopole in the Coulomb phase, whose massless
+  photon both makes the isolated charge finite-energy and gives a true 1/r.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
