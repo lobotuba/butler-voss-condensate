@@ -659,6 +659,24 @@ massless→massive knob, but the mass is now **dynamical** (from the gauge coupl
   case the range is set by *what protects the mediator from a mass term*, exactly as
   Screen-1 diagnosed.
 
+### Mobile-vortex check of the screened force law (`screening_gauged_mobile.py`)
+G-2 measured the gauged-vortex interaction on a *frozen* scalar ansatz (only the gauge
+field relaxed). Here the vortices actually **move** and the force law is read from their
+motion — overdamped (dissipative) scalar dynamics with an *adiabatic* gauge field (relaxed
+to equilibrium each step), which sidesteps the dispersion that sinks weak-force dynamic
+probes. A +1/−1 pair closes in; overdamped, the closing speed `v(d) ∝ F(d)` (extracted via
+a dwell-time proxy — steps to close each unit of separation — robust to plaquette-quantized
+vortex positions).
+- **M-0 gates:** scalar *and* gauge forces vs finite-difference `<1e-7` (the scalar gate needs
+  the Wirtinger factor 2: a real/imag FD gives `2·Re/Im(force)`); energy monotone-decreasing;
+  winding (±1) conserved as the vortices move.
+- **M-1:** `v(d) ~ exp(−d/λ_L)` — a **screened** force. From motion **e·λ_L ≈ 0.42** (e=0.15→λ 2.82,
+  0.20→2.13), i.e. **λ_L ~ 1/e** — the Meissner scaling, confirmed *directly from vortex motion*.
+  It runs ~30% shorter than the static frozen-scalar G-2 value (0.6/e), as expected (the mobile
+  measurement lets the scalar fully relax; the static one is a variational upper bound). So the
+  motion independently confirms the **screened** (Meissner) force with an **intrinsic** length —
+  not the long-range log of the ungauged U(1).
+
 ### The 3D topological defect: long-range survives into 3D as a vortex line (`screening_topocharge_3d.py`)
 Screen-2 used a 2D point vortex — the U(1) defect in 2D. In 3D a single complex
 field's defect is a **line** (π₂(S¹)=0, so no point charge from one field; a 3D
