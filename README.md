@@ -131,7 +131,7 @@ Requires Python 3.11+.
 | `screening_diagnosis.py` | Screen-0: coupling strength β is not a lever — screening is intrinsic |
 | `screening_gauss.py` | Screen-1: existence proof — the medium carries unscreened 1/r iff the mediating field is massless (screening = a mass term) |
 | `screening_topocharge.py` | Screen-2: a conserved topological charge sources a long-range (2D-Coulomb log) force — the model hosts EM-like *and* nuclear-like forces |
-| `screening_topocharge_3d.py` | The 3D topological defect (Route A): long-range survives into 3D as a vortex-line interaction (box-independent log per unit length) |
+| `screening_topocharge_3d.py` | The 3D topological defect (Route A): long-range survives into 3D as a vortex-line interaction (log per unit length); vortex ring is a closed 3D line (E = tension × circumference) |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 

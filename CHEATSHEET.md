@@ -683,10 +683,20 @@ energy so cubic wave-anisotropy is irrelevant).
   | best-sat. λ | 12 | 16 | **20** (∝ box → no intrinsic length) |
   The vortex-line interaction is a **long-range 2D-Coulomb log per unit length**;
   the conserved topological charge sources a long-range force in 3D as it did in 2D,
-  with energy-gravity (screened, λ≈3) the short-range contrast. **Open (Routes B/C):**
-  a genuine 3D *point*-charge 1/r needs an S² hedgehog field (π₂(S²)=ℤ; but the global
-  hedgehog's energy diverges linearly and its interaction is not clean 1/r) or a gauged
-  monopole in the Coulomb phase (massless photon → true 1/r; larger build).
+  with energy-gravity (screened, λ≈3) the short-range contrast.
+- **L-2 (a vortex ring — the intrinsically-3D defect):** a closed vortex loop (axis
+  along z, poloidal-phase ansatz). Gate: the loop pierces a meridian plane at exactly
+  **two opposite cores** (+1, −1), the signature of a closed line. `E(R)` for R = 5…17
+  rises monotonically and **~linearly in R** (marginal tension `dE/dR / 2π ≈ 10.9`), i.e.
+  **energy = tension × circumference** — so the ring carries a line tension and shrinks
+  under it. The average tension `E/2πR` falls from 16.6 (R=5) toward ~11–13 as R grows
+  (small tight rings pay extra curvature energy per length), approaching the straight-line
+  tension (L-0: 13.3). Same defect, same stiffness scale — a genuine closed 3D topological
+  object.
+- **Open (Routes B/C):** a genuine 3D *point*-charge 1/r needs an S² hedgehog field
+  (π₂(S²)=ℤ; but the global hedgehog's energy diverges linearly and its interaction is not
+  clean 1/r) or a gauged monopole in the Coulomb phase (massless photon → true 1/r; larger
+  build).
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
