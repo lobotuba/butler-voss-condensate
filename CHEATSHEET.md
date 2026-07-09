@@ -853,6 +853,21 @@ fermion as a 2-band **Wilson–Dirac (Chern) insulator**, `H(k)=sin k_x σ_x + s
   model would use for Standard-Model chirality. (So the fermion barrier now reads: Dirac cone ✓, single chiral
   fermion ✓ via a wall; still open — locking `v_F` to the boson `c`, and full SM chiral matter content.)
 
+### First quantization: the unified sector is a relativistic QFT (`test_quantization.py`)
+The unified linear theory is coupled harmonic oscillators = a free field; canonical quantization gives
+`H = Σ_k ħω_k(a_k†a_k + ½)`, bosonic quanta of energy `ħω_k`. Two checks that it's genuinely *relativistic*:
+- **A. Mass-shell.** The single-quantum energies are `ω→c|k|` (massless, linear/isotropic) and
+  `ω→√(c²k²+m²)` (massive) — the quanta are relativistic particles; zero-point energy per site ≈ 1.19.
+- **B. Vacuum correlator** `⟨0|φ(x)φ(0)|0⟩ = (1/N)Σ_k (1/2ω_k)e^{ik·x}`: **massless → power law `~1/r^{2.3}`**
+  (relativistic `1/r²` in 3D, the excess being lattice/finite-size → 2 in the continuum); **massive →
+  Yukawa `e^{−mr}/r`**, short-range. The quantum vacuum reproduces the relativistic-QFT correlator — and
+  the **same massless/massive, long-/short-range dichotomy** that ran through the whole forces program, now
+  at the level of the vacuum.
+- **C. Honest scope.** Canonical quantization *imposes* `[φ,π]=iħ`. It shows the model quantizes to a proper
+  relativistic QFT (a real check), but does **not** derive QM from the sub-quantum medium (emergent/stochastic
+  QM) — the deepest open problem, untouched. So the QM barrier is *half* addressed: the quantized theory is
+  correct; whether QM itself emerges is unanswered.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
