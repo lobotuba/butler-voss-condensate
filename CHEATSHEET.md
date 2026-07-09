@@ -974,7 +974,29 @@ mostly-temporal `Ω` at fixed `s`?
   rather than bolted on beside them. (Sakharov induced dynamics; the same mechanism Volovik uses for the emergent
   photon and graviton.)
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`)
+### The capstone: one structure → fermions + photon + graviton on one cone (`test_emergent_tetrad.py`)
+Volovik's mechanism, realized in the model's own medium. Near a Dirac node the fermion Hamiltonian is
+`H = e^a_i σ_a (k_i − A_i)`, where **`A` = the node position is an emergent U(1) gauge field (photon, spin-1)**
+and **`e` = the cone shape (tetrad) is an emergent metric (graviton, spin-2)**. Both are *features of the fermion
+dispersion*, so neither has a light cone of its own — they ride the fermion cone **by construction**. Perturbing
+the medium's own three nn bonds, `t_j → t(1+u_j)`, and reading the fermion bands (`A` = node shift;
+`G_ij = Re(M_i M_j*)`, `M=∇f`; trace → `v_F²`, traceless `h` → graviton):
+| bond fluctuation | \|A\| (photon) | v_F² | \|h\| (graviton) |
+|---|---|---|---|
+| unperturbed | 0 | **2.2500** = (3/2)² | 0 |
+| uniform `(u,u,u)` | **0** | 2.4806 = (1.05)²·2.25 | **0** |
+| doublet `(2u,−u,−u)` | 0.0629 | 2.2541 | 0.2741 |
+| doublet `(0,u,−u)` | 0.0347 | 2.2513 | 0.1559 |
+- The **singlet** (uniform stretch) is a pure **conformal** rescaling of the cone: no photon, no graviton.
+- The **doublet** (E-representation) bond fluctuations source **both** the emergent gauge field *and* the
+  traceless emergent metric — one microscopic degree of freedom (the bonds) yields both. Both are linear
+  responses: `|A|/u → 2.0`, `|h|/u → 9.0` as `u→0`.
+- **Meaning — the construction the whole program pointed to.** The photon and the graviton are not *added* to the
+  medium; they **are** the medium's own bond fluctuations, seen by its fermions. Because both are read off the
+  fermion dispersion, both are automatically Lorentz-invariant on the **single fermion cone** — exactly what
+  `test_cone_lock` and `test_induced_action` require. One structure ⇒ fermions, EM, and gravity, one cone, no tuning.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_emergent_tetrad.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac

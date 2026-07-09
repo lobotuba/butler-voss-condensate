@@ -146,6 +146,7 @@ Requires Python 3.11+.
 | `test_cone_universality.py` | Honest correction: the fermion cone `v_F` is **not** locked to the boson cone `c_B` (`v_F/c_B = √3·t/√(K/m)`, a tuning not a symmetry) — emergent Lorentz is a within-sector result |
 | `test_cone_lock.py` | The cure: a *composite* boson (particle–hole / induced gauge field) rides the fermion light cone — `ω_min(q) → v_F\|q\|` — so cross-statistics Lorentz universality is automatic when all excitations descend from one structure |
 | `test_induced_action.py` | Sakharov's lock: integrating out the fermions induces a Lorentz-invariant boson action — the polarization depends on `(q,Ω)` only through `Ω²+v_F²q²` (0.10% spread) — the emergent gauge field inherits the fermion cone |
+| `test_emergent_tetrad.py` | **Capstone:** the medium's own bond fluctuations *are* the emergent photon (Dirac-node shift, spin-1) and graviton (cone deformation / tetrad, spin-2) — both read off the fermion dispersion, so both ride one cone |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
