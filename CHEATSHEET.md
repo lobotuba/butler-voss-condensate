@@ -920,16 +920,33 @@ in the defect sector. This shows what that tensor field *is* — a real graviton
   medium's 3D defects (and clear Weinberg–Witten — whose loophole the model's cutoff-scale Lorentz violation,
   ~(E/E_Planck)², already opens).
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`)
-From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
-operator + boosts; violations ~(E/E_Planck)²). **✅ Fermions** (Dirac cone on a bipartite medium; a single
-chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
+### Cone universality across STATISTICS — an honest correction (`test_cone_universality.py`)
+`test_lorentz_unified` locked the medium and the *bosonic* field to one cone; `test_dirac` then introduced
+fermions with their own Fermi velocity — a **third cone**, never locked. Both live on the same honeycomb
+structure factor `f(k)`: the fermion cone is the slope of `E=±t|f|` at the Dirac point (`v_F = (3/2)ta`), the
+boson cone the curvature of `ω²=(K/m)(3−|f|)` at Γ (`c_B = (√3/2)√(K/m)·a`). Hence
+- **`v_F / c_B = √3 · t / √(K/m)`** — verified exactly (1.7321 at `t=K=m=1`; 0.8660 at `t=½`; 3.0000 at `m=3`).
+- The ratio is an **arbitrary, tunable** number set by *independent* couplings. `v_F = c_B` requires the
+  fine-tuning `K/m = 3t²` — **a tuning, not a symmetry.** Generically **two cones ⇒ Lorentz violation *between
+  statistics***. (Real graphene is the cautionary case: `v_F ~ c/300`, its phonons ~100× slower still; only the
+  fermion sector is even approximately relativistic.)
+- **Correction to the record:** the emergent-Lorentz result is a **within-sector** statement (one round universal
+  cone for medium + bosonic field). A genuinely Lorentz-invariant world needs **all excitations to descend from
+  one structure** (bosons as collective modes of the fermions, as near a Fermi point), or a symmetry relating
+  them — **supersymmetry** is precisely the boson–fermion symmetry that would lock the two cones together.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`)
+From "can it host X" to "can it be fundamental." **🟢 Emergent Lorentz — within a sector** (isotropy + speed
+universality via one operator + boosts; violations ~(E/E_Planck)². *But* the fermion cone `v_F` is **not** locked
+to the boson cone `c_B` — cross-sector universality needs one common structure, or SUSY). **✅ Fermions** (Dirac
+cone on a bipartite medium; a single chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
 relativistic QFT; deriving QM from the sub-quantum medium is untouched). **🟡 Long-range gravity** (energy-coupled
 gravity-by-density screens — the sharpest contradiction — *but* Route 1 / the elasticity–fracton duality exposes a
 **long-range curvature (disclination) sector**, dual to a rank-2 tensor gauge theory: couple to curvature, not
 energy; the 3D dynamical spin-2 upgrade remains open). **⬜** Standard-Model gauge group & constants, continuum
 limit, cosmology, Weinberg–Witten. Five "likely-fatal" barriers now have concrete in-model demonstrations, each
-with an honest statement of what is shown vs still open — including a concrete route past the gravity screening.
+with an honest statement of what is shown vs still open — including a concrete route past the gravity screening,
+and one self-correction (the Lorentz result is within-sector, not across statistics).
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
