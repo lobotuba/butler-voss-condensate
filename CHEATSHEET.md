@@ -768,6 +768,24 @@ Gauss law → a genuine 1/r Coulomb.
   here the *Coulomb* phase gives an unscreened **1/r**. The full arc now spans, from one medium, the
   whole menu of forces and both gauge phases.
 
+### Toward fundamental physics: a test for emergent Lorentz invariance (`test_lorentz.py`)
+A medium has a preferred frame, so the model is viable as fundamental physics only if Lorentz
+symmetry **emerges** at long wavelength — a single, round, universal light cone. Tested from the
+exact lattice dispersion `ω(k)` (Fourier symbol; no time evolution).
+- **A. Isotropy (field sector) — EMERGES.** On the self-assembled isotropic lattices the field wave
+  speed `c(direction,|k|)` becomes direction-independent as `k→0`; the anisotropy (the Lorentz
+  violation) is suppressed at low energy: **hex 2D ~ (k/k_max)⁴**, **fcc 3D ~ (k/k_max)²** (hexagonal
+  is isotropic to rank 4, cubic only to rank 2). With `k_max = π/R₀` the model's Planck wavenumber,
+  the LV is `~(E/E_Planck)^{2–4}` — the standard emergent-Lorentz story. Rotational Lorentz invariance
+  is real here. (Anisotropy at k/k_max = 0.05: hex 1e-7, fcc 2e-4; growing to ~1–5% at the BZ edge.)
+- **B. Universality (field vs medium) — FAILS generically (the crux).** The field wave speed is a
+  free parameter, while the medium's own phonons travel at the LJ sound speeds (`c_L ≈ 7.6`, `c_T ≈ 5.9`
+  in LJ units). Nothing forces `c_field = c_sound`: **two sectors, two light cones ⇒ Lorentz violation
+  *between* sectors** unless tuned by hand. This is the central obstacle for any "field on a medium"
+  theory. A single universal cone requires all excitations to emerge from **one** structure (as near a
+  single Fermi point in Volovik's ³He), not a field bolted onto an independent elastic medium — the
+  clearest signpost for where the model must change to be fundamental.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
