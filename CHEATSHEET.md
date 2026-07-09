@@ -786,6 +786,25 @@ exact lattice dispersion `ω(k)` (Fourier symbol; no time evolution).
   single Fermi point in Volovik's ³He), not a field bolted onto an independent elastic medium — the
   clearest signpost for where the model must change to be fundamental.
 
+### The unified prototype: one operator → one universal light cone (`test_lorentz_unified.py`)
+Acting on the universality signpost. The fix is structural: keep central (LJ) forces to *set* the
+isotropic geometry (self-assembly, H10), but govern all low-energy **dynamics** — medium displacement
+*and* the matter field — by a single **vector-Hooke graph Laplacian** `E = ½K Σ|U_i−U_j|²`, `U∈R^{D+1}`
+(D medium + 1 field). Its dynamical matrix is diagonal and isotropic, `D_ab(k)=δ_ab·K·S(k)`, so every
+polarisation shares one dispersion.
+- **Central-force (LJ) medium — many cones:** `c_L/c_T` = 1.28, 2.31, 1.99 along [100]/[110]/[111]
+  (split *and* direction-dependent), and the matter field's speed is an independent free parameter on top.
+- **Unified (vector-Hooke) — one cone:** `c_L = c_T = c_field = 1.587` **exactly** in every direction
+  (`c_L/c_T = 1.000000`). The matter field is the (D+1)-th component of the *same* operator, so
+  `c_field = c_L` by construction — a single universal light cone, no tuning; and it is **round** (same
+  emergent `(E/E_Planck)^{2–4}` isotropy as the field symbol). This recovers **speed universality**:
+  matter and medium are one structure, not a field on an elastic solid.
+- **Honest cost:** the bonds must carry shear stiffness (vector-Hooke), which bare central forces cannot
+  (`c_L>c_T` always for a stable central-force solid); central forces still supply the isotropic geometry.
+  So the model *can* have a single universal cone — provided the medium's dynamical operator is the field's,
+  not a separate elastic law. (Still open toward fundamental physics: boosts beyond the cone, quantization,
+  fermions/chirality, and long-range spin-2 gravity.)
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive

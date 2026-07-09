@@ -135,6 +135,7 @@ Requires Python 3.11+.
 | `route_b_hedgehog.py` | Route B: the S² hedgehog — a genuine 3D **point** topological charge (integer); bare self-energy diverges linearly (global monopole); the pair interaction is short-ranged, not 1/r |
 | `route_c_monopole.py` | Route C: the gauged monopole (compact U(1), Coulomb phase) — **EM-in-3D**: finite deconfined self-energy and a genuine 1/r² Coulomb field between quantized topological point charges |
 | `test_lorentz.py` | Test for emergent Lorentz invariance: field-sector isotropy emerges (LV ~ (E/E_Planck)²⁻⁴), but field and medium have different light cones (speed non-universality — the central obstacle) |
+| `test_lorentz_unified.py` | Unified prototype: governing medium + field by one vector-Hooke operator gives a single universal light cone (c_L = c_T = c_field exactly), recovering speed universality |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
