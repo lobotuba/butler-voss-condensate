@@ -802,8 +802,23 @@ polarisation shares one dispersion.
 - **Honest cost:** the bonds must carry shear stiffness (vector-Hooke), which bare central forces cannot
   (`c_L>c_T` always for a stable central-force solid); central forces still supply the isotropic geometry.
   So the model *can* have a single universal cone — provided the medium's dynamical operator is the field's,
-  not a separate elastic law. (Still open toward fundamental physics: boosts beyond the cone, quantization,
-  fermions/chirality, and long-range spin-2 gravity.)
+  not a separate elastic law.
+
+### Emergent boost invariance — the full Lorentz group (`test_lorentz_boost.py`)
+The rotational facets done (isotropy + one universal cone), the remaining Lorentz piece is **boosts**.
+Boosts act on `(ω,k)` as a 4-vector; a dispersion is boost-invariant iff its surface maps to itself under
+`ω'=γ(ω−βc k_x), k_x'=γ(k_x−βω/c)`. Applying a boost (emergent `c`, normalised to 1) to the unified
+single-cone dispersion and measuring how far the boosted point falls **off-shell**:
+- **Massless cone** `ω=c|k|`: off-shell residual scales as **`(k/k_max)²`** (6×10⁻⁴ at k/k_max=0.05 for β=0.3;
+  1×10⁻³ for β=0.6) — boost-invariant at low energy, violation `~(E/E_Planck)²`.
+- **Massive mass-shell** `ω²=c²k²+m²`: `ω²−|k|²` holds at **0.0900 = m²** to three figures at low k (drifting
+  only near the zone edge) — `ω²−c²k²` is a genuine Lorentz invariant; mass and momentum combine relativistically.
+- **Causality:** max group (front) velocity = **1.0000 = c** — no superluminal signal.
+- **Verdict:** boosts join isotropy and universality — **the full Lorentz group emerges at long wavelength**,
+  with all violations suppressed as `(E/E_Planck)²` (the lattice spacing = the Planck scale). The three tests
+  (`test_lorentz` isotropy, `test_lorentz_unified` universality, `test_lorentz_boost` boosts) together clear the
+  *first-order* obstacle to the model being fundamental. (Still open: quantization/QM, fermions + chirality, and
+  long-range spin-2 gravity.)
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
