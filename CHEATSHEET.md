@@ -935,10 +935,26 @@ boson cone the curvature of `ω²=(K/m)(3−|f|)` at Γ (`c_B = (√3/2)√(K/m)
   one structure** (bosons as collective modes of the fermions, as near a Fermi point), or a symmetry relating
   them — **supersymmetry** is precisely the boson–fermion symmetry that would lock the two cones together.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`)
-From "can it host X" to "can it be fundamental." **🟢 Emergent Lorentz — within a sector** (isotropy + speed
-universality via one operator + boosts; violations ~(E/E_Planck)². *But* the fermion cone `v_F` is **not** locked
-to the boson cone `c_B` — cross-sector universality needs one common structure, or SUSY). **✅ Fermions** (Dirac
+### Locking the cones: a composite boson rides the fermion cone (`test_cone_lock.py`)
+The cure for the gap above, and the project's recurring lesson at its deepest level. Don't *put in* a boson —
+let it be a **collective mode of the fermions** (a fermion bilinear, or a gauge field induced by integrating the
+fermions out, à la Sakharov). Then it has no cone of its own. The decisive statement: every composite
+(particle–hole) boson of momentum `q` costs at least the **lower edge of the interband continuum**,
+`ω_min(q) = min_k [E₊(k+q) − E₋(k)] = min_k v_F(|k+q|+|k|) = v_F|q|`.
+- Measured on the real honeycomb bands: `ω_min/(v_F|q|)` = **0.995** at `|q|=0.02`, → 1 as `q→0`, and **isotropic**
+  (`[1,0]` vs `[0.6,0.8]` agree to ~0.5%). The residual at larger `q` is band curvature beyond the linear Dirac cone.
+- So a massless collective mode **rides the fermion light cone**: its speed *is* `v_F`, **inherited, not chosen** —
+  no free parameter, no fine-tuning. Contrast an independent spring-boson, whose `c_B` gives the tunable ratio
+  `v_F/c_B = √3 t/√(K/m)`.
+- **Resolution:** cross-statistics Lorentz universality is *automatic* once **all excitations descend from one
+  structure**. In Volovik's picture the emergent gauge field *and* the graviton are tetrad fluctuations of the
+  fermion cone, so they ride it too. The independent lattice boson — a field bolted on — was the culprit, exactly as
+  the medium-vs-field cone mismatch was in `test_lorentz_unified`.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`)
+From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
+operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
+boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
 cone on a bipartite medium; a single chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
 relativistic QFT; deriving QM from the sub-quantum medium is untouched). **🟡 Long-range gravity** (energy-coupled
 gravity-by-density screens — the sharpest contradiction — *but* Route 1 / the elasticity–fracton duality exposes a
