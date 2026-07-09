@@ -820,6 +820,24 @@ single-cone dispersion and measuring how far the boosted point falls **off-shell
   *first-order* obstacle to the model being fundamental. (Still open: quantization/QM, fermions + chirality, and
   long-range spin-2 gravity.)
 
+### Emergent relativistic fermions — the Dirac cone and its wall (`test_dirac.py`)
+Matter is fermions (spin-½, chiral); the model is bosonic. Relativistic fermions can **emerge** near a
+band-touching point (Volovik/Wen), where the tight-binding dispersion becomes a linear isotropic Dirac
+cone. Bloch Hamiltonian on the honeycomb (nn hopping): `H(k)=[[0,f],[f*,0]]`, `f=−t Σ_j e^{ik·δ_j}`, bands `E=±|f|`.
+- **A. The cone exists.** On the **honeycomb** (bipartite) the bands touch (gapless, `|f|~4e-16`) with a
+  **linear, isotropic** cone: `v_F = 3/2` (t=a=1), anisotropy 5e-4 — emergent 2D massless Dirac fermions,
+  the fermions' own "speed of light".
+- **B. Nielsen–Ninomiya doubling.** The two Dirac points K, K′ carry **opposite chirality** (winding of
+  `arg f` = −1 and +1, summing to 0) — fermions appear only as canceling pairs; a **single chiral**
+  (Standard-Model) fermion is forbidden. (The chirality *is* a topological winding — the project's charge
+  concept again; total charge in the BZ must vanish.)
+- **C. The plain medium can't.** The self-assembled close-packing (triangular, one site/cell) has a single
+  band with a normal `|k|²` minimum — **no Dirac cone**. Relativistic fermions need a **bipartite** structure.
+- **Verdict:** the model **can** host emergent relativistic Dirac fermions — but only on a two-sublattice
+  medium and only as opposite-chirality pairs. Two open consequences: a single chiral fermion needs an extra
+  mechanism (domain wall / dimensional reduction / interactions), and `v_F` is a **new light cone** to unify
+  with the boson `c` — the universality demand again, now across statistics.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
