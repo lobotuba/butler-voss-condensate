@@ -951,7 +951,30 @@ fermions out, à la Sakharov). Then it has no cone of its own. The decisive stat
   fermion cone, so they ride it too. The independent lattice boson — a field bolted on — was the culprit, exactly as
   the medium-vs-field cone mismatch was in `test_lorentz_unified`.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`)
+### Sakharov's lock: the *induced* boson action is Lorentz-invariant with the fermion cone (`test_induced_action.py`)
+The effective-action strengthening of `test_cone_lock`. A boson **induced** by integrating out the fermions
+inherits their Lorentz invariance. Sharp signature: for a Lorentz-invariant fermion sector of speed `v_F`, the
+one-loop polarization must obey `Π(q,Ω)/q² = Π(s)`, a function of the **Euclidean invariant** `s = Ω² + v_F²q²`
+*alone*. Test on the real honeycomb bands: is `P = (Π/q²)·√s` the same for a mostly-spatial `q` as for a
+mostly-temporal `Ω` at fixed `s`?
+| √s | P (Ω/√s = 0) | 0.5 | 0.8 | 0.95 | spread |
+|---|---|---|---|---|---|
+| 0.30 | 2.3159 | 2.3175 | 2.3230 | 2.3296 | 0.59% |
+| 0.15 | 2.4015 | 2.4015 | 2.4027 | 2.4040 | **0.10%** |
+| 0.08 | 2.4349 | 2.4330 | 2.4354 | 2.4343 | **0.10%** |
+- `P` is **mix-independent** — the induced action depends on `(q,Ω)` only through `Ω² + v_F²q²`, i.e. it is
+  **Lorentz-invariant with the fermion's cone**, inherited rather than tuned. The residual spread shrinks at low
+  energy (0.59% → 0.10%): lattice corrections beyond the linear Dirac cone, the same `(E/E_Planck)²` suppression
+  seen throughout.
+- Independent check: `P` also converges to a constant as `s→0` (2.32 → 2.40 → 2.43), approaching the universal
+  Dirac coefficient `Π ≈ q²/(16√s)`.
+- **Meaning:** a gauge field defined as a *fluctuation of the fermion structure* (hopping phases) gets its Maxwell
+  term from the fermion loop, and hence its light cone from the fermions. With `test_cone_lock`, the
+  cross-statistics Lorentz problem is solved **by construction** — provided the boson is made *of* the fermions
+  rather than bolted on beside them. (Sakharov induced dynamics; the same mechanism Volovik uses for the emergent
+  photon and graviton.)
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
