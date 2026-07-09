@@ -838,6 +838,21 @@ cone. Bloch Hamiltonian on the honeycomb (nn hopping): `H(k)=[[0,f],[f*,0]]`, `f
   mechanism (domain wall / dimensional reduction / interactions), and `v_F` is a **new light cone** to unify
   with the boson `c` — the universality demand again, now across statistics.
 
+### Evading the chirality wall: a single chiral fermion on a domain wall (`test_domain_wall.py`)
+The standard escape from Nielsen–Ninomiya (Kaplan domain-wall fermions; Callan–Harvey): regularise the
+fermion as a 2-band **Wilson–Dirac (Chern) insulator**, `H(k)=sin k_x σ_x + sin k_y σ_y + (M−cos k_x−cos k_y)σ_z`
+(topological for `0<|M|<2`), and put it on a **domain wall** — an edge is a wall to the trivial vacuum.
+- **Topological strip (M=1):** two in-gap branches **cross E=0**, each a **single chiral** mode bound to
+  one edge (`E=∓0.30` at k_x=0.3, peak density **0.998** on the boundary site), with **opposite velocities**
+  (+0.955 bottom, −0.955 top) = opposite chirality on opposite edges.
+- **Trivial strip (M=3):** gapped; the near-zero states are delocalized **bulk** (peak density 0.03) — **no**
+  chiral edge mode.
+- **Result:** the chirality wall is **evaded** the standard way. A lattice that is vector-like *overall* still
+  carries a **single chiral fermion on a wall** — its Nielsen–Ninomiya partner is the opposite-chirality mode
+  on the *other* wall, spatially separated, not on this one. This is the mechanism a fundamental version of the
+  model would use for Standard-Model chirality. (So the fermion barrier now reads: Dirac cone ✓, single chiral
+  fermion ✓ via a wall; still open — locking `v_F` to the boson `c`, and full SM chiral matter content.)
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive

@@ -138,6 +138,7 @@ Requires Python 3.11+.
 | `test_lorentz_unified.py` | Unified prototype: governing medium + field by one vector-Hooke operator gives a single universal light cone (c_L = c_T = c_field exactly), recovering speed universality |
 | `test_lorentz_boost.py` | Emergent boost invariance: the massless cone and massive mass-shell are boost-invariant at low energy (violation ~ (E/E_Planck)²), signals sub-luminal — the full Lorentz group emerges |
 | `test_dirac.py` | Emergent relativistic fermions: a honeycomb medium gives a linear isotropic Dirac cone (v_F=3/2), but fermions come as opposite-chirality pairs (Nielsen–Ninomiya); the triangular close-packing has no cone |
+| `test_domain_wall.py` | Evading the chirality wall: a Wilson–Dirac (Chern) strip binds a single chiral fermion to each edge (opposite chirality, spatially separated) — the domain-wall route to Standard-Model chirality |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
