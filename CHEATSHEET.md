@@ -885,14 +885,35 @@ attractive**, and **spin-2**. Each requirement checked against the model:
   `T_μν`). The route it points to: add a symmetric-tensor d.o.f. whose mass-coupling is protected massless by
   **gauged diffeomorphisms** — the spin-2 analog of how gauging gave EM its unscreened 1/r² (Route C).
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton.py`)
+### Overcoming the screening — Route 1: the elasticity–fracton duality (`test_fracton_gravity.py`)
+The medium's *phonons* have no long-range gravity sector, but its **defects** do. In 2D linear elasticity every
+defect sources the same **biharmonic** (Airy) equation `∇⁴χ = source`; they differ only by the *multipole order*
+of the source, which sets the range (all computed from `G = FFT⁻¹(1/k^{2n})`):
+- **Dilatation** (energy density = a center of compression, source `∇²δ`): **contact only** — `|G(r>0)| ≈ 1.5×10⁻⁵ ≈ 0`
+  — **screened (Bitter–Crum)**. *This is exactly the gravity-by-density coupling* — and precisely why it screened:
+  energy couples as the **most-screened** multipole.
+- **Dislocation** (torsion, source `∇δ`): `G ~ −0.154·ln r` (2D-Coulomb log; `1/2π=0.159`) — **long-range**.
+- **Disclination** (curvature, source `δ`): the biharmonic `1/k⁴` kernel, the **least-screened** multipole
+  (free-space `~r²ln r`, even longer-range; verified `∇²`(disclination) = dislocation to 6×10⁻¹³).
+- **The point:** *fewer derivatives on the source ⇒ longer range.* Energy density is the maximally-screened case;
+  **curvature (disclinations) is long-range and unscreened.** By the **Pretko–Radzihovsky elasticity–fracton
+  duality**, these defects are the charges of a **rank-2 symmetric-tensor gauge theory** — the structure of
+  linearized gravity (the disclination is an immobile *fracton*). And in 2D gravity a **point mass = a conical
+  deficit = a disclination**: the medium already contains gravitational "masses" that curve space around them,
+  long-range. **So Route 1 overcomes the screening — couple gravity to *curvature* (the tensor-gauge/fracton
+  sector), not to energy density.** Open next: 3D (where the tensor gauge field is a dynamical spin-2 graviton),
+  and wiring matter energy → disclination density so "mass curves the medium" at long range.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton.py`, `test_fracton_gravity.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)²). **✅ Fermions** (Dirac cone on a bipartite medium; a single
 chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
-relativistic QFT; deriving QM from the sub-quantum medium is untouched). **⬜ Long-range spin-2 gravity** (the
-sharpest contradiction — screened + no tensor mode). **⬜** Standard-Model gauge group & constants, continuum
-limit, cosmology, Weinberg–Witten. Four "likely-fatal" barriers now have concrete in-model demonstrations, each
-with an honest statement of what is shown vs still open.
+relativistic QFT; deriving QM from the sub-quantum medium is untouched). **🟡 Long-range gravity** (energy-coupled
+gravity-by-density screens — the sharpest contradiction — *but* Route 1 / the elasticity–fracton duality exposes a
+**long-range curvature (disclination) sector**, dual to a rank-2 tensor gauge theory: couple to curvature, not
+energy; the 3D dynamical spin-2 upgrade remains open). **⬜** Standard-Model gauge group & constants, continuum
+limit, cosmology, Weinberg–Witten. Five "likely-fatal" barriers now have concrete in-model demonstrations, each
+with an honest statement of what is shown vs still open — including a concrete route past the gravity screening.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
