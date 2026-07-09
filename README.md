@@ -140,6 +140,7 @@ Requires Python 3.11+.
 | `test_dirac.py` | Emergent relativistic fermions: a honeycomb medium gives a linear isotropic Dirac cone (v_F=3/2), but fermions come as opposite-chirality pairs (Nielsen–Ninomiya); the triangular close-packing has no cone |
 | `test_domain_wall.py` | Evading the chirality wall: a Wilson–Dirac (Chern) strip binds a single chiral fermion to each edge (opposite chirality, spatially separated) — the domain-wall route to Standard-Model chirality |
 | `test_quantization.py` | First quantization: the unified sector quantizes to a relativistic QFT (quanta on the mass-shell; massless→power-law, massive→Yukawa vacuum correlator). Honest: it imposes QM, doesn't derive it |
+| `test_graviton.py` | The sharpest barrier: long-range spin-2 gravity — diagnosed, not achieved. Massless mediator would give universal 1/r attraction, but the model's mass-coupling is screened, and the medium has no spin-2 (only spin-0/1 phonons) |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |

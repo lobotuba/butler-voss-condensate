@@ -868,6 +868,32 @@ The unified linear theory is coupled harmonic oscillators = a free field; canoni
   QM) — the deepest open problem, untouched. So the QM barrier is *half* addressed: the quantized theory is
   correct; whether QM itself emerges is unanswered.
 
+### The sharpest barrier: long-range spin-2 gravity — diagnosed, NOT achieved (`test_graviton.py`)
+Closing the loop to where the forces program began. Real gravity is **long-range 1/r²**, **universally
+attractive**, and **spin-2**. Each requirement checked against the model:
+- **A. Long-range + universal — achievable *if* massless.** A massless mediator gives a `Φ~1/r` potential
+  (measured `~1/r^{1.3}`, box-corrected toward 1); a massive one gives `e^{−r/ξ}/r` (ξ≈1.4, screened). Since
+  mass density is intrinsically **positive**, the coupling is single-sign → **universally attractive** (unlike
+  EM's ±). *But the model's own gravity-by-density mediator is the **massive** one* (Bitter–Crum, λ≈3) — which
+  is precisely why gravity is short-range. Masslessness is the missing piece even for scalar-Newtonian gravity.
+- **B. Spin-2 — missing.** The medium's displacement field is a **vector**: its phonons are 1 longitudinal
+  (helicity 0) + 2 transverse (helicity ±1) = spin-0 + spin-1 (photon-like). A vector field **cannot** carry
+  helicity ±2, so there is **no spin-2 (graviton) mode** among the phonons.
+- **C. Verdict.** Long-range spin-2 gravity is **not achieved** — the sharpest open problem, now precisely
+  diagnosed: (i) the mass-coupling is massive/screened (so not even scalar-Newtonian survives long-range), and
+  (ii) there is no spin-2 d.o.f. (and Weinberg–Witten forbids an emergent massless spin-2 coupling to the full
+  `T_μν`). The route it points to: add a symmetric-tensor d.o.f. whose mass-coupling is protected massless by
+  **gauged diffeomorphisms** — the spin-2 analog of how gauging gave EM its unscreened 1/r² (Route C).
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton.py`)
+From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
+operator + boosts; violations ~(E/E_Planck)²). **✅ Fermions** (Dirac cone on a bipartite medium; a single
+chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
+relativistic QFT; deriving QM from the sub-quantum medium is untouched). **⬜ Long-range spin-2 gravity** (the
+sharpest contradiction — screened + no tensor mode). **⬜** Standard-Model gauge group & constants, continuum
+limit, cosmology, Weinberg–Witten. Four "likely-fatal" barriers now have concrete in-model demonstrations, each
+with an honest statement of what is shown vs still open.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
