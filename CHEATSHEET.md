@@ -904,7 +904,23 @@ of the source, which sets the range (all computed from `G = FFT⁻¹(1/k^{2n})`)
   sector), not to energy density.** Open next: 3D (where the tensor gauge field is a dynamical spin-2 graviton),
   and wiring matter energy → disclination density so "mass curves the medium" at long range.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton.py`, `test_fracton_gravity.py`)
+### The spin-2 half: the tensor sector is a genuine graviton (`test_graviton_spin2.py`)
+`test_graviton` found the phonons are spin-0 + spin-1 (no spin-2); Route 1 located the missing tensor structure
+in the defect sector. This shows what that tensor field *is* — a real graviton:
+- **A. 2 polarizations, helicity ±2.** The transverse-traceless projector on symmetric 3×3 tensors has **rank 2**
+  (exactly 2 physical polarizations, the GW `+` and `×`), and under a rotation by θ about `k` the polarization
+  rotates by **2θ** → **helicity ±2 = spin-2** (a photon's transverse polarizations rotate by θ → helicity ±1).
+  This is the decisive fingerprint separating a graviton from a photon.
+- **B. Universal 1/r² attraction** (Newtonian limit, positive mass → single-sign → attractive; the massless 1/r
+  was measured in `test_graviton` A).
+- **C. Light-bending factor 2.** A spin-2 graviton couples to the full `T_μν` (energy *and* pressure/momentum),
+  bending light by **twice** the scalar-gravity value — Eddington 1919 measured the factor-of-2, ruling out
+  scalar gravity. So real gravity *requires* the spin-2 tensor — exactly the sector the medium hides in its
+  disclination/fracton defects. **Remaining build:** derive the *propagating* 3D graviton dynamically from the
+  medium's 3D defects (and clear Weinberg–Witten — whose loophole the model's cutoff-scale Lorentz violation,
+  ~(E/E_Planck)², already opens).
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)²). **✅ Fermions** (Dirac cone on a bipartite medium; a single
 chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
