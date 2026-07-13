@@ -1073,7 +1073,25 @@ emergent **massive** field, `χ = √ρ e^{iS/ħ}`, is that fluid; its dispersio
   or decoherence + branching). **Status:** half of QM — the wave mechanics and ħ — emerges from the condensate for
   free; the probabilistic half remains open.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`)
+### Frontier 3, step 2 — the Born rule as a stochastic equilibrium (`test_born_rule.py`)
+The wave half done, the probabilistic half — `|ψ|²` = probability — is the hard part. **Nelson (1966):** it is the
+equilibrium of a diffusion. A particle doing Brownian motion with diffusion `ν = ħ/2m` and the **osmotic drift**
+`u = ν·d/dx ln|ψ|²` has stationary density exactly `|ψ|²`. The osmotic drift is just the entropic force down a
+density gradient, and the noise is the **medium's own fluctuations** (the same `ħ/2m` as the gradient stiffness of
+`test_emergent_qm`). The decisive, non-trivial claim (**Valentini quantum relaxation**): `|ψ|²` is an **attractor** —
+start non-Born and it relaxes there.
+- **Test:** ensemble started **uniform** (non-Born), relaxed under the osmotic drift; `KL(ρ_ensemble ‖ |ψ|²)` vs step:
+  ground state `4.39 → 0.0001`; a **structured two-peak (interference-like)** density `2.82 → 0.0002`. The ensemble
+  relaxes to `|ψ|²` in both cases — the Born rule is dynamically inevitable, not postulated.
+- **Honest scope:** the drift is set by `|ψ|` (the guiding wave, as in Nelson/Bohm), so the wavefunction is still
+  needed; what is *derived* is that its modulus-squared is the **unique equilibrium probability**. Definite
+  individual outcomes are handled Bohm-style (the particle always has a position; "collapse" = conditioning on it)
+  — an interpretation, not an extra mechanism. Deriving the guiding wave's drift from the sub-quantum medium itself
+  (not inserted) is the remaining depth of F3.
+- **Status:** wave half (`test_emergent_qm`) + Born-rule statistics (here) = **most of QM, emergent from a
+  fluctuating condensate**. The residue is the measurement *interpretation*, not new physics.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
