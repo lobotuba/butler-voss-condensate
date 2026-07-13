@@ -996,7 +996,27 @@ the medium's own three nn bonds, `t_j → t(1+u_j)`, and reading the fermion ban
   fermion dispersion, both are automatically Lorentz-invariant on the **single fermion cone** — exactly what
   `test_cone_lock` and `test_induced_action` require. One structure ⇒ fermions, EM, and gravity, one cone, no tuning.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_emergent_tetrad.py`)
+### Frontier 1 — the first falsifiable prediction: Lorentz violation vs experiment (`test_lv_prediction.py`)
+Everything above *reproduces* known physics; a theory must *predict* something nature could veto. The model's
+distinctive, quantitative feature is the Lorentz violation it already measured. Extracting the leading coefficients
+from the emergent fcc dispersion (with `a → l_Planck`, `k_max ~` the Planck momentum):
+- **Boost (isotropic):** `1 − v/c = ζ_boost (k/k_max)²`, `ζ_boost = 0.245`. **Rotation (crystallographic):**
+  `Δc/c = ζ_aniso (k/k_max)²`, `ζ_aniso = 0.068`. Both are **order-unity** and enter at **`(E/E_Planck)²`** — a
+  **quadratic, mass-dimension-6 (n=2)** Lorentz violation, *not* the linear (n=1) form many QG scenarios predict.
+- **Cast as `v(E)/c = 1 − ζ(E/E_Planck)²`** → effective `E_QG,2 = E_Planck/√ζ ≈ 2.5×10¹⁹ GeV`.
+- **Confrontation:** vs Fermi-LAT GRB timing (`E_QG,2 > 10¹⁰ GeV`) → safe by ~6×10¹⁸ in the effect; vs UHECR
+  (strongest n=2, `>10¹¹ GeV`) → safe by ~6×10¹⁶. Predicted `|Δv/c|` = 3×10⁻²⁷ at LHAASO (10⁶ GeV), **1.6×10⁻¹⁷ at
+  UHECR** (the closest frontier). Cross-species `|c_γ−c_e|/c = 0` at leading order (one cone) ≪ 10⁻¹⁵ bound.
+- **Verdict — consistent, and falsifiable in structure.** The LV is quadratic and Planck-suppressed, so it clears
+  every current bound by many orders of magnitude and is not quantitatively detectable today. But it makes three
+  **qualitative** predictions that need no Planck-energy access and would kill it: (1) LV is **quadratic (n=2), not
+  linear** — a confirmed linear photon LV falsifies it; (2) the rotation-violating part is **anisotropic with the
+  emergent lattice's crystallographic pattern**, correlated between boost and rotation sectors; (3) **one universal
+  cone** — no leading-order species-dependent maximal speed (a confirmed `c_γ ≠ c_e`, or `≠ c_grav` à la GW170817,
+  at `O(E/E_Planck)` falsifies it). The project's first *empirical* claim: a specific, cross-species-universal,
+  crystallographically-anisotropic n=2 signature that nature could rule out — not merely a reproduction of physics.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
