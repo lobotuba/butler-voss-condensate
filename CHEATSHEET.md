@@ -1091,12 +1091,36 @@ start non-Born and it relaxes there.
 - **Status:** wave half (`test_emergent_qm`) + Born-rule statistics (here) = **most of QM, emergent from a
   fluctuating condensate**. The residue is the measurement *interpretation*, not new physics.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`)
+### Frontier 3, step 3 — de Broglie's double solution: deriving guidance `v = ∇S/m` (`test_double_solution.py`)
+The last inserted ingredient was the **guidance rule** linking particle to pilot wave. **de Broglie's double
+solution:** one nonlinear field — far from the particle it is the smooth pilot wave `ψ = a·e^{ikx}` (`∇S/m = ħk/m`),
+at the particle a localized **soliton** core; the claim is the soliton is *steered* by the wave's phase. Realized in
+the medium's NR limit as the NLS `iψ_t = −½ψ_xx − g|ψ|²ψ` (dispersion `ω=k²/2`, group velocity `k` = the de Broglie
+value); its bright soliton `η·sech(ηx)` is a legitimate particle of the same field. Particle located by projecting
+out the pilot-wave carrier mode, then a periodic (circular) centroid; drift = least-squares slope of `x(t)`.
+- **A — SELF-guided (positive control):** a soliton carrying its **own** phase `e^{ikx}` drifts at exactly `k` —
+  **slope 1.000** across `k`. So `v = ∇S/m = ħk/m` for a particle's *own* wave is a **theorem** of the medium (the
+  NLS envelope is Galilean-covariant): de Broglie's `λ = h/p` emerges for free, not postulated.
+- **B — PILOT-guided (the double-solution test):** a **resting** soliton + a **separate** pilot wave of gradient `k`
+  → **slope −0.15 ≈ 0**: the particle is **not** dragged to `v = ∇S/m`. At the core the total phase is dominated by
+  the particle's own flat phase, so nothing guides it; the nonlinearity only scatters it weakly. de Broglie's full
+  double solution (a soliton *phase-locked to and steered by a distinct pilot wave*) is **not** realized by naive
+  nonlinear superposition — the very step he never rigorously closed.
+- **C — control `g=0` (linear):** resting bump + pilot wave, superposition only → drift `≈0` (tracker is honest).
+- **Status / F3 summit.** Emergent from the condensate: the wave equation + `ħ` (step 1), the Born rule as a
+  stochastic attractor (step 2), and de Broglie `v=∇S/m` for a particle's *own* wave (step 3A). **Not** emergent:
+  guidance by a *separate* pilot wave and the selection of a single definite outcome — the hard core of the
+  measurement problem stays a postulate. Honest boundary: most of QM is medium mechanics; the residue is exactly the
+  piece that is unsolved for everyone.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
 cone on a bipartite medium; a single chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
-relativistic QFT; deriving QM from the sub-quantum medium is untouched). **🟡 Long-range gravity** (energy-coupled
+relativistic QFT; and from the condensate directly — the Schrödinger wave + `ħ` as a material property, the Born rule
+as a stochastic attractor, and de Broglie `v=∇S/m` for a particle's *own* wave — all emerge. What does **not**: guidance
+by a *separate* pilot wave and the selection of a single definite outcome, i.e. the measurement problem's hard core). **🟡 Long-range gravity** (energy-coupled
 gravity-by-density screens — the sharpest contradiction — *but* Route 1 / the elasticity–fracton duality exposes a
 **long-range curvature (disclination) sector**, dual to a rank-2 tensor gauge theory: couple to curvature, not
 energy; the 3D dynamical spin-2 upgrade remains open). **⬜** Standard-Model gauge group & constants, continuum
