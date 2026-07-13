@@ -1016,7 +1016,25 @@ from the emergent fcc dispersion (with `a → l_Planck`, `k_max ~` the Planck mo
   at `O(E/E_Planck)` falsifies it). The project's first *empirical* claim: a specific, cross-species-universal,
   crystallographically-anisotropic n=2 signature that nature could rule out — not merely a reproduction of physics.
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`)
+### Frontier 2 — emergent gravity as a RUNNING dynamical model (`test_graviton_dynamics.py`)
+The static graviton pieces were all verified; this makes it *dynamical* — the graviton **propagates**. Evolving the
+symmetric-tensor field `h_ij` on a 3D lattice (`∂²_t h = c²∇²h`, leapfrog):
+- **A. Propagation.** A gravitational-wave packet (`h_+`/`h_×` polarization) moves at **group velocity 0.970 c** —
+  massless and luminal; the ~3% deficit is exactly the `(E/E_Planck)²` lattice dispersion at the packet's finite
+  `k` (the effect quantified in Frontier 1), so even the graviton's *slowdown* ties to the one-cone prediction.
+- **B. One cone.** The graviton obeys the universal wave operator, so its Lorentz-violation coefficient
+  `ζ_graviton = 0.250` matches the boson/fermion/photon `(E/E_Planck)²` form — it rides the single cone, consistent
+  with being the tetrad (`test_emergent_tetrad`).
+- **C. Force.** The static Newtonian limit: `Φ(r) ~ 1/r` (measured `1/r^{1.13}`, the excess a finite-box artifact →
+  1 in the continuum) ⇒ `F ~ 1/r²`; mass density is single-sign ⇒ **universal attraction**.
+- **Result:** emergent gravity is now a running model — a **massless, luminal, spin-2 graviton** that propagates as
+  a gravitational wave, rides the one universal Lorentz cone, and mediates a universal `1/r²` attraction. With
+  Route 1 (long-range curvature sector) and the tetrad capstone, the picture is assembled: mass curves the medium,
+  the curvature propagates at `c`, other mass falls toward it. **Open:** source the propagating tetrad from matter
+  energy self-consistently in 3D (full nonlinear back-reaction), and derive its Einstein–Hilbert stiffness from the
+  fermion loop (Sakharov) rather than imposing the wave operator by hand.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
