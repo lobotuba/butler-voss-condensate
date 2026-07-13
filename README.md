@@ -150,6 +150,7 @@ Requires Python 3.11+.
 | `test_lv_prediction.py` | **Frontier 1 — first falsifiable prediction:** quadratic (n=2), crystallographically-anisotropic, cross-species-universal Lorentz violation (`ζ~0.2`, `E_QG,2~2.5×10¹⁹ GeV`) — consistent with all bounds, falsifiable in structure |
 | `test_graviton_dynamics.py` | **Frontier 2 — emergent gravity, running:** the graviton propagates as a gravitational wave (group velocity 0.97c, massless), rides the one universal cone (`ζ=0.25`), and mediates a universal `1/r²` attraction |
 | `test_induced_gravity.py` | **Frontier 2 completion — Sakharov:** the graviton's Einstein–Hilbert kinetic term is *generated* by the fermion stress-tensor loop `⟨TT⟩` (Lorentz-invariant, spread → 0.37% as s→0) — its dynamics inherited from the fermion cone, not imposed |
+| `test_emergent_qm.py` | **Frontier 3, step 1:** the wave half of QM emerges — the field's NR envelope spreads at the exact Schrödinger rate (`D` measured 0.830 vs predicted 0.833), with `ħ/2m = c²/2Ω` a material property of the medium. The Born rule / measurement remain the open moonshot |
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |

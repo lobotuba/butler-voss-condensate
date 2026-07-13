@@ -1053,7 +1053,27 @@ so the `h_+`-polarization vertex is `V_+ = (v_F/2)(σ_x k_x − σ_y k_y)`. Comp
   the emergent photon, all three — fermion, photon, graviton — and their **dynamics** descend from the one fermion
   structure. (Open: separate the cutoff-dependent induced cosmological term — the toy's version of the CC problem.)
 
-### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`)
+### Frontier 3 (origin of QM), step 1 — the wave half emerges, ħ from the medium (`test_emergent_qm.py`)
+QM has two halves: the **wave** half (Schrödinger equation, superposition, interference, ħ) and the
+**probabilistic** half (Born rule, measurement). They are not equally hard. The medium is a condensate, and
+Madelung (1927): Schrödinger *is* the hydrodynamics of a fluid with the quantum-potential gradient energy. The
+emergent **massive** field, `χ = √ρ e^{iS/ħ}`, is that fluid; its dispersion `ω = √(c²k² + Ω²)` in the
+**non-relativistic limit** is `ω ≈ Ω + (c²/2Ω)k² = Ω + (ħ/2m)k²` — the free-Schrödinger dispersion, with
+**`ħ/2m = c²/(2Ω)` fixed by the medium's own gap and speed**.
+- **Test:** evolve the emergent (Klein–Gordon) field for a Gaussian packet; the envelope must spread as
+  `σ(t) = σ₀√(1 + (Dt/σ₀²)²)` with `D = c²/2Ω` predicted from the medium alone. Result: **measured `D = 0.830` vs
+  predicted `0.833` (0.4%)**, `max|σ_meas − σ_Schrödinger|/σ₀ = 0.027`. The packet spreads at the exact Schrödinger rate.
+- **What emerges:** the field's slow envelope obeys `iħ∂_tψ = −(ħ²/2m)∇²ψ` — **single-particle quantum wave
+  mechanics**; **ħ is a material property** of the medium (gap-to-curvature ratio), not a postulate (in Madelung
+  form, `ħ²` = the von-Weizsäcker density-gradient stiffness of the condensate); superposition and interference
+  are automatic (linear wave).
+- **What does NOT emerge (the real F3 moonshot):** the **Born rule** (`|ψ|²` = probability) and **measurement**.
+  Linear wave dynamics give amplitudes, not probabilities — these need a mechanism the linear substrate lacks
+  (a stochastic sub-quantum process à la Nelson, a deterministic automaton with equivalence classes à la 't Hooft,
+  or decoherence + branching). **Status:** half of QM — the wave mechanics and ħ — emerges from the condensate for
+  free; the probabilistic half remains open.
+
+### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
 boson, but *is* locked automatically once the boson is a composite of the fermions — one structure). **✅ Fermions** (Dirac
