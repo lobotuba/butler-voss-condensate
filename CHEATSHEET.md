@@ -1276,6 +1276,18 @@ factor of two, Cassini-measured to 10⁻⁵).
 > numerical limit to push past; the route through is to make the metric **dynamical in its own right** (incompatible
 > strain as a propagating field), **not** to refine the lattice. That is the next frontier, now sharply posed.
 
+**The door (`test_incompatible_gravity.py`).** The wall tested only the *displacement* sector. But on the triangular
+lattice each site has **3 independent bond lengths** while a displacement supplies only **2** DOF — so bond
+fluctuations = 2 (displacement, compatible, gauge) **+ 1 incompatible (curvature)**. That extra DOF is a strain no node
+motion can make. Demonstrated (2D): the **compatible** sector gives `η = 1.8×10⁻¹⁵` (flat) and zero deflection [the
+wall], while the **incompatible** sector — mass sourcing curvature `η ~ ρ`, carried by an Airy potential
+(`η = ∇⁴χ`, gate: recovered `η == ρ` to `6×10⁻¹⁰`) — has `η ≠ 0` and **does deflect light**, nearly `b`-independent
+(the 2D conical-deficit / cosmic-string signature, `→ 1/b` in 3D), long-range, vs the compatible sector's *exact*
+zero. **The graviton lives in the incompatible bond DOF, not the node positions** (DOF count: `3 − 2 = 1` curvature
+field/site). Remaining to walk through (= emergent diffeomorphism invariance): show mass sources this sector with the
+**Einstein coefficient** (`γ=1`), and that it carries the **Sakharov** kinetic term (`test_induced_gravity`, now with a
+home). The frontier is reframed from "can the medium bend light" (yes, in this sector) to "is the coupling Einstein."
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
