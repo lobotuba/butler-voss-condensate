@@ -1178,6 +1178,46 @@ the interaction of two dilatation centres **vanishes**. Measured `E_int(R) = E(b
 > found."** The `1/r²` of `test_graviton_dynamics` came from an **imposed Poisson equation** and cannot be cited as a
 > derivation.
 
+### ✅ WORKING LONG-RANGE GRAVITY — the amplitude mode (`test_critical_gravity.py`)
+After every long-range candidate failed (above), the answer came from applying the project's **own central
+principle** — *a force's range is set by whether a symmetry protects its mediator from a mass term* — to **gravity's
+mediator**, which had never been done.
+
+**The elastic/displacement sector is structurally dead** and now provably so: a mass is a force **dipole**, so
+Bitter–Crum makes its density response a contact term *for any moduli*, and Eshelby–Crum makes the two-mass force
+vanish outright. Stop looking there. **The mediator is the condensate's AMPLITUDE (Higgs) mode:**
+- The **phase** is a Goldstone. Its shift symmetry permits only **derivative** couplings ⇒ it can *never* mediate a
+  monopole force. Protected, and **useless for gravity**.
+- The **amplitude** is **unprotected** (radial modes never are), so it carries a mass `m_A² = 2a` — *and* it couples
+  monopolarly: `g·ρ·|χ|² → 2g·φ₀·ρ·η`. Energy density is **positive-definite**, and **scalar exchange between like
+  charges attracts** ⇒ **universal attraction, with no sign put in by hand.**
+
+Measured in **3D** (`1/r²` needs three dimensions), full nonlinear field, using the same `E_int(R) = E(both) − E(1) −
+E(2)` probe that correctly returned "no force" three times:
+- **`λ·m_A` = 1.010, 1.005, 1.003, 1.004, 1.023** across a gap sweep — with `m_A = √(2a)` read off the **potential**,
+  not fitted to the force. **The force's range IS the inverse gap.** `E_int < 0` and rising ⇒ **ATTRACTIVE** at every
+  point. *This explains every earlier "gravity is screened" result at one stroke: the amplitude mode was gapped.*
+- **Form check (the rigorous part):** divide the exponential out — `−E_int·R·exp(+R/λ)` is flat in `R` to **0.1–0.5%**,
+  and the screening-corrected potential is a pure **`R^-1.00`** power law, for *every* gap. So
+  **`E_int = −C·exp(−R/λ)/R` exactly**: a screening exponential times a **`1/R` Newtonian core**. Send `m_A → 0` and
+  the exponential → 1, leaving **`E = −C/R`: Newton's law, force `1/r²`, attractive.** Not an extrapolation — the form
+  is measured.
+- **Box gate:** `λ·m_A` = 1.023 (N=64) → **1.000** (N=96); core power `R^-1.00` in both.
+
+> **Honest ceiling.** This is **scalar (Nordström) gravity**: Newton's law, but **no light bending** (a scalar does not
+> deflect light) and no two-polarization waves. Full GR needs a massless **spin-2** protected by **diffeomorphism
+> invariance** (Weinberg's uniqueness theorem), and a fixed-background medium has none — so GR stays out of reach. It
+> also needs the medium **near criticality** (`m_A → 0`), a fine-tuning — though that is arguably the emergent version
+> of **why gravity is so weak**, and it is a *statable prediction*, not a fudge.
+
+**Two methodology traps caught here (both would have produced a wrong answer quietly):**
+1. **Critical slowing down.** Heavy-ball gradient descent silently under-converges exactly where we need to go (the
+   slowest mode relaxes at rate `m_A² → 0`). Replaced by an **exact Fourier split** of the linear operator, iterating
+   only the nonlinear remainder ⇒ machine precision, and it reproduces the converged GD answer to 6 figures.
+2. **Strong-field contamination.** Holding `g` *fixed* while `a → 0` silently enters the **strong-field** regime —
+   matter *crushes* the condensate (`φ → 0` locally), suppressing the mass and lengthening the range. That biased
+   `λ·m_A` up to **1.19**. Holding the *dimensionless* source strength `g/a` fixed restores `λ·m_A = 1.00`.
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
@@ -1186,13 +1226,17 @@ cone on a bipartite medium; a single chiral fermion via a domain wall, evading N
 relativistic QFT; and from the condensate directly — the Schrödinger wave + `ħ` as a material property, the Born rule
 as a stochastic attractor, and de Broglie `v=∇S/m` for a particle's *own* wave — all emerge. What does **not**: guidance
 by a *separate* pilot wave and the selection of a single definite outcome, i.e. the measurement problem's hard core).
-**🔴 Long-range gravity — OPEN (downgraded 2026-07-13; this is the model's outstanding failure).** Energy-coupled
-gravity-by-density screens (Bitter–Crum), and *every long-range replacement has now failed on a measurement*: the
-topological/curvature sector (Route 1) is **unshieldable** but its like charges **repel** with a force that **grows**
-with distance (`test_disclination_force`); the tetrad graviton has a genuine long-range `1/r²` **field** but is
-**shieldable** (`test_tetrad_shielding`) and exerts **no long-range force** (`test_tetrad_force`, Crum's theorem).
-The one real attraction the model has ever produced (Phase 3d) is screened. The linear/elastic sector is *provably*
-the wrong place to look; the attraction that exists is **nonlinear** — that is the lead. See "the shielding arc" above.
+**✅ Long-range gravity — SOLVED as SCALAR gravity (`test_critical_gravity`), after four failures.** The *elastic*
+sector is provably dead: gravity-by-density screens (Bitter–Crum contact term), the topological/curvature sector
+(Route 1) is unshieldable but its like charges **repel** with a force that *grows* with distance
+(`test_disclination_force`), and the tetrad graviton has a long-range `1/r²` **field** yet is **shieldable**
+(`test_tetrad_shielding`) and exerts **no force at all** (`test_tetrad_force`, Eshelby–Crum). The answer was the
+project's own principle applied to gravity's mediator: the **condensate's amplitude mode**. Unprotected ⇒ gapped ⇒
+Yukawa of range `1/m_A` (**why it always looked screened**); it couples monopolarly to positive-definite energy, and
+scalar exchange between like charges **attracts**. Measured: `λ·m_A = 1.00`, and `E_int = −C·e^{−R/λ}/R` exactly ⇒ at
+criticality, **Newton's law, `1/r²`, universally attractive**. 🟡 **But it is *scalar* (Nordström) gravity** — no light
+bending, no spin-2 waves; full GR needs diff invariance, which a fixed-background medium lacks (Weinberg). And it
+needs criticality — a fine-tuning that doubles as a *prediction* of why gravity is weak.
 **⬜** Standard-Model gauge group & constants, continuum limit, cosmology, Weinberg–Witten. The barriers have concrete
 in-model demonstrations, each with an honest statement of what is shown vs still open — and now **two** self-corrections:
 the Lorentz result is within-sector (not across statistics), and **the gravity "route found" was retracted** when its
