@@ -899,10 +899,17 @@ of the source, which sets the range (all computed from `G = FFT⁻¹(1/k^{2n})`)
   **curvature (disclinations) is long-range and unscreened.** By the **Pretko–Radzihovsky elasticity–fracton
   duality**, these defects are the charges of a **rank-2 symmetric-tensor gauge theory** — the structure of
   linearized gravity (the disclination is an immobile *fracton*). And in 2D gravity a **point mass = a conical
-  deficit = a disclination**: the medium already contains gravitational "masses" that curve space around them,
-  long-range. **So Route 1 overcomes the screening — couple gravity to *curvature* (the tensor-gauge/fracton
-  sector), not to energy density.** Open next: 3D (where the tensor gauge field is a dynamical spin-2 graviton),
-  and wiring matter energy → disclination density so "mass curves the medium" at long range.
+  deficit = a disclination**.
+- > ⚠️ **RETRACTED (2026-07-13).** This section previously concluded "**Route 1 overcomes the screening**".
+  > That claim was never backed by a *force* measurement, and when finally measured it **failed**
+  > (`test_disclination_force.py`): two **like** disclinations **REPEL**, with an interaction growing as `R^1.97`
+  > (force *grows* with distance). Wrong **sign** (gravity is universally attractive) and wrong **direction**
+  > (Newtonian falls as `1/r²`). A disclination behaves like a **charge**, not a **mass**. What survives is only
+  > the *screening* half: curvature charge is **unneutralizable** (`test_shielding.py`), and the IR box-saturation
+  > seen here was in fact this `R²` growth — the FFT was correctly refusing to converge on an unbounded force law.
+  > In hindsight this is what 2+1D gravity *is*: a point mass is a conical deficit and 2+1D GR is **topological**,
+  > with no Newtonian attraction. The curvature sector reproduces 2+1D gravity faithfully — which is exactly why it
+  > cannot yield a Newtonian force in 2D. See the corrected gravity scorecard below.
 
 ### The spin-2 half: the tensor sector is a genuine graviton (`test_graviton_spin2.py`)
 `test_graviton` found the phonons are spin-0 + spin-1 (no spin-2); Route 1 located the missing tensor structure
@@ -1113,6 +1120,64 @@ out the pilot-wave carrier mode, then a periodic (circular) centroid; drift = le
   measurement problem stays a postulate. Honest boundary: most of QM is medium mechanics; the residue is exactly the
   piece that is unsolved for everyone.
 
+### The shielding arc — why gravity is unshieldable, and the collapse of the long-range claims
+Four tests (2026-07-13) that began from a physical principle and ended by **retracting** the project's gravity claim.
+
+**1. Screening is not loss (`test_shielding.py`).** The intuition "gravity is lossless, so it can't be screened" is
+*wrong on the mechanism*: a superconductor screens `B` over `λ_L` with **exactly zero dissipation**, and a Yukawa
+field conserves energy exactly. Screening is **evanescent, not absorptive** — our screening never dissipated anything
+either, and it is still fatal. The real principle is **unneutralizability**: every screening mechanism (Debye, Faraday
+cage, Meissner) works by rearranging **opposite-sign** charge into a cancelling cloud, and **mass is unipolar**.
+- Cast as a box-independent **Gauss-law** measurement — what charge is visible on a contour *outside* a shell in
+  which the medium may do anything?
+- **Dilatation** (energy density): the medium cancels it *exactly*. Gate: `div u ≡ C·s(x)` to `7.5e-16` (strictly
+  local, Bitter–Crum); the far field is only the source's own tail (`2.1e-10` of peak). **Neutralizable ⇒ shieldable
+  ⇒ short-range.**
+- **Curvature** (topological): charge outside is **exactly `+1.000000000`** under a violent smooth deformation, a 50×
+  stiffer shell with full relaxation, a 50× softer shell, and all at once. Any single-valued response has **zero
+  winding**, identically.
+- **Control:** nucleating a real anti-defect *does* flip it to `0.000000000` — the probe is sensitive, so the
+  invariance is physics. But that charge is **quantized** (no fractional defect), so there is no linear-response
+  screening cloud. **Topological quantization does in the model what "no negative mass" does in nature.**
+
+**2. The tetrad graviton: long-range but shieldable (`test_tetrad_shielding.py`).** Sakharov couples the tetrad to
+`T_μν` — i.e. to *energy*, the shieldable channel. Measured in the medium's own idiom (a spring network, since the
+tetrad is read from **bonds**):
+- **Good:** the graviton is **long-range from ordinary energy density**. Bitter–Crum kills the **trace**, but the
+  **shear** survives: deviatoric strain falls as `r^-2.01` (box-gated, `Rd`=40 and 28). The tetrad `h` *is* the
+  **traceless** part of the cone deformation, so it reads exactly the sector the theorem never touched.
+  **Gravity-by-density failed because it coupled to the trace.** No topology needed.
+- **Bad:** an intervening shell **attenuates it up to ~4×** (1.00 → 0.23 soft, → 0.32 stiff; box-gated). Any impedance
+  mismatch scatters it. Real gravity shows *no* such attenuation.
+- **Diagnosis:** this is only possible because the medium's elastic **moduli are a free background you can dial**. In
+  GR you cannot dial spacetime's stiffness — the metric *is* the field, so a stiffness contrast is not a knob, it is
+  **mass**, and mass only *adds*. This makes the open **self-consistent matter → tetrad back-reaction** load-bearing.
+
+**3. The disclination force law (`test_disclination_force.py`) — Route 1 fails.** Real space, clamped disc (no
+periodic zero mode); box-gated `Rd`=78 vs 60. Control validates the solver (a dislocation pair gives the known
+log-repulsion, `|dE| ~ R^1.17`). **Measurement: two like disclinations give `|dE| ~ R^1.97` and they REPEL.**
+Wrong **sign** (gravity is universally attractive; a disclination behaves like a *charge*, not a *mass*) and wrong
+**direction** (the force *grows* with distance). See the retraction above.
+
+**4. The tetrad force (`test_tetrad_force.py`) — a field falloff is not a force.** `|h| ~ 1/r²` was measured around
+**one** mass; nobody measured the force between **two**. Eshelby/**Crum**: in an infinite *isotropic* elastic medium
+the interaction of two dilatation centres **vanishes**. Measured `E_int(R) = E(both) − E(1) − E(2)`:
+- **Isotropic (the real medium):** `E_int` **saturates** — the force collapses **69×** from `R≈10` to `R≈22`. The
+  short-range attraction that remains is just the **contact term** (the screened gravity-by-density of Phase 3).
+  **No long-range force at all.**
+- **Control:** break the isotropy and a genuine long-range force *does* appear (**46×** the isotropic residual at
+  `R≈22`) — and it is **repulsive**. The probe is sensitive exactly where the isotropic case reads zero.
+
+> **Corrected gravity scorecard.** Every long-range candidate has now failed *on a measurement*:
+> **Route 1 (topological)** — unshieldable ✅, but like charges **repel** with a force that **grows** ❌.
+> **Tetrad (energy-sourced)** — long-range `1/r²` *field* ✅, but **shieldable** ❌ and exerts **no long-range force** ❌.
+> **Gravity-by-density** — genuinely **attractive** ✅, but **screened**/short-range ❌.
+> The model has produced exactly **one** real attraction between two masses (Phase 3d, two lumps drift together) and
+> it is screened. The **linear/elastic sector is provably the wrong place to look** — Crum forbids a long-range force
+> there. The attraction that *does* exist is **nonlinear**. **Long-range emergent gravity is OPEN, not "a route
+> found."** The `1/r²` of `test_graviton_dynamics` came from an **imposed Poisson equation** and cannot be cited as a
+> derivation.
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
@@ -1120,13 +1185,18 @@ boson, but *is* locked automatically once the boson is a composite of the fermio
 cone on a bipartite medium; a single chiral fermion via a domain wall, evading Nielsen–Ninomiya). **🟡 Quantum mechanics** (quantizes to a correct
 relativistic QFT; and from the condensate directly — the Schrödinger wave + `ħ` as a material property, the Born rule
 as a stochastic attractor, and de Broglie `v=∇S/m` for a particle's *own* wave — all emerge. What does **not**: guidance
-by a *separate* pilot wave and the selection of a single definite outcome, i.e. the measurement problem's hard core). **🟡 Long-range gravity** (energy-coupled
-gravity-by-density screens — the sharpest contradiction — *but* Route 1 / the elasticity–fracton duality exposes a
-**long-range curvature (disclination) sector**, dual to a rank-2 tensor gauge theory: couple to curvature, not
-energy; the 3D dynamical spin-2 upgrade remains open). **⬜** Standard-Model gauge group & constants, continuum
-limit, cosmology, Weinberg–Witten. Five "likely-fatal" barriers now have concrete in-model demonstrations, each
-with an honest statement of what is shown vs still open — including a concrete route past the gravity screening,
-and one self-correction (the Lorentz result is within-sector, not across statistics).
+by a *separate* pilot wave and the selection of a single definite outcome, i.e. the measurement problem's hard core).
+**🔴 Long-range gravity — OPEN (downgraded 2026-07-13; this is the model's outstanding failure).** Energy-coupled
+gravity-by-density screens (Bitter–Crum), and *every long-range replacement has now failed on a measurement*: the
+topological/curvature sector (Route 1) is **unshieldable** but its like charges **repel** with a force that **grows**
+with distance (`test_disclination_force`); the tetrad graviton has a genuine long-range `1/r²` **field** but is
+**shieldable** (`test_tetrad_shielding`) and exerts **no long-range force** (`test_tetrad_force`, Crum's theorem).
+The one real attraction the model has ever produced (Phase 3d) is screened. The linear/elastic sector is *provably*
+the wrong place to look; the attraction that exists is **nonlinear** — that is the lead. See "the shielding arc" above.
+**⬜** Standard-Model gauge group & constants, continuum limit, cosmology, Weinberg–Witten. The barriers have concrete
+in-model demonstrations, each with an honest statement of what is shown vs still open — and now **two** self-corrections:
+the Lorentz result is within-sector (not across statistics), and **the gravity "route found" was retracted** when its
+force law was finally measured.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
