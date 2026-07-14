@@ -1288,6 +1288,24 @@ field/site). Remaining to walk through (= emergent diffeomorphism invariance): s
 **Einstein coefficient** (`γ=1`), and that it carries the **Sakharov** kinetic term (`test_induced_gravity`, now with a
 home). The frontier is reframed from "can the medium bend light" (yes, in this sector) to "is the coupling Einstein."
 
+**Is the coupling Einstein? γ isolated to one number (`test_einstein_source.py`).** A door is not a crossing.
+`γ = Ψ/Φ` (light bending = `(1+γ)×`Newtonian; γ=1 is GR's factor of two).
+- **[A] Mass sources *no* curvature elastically:** the incompatibility of a mass's elastic response is `η/|ρ| =
+  1.2×10⁻¹⁵` ≈ 0 — equilibrium elasticity returns a **displacement** (compatible), so mass curves nothing. *This is
+  why the model's native gravity is γ=0:* its working gravity (`test_critical_gravity`) is the **scalar** amplitude
+  mode (Nordström, spin-0), and the spin-2 curvature sector is **unsourced**.
+- **[B]** Only a **topological** charge (disclination) sources curvature — and it repels/confines
+  (`test_disclination_force`). So "mass → curvature" (Einstein's RHS) is **absent** from pure elasticity; it must be
+  **induced**.
+- **[C]** If an induced coupling gives `η = κρ`, then `γ = κ/(4πG)` — one number: γ=0 → bend ×1 (scalar), γ=1 → **×2
+  (Einstein/GR)**, γ=2 → ×3.
+
+> **The wall, now singular.** The graviton's *home* (incompatible sector) and *kinetic term* (Sakharov,
+> `test_induced_gravity`) are in hand. The one remaining ingredient is the **Einstein source coupling** — mass
+> sourcing curvature at γ=1 — which pure elasticity lacks. Whether the fermion loop induces the metric-to-**conserved**-
+> stress-tensor coupling (conservation forces the Einstein strength, Weinberg) is the single calculation left:
+> "emergent diffeomorphism invariance," isolated to one testable number.
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
