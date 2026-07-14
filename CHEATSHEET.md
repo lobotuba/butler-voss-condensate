@@ -1218,6 +1218,37 @@ E(2)` probe that correctly returned "no force" three times:
    matter *crushes* the condensate (`φ → 0` locally), suppressing the mass and lengthening the range. That biased
    `λ·m_A` up to **1.19**. Holding the *dimensionless* source strength `g/a` fixed restores `λ·m_A = 1.00`.
 
+### Absolute scale + collapse: `a₀ = l_Planck`, tuning `1e122`, and no black holes (`test_scale_fixing.py`, `test_collapse.py`)
+With a *working* gravity in hand, the model can finally be pinned to metres — and Robert's black-hole idea can be tested.
+
+**Scale-fixing.** The model supplies three constants in medium terms: `c` (wave speed), `ħ/2m = c²/2Ω`
+(`test_emergent_qm`), and `G ∝ (2gφ₀)²` (`test_critical_gravity`).
+- **`a₀ = l_Planck = 1.6×10⁻³⁵ m`** — matching the measured `G` with an *order-unity* coupling forces the lattice
+  scale to be the Planck scale. This was **assumed** in `test_lv_prediction`; it is now a **consistency result**, so
+  the Lorentz-violation prediction and the gravity result hang together. (Honest: naturalness + dimensional analysis,
+  not a hard derivation — `ħ` is not independently derived; quantization is still imposed.)
+- **Gravity's range measures the distance from criticality.** Since `m_A = 1/λ_g` and `m_A² = 2a`, every
+  graviton-mass bound gives `a = (a₀/λ_g)²/2`. The strongest (cosmological, `λ_g > 10²⁶ m`) ⇒ the condensate sits
+  within **1 part in 10¹²²** of its critical point — essentially the cosmological-constant number `~10¹²⁰`. Same kind
+  of fine-tuning, nearly the same size; the model already grew its own CC term (`test_induced_gravity`'s `Π₊(0,0)`).
+- **Falsifiable in a new way:** the model predicts a **Yukawa** (finite range), *not* a pure `1/r²`. A measured
+  graviton mass wouldn't refute it — it would *measure* how far the medium is from criticality. Gravity's range is a
+  thermometer for the condensate.
+
+**Collapse (Robert's P1/P2).** Where matter is dense enough the local curvature flips, `m_eff² = −a + 2gρ`, and at
+`2gρ > a` the condensate is destroyed (`φ → 0`): a bubble of **normal phase**. P1 ("mass = confluence of loci") is
+therefore real and in the model. But P2 (runaway → black hole) **fails from inside**:
+- **No critical nucleus, no runaway.** `N(σ)` is *monotonic* (cheapest collapse = smallest region, down to the
+  lattice), and `N_min` is **gap-independent** (ratio **0.96** when `a` halves, not the predicted √2 ≈ 1.41; `σ*`
+  pinned at the lattice cutoff, *not* tracking the healing length). *Recorded honestly: this refuted my own
+  critical-nucleus prediction.* The reason is structural — the condensate is the **true vacuum**, so a normal bubble
+  is never favorable; matter *pins* a suppressed region and it heals shut when removed. An impurity, not an instability.
+- **No black holes, for three independent reasons:** (1) no collapse instability at all (above); (2) real horizon
+  density `∝ 1/M²` spans 20 orders — `1.8×10¹⁷ kg/m³` stellar down to `4×10⁻³` (thinner than air) for TON 618 — so no
+  single "spacing → 0" density criterion can describe them; a horizon is **compactness** (`2GM/rc²=1`), not density;
+  (3) our gravity is **scalar**, which doesn't bend light, so nothing traps it. All three are cured only by the
+  spin-2 / diffeomorphism-invariant upgrade — **a denser lattice would not help.**
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
