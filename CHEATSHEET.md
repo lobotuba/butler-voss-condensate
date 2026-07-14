@@ -1249,6 +1249,33 @@ therefore real and in the model. But P2 (runaway → black hole) **fails from in
   (3) our gravity is **scalar**, which doesn't bend light, so nothing traps it. All three are cured only by the
   spin-2 / diffeomorphism-invariant upgrade — **a denser lattice would not help.**
 
+### The spin-2 wall, DERIVED: light bending `γ = 0` because compatible strain is gauge (`test_light_bending.py`)
+First assault on the one bottleneck everything points at (black holes, light bending, full GR all need a massless
+spin-2 protected by diffeomorphism invariance). The observable crux is **light bending**, decided by the PPN
+parameter **`γ = Ψ/Φ`** (space/time curvature): `γ=0` is scalar gravity (no bending), `γ=1` is GR (the Eddington
+factor of two, Cassini-measured to 10⁻⁵).
+
+**Measured `γ = 1.4×10⁻⁵ ≈ 0` — and the reason is the result, derived not asserted:**
+- A mass can only make the medium respond **one way**: its nodes move — a **displacement field `u`**. The spatial
+  metric a ruler or ray then sees is `g_ij = δ_ij + 2e_ij`, `e = sym(∇u)`. But a strain from a single-valued
+  displacement is **compatible**, and a compatible strain is a **flat** metric — literally the coordinate change
+  `x → x+u`, a **diffeomorphism, pure gauge**. Flat space bends no light.
+- **Gate:** the 2D curvature (strain incompatibility `η = e_xx,yy + e_yy,xx − 2e_xy,xy`) of a mass's response is
+  `η/|strain| = 1.8×10⁻¹⁵` — machine zero. Flat. The spatial light deflection is `~0` ⇒ **`γ ≈ 0`.**
+- This is *why* the long-range tetrad shear does zero gravitational work — why `test_tetrad_force` found no force and
+  this finds no bending: **the shear was gauge all along.**
+- **Genuine curvature exists only as *incompatible* strain — a disclination** (`η = 0.13`, nonzero) — but that
+  topological sector **repels and confines** (`test_disclination_force`). The medium's one source of real curvature
+  has the wrong sign for gravity.
+- What *does* attract at range is the **scalar** amplitude mode, which bends light through `g_00` only ⇒ `γ = 0`, no
+  factor of two.
+
+> **The wall, in one sentence:** a fixed-background medium responds to mass by a **displacement** (compatible strain =
+> flat = gauge), so it structurally *cannot* generate the genuine spatial curvature GR requires. GR needs a metric
+> perturbation that is **not** a displacement gradient — a dynamical, diffeomorphism-invariant field. This is not a
+> numerical limit to push past; the route through is to make the metric **dynamical in its own right** (incompatible
+> strain as a propagating field), **not** to refine the lattice. That is the next frontier, now sharply posed.
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
