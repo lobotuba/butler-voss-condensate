@@ -1403,6 +1403,19 @@ it one — `test_graviton_ward`'s "regulator-limited" is **structural, not numer
 **IR-emergent** (same footing as emergent Lorentz): Weinberg on the conserved IR Dirac stress tensor + the measured
 dynamical healthy spin-2 (`test_spin2_dynamical`). The loop is closed.
 
+### The cosmological constant — the fine-tuning dissolved (`test_cosmological_constant.py`)
+The medium's zero-point energy is `~1/a₀⁴ = M_Planck⁴`, about `10¹²²×` the observed dark-energy density — naively the
+famous fine-tuning (and the same term as `test_induced_gravity`'s `Π(0,0)` and `test_lattice_ward`'s `⟨T⟩`). But the
+model's vacuum **is a self-sustained condensate** (`test_collapse`), and — Volovik's result for emergent gravity in
+quantum liquids — the emergent metric couples to the vacuum **stress**, the grand potential `ρ_Λ = ε−μn = −P` (the
+`⟨T^{ij}⟩~−P δ^{ij}` vacuum stress), **not** the bare `ε`. A self-sustained vacuum (nothing outside) has `P=0`, so the
+density **self-adjusts** to give `ρ_Λ=0` — measured to machine precision for bare `ε₀` swept across all **122 orders**,
+with **no parameter tuning** (a rigid vacuum gravitates the full `ε₀` — control). The residual scales with the
+fractional departure `δ` from equilibrium (`ρ_Λ~δ`). Scope, honest: this makes the *equilibrium* CC exactly zero and
+automatic (dissolving the tuning); it does **not** derive the observed nonzero Λ — that is relocated to why the vacuum
+sits slightly off equilibrium (expansion/matter/relaxation), still open. The reframing: not "cancel `10¹²²` by tuning
+constants" but "the equilibrium vacuum gravitates zero by thermodynamics; Λ measures the departure from equilibrium."
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
