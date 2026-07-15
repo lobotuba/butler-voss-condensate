@@ -1369,9 +1369,19 @@ slope ≈ −1.5; even **Dirichlet walls** cap the μ=0 confinement growth so a 
 precision: Newton tail slope **−2.0000**, **`G=1/(4πμ)` to 5 figures**, closed-form match **~10⁻⁷** (grid-gated `∝h²`),
 and the μ=0 **confinement growth `G∝r^{+1.0000}`** with constant force = tension (the growth a box cannot show). So a
 positive induced Einstein term makes the lower-derivative term dominate the IR and **turns the confining `+R` into a
-Newtonian `−1/r`**. The one remaining input is the **sign** of `μ` — the standard Sakharov result `μ~N_f Λ²>0`,
-*quoted, not measured* — the same induced-action question as `test_graviton_ward`, now the whole ballgame for tensor
-gravity.
+Newtonian `−1/r`**. The one remaining input is the **sign** of `μ`.
+**That sign is measured in `test_induced_sign.py`: `μ>0`.** The Sakharov sign is notoriously scheme-sensitive (the
+Einstein coefficient is UV-dominated; free fields don't universally give the healthy sign), so it is fixed by a
+**calibration the model already owns**: the induced *photon* is healthy (`test_induced_action`), hence its induced
+Coulomb term — the charge-density correlator `⟨J₀J₀⟩` — is a healthy dielectric (`χ>0`). Computing the induced
+*Newtonian* term — the energy-density correlator `⟨T₀₀T₀₀⟩` (energy = the gravitational charge, couples to `h₀₀`) —
+from the *same gapped-Dirac loop with identical conventions*, its `q²` coefficient comes out the **same positive sign**
+as `⟨J₀J₀⟩` in every case (5 masses × 3 cutoffs, both `T₀₀` vertex definitions). So induced gravity is as healthy as
+the induced EM the model runs on: `μ>0`, and by `test_deconfinement` the confining `+R` deconfines into an attractive
+`−1/r`. Scope: only the **sign** is robust (the magnitude of `G` is cutoff-dependent — Sakharov); this is the
+`h₀₀`/Newtonian sector on the 2+1D cone (where the spatial spin-2 graviton is non-dynamical, `q²` coef `~0`), so the
+full `γ=1` light-bending completion remains the open `test_graviton_ward` item. The deconfinement input — the sign — is
+settled.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
