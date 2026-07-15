@@ -1392,6 +1392,16 @@ vs ~10⁻⁴ in 2+1D → **dynamical**), the two polarizations `h₊(xx−yy)` a
 `γ=1` follows by Weinberg (massless spin-2 + conserved IR Dirac stress tensor → Einstein); the measured missing
 ingredient (the graviton actually propagates) is now supplied. Still open: the direct transversality `q_iΠ=0`
 (regulator-limited, `test_graviton_ward`) and the magnitude of `G` (cutoff-dependent — Sakharov).
+**`test_lattice_ward.py` then resolves the transversality question — structurally.** It builds the symmetry-preserving
+regulator `test_graviton_ward` said it needed: a Wilson-Dirac model on a periodic **BZ torus** (no boundary → no
+surface term) with the **diamagnetic seagull**. Dichotomy: the **photon** (U(1) = an *exact* lattice symmetry) closes
+to machine precision (`Π^{xx}_para + K^{xx}=0` to `10⁻¹⁶` at all q; transverse Maxwell nonzero — a real cancellation) →
+the regulator works. The **graviton** (diffeomorphism = *not* a lattice symmetry, only discrete translations) cannot:
+its Ward identity is **inhomogeneous** (`⟨T^{xx}⟩≠0`, the induced stress/cosmological term) and the longitudinal stress
+response doesn't cancel. So γ=1 is **not** a lattice-exact identity and no finite-cutoff *direct* measurement can make
+it one — `test_graviton_ward`'s "regulator-limited" is **structural, not numerical**. γ=1 is therefore correctly
+**IR-emergent** (same footing as emergent Lorentz): Weinberg on the conserved IR Dirac stress tensor + the measured
+dynamical healthy spin-2 (`test_spin2_dynamical`). The loop is closed.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
