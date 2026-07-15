@@ -1382,6 +1382,16 @@ the induced EM the model runs on: `μ>0`, and by `test_deconfinement` the confin
 `h₀₀`/Newtonian sector on the 2+1D cone (where the spatial spin-2 graviton is non-dynamical, `q²` coef `~0`), so the
 full `γ=1` light-bending completion remains the open `test_graviton_ward` item. The deconfinement input — the sign — is
 settled.
+**The radiative spin-2 sector is then measured in 3+1D (`test_spin2_dynamical.py`).** `test_induced_sign`'s spatial
+graviton was non-dynamical on the 2+1D cone — kinematics: a massless symmetric tensor has `D(D−3)/2` polarizations = 0
+in 2+1D, 2 in 3+1D. In a 3+1D (4-component) Dirac loop the TT graviton kinetic `q²` coefficient is **nonzero** (−0.069
+vs ~10⁻⁴ in 2+1D → **dynamical**), the two polarizations `h₊(xx−yy)` and `h×(xy)` are **degenerate** to 4 digits
+(**spin-2**, one helicity-±2 field), and the coefficient has the **same sign as the induced transverse photon**
+(Maxwell) → **healthy**, robust across mass and cutoff. So both graviton sectors — Newtonian `h₀₀` (`μ>0`,
+`test_induced_sign`) and radiative spin-2 (`test_spin2_dynamical`) — are induced and healthy in the physical dimension.
+`γ=1` follows by Weinberg (massless spin-2 + conserved IR Dirac stress tensor → Einstein); the measured missing
+ingredient (the graviton actually propagates) is now supplied. Still open: the direct transversality `q_iΠ=0`
+(regulator-limited, `test_graviton_ward`) and the magnitude of `G` (cutoff-dependent — Sakharov).
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
