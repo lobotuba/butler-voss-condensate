@@ -1306,6 +1306,23 @@ home). The frontier is reframed from "can the medium bend light" (yes, in this s
 > stress-tensor coupling (conservation forces the Einstein strength, Weinberg) is the single calculation left:
 > "emergent diffeomorphism invariance," isolated to one testable number.
 
+**The Ward-identity test — γ=1 argued, not yet cleanly measured (`test_graviton_ward.py`).** The decisive check is
+whether the induced graviton is **transverse** (`q_i Π^{ij,kl}=0`) — the Ward identity of linearized diffeomorphism
+invariance, which by Weinberg forces γ=1. **Honest outcome (a flagged risk that materialized):** the direct numerical
+check is **regulator-limited/inconclusive.** Built as the static interband polarization of the filled continuum-Dirac
+sea (the IR theory the lattice flows to), it fails its own **validation** — the *current* (photon) transversality,
+which charge conservation *requires* to be exactly zero, stays at percent-to-tens-of-percent and won't clean up under
+hard/soft cutoffs, larger Λ, or Pauli–Villars. Classic disease: a momentum-cutoff fermion bubble breaks the Ward
+identity via a surface term; a symmetry-preserving regulator (dim-reg, or an exact lattice Ward identity) is needed.
+So the stress ratio is **not** a trustworthy transversality measurement, and isn't claimed as one.
+- **What stands (analytic):** the medium's IR sector is a Lorentz-invariant Dirac fermion (`test_lorentz`,
+  `test_dirac`); its stress tensor is conserved by Noether; a massless spin-2 coupled to a conserved stress tensor is
+  Einstein (Weinberg) ⇒ **γ=1**. So the missing coupling is supplied *in the IR* by the emergent-Lorentz flow — but as
+  an **argument**, not yet a clean in-model measurement.
+- **Honest wall status:** crossed *in principle* by the IR fixed point (γ=1 follows from emergent Lorentz); a **direct
+  numerical confirmation of graviton transversality remains open**, as do the UV/lattice obstructions (Weinberg–Witten,
+  the induced cosmological term).
+
 ### Fundamental-physics scorecard (`test_lorentz*.py`, `test_dirac.py`, `test_domain_wall.py`, `test_quantization.py`, `test_graviton*.py`, `test_fracton_gravity.py`, `test_cone_universality.py`, `test_cone_lock.py`, `test_induced_action.py`, `test_induced_gravity.py`, `test_emergent_tetrad.py`, `test_lv_prediction.py`, `test_graviton_dynamics.py`, `test_emergent_qm.py`, `test_born_rule.py`, `test_double_solution.py`)
 From "can it host X" to "can it be fundamental." **✅ Emergent Lorentz** (isotropy + speed universality via one
 operator + boosts; violations ~(E/E_Planck)². The cross-statistics cone is **not** locked for an *independent*
