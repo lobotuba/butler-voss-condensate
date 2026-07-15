@@ -1416,6 +1416,19 @@ automatic (dissolving the tuning); it does **not** derive the observed nonzero �
 sits slightly off equilibrium (expansion/matter/relaxation), still open. The reframing: not "cancel `10¹²²` by tuning
 constants" but "the equilibrium vacuum gravitates zero by thermodynamics; Λ measures the departure from equilibrium."
 
+### Emergent non-Abelian gauge fields — Yang-Mills, not just photons (`test_yang_mills.py`)
+`test_induced_action` induced the U(1) photon (Sakharov: the fermion loop makes the Maxwell term, with the fermion
+cone). The SM needs `SU(2)_L × SU(3)_color`. The decisive question — genuine Yang-Mills or N²−1 decoupled photons? — is
+settled by the **self-interaction**. A non-Abelian `F = dA + i[A,A]`, so a *uniform* non-Abelian field has
+`F=i[A_x,A_y]≠0` from the commutator alone (uniform Abelian is always pure gauge). Fermion in the fundamental of SU(N),
+uniform links: **commuting** (Cartan) → induced action `~10⁻¹⁵` = machine-zero pure gauge; **non-commuting** →
+`E−E₀ ∝ A^3.97 ≈ A⁴` = the Yang-Mills `Tr[A_x,A_y]²`. Decoupled photons give zero for both. Shown for **SU(2)** (3
+bosons) and **SU(3)** (8 gluons), universal `1/g²` from exact non-Abelian lattice gauge invariance (Wilson links, same
+footing as `test_lattice_ward`'s exact U(1)). The photon is the Abelian `F=dA` case of one mechanism; non-Abelian adds
+the `[A,A]`. **Honest scope — the mechanism, not the SM:** does not derive the group `SU(3)×SU(2)×U(1)`, the chiral
+coupling, fermion reps/hypercharges, anomaly cancellation, or the Higgs. The group is an input; the Yang-Mills dynamics
+(with the fermion cone) are induced — emergent gauge theory scales from U(1) to SU(N).
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
