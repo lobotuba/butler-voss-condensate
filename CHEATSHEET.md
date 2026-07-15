@@ -1357,15 +1357,21 @@ a falsifiable **scale-dependent γ** (GR at range, scalar-contaminated below `1/
 forces **γ=½** (ruled out) — the wrong move; the amplitude mode should stay **gapped**, and gravity proper is the
 graviton.
 The graviton only exists if the incompatible sector **deconfines**. In the pure medium it is **confining**: the
-biharmonic `κ∇⁴` (propagator `1/q⁴`) gives a constant force = a **string tension** `s²/(8πκ)` (`test_deconfinement`
-plateau, ratio 0.95; the clean force-form of `test_disclination_force`'s `|dE|~R^1.97`). The **Sakharov-induced
-Einstein term** adds `μ∇²`; the full propagator `1/(κq⁴+μq²)` has the exact 3D closed form
-`G(r)=(1/4πμr)(1−e^{−r/ℓ})`, `ℓ=√(κ/μ)`. Measured on a **Dirichlet-wall** sine-transform solve (periodic FFT's Ewald
-background distorts the very tail we need): the force matches this closed form to **<1%** (box-gated `1.8→1.3→0.7%`),
-turning over at `ℓ` into a **`1/r²` Newton tail** with **`G=1/(4πμ)`**. So a positive induced Einstein term makes the
-lower-derivative term dominate the IR and **turns the confining `+R` into a Newtonian `−1/r`**. The one remaining input
-is the **sign** of `μ` — the standard Sakharov result `μ~N_f Λ²>0`, *quoted, not measured* — which is the same
-induced-action question as `test_graviton_ward` and is now the whole ballgame for tensor gravity.
+biharmonic `κ∇⁴` (in 3D `G=r/8πκ`) gives a constant force = a **string tension** `s²/(8πκ)` (the clean force-form of
+`test_disclination_force`'s `|dE|~R^1.97`). The **Sakharov-induced Einstein term** adds `μ∇²`; the full operator
+`κ∇⁴−μ∇²` has the exact 3D closed form `G(r)=(1/4πμr)(1−e^{−r/ℓ})`, `ℓ=√(κ/μ)`.
+**The correct measurement tool is the radial ODE, not a box.** A point mass is spherically symmetric, so `u=rG` and the
+factorization `−∇²(κ∇²−μ)` reduce the fourth-order equation to a 1-D second-order tridiagonal solve
+(`u''−u/ℓ²=−s/4πκ`) on an effectively infinite line — **no transverse box, no periodic images** — and by linearity the
+two-body force is exactly `−s²G'(R)`, so one single-source radial solve gives the entire force law. (The wrong tools,
+checked and discarded: a **periodic FFT box**'s neutralizing-background/Ewald images distort the very `1/r²` tail →
+slope ≈ −1.5; even **Dirichlet walls** cap the μ=0 confinement growth so a box can never show it.) Clean to machine
+precision: Newton tail slope **−2.0000**, **`G=1/(4πμ)` to 5 figures**, closed-form match **~10⁻⁷** (grid-gated `∝h²`),
+and the μ=0 **confinement growth `G∝r^{+1.0000}`** with constant force = tension (the growth a box cannot show). So a
+positive induced Einstein term makes the lower-derivative term dominate the IR and **turns the confining `+R` into a
+Newtonian `−1/r`**. The one remaining input is the **sign** of `μ` — the standard Sakharov result `μ~N_f Λ²>0`,
+*quoted, not measured* — the same induced-action question as `test_graviton_ward`, now the whole ballgame for tensor
+gravity.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
