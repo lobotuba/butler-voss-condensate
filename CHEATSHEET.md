@@ -1347,6 +1347,26 @@ in-model demonstrations, each with an honest statement of what is shown vs still
 the Lorentz result is within-sector (not across statistics), and **the gravity "route found" was retracted** when its
 force law was finally measured.
 
+### Tensor gravity: the two-gravities showdown and the deconfinement target (`test_two_gravities.py`, `test_deconfinement.py`)
+The model carries **two** universal attractions: the **scalar** amplitude mode (γ=0, the working force of
+`test_critical_gravity`) and the **tensor** graviton (γ=1, the incompatible/curvature sector). Which wins at long
+range is set by **mass, not coupling** — a massless mediator's `1/r` always beats a massive one's Yukawa. So if the
+graviton is massless and the amplitude mode gapped, **γ(r) climbs 0→1** across the amplitude Compton wavelength `1/m_A`:
+a falsifiable **scale-dependent γ** (GR at range, scalar-contaminated below `1/m_A`, the Eöt-Wash regime). This
+**reinterprets** `test_critical_gravity`: its "working gravity" was the scalar *tuned* long-range (`m_A→0`), which
+forces **γ=½** (ruled out) — the wrong move; the amplitude mode should stay **gapped**, and gravity proper is the
+graviton.
+The graviton only exists if the incompatible sector **deconfines**. In the pure medium it is **confining**: the
+biharmonic `κ∇⁴` (propagator `1/q⁴`) gives a constant force = a **string tension** `s²/(8πκ)` (`test_deconfinement`
+plateau, ratio 0.95; the clean force-form of `test_disclination_force`'s `|dE|~R^1.97`). The **Sakharov-induced
+Einstein term** adds `μ∇²`; the full propagator `1/(κq⁴+μq²)` has the exact 3D closed form
+`G(r)=(1/4πμr)(1−e^{−r/ℓ})`, `ℓ=√(κ/μ)`. Measured on a **Dirichlet-wall** sine-transform solve (periodic FFT's Ewald
+background distorts the very tail we need): the force matches this closed form to **<1%** (box-gated `1.8→1.3→0.7%`),
+turning over at `ℓ` into a **`1/r²` Newton tail** with **`G=1/(4πμ)`**. So a positive induced Einstein term makes the
+lower-derivative term dominate the IR and **turns the confining `+R` into a Newtonian `−1/r`**. The one remaining input
+is the **sign** of `μ` — the standard Sakharov result `μ~N_f Λ²>0`, *quoted, not measured* — which is the same
+induced-action question as `test_graviton_ward` and is now the whole ballgame for tensor gravity.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
