@@ -1429,6 +1429,20 @@ the `[A,A]`. **Honest scope — the mechanism, not the SM:** does not derive the
 coupling, fermion reps/hypercharges, anomaly cancellation, or the Higgs. The group is an input; the Yang-Mills dynamics
 (with the fermion cone) are induced — emergent gauge theory scales from U(1) to SU(N).
 
+### Chirality and anomalies — consistent by inflow (`test_anomaly_inflow.py`)
+The real obstruction between "we have Yang-Mills" (`test_yang_mills`) and "we have the SM": `SU(2)_L` couples
+**chirally**, and a chiral gauge theory is **inconsistent unless its anomalies cancel**. The model's domain-wall chiral
+fermion (`test_domain_wall`) survives by **Callan–Harvey anomaly inflow**, and the content is a single quantized
+integer: `(bulk Chern C) = (chiral modes per wall) = (charge pumped per flux quantum)`. Measured on the QWZ strip:
+topological `C = −0.9995`, edge **spectral flow +1 / −1** on the two walls, **sum exactly 0**; trivial control `0,0,0`.
+So each wall is *individually anomalous* (gauge charge not conserved on it), the lattice as a whole is vector-like and
+anomaly-free (Nielsen–Ninomiya), and the charge a wall loses is pumped through the **bulk** to the other wall — neither
+wall is a consistent theory alone, the pair plus bulk is. **Honest ceiling:** this is NOT the SM's anomaly
+cancellation. The SM is a standalone 4D chiral gauge theory cancelling among its **own** fermion content (the
+quark/lepton hypercharge conspiracy, `ΣY=0` and `ΣY³=0` per generation), with no bulk. Here the bulk does the work, so
+the wall theory is anomaly-free only *with* it. Chirality is shown **consistently realizable**; the SM's particular
+chiral spectrum, representations and hypercharges remain inputs.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
