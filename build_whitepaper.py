@@ -172,7 +172,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-08")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-09")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -868,6 +868,35 @@ result("Result 8.16 — one prediction sharpened, one deflated, one tuning retra
 "removed by a structural result rather than a fitted parameter. (Scope: literature order-of-magnitude bounds, "
 "assuming comparable scalar and tensor couplings; loosening that weakens the gravitational bound proportionally.)")
 
+heading("8.17  The first dynamical integration: chiral matter and a gauge field, in real time", 2)
+body("Every result to this point -- emergent Lorentz invariance, chiral fermions, the induced photon and graviton, the "
+"anomaly -- is established at the level of a dispersion relation, a band structure, or a defect algebra. None is a "
+"RUNNING SIMULATION in which two of these emergent sectors coexist and interact IN TIME. That gap is the sharpest "
+"honest criticism of the whole program, and this section takes the first step across it, using the anomaly of "
+"Section 8.15 as the target. That anomaly was established statically, by counting; the question here is whether the "
+"charge it bookkeeps actually MOVES.")
+body("The test is a Laughlin flux threading. On the same QWZ strip -- two chiral walls, x periodic -- the "
+"negative-energy sea is filled at t = 0, and one full flux quantum is threaded adiabatically by ramping a uniform "
+"vector potential, A: 0 -> 2 pi / L_x, which enters as k_x -> k_x + A(t). Every occupied orbital is evolved under the "
+"time-dependent Schrodinger equation by exact exponentiation of the instantaneous Hamiltonian at each step -- no "
+"adiabatic-following shortcut, which would presuppose the result. If the anomaly is genuine dynamics rather than "
+"bookkeeping, exactly one unit of charge must cross from one wall to the other per flux quantum, pumped through the "
+"BULK since the walls are spatially separated and nothing local joins them.")
+body("It does. The charge in the bottom half of the strip changes by 0.9991 of one unit in the topological phase and "
+"by exactly zero in the trivial control, so the transfer is the anomaly and not the ramp. Slowing the ramp drives the "
+"residual to zero as roughly one over the number of steps -- the quantization is physics, not an artifact of the "
+"discretisation. The charge has crossed the bulk in real time: Callan-Harvey inflow, observed as dynamics.")
+result("Result 8.17 — the anomaly happens, and two sectors run together.", "Threading one flux quantum through the "
+"chiral strip and evolving the filled sea under the actual time-dependent Schrodinger equation pumps exactly one unit "
+"of charge between the walls (0.9991, converging to one as the ramp slows), and exactly zero in the trivial control. "
+"The topological accounting of Section 8.15 therefore describes real time evolution -- the bulk really does supply "
+"what each wall loses. This is the program's FIRST running simulation in which two emergent sectors -- chiral matter "
+"and a gauge field -- coexist and interact in time, and the consistency does not break down. HONEST scope: the field "
+"threaded is the U(1) GAUGE field, not gravity. The full integration this program's limitations call for -- emergent "
+"Lorentz-invariant chiral quantum matter interacting through an emergent SPIN-2 gravity, with back-reaction -- is not "
+"done; gravitational back-reaction in a running simulation remains the open integration problem. What is shown is that "
+"the first pair of sectors can be run together at all.")
+
 result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -888,7 +917,8 @@ result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a m
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
 "shows the photon's induction mechanism scales to non-Abelian YANG-MILLS (SU(2), SU(3)), while Section 8.15 shows "
 "CHIRALITY is consistently realizable alongside it, the anomaly being a quantized identity settled by Callan-Harvey "
-"inflow. Section 8.16 then puts the model against data, and the result is bracing: the Lorentz-violation signature is "
+"inflow -- now confirmed DYNAMICALLY (Section 8.17), in the program's first running simulation of two emergent sectors "
+"together. Section 8.16 then puts the model against data, and the result is bracing: the Lorentz-violation signature is "
 "safe but NOT presently falsifiable, the genuinely testable prediction is the short-range gravitational gamma, and "
 "the 1e122 criticality tuning is RETRACTED. What remains open is quantitative: the magnitude of Newton's constant "
 "(cutoff-dependent), the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
@@ -935,12 +965,15 @@ body("This is a toy model, and the results are qualitative correspondences, not 
 "not attempted. What survives these caveats is the central, dimension-robust and repeatedly gate-checked "
 "statement: within this medium, a force's range is set by whether a symmetry protects its mediator from a "
 "mass term.")
-body("The fundamental-physics program of Section 8 carries a further, honest qualification. Those results are "
-"established at the level of the dispersion relation, the band structure, and the defect algebra — not yet as "
-"a single running simulation in which emergent Lorentz-invariant, quantum, chiral matter interacts through an "
-"emergent spin-2 gravity. Each barrier is met individually; assembling them into one consistent theory that "
-"also fixes the Standard-Model content and the constants of nature is the work of fundamental physics itself, "
-"not of this toy. The value of Section 8 is to show that these barriers, usually treated as fatal to any "
+body("The fundamental-physics program of Section 8 carries a further, honest qualification. Most of those results are "
+"established at the level of the dispersion relation, the band structure, and the defect algebra rather than a single "
+"running simulation. Section 8.17 takes the FIRST step past this: it runs chiral matter and a gauge field together in "
+"time and recovers the anomaly as real charge transport. But that is one PAIR of sectors and the threaded field is the "
+"U(1) gauge field -- the full target, emergent Lorentz-invariant quantum chiral matter interacting through an emergent "
+"spin-2 GRAVITY with back-reaction, is not yet a single running simulation. Gravitational back-reaction in real time "
+"is the open integration problem. Each barrier is met individually, the first pair now jointly; assembling them all "
+"into one consistent theory that also fixes the Standard-Model content and the constants of nature is the work of "
+"fundamental physics itself, not of this toy. The value of Section 8 is to show that these barriers, usually treated as fatal to any "
 "'space is a medium' program, are here concrete and — one at a time — surmountable. The quantum-mechanics result "
 "of Section 8.6 carries its own explicit boundary: the wave, hbar, the Born statistics and de Broglie's relation "
 "emerge, but the guidance of a particle by a separate pilot wave and the selection of a single definite outcome are "
@@ -1057,7 +1090,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_disclination_force.py, test_tetrad_force.py (§8.9); test_critical_gravity.py (§8.10); test_two_gravities.py, "
 "test_deconfinement.py (§8.11); test_induced_sign.py, test_spin2_dynamical.py, test_lattice_ward.py (§8.12); "
 "test_cosmological_constant.py (§8.13); test_yang_mills.py (§8.14); test_anomaly_inflow.py (§8.15); "
-"test_experimental_bounds.py (§8.16).")
+"test_experimental_bounds.py (§8.16); "
+"test_realtime_pump.py (§8.17).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
