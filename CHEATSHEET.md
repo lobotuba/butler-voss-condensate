@@ -1443,6 +1443,27 @@ quark/lepton hypercharge conspiracy, `ΣY=0` and `ΣY³=0` per generation), with
 the wall theory is anomaly-free only *with* it. Chirality is shown **consistently realizable**; the SM's particular
 chiral spectrum, representations and hypercharges remain inputs.
 
+### The model against the data — predictions vs bounds, and a retraction (`test_experimental_bounds.py`)
+**[A] n=2 Lorentz violation** (`test_lv_prediction`): `v(E)/c = 1 − ζ(E/E_Planck)²`, subluminal. Against photon
+time-of-flight limits on quadratic dispersion (`E_QG,2 ~ 10¹⁰–10¹² GeV`), the effect is **~10⁻¹⁶ of current
+sensitivity** — safe by ~16 orders, but therefore **not currently falsifiable** (needs ~8 orders in energy reach).
+Honest tempering: a *quadratic* Planck-suppressed signal is out of reach; experiments probe the *linear* n=1 signal the
+model does not predict.
+**[B] Scale-dependent γ — the genuinely testable one** (`test_two_gravities`): massless graviton + gapped amplitude
+mode ⇒ `γ(r) = g_t/(g_t + g_s e^{−r/λ})`, `λ=1/m_A`, i.e. a Yukawa addition to gravity. Cassini (`|γ−1|<2.3×10⁻⁵` at
+1 AU) gives only `λ < 1.4×10¹⁰ m`; **short-range torsion-balance tests bind, beating Cassini by 14 orders**: with
+`α~1`, `m_A ≳ 3.9 meV` — within a factor **1.6 of the dark-energy scale** (2.4 meV), the coincidence that makes ~100 µm
+the frontier. γ is 1 to far beyond precision at solar-system scales and departs only sub-millimetre.
+**[C] RETRACTION — the 10¹²² criticality tuning of `test_scale_fixing` does not survive.** That chain read gravity's
+range *as* `1/m_A` (the scalar picture), forcing `m_A` tiny. The tensor arc (`test_deconfinement`, `test_induced_sign`,
+`test_spin2_dynamical`) replaced it: the long-range force is the **massless deconfined graviton**, and the amplitude
+mode is only a short-range correction. The surviving constraint is a **lower** bound (`m_A ≳ 3.9 meV`, no upper bound —
+a bigger gap is only safer), which an **untuned** medium (`m_A ~ M_Planck`) clears by ~30 orders. Fine-tuning
+**dissolved, not reduced**. `a₀ = l_Planck` stands. Together with the cosmological-constant result, the model has shed
+**both** of its 10¹²² fine-tunings, each by a structural result rather than a fitted parameter.
+*(Scope: literature order-of-magnitude bounds; assumes `g_s ~ g_t` and `α ~ 1` — loosening either weakens [B]
+proportionally.)*
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
