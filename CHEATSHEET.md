@@ -1476,6 +1476,22 @@ a bigger gap is only safer), which an **untuned** medium (`m_A ~ M_Planck`) clea
 *(Scope: literature order-of-magnitude bounds; assumes `g_s ~ g_t` and `α ~ 1` — loosening either weakens [B]
 proportionally.)*
 
+### The first dynamical integration — chiral matter + gauge field in real time (`test_realtime_pump.py`)
+Every result so far lives in a dispersion relation / band structure / defect algebra — never a **running** system where
+two emergent sectors interact in time (§10's own sharpest criticism). `test_anomaly_inflow` proved Callan–Harvey inflow
+**statically**, by counting. This threads **one flux quantum** through the QWZ cylinder (`k_x → k_x + A(t)`, `A: 0→2π/L_x`)
+and evolves the filled sea by the **time-dependent Schrödinger equation** — exact exponentiation of the instantaneous
+`H` each step, no adiabatic-following shortcut. Result: **ΔQ_bottom = +0.9991** of charge physically crosses between the
+walls in the topological phase, **exactly 0.0000** in the trivial control; the **adiabatic gate** converges (`|err|`
+2.5×10⁻³→8.6×10⁻⁴ as `N_t` doubles, `~1/N_t`). The walls are spatially separated, so the charge went through the
+**bulk** — the anomaly seen as *dynamics*, not inferred from topology. **Debug note:** the occupied-state count varies
+by ±1 across `k` where the edge mode crosses zero (31 at `k=0`, 32 elsewhere), so keep **all** negative-energy states and
+pad ragged sectors with zero columns — truncating to a fixed count drops real states and wrecks the pumping. **Honest
+scope:** the threaded field is the **U(1) gauge** field, not gravity; the full §10 integration (chiral quantum matter
+through emergent **spin-2 gravity with back-reaction**) is *not* done — gravitational back-reaction stays the open
+integration problem. What's shown: the first pair of emergent sectors runs together, and the topological accounting
+survives contact with real dynamics.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
