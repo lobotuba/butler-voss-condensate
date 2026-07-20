@@ -1339,13 +1339,25 @@ sector is provably dead: gravity-by-density screens (Bitter–Crum contact term)
 project's own principle applied to gravity's mediator: the **condensate's amplitude mode**. Unprotected ⇒ gapped ⇒
 Yukawa of range `1/m_A` (**why it always looked screened**); it couples monopolarly to positive-definite energy, and
 scalar exchange between like charges **attracts**. Measured: `λ·m_A = 1.00`, and `E_int = −C·e^{−R/λ}/R` exactly ⇒ at
-criticality, **Newton's law, `1/r²`, universally attractive**. 🟡 **But it is *scalar* (Nordström) gravity** — no light
-bending, no spin-2 waves; full GR needs diff invariance, which a fixed-background medium lacks (Weinberg). And it
-needs criticality — a fine-tuning that doubles as a *prediction* of why gravity is weak.
-**⬜** Standard-Model gauge group & constants, continuum limit, cosmology, Weinberg–Witten. The barriers have concrete
-in-model demonstrations, each with an honest statement of what is shown vs still open — and now **two** self-corrections:
-the Lorentz result is within-sector (not across statistics), and **the gravity "route found" was retracted** when its
-force law was finally measured.
+criticality, **Newton's law, `1/r²`, universally attractive**.
+⚠️ **The scalar reading above is SUPERSEDED by the tensor arc** (see the two sections below). A long-range scalar
+coexisting with the graviton forces γ=½ (ruled out), so the amplitude mode stays **gapped** as a *short-range*
+correction, and gravity proper is the **spin-2 graviton**: the confining curvature sector **deconfines** given the
+*measured* `μ>0`, the graviton is dynamical/degenerate/healthy in 3+1D, and **γ→1** follows from Weinberg on the
+conserved IR stress tensor. **✅ Full GR is reached as an INFRARED FIXED POINT** — not lattice-exact, because
+diffeomorphism invariance (unlike U(1)) is emergent rather than a lattice symmetry. The criticality fine-tuning is
+**retracted**.
+**🟡 Standard-Model gauge group:** the *mechanism* is achieved — the same fermion loop induces genuine non-Abelian
+Yang-Mills for SU(2)/SU(3), and chirality is consistent via quantized anomaly **inflow** — but the **group, chiral
+content, representations and hypercharges remain inputs**; the SM is not derived. **🟡 Cosmology:** the CC
+*fine-tuning* is dissolved (the self-sustained condensate gravitates `−P`, zero at equilibrium), though the observed
+nonzero Λ is not derived. **⬜** Constants (the magnitude of `G` stays cutoff-dependent), continuum limit,
+Weinberg–Witten, and the measurement problem.
+The barriers have concrete in-model demonstrations, each with an honest statement of what is shown vs still open — and
+now **four** self-corrections on record: the Lorentz result is within-sector (not across statistics); **the gravity
+"route found" was retracted** when its force law was finally measured; the **critical-nucleus prediction was refuted**
+by its own measurement (`test_collapse`); and the **10¹²² criticality tuning was retracted** once gravity became
+tensor (`test_experimental_bounds`).
 
 ### Tensor gravity: the two-gravities showdown and the deconfinement target (`test_two_gravities.py`, `test_deconfinement.py`)
 The model carries **two** universal attractions: the **scalar** amplitude mode (γ=0, the working force of

@@ -1,6 +1,22 @@
 """
 Is the coupling Einstein? gamma = 1 needs mass to source CURVATURE, not displacement.
 
+*** STATUS UPDATE: the missing ingredient this file isolated has since been SUPPLIED. The analysis
+    below stands -- gamma is set by ONE number, the strength with which mass sources curvature
+    relative to the Newtonian potential, and the medium's ELASTIC response supplies none of it
+    (eta/rho ~ 1e-15), so the native scalar sector sits at gamma = 0. What has changed is the
+    closing status "the medium currently sits at gamma = 0 / the curvature sector is unsourced":
+      * the curvature sector is confining on its own but DECONFINES into a massless Newtonian
+        graviton given a positive induced Einstein term (test_deconfinement),
+      * that term's SIGN was then measured positive, mu > 0, by calibrating the induced Newtonian
+        coupling against the model's own healthy photon (test_induced_sign),
+      * the resulting spin-2 graviton is dynamical, doubly degenerate and healthy in 3+1D
+        (test_spin2_dynamical), and
+      * gamma = 1 follows from Weinberg's theorem on the conserved infrared stress tensor, as an
+        EMERGENT (not lattice-exact) identity -- test_lattice_ward explains why it can only be
+        emergent: diffeomorphism invariance, unlike U(1), is not a lattice symmetry.
+    So the "one number" is no longer missing; it is induced. ***
+
 test_incompatible_gravity found the door: the medium has an incompatible-strain (curvature)
 sector, distinct from the gauge displacement sector, and it DOES bend light. But a door is not a
 crossing. Two things decide whether the medium actually does GR (gamma = 1, the light-bending

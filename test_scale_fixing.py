@@ -1,6 +1,22 @@
 """
 Fixing the medium's ABSOLUTE SCALE from measured constants.
 
+*** STATUS UPDATE -- the 1e122 criticality tuning below is RETRACTED (test_experimental_bounds).
+    What STANDS: a0 = l_Planck. Matching the measured G with an order-unity coupling still forces
+    the node spacing to the Planck length, and that consistency result is unaffected.
+    What FAILS: the inference that the medium must be tuned to ~1 part in 1e122 of criticality. That
+    chain assumed gravity's RANGE is 1/m_A -- i.e. that the amplitude mode IS gravity's mediator --
+    so any bound on gravity being 1/r^2 out to large distances forced 1/m_A astronomically large and
+    hence m_A^2 = 2a absurdly small. The tensor-gravity arc replaced that premise: the long-range
+    force is carried by the MASSLESS deconfined graviton (test_deconfinement, test_induced_sign,
+    test_spin2_dynamical), and the amplitude mode is only a short-range correction. The surviving
+    experimental constraint is therefore a LOWER bound, m_A >~ 4 meV from short-range gravity, with
+    NO upper bound -- a larger gap is only safer -- and an UNTUNED medium (m_A ~ M_Planck) clears it
+    by ~30 orders. The fine-tuning is dissolved, not merely reduced.
+    Also superseded: "the model predicts a Yukawa, not a pure 1/r^2". Long-range gravity is now the
+    massless graviton's exact 1/r^2; the Yukawa survives only as the sub-millimetre correction that
+    test_experimental_bounds turns into the model's one genuinely testable prediction. ***
+
 Until now every number in this project has been in lattice units. Robert's instinct was the
 right one: find a real observable that pins the node spacing a0 to metres. His route -- use
 black-hole masses -- does not work (see the companion test_collapse.py, and the note below),

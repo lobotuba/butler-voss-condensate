@@ -1,6 +1,23 @@
 """
 Gravity from the amplitude mode -- and why it was screened all along.
 
+*** STATUS UPDATE (superseded in part by the tensor-gravity arc). The MEASUREMENTS below stand
+    exactly as reported: the amplitude mode does mediate an attractive Yukawa force with
+    lambda*m_A = 1.00 and a pure 1/R Newtonian core. What has changed is their INTERPRETATION and
+    two of the closing claims:
+      * The amplitude mode is NO LONGER read as gravity itself. test_two_gravities showed that a
+        long-range scalar coexisting with the graviton forces gamma = 1/2, which is ruled out. The
+        amplitude mode should stay GAPPED, as a SHORT-RANGE correction; gravity proper is the
+        spin-2 graviton (test_deconfinement, test_induced_sign, test_spin2_dynamical).
+      * "GR remains out of reach" is superseded: general relativity is now reached as an INFRARED
+        fixed point -- the confining curvature sector deconfines given the measured mu > 0, the
+        spin-2 graviton is dynamical and healthy in 3+1D, and gamma = 1 follows from Weinberg on the
+        conserved IR stress tensor (test_lattice_ward).
+      * "It needs the medium tuned near criticality" is RETRACTED (test_experimental_bounds). That
+        tuning followed from reading gravity's RANGE as 1/m_A. With gravity carried by the massless
+        graviton, m_A faces only a LOWER bound (m_A >~ 4 meV from short-range gravity), which an
+        untuned medium clears by ~30 orders. ***
+
 The project's central principle is: A FORCE'S RANGE IS SET BY WHETHER A SYMMETRY PROTECTS ITS
 MEDIATOR FROM A MASS TERM. We applied it to the Goldstone force, to the gauged/Higgsed force,
 and to electromagnetism. We never once applied it to GRAVITY's mediator. Do that now.

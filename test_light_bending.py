@@ -1,6 +1,20 @@
 """
 Does the model bend light? The PPN gamma, and WHY the wall is where it is.
 
+*** STATUS UPDATE (conclusion superseded by the tensor-gravity arc). The measurement and its
+    derivation below are correct AND still load-bearing: mass deforms the medium by a DISPLACEMENT,
+    displacement-derived strain is COMPATIBLE, compatible strain is flat (pure gauge), and it bends
+    no light. That is why the ELASTIC/scalar sector has gamma = 0.
+    What is superseded is the headline "the model gives gamma = 0". It does not, at long range. The
+    curvature (incompatible) sector -- which this file correctly identified as the only source of
+    genuine bending, but dismissed because it REPELLED -- was later shown to be CONFINING rather
+    than repulsive in the usual sense, and to DECONFINE into an attractive massless graviton once
+    the fermion loop supplies a positive induced Einstein term (test_deconfinement, with mu > 0
+    measured in test_induced_sign). That graviton is dynamical and healthy in 3+1D
+    (test_spin2_dynamical), and gamma -> 1 follows from Weinberg on the conserved IR stress tensor
+    (test_lattice_ward). So: gamma = 0 for the compatible/scalar sector (this file, still true),
+    gamma -> 1 for the model's actual long-range gravity. ***
+
 The spin-2 wall's one observable crux is light bending, set by gamma = Psi/Phi (space/time
 curvature): gamma = 0 is scalar gravity (no Eddington bending), gamma = 1 is GR (factor of two).
 A first attempt built Psi from a stand-in and got a meaningless number; a second, using the

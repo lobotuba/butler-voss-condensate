@@ -1,6 +1,25 @@
 """
 The collapse threshold: the minimum number of particles that destroys the condensate.
 
+*** STATUS UPDATE -- one of the three legs of the "no black holes" argument has been removed; the
+    conclusion survives on the other two, and this file should be read accordingly.
+    STANDS (and is the load-bearing leg): the measurement that there is NO critical nucleus and NO
+    runaway -- N is monotonic in sigma and the ratio is gap-independent (0.96, not the predicted
+    sqrt(2)). The condensate is the true vacuum, so matter PINS a suppressed region rather than
+    triggering an instability. That is a statement about the condensate alone and is untouched by
+    anything in the gravity sector. The self-correction recorded below (my critical-nucleus
+    prediction was refuted by the data) also stands.
+    STANDS: the horizon-density argument (rho_horizon ~ 1/M^2 spans 20 orders, so no single
+    "spacing -> 0" density describes black holes).
+    SUPERSEDED: the third leg, "our gravity is SCALAR, which does not bend light, so nothing traps
+    it into a horizon." The tensor-gravity arc removed that premise -- the curvature sector
+    deconfines into a massless spin-2 graviton (test_deconfinement, test_induced_sign,
+    test_spin2_dynamical) and gamma -> 1 in the infrared (test_lattice_ward), so the model's
+    long-range gravity DOES bend light. The "spin-2 / diffeomorphism-invariant upgrade" this file
+    named as the cure has since happened. It cures the light-bending objection only; it does NOT
+    supply a collapse instability, so the absence of black holes here still follows from the first
+    leg. ***
+
 Robert's Postulate 1 -- mass is a confluence of loci -- and Postulate 2 -- enough distortion
 drives the inter-particle distance to zero, giving a black hole. The first is right and the
 model already contains the mechanism. The second needs testing, and the honest answer turns out

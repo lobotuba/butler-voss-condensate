@@ -1,6 +1,25 @@
 """
 Is the induced graviton transverse? The Ward identity that forces gamma = 1.
 
+*** STATUS UPDATE -- the honest negative below is now EXPLAINED, and it was not a numerical failure.
+    This file reports that the direct transversality check is regulator-limited: a momentum cutoff
+    breaks the Ward identity through a surface term, and even the PHOTON validation (which charge
+    conservation REQUIRES to be exact) would not fall cleanly to zero. It correctly flagged the fix
+    as "a lattice model with an EXACT lattice Ward identity".
+    test_lattice_ward built exactly that -- a periodic BZ torus (no boundary, hence no surface term)
+    with the diamagnetic seagull -- and found a sharp dichotomy. The PHOTON Ward identity then
+    closes to MACHINE PRECISION (1e-16 at every q, with the transverse Maxwell response nonzero), so
+    the regulator is sound and the diagnosis here was right. But the GRAVITON's cannot close
+    exactly, for a structural reason rather than a numerical one: U(1) gauge invariance is an EXACT
+    lattice symmetry, while DIFFEOMORPHISM invariance is not (a lattice keeps only discrete
+    translations), and the gravitational Ward identity is additionally INHOMOGENEOUS (the induced
+    vacuum stress <T> is nonzero -- the same term that reappears as the cosmological constant).
+    So gamma = 1 is not a lattice-exact identity and no finite-cutoff DIRECT measurement can make it
+    one. It is an INFRARED-EMERGENT identity, on the same footing as the model's emergent Lorentz
+    invariance -- which is precisely the analytic route this file fell back on (Weinberg on the
+    conserved IR Dirac stress tensor), now with the missing measured ingredient supplied: the spin-2
+    graviton genuinely propagates and is healthy (test_spin2_dynamical). ***
+
 test_einstein_source reduced the spin-2 wall to ONE question: does mass source the curvature
 sector with the Einstein strength (gamma = 1)? Weinberg's answer: a massless spin-2 field coupled
 to a CONSERVED stress tensor is forced to be Einstein (gamma = 1). Conservation shows up as

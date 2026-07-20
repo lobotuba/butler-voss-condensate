@@ -1,6 +1,22 @@
 """
 The disclination force law, end-to-end.  (The link Route 1 asserts but never measured.)
 
+*** STATUS UPDATE -- the measurement stands; the open problem it named has since been SOLVED.
+    STANDS: two like curvature charges are not Newtonian in the PURE medium -- |dE| ~ R^1.97, an
+    energy that GROWS with separation. Route 1, as asserted, does fail.
+    REINTERPRETED: that growing energy is CONFINEMENT, not a mere wrong-sign repulsion. In its clean
+    3D form the biharmonic curvature sector gives a CONSTANT force -- a string tension
+    s^2/(8 pi kappa) (test_deconfinement). A confining sector simply contributes nothing at long
+    range; it is not a refutation of curvature-coupled gravity, it is a statement that the sector
+    must be deconfined first.
+    SOLVED: this file closes by naming "the honest open problem -- a 3D construction where the
+    graviton's two propagating polarizations carry a universally attractive, unshieldable 1/r^2
+    force." All three pieces now exist. The Sakharov-induced Einstein term deconfines the confining
+    +R into an exact Newtonian -1/r with G = 1/(4 pi mu) (test_deconfinement); the sign mu > 0 is
+    measured by calibration against the model's healthy photon (test_induced_sign); and in 3+1D the
+    graviton has exactly two degenerate, healthy propagating polarizations (test_spin2_dynamical),
+    with gamma -> 1 in the infrared (test_lattice_ward). ***
+
 Route 1 says: couple gravity to CURVATURE (disclinations), not energy density, because the
 curvature sector is unscreened (test_shielding: it is topologically unneutralizable). But the
 chain "topological curvature charge -> long-range 1/r^2 attraction between two masses" has
