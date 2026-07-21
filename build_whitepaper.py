@@ -160,30 +160,70 @@ def _esc(s):
 def _mrun(s):
     return f'<m:r><m:t xml:space="preserve">{_esc(s)}</m:t></m:r>' if s else ""
 
-def _omml(markup):
-    """Compile _{}/^{} markup into OMML, pairing each script with the token before it."""
-    out, buf, i = [], "", 0
-    while i < len(markup):
-        c = markup[i]
-        if c in "_^" and i + 1 < len(markup) and markup[i + 1] == "{":
-            j = markup.index("}", i)
-            # the base is the trailing identifier of the text accumulated so far
-            k = len(buf)
-            while k > 0 and (buf[k - 1].isalnum() or buf[k - 1] in "∂∇ΓΔΘΛΞΠΣΦΨΩαβγδεζηθκλμνξπρστφχψω"):
-                k -= 1
-            head, base = buf[:k], buf[k:]
-            out.append(_mrun(head))
-            tag = "sSub" if c == "_" else "sSup"
-            sub = "sub" if c == "_" else "sup"
-            out.append(f'<m:{tag}><m:e>{_mrun(base)}</m:e>'
-                       f'<m:{sub}>{_mrun(markup[i + 2:j])}</m:{sub}></m:{tag}>')
-            buf = ""
-            i = j + 1
+import unicodedata as _ud
+
+def _isletter(c):
+    """Identifier char: any letter, a combining mark (so Q⃛ stays one atom), or a prime."""
+    cat = _ud.category(c)
+    return cat[0] == "L" or cat == "Mn" or c in "∂∇'′"
+
+def _delim(op, cl, inner):
+    pr = ""
+    if (op, cl) != ("(", ")"):
+        pr = f'<m:dPr><m:begChr m:val="{_esc(op)}"/><m:endChr m:val="{_esc(cl)}"/></m:dPr>'
+    return f"<m:d>{pr}<m:e>{inner}</m:e></m:d>"
+
+def _attach(s, i, base):
+    """Consume any _{..}/^{..} following position i and wrap `base` accordingly."""
+    sub = sup = None
+    while i + 1 < len(s) and s[i] in "_^" and s[i + 1] == "{":
+        j = s.index("}", i)
+        if s[i] == "_":
+            sub = s[i + 2:j]
         else:
-            buf += c
-            i += 1
-    out.append(_mrun(buf))
-    return "".join(out)
+            sup = s[i + 2:j]
+        i = j + 1
+    if sub is not None and sup is not None:
+        base = (f"<m:sSubSup><m:e>{base}</m:e><m:sub>{_mrun(sub)}</m:sub>"
+                f"<m:sup>{_mrun(sup)}</m:sup></m:sSubSup>")
+    elif sub is not None:
+        base = f"<m:sSub><m:e>{base}</m:e><m:sub>{_mrun(sub)}</m:sub></m:sSub>"
+    elif sup is not None:
+        base = f"<m:sSup><m:e>{base}</m:e><m:sup>{_mrun(sup)}</m:sup></m:sSup>"
+    return base, i
+
+def _parse(s, i=0, stop=None):
+    """Recursive-descent over the equation markup -> list of OMML fragments."""
+    out = []
+    while i < len(s):
+        c = s[i]
+        if stop and c == stop:
+            break
+        if c in "([" or c == "|":
+            cl = {"(": ")", "[": "]", "|": "|"}[c]
+            inner, i = _parse(s, i + 1, cl)
+            i += 1                                   # consume the closer
+            node, i = _attach(s, i, _delim(c, cl, "".join(inner)))
+            out.append(node)
+            continue
+        j = i
+        if _isletter(c):
+            while j < len(s) and _isletter(s[j]):
+                j += 1
+        elif c.isdigit():
+            while j < len(s) and (s[j].isdigit() or s[j] == "."):
+                j += 1
+        else:
+            j = i + 1                                # lone operator / space
+        node, i = _attach(s, j, _mrun(s[i:j]))
+        out.append(node)
+    return out, i
+
+def _omml(markup):
+    xml = "".join(_parse(markup)[0])
+    if "<m:e></m:e>" in xml:                          # Word renders empty slots as dotted boxes
+        raise ValueError(f"empty math slot in equation: {markup!r}")
+    return xml
 
 def add_eq(markup, num):
     """Display equation as a real Word math object, with a right-hand equation number."""
@@ -771,9 +811,9 @@ body("But the spin-2 sector is confining in the pure medium. Its energy is the e
 "integrating out the gapped matter generates an Einstein-Hilbert term, which at quadratic order adds an ordinary "
 "two-derivative stiffness μ (∇φ)^2 to the biharmonic. The full propagator is then 1/(κ q^4 + μ q^2), "
 "whose exact three-dimensional Green's function is closed-form:")
-add_eq("G(R) = (1 / 4 π μ R)(1 - exp(-R / ell)),     ell = √(κ / μ)", "8.11a")
-body("The lower-derivative induced term dominates the infrared: below the crossover ell the force is the confining "
-"string tension, and above ell it turns over into an exact inverse-square Newtonian tail with G = 1/(4 π μ). "
+add_eq("G(R) = (1 / 4 π μ R)(1 - exp(-R / ℓ)),     ℓ = √(κ / μ)", "8.11a")
+body("The lower-derivative induced term dominates the infrared: below the crossover ℓ the force is the confining "
+"string tension, and above ℓ it turns over into an exact inverse-square Newtonian tail with G = 1/(4 π μ). "
 "Measured on the correct tool for a spherically symmetric source — a one-dimensional radial ODE with no box and no "
 "periodic images — the Newton-tail exponent is -2.0000, Newton's constant matches 1/(4 π μ) to five figures, the "
 "closed form (8.11a) is reproduced to one part in ten million, and the pure-medium (μ = 0) confinement shows its "
@@ -782,7 +822,7 @@ body("The lower-derivative induced term dominates the infrared: below the crosso
 result("Result 8.11 — the graviton deconfines.", "The tensor (curvature) sector is confining in the pure medium — a "
 "constant-force string tension, the clean 3D form of the earlier 'curvature charges repel and grow' result. A "
 "positive Sakharov-induced Einstein term turns it into a massless Newtonian graviton: the force crosses over at "
-"ell = √(κ/μ) from the string tension to an exact 1/r^2 with G = 1/(4 π μ). Everything now rests on the sign "
+"ℓ = √(κ/μ) from the string tension to an exact 1/r^2 with G = 1/(4 π μ). Everything now rests on the sign "
 "of the induced μ.")
 
 heading("8.12  The sign of induced gravity, and a dynamical spin-2 graviton", 2)
@@ -827,14 +867,14 @@ body("The same induced vacuum stress that made the graviton Ward identity inhomo
 "is about 10^122 times the observed dark-energy density. Taken at face value it demands a 122-digit fine-tuning. But "
 "the model's vacuum is not empty space with fields on top — it is a self-sustained condensate, and that changes what "
 "gravitates. Following Volovik's analysis of emergent gravity in quantum liquids, the emergent metric couples to the "
-"vacuum stress — the grand-canonical potential density ρ_Λ = eps - μ n = -P — not to the bare energy density "
-"eps. A self-sustained vacuum, one that can exist with nothing outside pushing on it (which is what the vacuum of "
+"vacuum stress — the grand-canonical potential density ρ_Λ = ε - μ n = -P — not to the bare energy density "
+"ε. A self-sustained vacuum, one that can exist with nothing outside pushing on it (which is what the vacuum of "
 "empty space is), has zero pressure:")
-add_eq("ρ_Λ = eps - μ n = -P;      self-sustained vacuum: P = 0  =>  ρ_Λ = 0", "8.13a")
+add_eq("ρ_Λ = ε - μ n = -P;      self-sustained vacuum: P = 0 ⇒ ρ_Λ = 0", "8.13a")
 body("The huge zero-point energy is absorbed into the equilibrium condensate density, not into curvature. This is not "
-"a tuning: the density self-adjusts so that P = 0, for any bare eps. Sweeping the bare vacuum energy across all 122 "
+"a tuning: the density self-adjusts so that P = 0, for any bare ε. Sweeping the bare vacuum energy across all 122 "
 "orders of magnitude, the gravitating ρ_Λ stays zero to machine precision while a rigid (non-adjusting) vacuum "
-"would gravitate the full eps — the standard disaster. The observed small but nonzero Λ is then the residual of "
+"would gravitate the full ε — the standard disaster. The observed small but nonzero Λ is then the residual of "
 "a slight departure from equilibrium (ρ_Λ scales with that departure), not a cancellation of 122 digits.")
 result("Result 8.13 — the cosmological-constant fine-tuning, dissolved (not the value derived).", "Because the vacuum "
 "is a self-sustained condensate, the quantity that gravitates is its grand potential -P, which vanishes at "
@@ -961,7 +1001,7 @@ body("Section 8.17 ran chiral matter together with a gauge field. gravity is the
 "being a toy.")
 body("The system evolved is the Schrödinger-Newton pair -- the non-relativistic limit of a massive matter field "
 "minimally coupled to its own gravity, and the standard model of self-gravitating quantum matter:")
-add_eq("i d_{t} ψ = -(1/2) ∇²ψ + Φ ψ,      ∇²Φ = 4 π G |ψ|^{2}", "8.18a")
+add_eq("i ∂_{t} ψ = -(1/2) ∇²ψ + Φ ψ,      ∇²Φ = 4 π G |ψ|^{2}", "8.18a")
 body("The gravity in (8.18a) is not inserted by hand: it is the infrared-effective form of the gravity this program "
 "derived -- the deconfined graviton mediates an exact Newtonian potential with G = 1/(4 π μ) (Section 8.11), and the "
 "sign μ > 0 was measured against the model's own healthy photon (Section 8.12). Co-evolving matter with that "
@@ -1054,7 +1094,7 @@ body("Three results had been arrived at separately, and each named the same gap.
 "is the last thing separating a simulated force from a real one.")
 body("The closure is obtained by refusing to insert it. Matter and the radiative transverse-traceless field are "
 "evolved from a single Hamiltonian,")
-add_eq("H = ∫[ (1/2)|∇ψ|^{2} + (g/2) h_{ij} Re(d_{i} ψ* d_{j} ψ) + (1/2) Φ |ψ|^{2} ] "
+add_eq("H = ∫[ (1/2)|∇ψ|^{2} + (g/2) h_{ij} Re(∂_{i} ψ* ∂_{j} ψ) + (1/2) Φ |ψ|^{2} ] "
        "+ ∫(1/2)( π^{2} + |∇h|^{2} )", "8.21a")
 body("whose variation gives both equations of motion at once -- the matter equation with its coupling to h, and the "
 "wave equation for h driven by the TT part of the matter stress. No radiation-reaction force is added by hand. If the "
@@ -1089,7 +1129,7 @@ body("First, the matter is made relativistic and quantum. The Schrödinger field
 "components. And it is a many-fermion quantum state rather than a classical field -- a set of mutually orthonormal "
 "occupied modes evolved as a Slater determinant. The matter Hamiltonian is the Dirac operator in a perturbed spatial "
 "frame,")
-add_eq("H_{m} = ∫ψ^{†} [ -i α_{i} ( δ_{ij} - (g/2) h_{ij} ) d_{j} + m β ] ψ   (hermitised)",
+add_eq("H_{m} = ∫ψ^{†} [ -i α_{i} ( δ_{ij} - (g/2) h_{ij} ) ∂_{j} + m β ] ψ   (hermitised)",
        "8.22a")
 body("whose conjugate source for h is the relativistic momentum flux, arising from the same single Hamiltonian, so "
 "the energy exchange stays derived rather than inserted. Because the gravitational coupling is a one-body operator, "
@@ -1101,7 +1141,7 @@ body("whose conjugate source for h is the relativistic momentum flux, arising fr
 "the monopole prohibition holds for relativistic quantum matter too.")
 body("Second, the gravity is made nonlinear. The field acquires the derivative self-coupling that is the structural "
 "signature of general relativity -- the statement that gravity gravitates:")
-add_eq("H_{f} = ∫(1/2)( π^{2} + |∇h|^{2} ) + (λ/2) h_{kl} d_{k} h_{ij} d_{l} h_{ij}", "8.22b")
+add_eq("H_{f} = ∫(1/2)( π^{2} + |∇h|^{2} ) + (λ/2) h_{kl} ∂_{k} h_{ij} ∂_{l} h_{ij}", "8.22b")
 body("Two things are then measured, and the second is decisive. Energy remains conserved to 1.4×10^-11, which "
 "establishes that the self-interaction is a genuine Hamiltonian term and not a force bolted onto the equations of "
 "motion after the fact. And superposition fails: evolving two wave packets together no longer equals evolving each "
