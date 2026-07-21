@@ -1566,6 +1566,34 @@ fine — aliasing lives at high `k` while the radiation is at `k=ω`, and `σ→
 **HONEST SCOPE:** the source is **PRESCRIBED**, not self-gravitating — deliberate: back-reaction is higher-order and
 would contaminate a leading-order measurement, and **prescription was never the obstacle — compactness was.** What is
 tested is the radiation **LAW**.
+✅ **Its dynamical consequence — a bound binary actually decaying — is tested in `test_inspiral_peters` (below).**
+
+### Orbital decay vs Peters–Mathews — the Hulse–Taylor observable (`test_inspiral_peters.py`)
+§8.23 reproduced a **rate**; this tests the **CONSEQUENCE** of that rate for a bound system, against a **second
+independent closed form** (Peters 1964, confirmed on the binary pulsar).
+**⚑ WHY IT HAS TEETH — the single-G lock.** GR has **ONE** Newton constant, so the binding and radiative sectors are
+**not independent knobs**. Binding: `∇²Φ = g_N ρ` ⇒ `G_N = g_N/4π`. Radiation (fixed in §8.23): `L = g²/(160π)Q⃛·Q⃛`
+⇒ `G_rad = g²/32π`. Demanding `G_N = G_rad` **LOCKS `g_N = g²/8`** — orbital frequency, binding energy and radiated
+power then all follow from the **same G**, with **nothing tunable per-quantity**.
+**Equal-mass closed forms:** `Ω² = 2Gm/a³`, `E_orb = −Gm²/2a`, `L = (64/5)G⁴m⁵/a⁵`, `da/dt = −(128/5)G³m³/a³`,
+`a(t)⁴ = a₀⁴ − (512/5)G³m³t`.
+**[0] AUDITED IN CLOSED FORM FIRST:** `(G/5)Q⃛·Q⃛ = (64/5)G⁴m⁵/a⁵` **exactly**; energy balance reproduces the Peters
+`da/dt` to **3.7e-16**.
+**[A] GRID L vs PETERS ACROSS SEPARATION:** ratios **0.9903 / 0.9924 / 0.9939 / 0.9973** at `a` = 1.35/1.53/1.75/2.00,
+linearity ≥0.9999. **The ratio TRENDS TO 1 as `v/c` falls (0.160→0.131)** — exactly what a leading-order result must
+do; the residual is higher-PN, not error. Fitted exponent **`L ∝ a^−4.983`** (Peters: −5) — the `a⁻⁵` steepening that
+makes the inspiral run away.
+**[B] `da/dt` vs PETERS:** same 0.99 ratios. **This is the Hulse–Taylor observable.**
+**[C] CHIRP:** integrating gives `(t_c−t)^{1/4}` to coalescence at the Peters time.
+⚠️ **ESTIMATOR TRAP (cost me two wrong numbers — don't repeat):** a field-energy budget over a **MOVING** orbit does
+**NOT** measure radiated power. (i) *Total* field energy includes the **near-zone standing energy** → comparing it to
+orbital loss double-counts (gave ratio **1.108**). (ii) Even the *slope* fails once the orbit moves, because the
+near-zone energy **itself changes** as `a` shrinks (`dE_nz/da · da/dt` adds to the slope) → gave **1.17**. A third
+trap: the slope is the **time-average** of `L`, so comparing it to `L(a_mean)` is biased when `L∝a⁻⁵` varies fast
+across the window. **Fix: measure at FIXED separation**, where the near-zone is constant and the slope is clean.
+**HONEST SCOPE:** radiation reaction is **ADIABATIC** (grid-measured `L` through energy balance — how binary inspirals
+are actually modelled in GW astronomy), **not** a first-principles self-force. Newtonian point-mass orbit, leading
+quadrupole, `v/c ≈ 0.13–0.16` ⇒ **percent-level agreement is the right expectation, not machine precision.**
 
 ### The integration closed — a source that radiates and thereby decays (`test_radiative_backreaction.py`)
 Three pieces existed separately: self-consistent matter+gravity but **non-radiative** (`test_backreaction`, instantaneous
