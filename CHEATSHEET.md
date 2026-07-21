@@ -1549,8 +1549,38 @@ artifact of prescribing the source. **[D] it's the coupling**: `E_rad/g²` flat 
 amplitude**. Zeroing it drops the spherical TT stress from 2.33 → `3×10⁻⁵`.
 **Honest scope:** matter is a **classical, non-relativistic** (Schrödinger) field, not the relativistic quantum chiral
 matter of the fermion sector; gravity is **linearised**; and `g` is dialled far above physical so the decay is visible
-in a short run — the **mechanism and budget** are demonstrated, not the magnitude. Relativistic quantum matter coupled
-to nonlinear gravity remains beyond the model.
+in a short run — the **mechanism and budget** are demonstrated, not the magnitude. ✅ **All three caveats are addressed
+one at a time in `test_relativistic_backreaction` (below).**
+
+### Past the toy — relativistic quantum matter, nonlinear gravity, coupling→0 (`test_relativistic_backreaction.py`)
+Attacks the three caveats above **separately**, so each upgrade is independently measured rather than bundled into one
+unfalsifiable "improved" run.
+**[A] RELATIVISTIC + QUANTUM.** The Schrödinger field becomes a genuine **Dirac** field — 4-component spinor,
+**first-order** equation, `α/β` matrices, spin and antiparticle components — carried as a many-fermion **Slater
+determinant** of 4 occupied modes. Matter Hamiltonian = the Dirac operator in a perturbed spatial frame,
+`H_m = ∫ψ†[−iα_i(δ_ij − (g/2)h_ij)∂_j + mβ]ψ` (hermitised), whose stress `S_ij = Σ_n Re[ψ_n†α_(i(−i∂_j))ψ_n]` is the
+**relativistic momentum flux** and is exactly the quantity conjugate to `h_ij` in the same single `H`. Because the
+gravitational coupling is a **one-body** operator, determinant evolution is **exact for the matter** — there is no
+mean-field error in the matter sector. Budget closes to `8.6×10⁻⁹`, total conserved to `2×10⁻¹⁰`, and **Pauli survives**:
+modes stay orthonormal to `5×10⁻¹²`. Spherical control radiates **2×10⁸×** less, *at* the integrator noise floor.
+**[B] NONLINEAR.** Field gains GR's structural derivative self-coupling — gravity gravitates:
+`H_f = ∫½(π² + |∇h|²) + (λ/2) h_kl ∂_k h_ij ∂_l h_ij`. Energy still conserved to `1.4×10⁻¹¹` ⇒ genuine **Hamiltonian**
+term, not a patch. And decisively **SUPERPOSITION FAILS**: evolving two packets together stops equalling evolving them
+apart — `5.7×10⁻¹⁶` (machine zero) at `λ=0` → `2.1×10⁻³` at `λ·amp=0.96`, tracking the vertex strength.
+**[C] THE COUPLING.** `E_rad/g²` flat to **six significant figures across four decades of `g`** (`7.335439×10⁻⁴` at
+`g=10⁻⁴…10⁰`) ⇒ the transfer is **exactly** second order, so extrapolating to physical strength is arithmetic, not
+assumption. **Honest floor reported:** the *closure* test stays verifiable only down to `g~10⁻³` (where the transfer
+meets the integrator's drift); below that it is extrapolation and is labelled one.
+**[D] ALL THREE ON.** Self-interaction carries **9.5%** of field energy and shifts radiated energy by **2.0%** — it is
+genuinely active, not decoration — and the budget still closes to five figures.
+**Method notes:** spectral derivatives with the **Nyquist mode zeroed** (odd derivatives ill-defined there); positive-
+energy spinors then **Gram–Schmidt**, since unitary evolution preserves orthonormality exactly; the `k=0` TT-projector
+zeroing from `test_radiative_backreaction` still applies. `einsum` with a mid-string ellipsis (`"ma...,na...->mn"`)
+**fails** — reshape to `(M,−1)` and use a matrix product for the overlap matrix.
+**STILL OPEN, and not weakened by any of the above:** the **geometry is classical** — this is *semiclassical* gravity
+(quantum matter, classical field), so the measurement problem is untouched; and the cubic vertex is the **structural**
+nonlinearity, not the resummed Einstein–Hilbert series. There is no black hole here and none is claimed. Physical
+coupling (`~10⁻⁴⁰` in this ratio) is **not reachable in double precision by any direct simulation.**
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to

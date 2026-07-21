@@ -172,7 +172,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-12")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-13")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1019,9 +1019,60 @@ result("Result 8.21 — gravity, simulated as a force that costs its source.", "
 "matter is a CLASSICAL, NON-RELATIVISTIC field, not the relativistic quantum chiral matter of the fermion sector, and "
 "the gravity is LINEARISED. The coupling is also dialled far above its physical value so that the decay is visible in "
 "a short run; real radiation reaction is minuscule, and what is demonstrated is the MECHANISM and the BALANCE OF THE "
-"BUDGET, not the magnitude. Relativistic quantum matter coupled to nonlinear gravity remains beyond this model.")
+"BUDGET, not the magnitude. Relativistic quantum matter coupled to nonlinear gravity is taken up in Section 8.22.")
 
-result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a medium' theory now carry concrete "
+heading("8.22  Past the toy: relativistic quantum matter, nonlinear gravity, and the coupling taken to zero", 2)
+body("Section 8.21 closed the integration but admitted three caveats, and they were not small ones: the matter was a "
+"CLASSICAL, NON-RELATIVISTIC field; the gravity was LINEARISED; and the coupling was dialled far above its physical "
+"value. A single 'improved' run that changed all three at once would be unfalsifiable -- any success could be "
+"attributed to any of the changes, and any failure to any other. The three axes are therefore attacked SEPARATELY, so "
+"that each upgrade is independently measured.")
+body("First, the matter is made relativistic and quantum. The Schrodinger field is replaced by a genuine Dirac field: "
+"a four-component spinor obeying a FIRST-order equation with alpha and beta matrices, carrying spin and antiparticle "
+"components. And it is a many-fermion QUANTUM state rather than a classical field -- a set of mutually orthonormal "
+"occupied modes evolved as a Slater determinant. The matter Hamiltonian is the Dirac operator in a perturbed spatial "
+"frame,")
+add_eq("H_{m} = int psi^{dag} [ -i alpha_{i} ( delta_{ij} - (g/2) h_{ij} ) d_{j} + m beta ] psi   (hermitised)",
+       "8.22a")
+body("whose conjugate source for h is the RELATIVISTIC momentum flux, arising from the same single Hamiltonian, so "
+"the energy exchange stays derived rather than inserted. Because the gravitational coupling is a ONE-BODY operator, "
+"determinant evolution is EXACT for the matter: there is no mean-field error in the matter sector at all, and Pauli "
+"antisymmetry is preserved identically. It balances as before -- the matter energy falls by what the field energy "
+"rises, to agreement of 8.6e-9, with the total conserved to 2e-10 -- and the occupied modes stay orthonormal to "
+"5e-12, so what is being evolved remains a legitimate antisymmetrised fermionic state and not a drifting classical "
+"field. A spherically symmetric control radiates a factor of 2e8 less, sitting AT the integrator's own noise floor: "
+"the monopole prohibition holds for relativistic quantum matter too.")
+body("Second, the gravity is made nonlinear. The field acquires the derivative self-coupling that is the structural "
+"signature of general relativity -- the statement that gravity gravitates:")
+add_eq("H_{f} = int (1/2)( pi^{2} + |grad h|^{2} ) + (lambda/2) h_{kl} d_{k} h_{ij} d_{l} h_{ij}", "8.22b")
+body("Two things are then measured, and the second is decisive. Energy remains conserved to 1.4e-11, which "
+"establishes that the self-interaction is a genuine HAMILTONIAN term and not a force bolted onto the equations of "
+"motion after the fact. And SUPERPOSITION FAILS: evolving two wave packets together no longer equals evolving each "
+"alone and adding. In the linearised theory that residual is machine zero, measured at 5.7e-16; with the vertex "
+"switched on it rises to 2.1e-3, tracking the product of the coupling and the amplitude exactly as a cubic term must. "
+"A field whose waves scatter off one another is not a linear field.")
+body("Third, the coupling. Physical gravitational coupling cannot be simulated directly and no honest report should "
+"suggest otherwise: the ratio of radiated to rest energy for anything resolvable is around 1e-40, some thirty orders "
+"below double precision. What CAN be established is the property that makes extrapolation legitimate rather than "
+"hopeful -- that the transfer is EXACTLY second order in the coupling. The radiated energy divided by the square of "
+"the coupling is flat to SIX significant figures across four decades. Scaling to the physical value therefore changes "
+"the magnitude and nothing else. The floor is reported rather than hidden: the CLOSURE test remains verifiable only "
+"while the transfer exceeds the integrator's own drift, here down to a coupling of about 1e-3, and below that the "
+"budget is extrapolated by the measured square law rather than checked. With all three upgrades switched on together, "
+"the self-interaction carries 9.5 percent of the field energy and shifts the radiated energy by 2.0 percent -- it is "
+"genuinely active, not decoration -- and the budget still closes to five significant figures.")
+result("Result 8.22 — the three caveats, addressed one at a time.", "The matter is now RELATIVISTIC and QUANTUM: a "
+"Dirac spinor field carried as a many-fermion Slater determinant, whose evolution is EXACT for the matter because the "
+"gravitational coupling is one-body, with Pauli antisymmetry surviving to ~1e-12 and the budget closing as it did for "
+"the classical field. The gravity is NONLINEAR: it carries the derivative self-coupling of general relativity, "
+"conserves energy (so it is Hamiltonian, not patched), and SUPERPOSITION FAILS -- the sharpest available proof that "
+"the field is no longer the linear one. The coupling dependence is EXACTLY g^2 to six significant figures over four "
+"decades, so extrapolation to physical strength is arithmetic; it is still an extrapolation and is labelled one. "
+"STILL OPEN, and weakened by none of the above: the GEOMETRY IS CLASSICAL. This is SEMICLASSICAL gravity -- quantum "
+"matter, classical field -- so the measurement problem is untouched, and the cubic vertex is the structural "
+"nonlinearity rather than the resummed Einstein-Hilbert series. There is no black hole here and none is claimed.")
+
+result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
 "the individual results is that ONE principle — everything from one structure — surmounts several at once. Even quantum "
@@ -1044,9 +1095,10 @@ result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a m
 "inflow -- now confirmed DYNAMICALLY (Section 8.17), in the program's first running simulation of two emergent sectors "
 "together. Section 8.16 then puts the model against data, and the result is bracing: the Lorentz-violation signature is "
 "safe but NOT presently falsifiable, the genuinely testable prediction is the short-range gravitational gamma, and "
-"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. Section 8.20 then shows the field RADIATES like spin-2 -- propagating at c with two polarizations, and with the monopole channel shut to machine precision, which scalar gravity would have left open -- and Section 8.21 CLOSES the integration, coupling matter, the radiative field and their energy exchange in one evolution so that a source radiates and thereby decays, with the budget balancing. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
-"content (all still inputs), the observed value of the cosmological constant, and the measurement problem's hard "
-"core. Four self-corrections are now on record — the within-sector Lorentz result, the retracted gravity route, the "
+"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. Section 8.20 then shows the field RADIATES like spin-2 -- propagating at c with two polarizations, and with the monopole channel shut to machine precision, which scalar gravity would have left open -- and Section 8.21 CLOSES the integration, coupling matter, the radiative field and their energy exchange in one evolution so that a source radiates and thereby decays, with the budget balancing. Section 8.22 then takes that closure past the toy on all three of its admitted caveats -- SEPARATELY, so each is measured rather than bundled: the matter becomes a relativistic QUANTUM Dirac field carried as a many-fermion Slater determinant, the gravity becomes NONLINEAR (proved by the FAILURE of superposition, machine zero without the vertex and finite with it), and the coupling dependence is measured to be exactly second order over four decades, so extrapolation to physical strength is arithmetic rather than hope. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
+"content (all still inputs), the observed value of the cosmological constant, the measurement problem's hard "
+"core, and -- sharpened rather than removed by Section 8.22 -- the fact that the GEOMETRY IS CLASSICAL throughout: "
+"this is semiclassical gravity, and nothing here bears on quantising geometry. Four self-corrections are now on record — the within-sector Lorentz result, the retracted gravity route, the "
 "refuted critical-nucleus prediction, and the retracted 1e122 tuning — which is the discipline working as intended.")
 table(["Barrier","Status","Key result"],
  [["Emergent Lorentz","achieved","one round universal cone, violations ~ (E/E_Planck)^2; cross-statistics universality holds once the boson is a fermion composite (§8.5)"],
@@ -1060,6 +1112,7 @@ table(["Barrier","Status","Key result"],
   ["Gravitational back-reaction","runs as a conserving simulation (§8.18)","matter sources the potential and the potential moves matter, solved together: energy conserved to ~1e-9 and norm to ~1e-14, a self-gravitating BOUND soliton forms (a gravity-off control disperses), the relaxed soliton satisfies the virial identity 2T+W=0, and both converge under mesh refinement. Scope: non-relativistic, scalar/Newtonian, classical matter; the radiative spin-2 sector is not evolved"],
   ["Magnitude of G","fixed at the Planck area (§8.19)","the Sakharov cutoff-ambiguity does not apply because the cutoff is PHYSICAL (a0 = l_Planck): over the full Brillouin zone the induced stiffness is O(1) in lattice units, so G = O(1) a0^2, with G ~ a0^2/N_f. Gravity is weak because a0 is Planckian -- no hierarchy, no tuning. The O(1) coefficient stays scheme-sensitive"],
   ["Radiative back-reaction","integration closed for classical matter (§8.21)","matter, a dynamical radiative field and their energy exchange run in ONE evolution from ONE Hamiltonian: the matter energy falls by exactly what the field energy rises (2.0451e-2 vs 2.0452e-2, total conserved to 2e-6), a spherical control radiates 4e5 times less, and E_rad/g^2 is flat. Radiation reaction is derived, not inserted. Scope: CLASSICAL, NON-RELATIVISTIC matter and LINEARISED gravity, at exaggerated coupling"],
+  ["Relativistic quantum matter + nonlinear gravity","the three caveats addressed separately (§8.22)","the matter becomes a DIRAC field carried as a many-fermion Slater determinant -- evolution EXACT for the matter since the coupling is one-body, Pauli holding to 5e-12, budget closing to 8.6e-9, spherical control 2e8 times smaller; the field gains the derivative self-coupling of general relativity, conserving energy (Hamiltonian, not patched) while SUPERPOSITION FAILS (5.7e-16 at zero coupling, 2.1e-3 with the vertex on); and E_rad/g^2 is flat to SIX figures over four decades, so extrapolation to physical coupling is arithmetic. STILL OPEN: the geometry is CLASSICAL (semiclassical gravity), the cubic vertex is the structural nonlinearity not the resummed Einstein-Hilbert series, and physical coupling is extrapolated, never simulated"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~1e-14 of an equal quadrupole (ratio 3e-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are NOT tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, sum 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. NOT the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for ANY bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Lambda is relocated to a departure from equilibrium (open)"],
@@ -1104,12 +1157,16 @@ body("The fundamental-physics program of Section 8 carries a further, honest qua
 "back-reaction. That coupling is now done, in Section 8.21: matter, a dynamical radiative field and a self-consistent "
 "exchange of energy between them run in one evolution from one Hamiltonian, and a source radiates and thereby decays "
 "with the budget balancing to four significant figures. The integration gap this report kept naming is therefore "
-"CLOSED -- but closed for CLASSICAL, NON-RELATIVISTIC matter coupled to LINEARISED gravity, which is a narrower claim "
-"than the full target and should not be read as more. The matter evolved in 8.21 is a classical Schrodinger field, "
-"not the relativistic quantum chiral matter the fermion sector supplies; the gravity is linear, not the nonlinear "
-"theory; and the coupling is dialled far above its physical value so the decay is visible at all. Joining the "
-"relativistic quantum matter of Sections 8.2 and 8.15 to the nonlinear gravitational field, at physical coupling, is "
-"what remains, and it is the work of fundamental physics rather than of a toy. Each barrier is met "
+"CLOSED. It was closed first only for CLASSICAL, NON-RELATIVISTIC matter coupled to LINEARISED gravity at exaggerated "
+"coupling, and Section 8.22 then addressed those three caveats one at a time: the matter is now a Dirac field carried "
+"as a many-fermion Slater determinant, the field carries the derivative self-coupling of general relativity (proved "
+"active by the FAILURE of superposition), and the coupling dependence is measured to be exactly second order across "
+"four decades, which makes the extrapolation to physical strength arithmetic. What remains genuinely open there is "
+"narrower but not smaller: the GEOMETRY IS CLASSICAL. Every result in this report treats the gravitational field as a "
+"classical object sourced by quantum matter -- semiclassical gravity -- so nothing here bears on the quantisation of "
+"geometry, and the cubic vertex is the structural nonlinearity rather than the resummed Einstein-Hilbert series: "
+"there is no black hole in this model and none is claimed. Physical coupling is reached by extrapolation, not by "
+"simulation, and cannot be reached by any direct simulation in double precision. Each barrier is met "
 "individually, and two pairs now jointly; assembling them all into one consistent theory that also fixes the "
 "Standard-Model content and the constants of nature is the work of fundamental physics itself, not of this toy. The value of Section 8 is to show that these barriers, usually treated as fatal to any "
 "'space is a medium' program, are here concrete and — one at a time — surmountable. The quantum-mechanics result "
@@ -1232,7 +1289,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_realtime_pump.py (§8.17); test_backreaction.py (§8.18); "
 "test_newton_constant.py (§8.19); "
 "test_gravitational_radiation.py (§8.20); "
-"test_radiative_backreaction.py (§8.21).")
+"test_radiative_backreaction.py (§8.21); "
+"test_relativistic_backreaction.py (§8.22).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
