@@ -179,7 +179,7 @@ sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces
 sr.font.size=Pt(13); sr.italic=True; sr.font.color.rgb=GREY; sub.paragraph_format.space_after=Pt(8)
 bl=doc.add_paragraph(); br=bl.add_run("Robert Voss"); br.bold=True; br.font.size=Pt(10.5)
 bl.add_run("   ·   Independent research, Butler–Voss Condensate Project").font.size=Pt(10.5)
-dl=doc.add_paragraph(); dr=dl.add_run("Draft — 7 July 2026   ·   toy-model study, computational")
+dl=doc.add_paragraph(); dr=dl.add_run("Draft — 21 July 2026   ·   toy-model study, computational")
 dr.font.size=Pt(9); dr.font.color.rgb=GREY; dl.paragraph_format.space_after=Pt(10)
 
 # --- abstract ---
