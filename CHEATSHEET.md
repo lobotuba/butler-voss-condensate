@@ -1319,6 +1319,8 @@ So the stress ratio is **not** a trustworthy transversality measurement, and isn
   `test_dirac`); its stress tensor is conserved by Noether; a massless spin-2 coupled to a conserved stress tensor is
   Einstein (Weinberg) ⇒ **γ=1**. So the missing coupling is supplied *in the IR* by the emergent-Lorentz flow — but as
   an **argument**, not yet a clean in-model measurement.
+- ⚠️ **What "IR fixed point" may be leaned on for is now bounded — see `test_ir_fixed_point` below: it is
+  EMPIRICAL, not PROTECTED, and γ=1 stays argued.**
 - **Honest wall status:** crossed *in principle* by the IR fixed point (γ=1 follows from emergent Lorentz); a **direct
   numerical confirmation of graviton transversality remains open**, as do the UV/lattice obstructions (Weinberg–Witten,
   the induced cosmological term).
@@ -1644,6 +1646,35 @@ zeroing from `test_radiative_backreaction` still applies. `einsum` with a mid-st
 nonlinearity, not the resummed Einstein–Hilbert series. There is no black hole here and none is claimed. Physical
 coupling (`~10⁻⁴⁰` in this ratio) is **not reachable in double precision by any direct simulation.**
 ✅ **The classical-geometry gap is now MEASURED, not just named — see `test_semiclassical_inconsistency` below.**
+
+### Auditing the largest claim — "IR fixed point" measured, narrowed to an ATTRACTOR (`test_ir_fixed_point.py`)
+Robert flagged **"general relativity is thus reached as an infrared fixed point"** as the report's **biggest
+vulnerability** — not necessarily wrong, but an extraordinarily large claim carrying little support.
+⚑ **The precise problem:** *"fixed point" is a renormalisation-group term, and NO RG analysis existed anywhere in the
+project* — no operator classified relevant/irrelevant, nothing said about what the IR forgets. **The phrase borrowed
+the authority of a calculation never performed.** A fixed point operationally asserts exactly two measurable things:
+**(i) universality** (IR observables lose UV dependence) and **(ii) an operator sorting** (relevant vs irrelevant).
+**TOOL (non-contaminating):** exact closed form, no box/lattice/images. Add a graviton mass to the deconfined
+propagator `κq⁴+μq²+μm²`, factorise `κ(q²+A)(q²+B)`:
+`G(r) = [e^{−√B r} − e^{−√A r}] / (4πκ(A−B)r)`, `A+B=μ/κ`, `AB=μm²/κ` → reduces to §8.11's `(1−e^{−r/ℓ})/(4πμr)` at m=0.
+**[A] UNIVERSALITY:** κ over **4 decades** at fixed μ, each probed at equal depth into **its own** far field (r=50ℓ):
+far-field law is Newton to **10 figures**, exponent **−2** to five. κ sets only **where** the crossover sits, never
+what lies beyond; residual `∝ e^{−r/ℓ}` ⇒ the IR forgets the UV **exponentially**, not as a power.
+**[B] OPERATOR SORTING:** ⚠️ **relevance is about the `r→∞` LIMIT, not any single radius.** Tracked outward:
+higher-derivative structure dies `e^{−r/ℓ}`, gone by `100ℓ` however large κ ⇒ **irrelevant**; graviton mass `10⁻⁴` of
+the Einstein scale **GROWS** (`1.0e-3 → 3.0e-3 → 1.0e-2`) until the tail is destroyed ⇒ **RELEVANT**.
+**[C] BOUND:** everything rests on that relevant operator being absent ⇒ measured tail excludes induced graviton mass
+above **~3×10⁻⁵** of the Einstein scale (Compton wavelength `≳10⁴ℓ`).
+**VERDICT — earned:** the **LINEARISED** Einstein term is the IR **attractor**; a real RG statement, measured.
+**NOT earned:** the fixed point is **EMPIRICAL, not PROTECTED** — diffeomorphism invariance is not an exact lattice
+symmetry (§8.12), so nothing **forbids** the relevant deformation. Masslessness is **measured, not guaranteed**,
+unlike the photon's symmetry-protected masslessness. Analysis is **linearised**; reaches neither the nonlinear
+Einstein equations nor a measurement of **γ=1**.
+✅ **Whitepaper wording corrected in all 4 places** + new §8.26: *"general relativity as a fixed point"* →
+*"the linearised Einstein term as an infrared attractor"*.
+⚠️ **BUG I MADE (don't repeat):** first version probed every κ at a **fixed radius** (r=300) and labelled κ×10⁴
+"irrelevant" when its deviation was **5e-2** — that probe sat only **3ℓ** out, not in the far field at all. Probe at
+fixed **r/ℓ**, and judge relevance by the **outward trend**.
 
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
