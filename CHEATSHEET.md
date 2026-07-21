@@ -1533,6 +1533,25 @@ source (inspiral) not computed; the quadrupole **luminosity law is NOT tested** 
 (`ωσ≪1`), and this source has `ωσ≈1.6`, so the measured frequency dependence is the source's own spatial spectrum, not
 the multipole expansion. No such claim is made.
 
+### The integration closed — a source that radiates and thereby decays (`test_radiative_backreaction.py`)
+Three pieces existed separately: self-consistent matter+gravity but **non-radiative** (`test_backreaction`, instantaneous
+Poisson); a **radiative** field but from a **prescribed** source (`test_gravitational_radiation`); and two emergent
+sectors run together at all (`test_realtime_pump`). This couples all three. Matter and the radiative TT field are
+evolved from a **single Hamiltonian**
+`H = ∫[½|∇ψ|² + (g/2)h_ij Re(∂_iψ*∂_jψ) + ½Φ|ψ|²] + ∫½(π² + |∇h|²)`,
+so radiation reaction is **derived, not inserted** — if the matter loses energy, the field took it.
+**[A] the budget closes**: `ΔE_matter = −2.0451×10⁻²`, `ΔE_field = +2.0452×10⁻²` (balance `8×10⁻⁶`, total conserved to
+`2×10⁻⁶`). **[B] monotonic decay** — an inspiral in field-theoretic form. **[C] control**: a spherical source radiates
+`5×10⁻⁸`, a factor **4×10⁵** smaller — the monopole prohibition survives being made self-consistent, so it was *not* an
+artifact of prescribing the source. **[D] it's the coupling**: `E_rad/g²` flat to 4 digits (`6.783/6.784/6.785×10⁻⁵`).
+**KEY BUG (don't repeat):** the `k=0` mode must be zeroed in the TT projector — at `k=0` the projector is undefined
+(`K2s=1` makes `P=δ_ij`, and `Λ(δ)=−½δ` instead of 0), which lets a **spherical source appear to radiate at exactly half
+amplitude**. Zeroing it drops the spherical TT stress from 2.33 → `3×10⁻⁵`.
+**Honest scope:** matter is a **classical, non-relativistic** (Schrödinger) field, not the relativistic quantum chiral
+matter of the fermion sector; gravity is **linearised**; and `g` is dialled far above physical so the decay is visible
+in a short run — the **mechanism and budget** are demonstrated, not the magnitude. Relativistic quantum matter coupled
+to nonlinear gravity remains beyond the model.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
