@@ -1,6 +1,24 @@
 """
 Gravitational back-reaction as a running simulation: self-gravitating matter, energy-conserving.
 
+*** STATUS UPDATE -- the EQUATION solved here is now known to be INCONSISTENT outside the regime it
+    is used in, and this file should be read with that boundary in mind.
+    The system below is Schrodinger-Newton: quantum matter sourcing a CLASSICAL gravitational field
+    through its own density. test_semiclassical_inconsistency uses that very equation to demonstrate
+    the pathology of semiclassical gravity -- it is nonlinear in the WAVE FUNCTION, so superposition
+    fails (2.8e-15 with gravity off, 4.6e-1 with it on); it makes a SINGLE particle attract ITSELF
+    with the full Newtonian force of a partner that does not exist; and it fails the Page-Geilker
+    case, where the randomness is CLASSICAL and no interpretation can rescue the prediction.
+    NONE OF THE RESULTS BELOW ARE RETRACTED. They concern a single self-gravitating lump with NO
+    macroscopic superposition, which is exactly the regime where the mean-field treatment is a
+    controlled approximation and where Schrodinger-Newton is the right effective description (it is
+    also genuinely correct for a self-gravitating BEC of many particles). The conservation, binding,
+    virial and convergence measurements stand. What does not survive is any reading of this file as
+    showing that the FRAMEWORK is the final account of gravity: it is not, and the self-description
+    below as "a scientific simulation of gravity, not a toy" should be read as a claim about
+    simulation QUALITY -- conserving, convergent, self-consistent -- and not about the framework's
+    fundamental correctness. ***
+
 The project's sharpest self-criticism (its own limitations section) is that every fundamental result
 is established at the level of a dispersion relation, a band structure, or a defect algebra -- never
 as a RUNNING SIMULATION in which matter and an emergent field interact, in time, with back-reaction.

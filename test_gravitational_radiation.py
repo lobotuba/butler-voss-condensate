@@ -1,6 +1,22 @@
 """
 Gravity that RADIATES: the spin-2 field propagates, and a monopole cannot radiate.
 
+*** STATUS UPDATE -- the luminosity claim dropped below has since been TESTED AND REPRODUCED, and
+    the reason it could not be tested HERE is now quantified rather than merely asserted.
+    This file states that the quadrupole LUMINOSITY formula is not tested, because that law assumes
+    a source small compared with the wavelength and this source has omega*sigma ~ 1.6. Dropping the
+    claim was the right call, and test_quadrupole_luminosity shows how right: sweeping the source
+    size, the radiated power follows the exact Gaussian form factor exp(-omega^2 sigma^2) to four
+    decimal places across a twelvefold suppression, and at THIS file's compactness the power is down
+    by about a factor of THIRTEEN. The frequency dependence measured here really was the source's
+    own spatial spectrum, exactly as stated.
+    With compactness controlled the law comes out right: measured/predicted = 0.9924, 0.9983, 0.9996,
+    with the coefficient g^2/(160 pi) DERIVED from this project's own field normalisation and audited
+    against GR's binary formula before simulating; the frequency law is recovered as Omega^6.007
+    (exactly 6 required) -- the very scaling this file could not obtain. test_inspiral_peters then
+    carries it to the bound-system consequence: a binary decaying at the Peters-Mathews rate.
+    NOTHING measured below is retracted. ***
+
 test_backreaction ran gravity as a force with genuine back-reaction, but in the NEWTONIAN limit:
 the potential was solved from an instantaneous constraint (lap Phi = 4 pi G rho), which is exact only
 for slow sources. A real gravitational field is RETARDED -- it propagates at finite speed and carries

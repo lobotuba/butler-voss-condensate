@@ -1,6 +1,19 @@
 """
 Einstein's quadrupole luminosity formula, coefficient and all -- the model's first HARD NUMBER.
 
+*** STATUS UPDATE -- the prescribed-source scope admitted below has since been CARRIED to a bound
+    system. This file measures a RATE, and notes that its source is PRESCRIBED rather than
+    self-gravitating (deliberately: compactness, not prescription, was what blocked the test).
+    test_inspiral_peters takes the next step and tests the CONSEQUENCE of that rate for a BOUND
+    binary, against a second and independent closed form -- Peters-Mathews orbital decay, the law
+    confirmed on the Hulse-Taylor pulsar. Crucially it removes the last free knob: general relativity
+    has ONE Newton constant, so the binding sector and the radiative sector fixed HERE are locked by
+    g_N = g^2/8, and orbital frequency, binding energy and radiated power all follow from the same G.
+    The grid luminosity of a Keplerian binary tracks Peters to 0.9903-0.9973 across separation, the
+    exponent comes out a^-4.983 against the required -5, and the decay rate da/dt matches at the same
+    accuracy -- with the residual SHRINKING as v/c falls, the signature of neglected higher
+    post-Newtonian terms rather than error. Nothing here is retracted. ***
+
 Every gravity result in this project so far is STRUCTURAL: a sign (mu > 0), a rank (2 polarizations),
 a scaling (E_rad ~ g^2), a prohibition (no monopole), a balance (the budget closes). Structural
 results are strong, but none of them can be contradicted by a known closed-form answer. The quadrupole

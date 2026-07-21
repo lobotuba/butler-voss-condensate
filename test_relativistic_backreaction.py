@@ -1,6 +1,24 @@
 """
 Past the toy: RELATIVISTIC QUANTUM matter, NONLINEAR gravity, and the coupling taken to zero.
 
+*** STATUS UPDATE -- the limitation this file names as remaining has since been SHARPENED from a gap
+    into a demonstrated INCONSISTENCY, and the model's own repair identified.
+    The closing section states, correctly, that the geometry here is CLASSICAL -- semiclassical
+    gravity, quantum matter on a classical field -- and leaves it as an acknowledged limitation.
+    test_semiclassical_inconsistency shows that is too gentle: the prescription is not merely
+    incomplete but WRONG. It breaks the superposition principle (2.8e-15 with gravity off, 4.6e-1
+    with it on); it makes a SINGLE particle attract ITSELF with the full Newtonian force of a partner
+    that does not exist (ratio 1.000 against the point-mass value); and it fails the Page-Geilker
+    case, where a CLASSICAL coin flip places the mass and semiclassical gravity predicts a central
+    test mass STAYS PUT when it must fall -- randomness that is classical, so no interpretation of
+    quantum mechanics is available to rescue it.
+    That file also identifies the repair from this model's own structure: h is a COLLECTIVE MODE OF A
+    QUANTUM CONDENSATE, and collective modes of quantum media are quantised, so the semiclassical
+    treatment was a tractability approximation rather than a claim about nature. Quantising one mode
+    produces matter-geometry entanglement and decoherence and removes the self-attraction -- though
+    that is LINEARISED quantum gravity, the easy part, and leaves the measurement problem untouched.
+    Everything measured below stands. ***
+
 test_radiative_backreaction closed the three-way integration -- matter sourcing a radiative field,
 feeling it back, and losing exactly the energy the field carries away -- but with three admitted
 caveats, restated verbatim in the limitations section: the matter was a CLASSICAL, NON-RELATIVISTIC

@@ -1,6 +1,21 @@
 """
 The integration closed: a source that RADIATES and thereby DECAYS, with the energy budget balancing.
 
+*** STATUS UPDATE -- the three caveats this file admits have since been ADDRESSED, separately.
+    The closing paragraph below says the matter is CLASSICAL and NON-RELATIVISTIC, the gravity is
+    LINEARISED, and the coupling is dialled far above physical, concluding that relativistic quantum
+    matter coupled to nonlinear gravity "remains beyond this, and beyond a toy model". That is no
+    longer where things stand. test_relativistic_backreaction attacks all three axes ONE AT A TIME
+    (bundling them would have been unfalsifiable): the matter becomes a genuine Dirac field carried
+    as a many-fermion Slater determinant -- and since the gravitational coupling is a ONE-BODY
+    operator, that evolution is EXACT for the matter, with Pauli holding to 5e-12; the field gains
+    the derivative self-coupling of general relativity, proved ACTIVE by the FAILURE of superposition
+    (5.7e-16 without the vertex, 2.1e-3 with it); and E_rad/g^2 is flat to six significant figures
+    over four decades, so extrapolation to physical coupling is arithmetic rather than hope.
+    What replaced those caveats as the live limitation is NARROWER BUT SHARPER: the GEOMETRY IS
+    CLASSICAL, and test_semiclassical_inconsistency shows that is not merely approximate but
+    INCONSISTENT. The budget result below stands unchanged. ***
+
 Three pieces existed separately. test_backreaction ran matter and gravity together self-consistently,
 but in the NEWTONIAN limit -- an instantaneous constraint that cannot radiate. test_gravitational_
 radiation evolved the dynamical, retarded spin-2 field and found it radiates like a tensor (monopole
