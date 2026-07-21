@@ -1518,6 +1518,21 @@ and *sign* (positive/attractive, per `test_induced_sign`) are robust; the precis
 (residual Sakharov ambiguity). With `test_scale_fixing` this closes the loop: the node spacing *is* the Planck length,
 and the gravity it induces has Planck strength.
 
+### Gravitational radiation — the spin-2 discriminator (`test_gravitational_radiation.py`)
+`test_backreaction` ran gravity in the **Newtonian** limit (instantaneous `∇²Φ=4πGρ`, exact only for slow sources). A
+real gravitational field is **retarded** and radiates. Evolving the linearised TT wave equation
+`∂²_t h^TT_ij + k²h^TT_ij = S^TT_ij` in k-space with the exact projector
+`Λ_ij,kl = ½(P_ik P_jl + P_il P_jk) − ½P_ij P_kl`, source driven then switched off (residual field energy = radiated):
+**[A] propagation** — the outgoing shell travels at **0.958 ≈ c** (the few-% deficit is the threshold-weighted radius of
+a finite-width shell); **[B] two polarizations** — TT projector **rank 2**, the helicity-±2 states of
+`test_spin2_dynamical`; **[C] THE DISCRIMINATOR** — at identical amplitude/width/frequency, **monopole radiates
+`1.05×10⁻¹⁴` vs quadrupole `3.79×10⁻²`** (ratio `3×10⁻¹³` = machine zero). **Scalar (Nordström) gravity radiates
+monopole breathing waves; spin-2 cannot** — so this is a sharp structural confirmation the model's gravity is tensor,
+not the scalar it discarded. **Honest scope:** linearised, **prescribed** source; radiative back-reaction *on* the
+source (inspiral) not computed; the quadrupole **luminosity law is NOT tested** — it assumes a compact source
+(`ωσ≪1`), and this source has `ωσ≈1.6`, so the measured frequency dependence is the source's own spatial spectrum, not
+the multipole expansion. No such claim is made.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
