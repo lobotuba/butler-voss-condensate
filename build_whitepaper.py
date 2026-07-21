@@ -172,7 +172,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-10")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-11")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -956,6 +956,37 @@ result("Result 8.19 — G is the Planck area, with no tuning.", "With a physical
 "regulator among several. What is settled is the qualitative point that had been left open: the magnitude of G is not "
 "free here.")
 
+heading("8.20  Gravity that radiates, and the monopole that cannot", 2)
+body("Section 8.18 ran gravity as a force, but in the NEWTONIAN limit: the potential was solved from an instantaneous "
+"constraint, which is exact only for slow sources. A real gravitational field is RETARDED -- it propagates at finite "
+"speed and carries energy away as radiation -- and that radiative sector is the last structural piece of the gravity "
+"programme. It also carries a sharp signature which separates the TENSOR gravity this programme arrived at from the "
+"SCALAR gravity it discarded along the way.")
+body("The signature is the MONOPOLE. A scalar (Nordstrom) gravity radiates from a spherically pulsating mass: a "
+"breathing star emits scalar gravitational waves. A spin-2 field cannot. The radiative degrees of freedom of "
+"linearised gravity are the transverse-traceless part of h_ij, and the TT projection annihilates a spherically "
+"symmetric source identically, so monopole radiation is forbidden and the leading channel is the quadrupole. That is "
+"why a pulsating star does not gravitationally radiate, and it is a structural test of whether the model's gravity is "
+"really spin-2.")
+body("Evolving the linearised TT wave equation in momentum space -- each mode a driven oscillator, the source switched "
+"off after a few cycles, and the field energy remaining once the near field has dispersed counted as the radiated "
+"energy -- gives three results. The disturbance PROPAGATES: after the source stops, the outgoing shell moves at speed "
+"0.96 in units where c = 1, the few-per-cent deficit being the finite width of the shell rather than a slow wave. The "
+"radiation is carried by exactly TWO polarizations, the transverse-traceless projector having rank two, which are the "
+"helicity-2 states of Section 8.12 and not a scalar breathing mode. And at identical amplitude, width and frequency, "
+"the monopole source radiates about 1e-14 of what the quadrupole source radiates -- a ratio of 3e-13, which is machine "
+"zero against a finite signal.")
+result("Result 8.20 — the radiation is spin-2, and the monopole channel is closed.", "The model's gravitational field "
+"propagates at c and carries exactly two polarizations, and a spherically pulsating mass radiates NOTHING through it, "
+"while an equal quadrupole radiates a finite amount. Scalar gravity would have opened the monopole channel; spin-2 "
+"gravity forbids it, and the measurement finds it shut to machine precision. This is a structural confirmation, "
+"independent of the earlier propagator arguments, that the gravity this programme ended up with is genuinely tensor. "
+"HONEST scope: the radiation is LINEARISED and the source is PRESCRIBED, so the back-reaction of the radiated energy "
+"ON the source -- the inspiral of a binary -- is not computed. Neither is the quadrupole LUMINOSITY formula tested: "
+"that law assumes a source small compared with the wavelength, the source used here is not, and the frequency "
+"dependence in this setup therefore reflects the source's own spatial spectrum rather than the multipole expansion. No "
+"such claim is made.")
+
 result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -979,7 +1010,7 @@ result("Result 8 — scorecard.", "The barriers usually fatal to a 'space is a m
 "inflow -- now confirmed DYNAMICALLY (Section 8.17), in the program's first running simulation of two emergent sectors "
 "together. Section 8.16 then puts the model against data, and the result is bracing: the Lorentz-violation signature is "
 "safe but NOT presently falsifiable, the genuinely testable prediction is the short-range gravitational gamma, and "
-"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
+"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. Section 8.20 then shows the field RADIATES like spin-2 -- propagating at c with two polarizations, and with the monopole channel shut to machine precision, which scalar gravity would have left open. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
 "content (all still inputs), the observed value of the cosmological constant, and the measurement problem's hard "
 "core. Four self-corrections are now on record — the within-sector Lorentz result, the retracted gravity route, the "
 "refuted critical-nucleus prediction, and the retracted 1e122 tuning — which is the discipline working as intended.")
@@ -994,6 +1025,7 @@ table(["Barrier","Status","Key result"],
   ["Empirical prediction","one testable, one out of reach (§8.16)","the n=2 Lorentz violation is safe vs every bound by ~16 orders — but being QUADRATIC it is ~1e-16 below current sensitivity and NOT presently falsifiable (§8.8 tempered). The reachable prediction is gravitational: a scale-dependent gamma below 1/m_A (§8.11), for which short-range tests already require m_A >~ 4 meV — within a factor 1.6 of the dark-energy scale, in the sub-mm window now being probed"],
   ["Gravitational back-reaction","runs as a conserving simulation (§8.18)","matter sources the potential and the potential moves matter, solved together: energy conserved to ~1e-9 and norm to ~1e-14, a self-gravitating BOUND soliton forms (a gravity-off control disperses), the relaxed soliton satisfies the virial identity 2T+W=0, and both converge under mesh refinement. Scope: non-relativistic, scalar/Newtonian, classical matter; the radiative spin-2 sector is not evolved"],
   ["Magnitude of G","fixed at the Planck area (§8.19)","the Sakharov cutoff-ambiguity does not apply because the cutoff is PHYSICAL (a0 = l_Planck): over the full Brillouin zone the induced stiffness is O(1) in lattice units, so G = O(1) a0^2, with G ~ a0^2/N_f. Gravity is weak because a0 is Planckian -- no hierarchy, no tuning. The O(1) coefficient stays scheme-sensitive"],
+  ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~1e-14 of an equal quadrupole (ratio 3e-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are NOT tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, sum 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. NOT the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for ANY bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Lambda is relocated to a departure from equilibrium (open)"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
@@ -1034,9 +1066,12 @@ body("The fundamental-physics program of Section 8 carries a further, honest qua
 "convergence under mesh refinement. Those are the standards a scientific simulation must meet, and in those sectors "
 "the model now meets them. What is still NOT a single running simulation is the full target: emergent "
 "Lorentz-invariant, chiral, QUANTUM matter interacting through the emergent SPIN-2 gravity with radiative "
-"back-reaction. Section 8.18 is non-relativistic, scalar/Newtonian and classical in its matter; the radiative graviton "
-"is not evolved. Closing that gap -- relativistic quantum matter coupled to the dynamical spin-2 sector -- is the "
-"remaining integration problem, and it is a substantial build rather than a further increment. Each barrier is met "
+"back-reaction. Section 8.18 is non-relativistic, scalar/Newtonian and classical in its matter; Section 8.20 evolves "
+"the radiative spin-2 sector but LINEARLY and from a PRESCRIBED source, so the radiated energy is never taken back out "
+"of the matter that emitted it. The three pieces -- relativistic quantum matter, the dynamical spin-2 field, and a "
+"self-consistent exchange of energy between them -- each now exist separately; coupling all three in one evolution, so "
+"that a source radiates and thereby decays, is the remaining integration problem, and it is a substantial build rather "
+"than a further increment. Each barrier is met "
 "individually, and two pairs now jointly; assembling them all into one consistent theory that also fixes the "
 "Standard-Model content and the constants of nature is the work of fundamental physics itself, not of this toy. The value of Section 8 is to show that these barriers, usually treated as fatal to any "
 "'space is a medium' program, are here concrete and — one at a time — surmountable. The quantum-mechanics result "
@@ -1157,7 +1192,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_cosmological_constant.py (§8.13); test_yang_mills.py (§8.14); test_anomaly_inflow.py (§8.15); "
 "test_experimental_bounds.py (§8.16); "
 "test_realtime_pump.py (§8.17); test_backreaction.py (§8.18); "
-"test_newton_constant.py (§8.19).")
+"test_newton_constant.py (§8.19); "
+"test_gravitational_radiation.py (§8.20).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
