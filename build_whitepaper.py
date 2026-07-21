@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-16")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-17")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -856,9 +856,13 @@ result("Result 8.12 — induced gravity is healthy, spin-2, and Einstein in the 
 "coupling has the same sign as the model's working photon: μ > 0, so the graviton of 8.11 deconfines into real "
 "attraction. In 3+1D the radiative spin-2 graviton is dynamical, doubly degenerate (helicity 2), and healthy. And "
 "γ = 1 follows from Weinberg on the conserved infrared stress tensor — an emergent identity, since diffeomorphism "
-"invariance (unlike the exactly-closing U(1) Ward identity) is not a lattice symmetry. General relativity is thus "
-"reached as an infrared fixed point. Open still: the magnitude of G is cutoff-dependent (the Sakharov feature), and a "
-"lattice-exact γ = 1 is structurally unavailable, by design.")
+"invariance (unlike the exactly-closing U(1) Ward identity) is not a lattice symmetry. The linearised Einstein term is thus reached as an infrared "
+"attractor, and Section 8.26 measures what that means: the far field forgets the ultraviolet "
+"coefficient exponentially, and the operators sort as a fixed point requires — higher-derivative "
+"structure irrelevant, a graviton mass relevant. Open still: the fixed point is empirical rather than "
+"protected, since no exact lattice symmetry forbids the one relevant deformation; the magnitude of G is "
+"cutoff-dependent (the Sakharov feature); γ = 1 remains argued rather than measured; and nothing here "
+"reaches the nonlinear Einstein equations.")
 
 heading("8.13  The cosmological constant", 2)
 body("The same induced vacuum stress that made the graviton Ward identity inhomogeneous is, physically, the "
@@ -1321,6 +1325,44 @@ result("Result 8.25 — the classical geometry is demonstrably wrong, not merely
 "macroscopic superposition, where the mean-field treatment is a controlled approximation -- but the framework itself "
 "cannot be the final story, and this is the measurement of why.")
 
+heading("8.26  Auditing the largest claim: what \"infrared fixed point\" can carry", 2)
+body("The largest claim in this report is that general relativity is reached as an infrared fixed point, and it was "
+"also the least supported. The phrase is a renormalisation-group statement, and until now no "
+"renormalisation-group analysis had been performed anywhere in the project: no operator had been classified as "
+"relevant or irrelevant, and no statement had been made about what the infrared forgets. The phrase was carrying the "
+"authority of a calculation that had not been done. This section performs it, and then narrows the claim to what the "
+"calculation supports.")
+body("Operationally a fixed point asserts two things. First, universality: long-distance observables must lose their "
+"dependence on the ultraviolet couplings. Second, an operator sorting: deformations must separate into irrelevant "
+"ones the infrared forgets and relevant ones that destroy it. Both are computable in closed form here. Adding a "
+"graviton mass to the deconfined propagator and factorising κ(q^{2}+A)(q^{2}+B) gives")
+add_eq("G(r) = [ exp(-√B r) - exp(-√A r) ] / ( 4π κ (A - B) r ),     A + B = μ/κ,   AB = μ m^{2}/κ", "8.26a")
+body("which returns the Section 8.11 form at m = 0, and which involves no box, no lattice and no periodic images, so "
+"the tool cannot contaminate the quantity being tested. Varying the higher-derivative coefficient κ over four "
+"decades at fixed Einstein coefficient, and probing each at equal depth into its own far field, the far-field law is "
+"Newton to ten figures with force exponent -2 to five: κ sets only where the crossover sits, never what lies beyond "
+"it. The residual dependence falls as exp(-r/ℓ), so the infrared forgets the ultraviolet exponentially rather than "
+"as a power. That is universality, measured.")
+body("The sorting is equally sharp, and because relevance is a statement about the limit rather than about any one "
+"radius, each deformation is tracked outward. Higher-derivative structure decays as exp(-r/ℓ) and has vanished by a "
+"hundred crossover lengths however large κ is made: irrelevant. A graviton mass ten thousand times smaller than the "
+"Einstein scale instead grows with distance until it removes the inverse-square tail altogether: relevant. Since the "
+"claim therefore rests entirely on that one relevant deformation being absent, the measured tail is converted into "
+"an exclusion bound — any induced graviton mass above roughly 3e-5 of the Einstein scale would have shifted the "
+"force exponent detectably, so the graviton's Compton wavelength exceeds the crossover scale by about four orders.")
+result("Result 8.26 — the fixed-point claim, measured and narrowed.", "What is earned: the infrared forgets the "
+"ultraviolet exponentially (the far-field law is unchanged to ten figures across 10000× in the higher-derivative "
+"coefficient), and the operators sort as a fixed point requires — higher-derivative structure irrelevant, a graviton "
+"mass relevant, with masslessness bounded to ~3e-5 of the Einstein scale. The linearised Einstein term is the "
+"attractor of the long-distance theory, and that is a genuine renormalisation-group statement rather than a phrase. "
+"What is not earned, and what the wording elsewhere has been corrected to reflect: the fixed point is empirical, not "
+"protected. Diffeomorphism invariance is not an exact lattice symmetry (Section 8.12), so nothing forbids an induced "
+"graviton mass; masslessness here is measured, not guaranteed, which is a weaker object than the photon's "
+"symmetry-protected masslessness. The analysis is of the linearised propagator and reaches neither the nonlinear "
+"Einstein equations nor a measurement of γ = 1, which remains an argument from Weinberg because the direct check is "
+"regulator-limited. The report accordingly claims a linearised infrared attractor, not general relativity as a fixed "
+"point.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1336,8 +1378,9 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "gravity from that scalar force to the tensor theory: the confining curvature sector deconfines into a Newtonian "
 "graviton once the Sakharov loop supplies a positive Einstein term (and that sign is measured, μ > 0, by calibration "
 "against the model's own healthy photon), the radiative spin-2 graviton is dynamical and healthy in 3+1D, and γ = 1 "
-"follows from Weinberg as an infrared-emergent identity — general relativity as a fixed point rather than a "
-"lattice-exact law. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
+"follows from Weinberg as an infrared-emergent identity. Section 8.26 then tests the fixed-point language "
+"itself and narrows it: what is measured is that the linearised Einstein term is the infrared attractor, "
+"empirically rather than by protection. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
 "shows the photon's induction mechanism scales to non-Abelian yang-mills (SU(2), SU(3)), while Section 8.15 shows "
 "chirality is consistently realizable alongside it, the anomaly being a quantized identity settled by Callan-Harvey "
@@ -1355,7 +1398,7 @@ table(["Barrier","Status","Key result"],
   ["Quantum mechanics","largely emergent","quantizes to a relativistic QFT; and from the condensate directly (§8.6): the Schrödinger wave + ℏ as a material property, the Born rule as a stochastic attractor, and de Broglie v=∇(S)/m for a particle's own wave. Only guidance by a separate pilot wave + definite outcomes (measurement) stay a postulate"],
   ["Emergent photon","achieved","the Dirac-node position: a fluctuation of the medium's own bonds, on the fermion cone"],
   ["Long-range gravity","achieved as scalar gravity (§8.10)","the mediator is the condensate's amplitude mode: unprotected, hence gapped — which is why gravity always looked screened. It couples monopolarly to positive-definite energy, and scalar exchange between like charges attracts. Measured: λ*m_A = 1.00, and E = -C exp(-R/λ)/R exactly, so at criticality Newton's law, 1/r^2, universally attractive. The elastic route is provably dead (§8.9: Bitter-Crum + Eshelby-Crum)"],
-  ["Full general relativity","reached as an IR fixed point (§8.11-8.12)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon); γ=1 follows from Weinberg on the conserved IR stress tensor. Diffeomorphism invariance is emergent (not a lattice symmetry), so γ=1 is an IR identity, not lattice-exact; the magnitude of G stays cutoff-dependent"],
+  ["Linearised general relativity","reached as an IR attractor, measured (§8.11-8.12, §8.26)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon); γ=1 follows from Weinberg on the conserved IR stress tensor. Diffeomorphism invariance is emergent (not a lattice symmetry), so γ=1 is an IR identity, not lattice-exact; the magnitude of G stays cutoff-dependent"],
   ["Spin-2 graviton (dynamical)","achieved in 3+1D (§8.12)","the transverse-traceless graviton is non-dynamical in 2+1D (0 polarizations) but dynamical in 3+1D (2 polarizations): the induced TT kinetic term is nonzero, the two polarizations are degenerate (helicity 2), and the mode is healthy (same sign as the transverse photon)"],
   ["Empirical prediction","one testable, one out of reach (§8.16)","the n=2 Lorentz violation is safe vs every bound by ~16 orders — but being quadratic it is ~10^-16 below current sensitivity and not presently falsifiable (§8.8 tempered). The reachable prediction is gravitational: a scale-dependent γ below 1/m_A (§8.11), for which short-range tests already require m_A >~ 4 meV — within a factor 1.6 of the dark-energy scale, in the sub-mm window now being probed"],
   ["Gravitational back-reaction","runs as a conserving simulation (§8.18)","matter sources the potential and the potential moves matter, solved together: energy conserved to ~10^-9 and norm to ~10^-14, a self-gravitating bound soliton forms (a gravity-off control disperses), the relaxed soliton satisfies the virial identity 2T+W=0, and both converge under mesh refinement. Scope: non-relativistic, scalar/Newtonian, classical matter; the radiative spin-2 sector is not evolved"],
@@ -1365,6 +1408,7 @@ table(["Barrier","Status","Key result"],
   ["Quadrupole luminosity law","reproduced to sub-percent, nothing fitted (§8.23)","the gravity arc's first result that a known closed-form answer could have contradicted -- all earlier ones were structural (a sign, a rank, a scaling, a prohibition, a balance). L = g^2/(160 π) Q⃛.Q⃛ is derived from the model's own field normalisation and checked against GR's binary law before simulating; measured/predicted = 0.9924/0.9983/0.9996, the frequency law comes out Ω^6.007 (exactly 6 required, and the very claim §8.20 had to drop) and the amplitude law M2^2.000. The supporting identity ∫T_ij = (1/2) Ï_ij holds to 5×10^-8 given the centripetal binding stress. Scope: the source is prescribed -- compactness, not prescription, was the obstacle"],
   ["Orbital decay (Peters-Mathews)","binary inspiral reproduced, second hard number (§8.24)","the consequence of the radiation law for a bound system, against a second independent closed form -- the law confirmed on the Hulse-Taylor pulsar. GR has one Newton constant, so g_N = g^2/8 locks the binding and radiative sectors and nothing is tunable per quantity. Grid luminosity of a Keplerian binary vs Peters: 0.9903/0.9924/0.9939/0.9973; exponent L ~ a^-4.983 (required -5); da/dt tracks Peters at the same accuracy; integrating gives the (t_c-t)^{1/4} chirp. The residual shrinks as v/c falls (0.160 → 0.131) -- the signature of neglected higher PN terms, not error. Scope: adiabatic reaction (grid L through energy balance), not a self-force; measured at fixed separation because a moving-orbit energy budget conflates radiation with changing near-zone energy"],
   ["Classical geometry","semiclassical gravity shown inconsistent (§8.25)","an honest-negative on the framework used from 8.18 on: sourcing a classical field on <T> breaks the superposition principle (2.8×10^-15 off vs 4.6×10^-1 on), makes a single particle attract itself with the full Newtonian force of a partner that does not exist (ratio 1.000), and gets wrong the Page-Geilker case where the randomness is classical and no interpretation can rescue it (branch-wise 0.776 vs semiclassical 0.000). The model's own structure indicates the repair -- h is a collective mode of a quantum medium, so it should be quantised -- and quantising one mode gives matter-geometry entanglement plus decoherence, matching the exact answer to 10^-16. Limit: linearised quantum gravity, the easy part; the measurement problem is untouched"],
+  ["Infrared fixed point (the claim itself)","measured, and narrowed to an attractor (§8.26)","the report's largest claim, audited. earned: the far field forgets the ultraviolet coefficient exponentially (Newton to ten figures across 10000× in κ), and the operators sort as a fixed point requires -- higher-derivative structure irrelevant, a graviton mass relevant, with any induced mass excluded above ~3e-5 of the Einstein scale. not earned: the fixed point is empirical not protected (no exact lattice symmetry forbids the relevant deformation), the analysis is linearised, and γ=1 stays argued. Wording corrected from 'general relativity as a fixed point' to 'the linearised Einstein term as an infrared attractor'"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1495,8 +1539,10 @@ body("That scalar gravity was then carried the rest of the way to the tensor the
 "model's other great fine-tuning — the 10^122 approach to criticality, which had rested on the superseded scalar "
 "reading of gravity — so that both of the program's 10^122 tunings have now fallen, each to a structural result "
 "rather than a fitted parameter.")
-body("What remains is honest and specific. General relativity is reached as an infrared fixed point, not as a "
-"lattice-exact law — the magnitude of Newton's constant is cutoff-dependent, and a direct lattice-exact measurement "
+body("What remains is honest and specific. The linearised Einstein term is reached as an infrared attractor, not as a "
+"lattice-exact law, and Section 8.26 bounds what that claim can carry: universality and the operator "
+"sorting are measured, but the fixed point is empirical rather than symmetry-protected, the nonlinear "
+"Einstein equations are not reached — the magnitude of Newton's constant is cutoff-dependent, and a direct lattice-exact measurement "
 "of γ = 1 is structurally unavailable because diffeomorphism invariance is emergent by construction. The observed "
 "nonzero cosmological constant, the derivation of the specific Standard-Model group and its representations and "
 "constants (the group remains an input, only its Yang-Mills dynamics are induced), the residual measurement problem, "
@@ -1554,7 +1600,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_relativistic_backreaction.py (§8.22); "
 "test_quadrupole_luminosity.py (§8.23); "
 "test_inspiral_peters.py (§8.24); "
-"test_semiclassical_inconsistency.py (§8.25).")
+"test_semiclassical_inconsistency.py (§8.25); "
+"test_ir_fixed_point.py (§8.26).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
