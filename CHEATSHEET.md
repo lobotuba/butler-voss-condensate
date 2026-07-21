@@ -1615,6 +1615,44 @@ zeroing from `test_radiative_backreaction` still applies. `einsum` with a mid-st
 (quantum matter, classical field), so the measurement problem is untouched; and the cubic vertex is the **structural**
 nonlinearity, not the resummed Einstein–Hilbert series. There is no black hole here and none is claimed. Physical
 coupling (`~10⁻⁴⁰` in this ratio) is **not reachable in double precision by any direct simulation.**
+✅ **The classical-geometry gap is now MEASURED, not just named — see `test_semiclassical_inconsistency` below.**
+
+### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
+**Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
+prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**
+**[A] NONLINEAR IN THE WAVE FUNCTION.** Sourcing gravity on `|ψ|²` breaks the superposition principle: residual
+**2.8e-15** (machine zero) with gravity off vs **4.6e-01** with it on. ⚠️ **Contrast with §8.22:** there a failure of
+superposition was the **POINT** (a nonlinear *field* is what GR has); here the nonlinear object is the **WAVE
+FUNCTION**, which is a **defect**. Same measurement, opposite verdict — don't conflate them.
+**[B] A SINGLE PARTICLE ATTRACTS ITSELF.** One particle (total norm **1**) in a two-place superposition: lumps close
+`4.979→4.879` while the gravity-OFF control **drifts apart** to `5.014` (free dispersion — so the control is not
+static, and the comparison must be ON-vs-OFF, not ON-vs-initial). **Measure the force straight off the field at t=0**,
+not from trajectories (dispersion confounds them; an early trajectory-derived estimate also has a **factor-2 trap**:
+separation closes at *twice* the per-lump rate). A symmetric lump exerts no net force on itself, so what remains is
+purely the other lump. Result: equals the Newtonian pull of a point mass of **HALF the particle's own mass** to ratio
+**1.000** at separations 7 and 9 (1.034 at separation 5, finite-size). **The full force of a partner that does not
+exist.**
+**[C] PAGE–GEILKER (1981) — THE CASE NEEDING NO INTERPRETATION.** A **CLASSICAL** coin flip puts a mass at L or R (a
+proper mixture: the mass really *is* at one). Branch-wise force on a central test mass `∓0.77608`; **semiclassical
+sources the ensemble average → `−0.00000`**. It predicts the test mass **STAYS PUT when it must fall**. Because the
+randomness is classical, **no interpretation of QM can rescue it** — this is the sharpest form of the inconsistency.
+**[D] THE MODEL'S OWN WAY OUT.** `h` is **not** a fundamental classical field — it is a **collective mode of a QUANTUM
+condensate**, and collective modes of quantum media are **quantised** (phonons are). So the model's own logic says `h`
+should be quantised; semiclassical was a **tractability approximation, not a claim about nature**. Spin-boson
+`H = ω a†a + λσ_z(a+a†)`, exactly solvable: branch `s` displaces to `α_s(t) = −(λs/ω)(1−e^{−iωt})`, coherence
+`= exp(−(8λ²/ω²)sin²(ωt/2))`. Numerics match to **~1e-16**. Matter and geometry **ENTANGLE** (`S>0`, purity`<1`) and
+the matter **decoheres**; the semiclassical column is **1.000000 forever** (a classical field sourced on `⟨σ_z⟩=0`
+never moves ⇒ can never entangle or decohere anything). The [B] self-attraction is **gone** — each branch sources its
+own field instead of one classical field serving both.
+⚠️ **Don't over-read [D]:** coherence **RETURNS to 1 at t=2π** — correct for a **single** mode (the oscillator comes
+back and disentangles). Irreversible decoherence needs a **continuum** of modes; one mode establishes only that matter
+and geometry entangle **at all**, which is precisely what semiclassical forbids.
+**HONEST LIMIT:** [D] quantises **LINEARISED** gravity — perturbative QG as an effective theory, the **EASY and
+long-known** part. **Not** quantum geometry, silent on the nonperturbative problem, and it does **NOT** solve the
+measurement problem: it relocates branch structure into entanglement **without selecting an outcome**. §10's hard core
+stands untouched.
+**Method note:** isolated (Hockney) free-space BC required throughout — periodic BC gave the spurious virial in
+`test_backreaction`.
 
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to

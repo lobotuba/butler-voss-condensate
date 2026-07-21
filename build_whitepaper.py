@@ -172,7 +172,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-14")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-15")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1122,6 +1122,58 @@ result("Result 8.23 — general relativity's radiation law, reproduced to sub-pe
 "returning: prescription was never the obstacle, compactness was, and back-reaction is a higher-order effect that "
 "would contaminate a leading-order measurement. What is established is the radiation LAW.")
 
+heading("8.24  What the classical geometry costs: semiclassical gravity is inconsistent", 2)
+body("Section 8.22 named the assumption that survives every other repair in this report -- THE GEOMETRY IS CLASSICAL -- "
+"and left it there, as a limitation to be acknowledged. That is too gentle. Every gravitational result from Section "
+"8.18 onward sources a classical field on the expectation value of quantum matter, and that prescription is not "
+"merely incomplete: it is INCONSISTENT. This section measures the cost, which makes it an honest-negative result "
+"about the framework the report has been using.")
+body("Three failures, in increasing order of severity. First, sourcing gravity on the matter density makes the "
+"evolution nonlinear in the WAVE FUNCTION, so the superposition principle fails: the residual is machine zero with "
+"gravity switched off and of order one-half with it on. The contrast with Section 8.22 is worth stating explicitly, "
+"because the same measurement carries the opposite verdict. There, the failure of superposition was the POINT -- a "
+"nonlinear FIELD is what general relativity has. Here the nonlinear object is the wave function, and that is a defect "
+"rather than a feature.")
+body("Second, and more concretely absurd: a SINGLE PARTICLE gravitationally attracts ITSELF. One particle, total "
+"probability one, placed in a superposition of two locations has a density with two lumps, so the semiclassical field "
+"pulls each lump toward the other. There is no second particle for it to respond to. Reading the force directly off "
+"the field rather than inferring it from trajectories -- so that ordinary dispersion cannot confound the measurement "
+"-- the attraction equals the Newtonian pull of a point mass of HALF the particle's own mass, to a ratio of 1.000 "
+"once the lumps are well separated. This is not a small correction: it is the full gravitational force of a partner "
+"that does not exist.")
+body("Third, and sharpest, the case that requires no interpretation of quantum mechanics at all. Let a CLASSICAL coin "
+"flip decide whether a mass sits at one location or another. This is a proper mixture -- the mass really is at one of "
+"them -- and every account of quantum theory agrees that the gravitational field is the field of the actual location. "
+"Semiclassical gravity sources on the ensemble average and places the field at the midpoint, so it predicts that a "
+"test mass released at the centre STAYS PUT. Measured here, the branch-wise force is the full Newtonian value while "
+"the semiclassical force is zero to machine precision. The test mass must fall, and the theory says it will not. "
+"Because the randomness is classical, no interpretation of quantum mechanics is available to rescue the prediction. "
+"This is the Page-Geilker experiment of 1981, and it is the reason semiclassical gravity cannot be the final account.")
+body("The model's own structure supplies the direction of the repair. In this project h is not a fundamental classical "
+"field: it is a COLLECTIVE MODE OF A QUANTUM CONDENSATE, and collective modes of quantum media are quantised -- "
+"phonons are. The model's own logic therefore says that h should be quantised, and that the semiclassical treatment "
+"used throughout Section 8 is an approximation adopted for tractability rather than a claim about nature. Quantising "
+"a single radiative mode and coupling it to the same two-branch matter state gives the exactly solvable spin-boson "
+"problem: matter and geometry become ENTANGLED, the matter DECOHERES, and the numerics reproduce the closed-form "
+"answer to sixteen digits. The semiclassical treatment of the identical setup gives coherence exactly one, forever -- "
+"a classical field sourced on a vanishing expectation value never moves, so it can never entangle with anything and "
+"can never decohere anything. The self-attraction also disappears, because each branch now sources its own field "
+"instead of one classical field being forced to serve both.")
+result("Result 8.24 — the classical geometry is demonstrably wrong, not merely approximate.", "Semiclassical gravity "
+"breaks the superposition principle (residual 2.8e-15 with gravity off, 4.6e-1 with it on), makes a single particle "
+"attract itself with the FULL Newtonian force of a partner that does not exist (ratio 1.000 to the point-mass value), "
+"and gets WRONG the Page-Geilker case in which the randomness is CLASSICAL and the correct answer needs no "
+"interpretation (branch-wise force 0.776, semiclassical force 0.000). The model's own structure indicates the "
+"replacement: h is a collective mode of a QUANTUM medium and so should be quantised, and quantising one mode produces "
+"matter-geometry entanglement and gravitational decoherence, matching the exact solution to ~1e-16, while removing "
+"the self-attraction. HONEST LIMIT: this quantises LINEARISED gravity -- perturbative quantum gravity as an effective "
+"theory, which is the EASY and long-known part. It is not a theory of quantum geometry, it is silent on the "
+"nonperturbative problem, and it does NOT solve the measurement problem: it relocates the branch structure into "
+"matter-field entanglement without selecting an outcome. Single-mode coherence recurs at t = 2 pi, as it must for one "
+"mode; irreversible decoherence requires a continuum. The results of Sections 8.18-8.23 concern regimes without "
+"macroscopic superposition, where the mean-field treatment is a controlled approximation -- but the framework itself "
+"cannot be the final story, and this is the measurement of why.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1145,7 +1197,7 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "inflow -- now confirmed DYNAMICALLY (Section 8.17), in the program's first running simulation of two emergent sectors "
 "together. Section 8.16 then puts the model against data, and the result is bracing: the Lorentz-violation signature is "
 "safe but NOT presently falsifiable, the genuinely testable prediction is the short-range gravitational gamma, and "
-"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. Section 8.20 then shows the field RADIATES like spin-2 -- propagating at c with two polarizations, and with the monopole channel shut to machine precision, which scalar gravity would have left open -- and Section 8.21 CLOSES the integration, coupling matter, the radiative field and their energy exchange in one evolution so that a source radiates and thereby decays, with the budget balancing. Section 8.22 then takes that closure past the toy on all three of its admitted caveats -- SEPARATELY, so each is measured rather than bundled: the matter becomes a relativistic QUANTUM Dirac field carried as a many-fermion Slater determinant, the gravity becomes NONLINEAR (proved by the FAILURE of superposition, machine zero without the vertex and finite with it), and the coupling dependence is measured to be exactly second order over four decades, so extrapolation to physical strength is arithmetic rather than hope. Section 8.23 then supplies the arc's FIRST HARD NUMBER: general relativity's quadrupole luminosity law, reproduced to sub-percent with a coefficient derived from the model's own normalisation and audited against the GR binary formula before simulating (measured/predicted 0.9924-0.9996, frequency law Omega^6.007, amplitude law M2^2.000). Everything preceding it in the gravity arc was structural and could not be contradicted by a closed-form answer; this could, and was not. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
+"the 1e122 criticality tuning is RETRACTED. Sections 8.18-8.19 then close two more: gravitational BACK-REACTION now runs as a conserving, convergent simulation that binds matter into a virial-satisfying soliton, and the magnitude of G is fixed at O(1) x the Planck area by the physical lattice cutoff. Section 8.20 then shows the field RADIATES like spin-2 -- propagating at c with two polarizations, and with the monopole channel shut to machine precision, which scalar gravity would have left open -- and Section 8.21 CLOSES the integration, coupling matter, the radiative field and their energy exchange in one evolution so that a source radiates and thereby decays, with the budget balancing. Section 8.22 then takes that closure past the toy on all three of its admitted caveats -- SEPARATELY, so each is measured rather than bundled: the matter becomes a relativistic QUANTUM Dirac field carried as a many-fermion Slater determinant, the gravity becomes NONLINEAR (proved by the FAILURE of superposition, machine zero without the vertex and finite with it), and the coupling dependence is measured to be exactly second order over four decades, so extrapolation to physical strength is arithmetic rather than hope. Section 8.23 then supplies the arc's FIRST HARD NUMBER: general relativity's quadrupole luminosity law, reproduced to sub-percent with a coefficient derived from the model's own normalisation and audited against the GR binary formula before simulating (measured/predicted 0.9924-0.9996, frequency law Omega^6.007, amplitude law M2^2.000). Everything preceding it in the gravity arc was structural and could not be contradicted by a closed-form answer; this could, and was not. Section 8.24 then turns the same scrutiny on the report's OWN framework and returns an honest negative: the classical geometry assumed throughout 8.18-8.23 is not merely approximate but INCONSISTENT -- it breaks superposition, it makes a single particle attract itself with the full force of a nonexistent partner, and it fails the Page-Geilker case where the randomness is classical and no interpretation can rescue it. The model's own structure indicates the repair, since h is a collective mode of a quantum medium and so should be quantised. What remains open is the DERIVATION of the specific Standard-Model group, representations, hypercharges and chiral "
 "content (all still inputs), the observed value of the cosmological constant, the measurement problem's hard "
 "core, and -- sharpened rather than removed by Section 8.22 -- the fact that the GEOMETRY IS CLASSICAL throughout: "
 "this is semiclassical gravity, and nothing here bears on quantising geometry. Four self-corrections are now on record — the within-sector Lorentz result, the retracted gravity route, the "
@@ -1164,6 +1216,7 @@ table(["Barrier","Status","Key result"],
   ["Radiative back-reaction","integration closed for classical matter (§8.21)","matter, a dynamical radiative field and their energy exchange run in ONE evolution from ONE Hamiltonian: the matter energy falls by exactly what the field energy rises (2.0451e-2 vs 2.0452e-2, total conserved to 2e-6), a spherical control radiates 4e5 times less, and E_rad/g^2 is flat. Radiation reaction is derived, not inserted. Scope: CLASSICAL, NON-RELATIVISTIC matter and LINEARISED gravity, at exaggerated coupling"],
   ["Relativistic quantum matter + nonlinear gravity","the three caveats addressed separately (§8.22)","the matter becomes a DIRAC field carried as a many-fermion Slater determinant -- evolution EXACT for the matter since the coupling is one-body, Pauli holding to 5e-12, budget closing to 8.6e-9, spherical control 2e8 times smaller; the field gains the derivative self-coupling of general relativity, conserving energy (Hamiltonian, not patched) while SUPERPOSITION FAILS (5.7e-16 at zero coupling, 2.1e-3 with the vertex on); and E_rad/g^2 is flat to SIX figures over four decades, so extrapolation to physical coupling is arithmetic. STILL OPEN: the geometry is CLASSICAL (semiclassical gravity), the cubic vertex is the structural nonlinearity not the resummed Einstein-Hilbert series, and physical coupling is extrapolated, never simulated"],
   ["Quadrupole luminosity law","REPRODUCED to sub-percent, nothing fitted (§8.23)","the gravity arc's first result that a known closed-form answer could have CONTRADICTED -- all earlier ones were structural (a sign, a rank, a scaling, a prohibition, a balance). L = g^2/(160 pi) Qdddot.Qdddot is DERIVED from the model's own field normalisation and checked against GR's binary law before simulating; measured/predicted = 0.9924/0.9983/0.9996, the frequency law comes out Omega^6.007 (exactly 6 required, and the very claim §8.20 had to drop) and the amplitude law M2^2.000. The supporting identity int T_ij = (1/2) Iddot_ij holds to 5e-8 given the centripetal binding stress. Scope: the source is PRESCRIBED -- compactness, not prescription, was the obstacle"],
+  ["Classical geometry","semiclassical gravity shown INCONSISTENT (§8.24)","an honest-negative on the framework used from 8.18 on: sourcing a classical field on <T> breaks the superposition principle (2.8e-15 off vs 4.6e-1 on), makes a SINGLE particle attract itself with the full Newtonian force of a partner that does not exist (ratio 1.000), and gets WRONG the Page-Geilker case where the randomness is CLASSICAL and no interpretation can rescue it (branch-wise 0.776 vs semiclassical 0.000). The model's own structure indicates the repair -- h is a collective mode of a QUANTUM medium, so it should be quantised -- and quantising one mode gives matter-geometry ENTANGLEMENT plus decoherence, matching the exact answer to 1e-16. Limit: LINEARISED quantum gravity, the easy part; the measurement problem is untouched"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~1e-14 of an equal quadrupole (ratio 3e-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are NOT tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, sum 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. NOT the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for ANY bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Lambda is relocated to a departure from equilibrium (open)"],
@@ -1214,8 +1267,17 @@ body("The fundamental-physics program of Section 8 carries a further, honest qua
 "active by the FAILURE of superposition), and the coupling dependence is measured to be exactly second order across "
 "four decades, which makes the extrapolation to physical strength arithmetic. What remains genuinely open there is "
 "narrower but not smaller: the GEOMETRY IS CLASSICAL. Every result in this report treats the gravitational field as a "
-"classical object sourced by quantum matter -- semiclassical gravity -- so nothing here bears on the quantisation of "
-"geometry, and the cubic vertex is the structural nonlinearity rather than the resummed Einstein-Hilbert series: "
+"classical object sourced by quantum matter -- semiclassical gravity -- and Section 8.24 establishes that this is not "
+"a gap to be acknowledged but a prescription that is INCONSISTENT: it breaks the superposition principle, it makes a "
+"single particle attract itself with the full Newtonian force of a partner that does not exist, and it fails the "
+"Page-Geilker case in which the randomness is CLASSICAL and no interpretation of quantum mechanics can rescue it. The "
+"model's own structure indicates the repair -- h is a collective mode of a QUANTUM medium, so it should be quantised "
+"as phonons are, and quantising one mode yields matter-geometry entanglement and gravitational decoherence. But that "
+"is LINEARISED quantum gravity, the easy and long-known part; it is not a theory of quantum geometry, and it does not "
+"select an outcome, so the measurement problem below stands untouched. The results of Sections 8.18-8.23 concern "
+"regimes without macroscopic superposition, where the mean-field treatment is a controlled approximation, and they "
+"are not retracted -- but the framework carrying them cannot be the final story. Alongside this, the cubic vertex is "
+"the structural nonlinearity rather than the resummed Einstein-Hilbert series: "
 "there is no black hole in this model and none is claimed. Physical coupling is reached by extrapolation, not by "
 "simulation, and cannot be reached by any direct simulation in double precision. Each barrier is met "
 "individually, and two pairs now jointly; assembling them all into one consistent theory that also fixes the "
@@ -1342,7 +1404,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_gravitational_radiation.py (§8.20); "
 "test_radiative_backreaction.py (§8.21); "
 "test_relativistic_backreaction.py (§8.22); "
-"test_quadrupole_luminosity.py (§8.23).")
+"test_quadrupole_luminosity.py (§8.23); "
+"test_semiclassical_inconsistency.py (§8.24).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
