@@ -1531,7 +1531,41 @@ monopole breathing waves; spin-2 cannot** — so this is a sharp structural conf
 not the scalar it discarded. **Honest scope:** linearised, **prescribed** source; radiative back-reaction *on* the
 source (inspiral) not computed; the quadrupole **luminosity law is NOT tested** — it assumes a compact source
 (`ωσ≪1`), and this source has `ωσ≈1.6`, so the measured frequency dependence is the source's own spatial spectrum, not
-the multipole expansion. No such claim is made.
+the multipole expansion. No such claim is made. ✅ **Now tested and REPRODUCED by `test_quadrupole_luminosity` (below),
+which also quantifies the failure here: at `ωσ≈1.6` the power is suppressed ~13×.**
+
+### Einstein's quadrupole luminosity formula — the arc's first HARD NUMBER (`test_quadrupole_luminosity.py`)
+Every prior gravity result is **structural** — a sign (`μ>0`), a rank (2 polarizations), a scaling (`E_rad~g²`), a
+prohibition (no monopole), a balance (the budget closes). Strong, but **none can be contradicted by a known
+closed-form answer.** This one can be, and isn't.
+**THE PREDICTION IS PARAMETER-FREE**, derived from the project's own field normalisation. From
+`H_f = ∫½(π²+|∇h|²)` ⇒ `π̇ = −k²h − (g/2)S^TT` ⇒ `□h_ij = −(g/2)T^TT_ij` ⇒ `h^TT = (g/16πr) Ï^TT(t−r)`; the flux for
+this `H` is `S_r = ḣ_ij ḣ_ij`; the TT angular average is `∮dΩ = (8π/5)×(traceless contraction)`. Together:
+**`L = g²/(160π) · Q⃛_ij Q⃛_ij`**, `Q_ij = ∫ρ(x_i x_j − ⅓r²δ_ij)`.
+**[0] DERIVATION AUDITED BEFORE SIMULATING:** the chain reproduces GR's binary law `(32/5)Gμ²a⁴Ω⁶` **exactly**
+(sub `Q⃛·Q⃛ = 128m²R⁴Ω⁶` into `L=(G/5)Q⃛·Q⃛` → 25.6 both ways), and `∮dΩ = (8π/5)Q·Q` to `1.7e-5`.
+**[A] THE IDENTITY IT ALL RESTS ON:** `∫T_ij d³x = ½Ï_ij` to **5.2e-8**, for a rotating body carrying its **FULL**
+stress `T_ij = ρ(v_i v_j + ½(x_i a_j + a_i x_j))` — ram pressure **PLUS the centripetal binding stress** that holds a
+spinning body together. ⚠️ **Omit the binding term and the identity fails outright** (`∫ρv_iv_j ≠ ½Ï`): the classic
+way this calculation goes wrong. This identity is *why* the **mass** quadrupole, not the stress, sets the radiation.
+**[B] THE COEFFICIENT:** measured/predicted = **0.9924 / 0.9983 / 0.9996**. Method note: for a **rigidly** rotating
+quadrupole the near-zone field just rotates, so its energy is **CONSTANT** ⇒ `E_f(t) = const + L·t` exactly ⇒ the
+slope **is** the radiated power, no near-field subtraction, nothing fitted but the line (linearity 0.99998). Stable to
+`~1e-3` over a 4× range of `dt` — **non-monotonic**, so it *bounds* the integrator's contribution rather than
+extrapolating it away.
+**[C] SCALING LAWS:** **`L ∝ Ω^6.007`** (exactly 6 required — *the very claim `test_gravitational_radiation` had to
+drop when it came out `Ω^−3.96`*) and `L ∝ M2^2.000`.
+**[D] WHY THE EARLIER ATTEMPT COULDN'T WORK:** for a Gaussian source the exact leading-multipole power carries a form
+factor `exp(−ω²σ²)`. The σ sweep tracks it to **four decimals across a 12× suppression** (`ωσ`=0.06→1.57 gives
+`L/L_quad`=0.9984→0.0855 vs `exp`=0.9965→0.0848). At the old `ωσ≈1.6` the power is down **~13×** — quantified, not
+excused.
+**BOX/METHOD NOTES:** periodic-box contamination is avoided by ending the window **before radiation from the nearest
+image reaches the source** (`t < L_box`); free evolution uses **EXACT per-k rotation (Strang split)**, so `dt` is
+limited only by how fast the SOURCE turns and **no numerical damping can masquerade as radiated power**. Sub-grid σ is
+fine — aliasing lives at high `k` while the radiation is at `k=ω`, and `σ→0` is exactly the point-source limit.
+**HONEST SCOPE:** the source is **PRESCRIBED**, not self-gravitating — deliberate: back-reaction is higher-order and
+would contaminate a leading-order measurement, and **prescription was never the obstacle — compactness was.** What is
+tested is the radiation **LAW**.
 
 ### The integration closed — a source that radiates and thereby decays (`test_radiative_backreaction.py`)
 Three pieces existed separately: self-consistent matter+gravity but **non-radiative** (`test_backreaction`, instantaneous
