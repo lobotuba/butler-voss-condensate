@@ -1676,6 +1676,34 @@ Einstein equations nor a measurement of **γ=1**.
 "irrelevant" when its deviation was **5e-2** — that probe sat only **3ℓ** out, not in the far field at all. Probe at
 fixed **r/ℓ**, and judge relevance by the **outward trend**.
 
+### Is a graviton mass induced? — the assumption under the whole arc (`test_graviton_mass.py`)
+`test_ir_fixed_point` showed a mass is **THE relevant deformation** ⇒ the attractor stands or falls on its absence.
+But it only bounded a mass **it inserted by hand**. ⚑ **The propagator used everywhere else, `κ∇⁴−μ∇²`, has NO mass
+term written in it** — masslessness has been an **assumption of the operator form**, never measured. And
+`test_induced_sign` makes the omission explicit: it takes `μ` from `Π(q)−Π(0)` and **discards `Π(0)` as a contact
+term**. **That discarded number IS the mass candidate.**
+**⚑ METHOD (the reusable trick): don't assemble bubble+seagull and hope the set is complete.** Compute the filled-sea
+energy under a **CONSTANT deformation** — that *is* the `q→0` limit and contains **every order at once** (bubble,
+seagull, above). Nothing can be left out of the bookkeeping.
+`E(k) = √(Σ_i v_i² sin²(k_i+A_i) + M(k+A)²)`, `M(k)=M+rΣ(1−cos k_i)`; sea energy `= −⟨E⟩` over the 3D BZ torus.
+Second derivative by 5-point stencil (cancels the linear term exactly).
+**[A] PHOTON CONTROL (protected):** constant gauge field `k→k+A` ⇒ `d²E/dA² = −1.5e-10`, and **improves under
+refinement** (1.9e-7 → 5.6e-10 as N: 24→48). Zero **because a symmetry forbids it** — on a torus a constant `A` only
+re-samples a complete period. *This is what protection looks like.*
+**[B] TETRAD GRAVITON (unprotected):** constant traceless cone shear `v=(1+ε,1−ε,1)` (the `h₊` polarisation) ⇒
+**`d²E/dε² = −0.27`**, O(1), **eight orders** above the control, stable across gap (M=0.4→1.5) and grid (N=24→48).
+⚠️ **SIGN — I misread it first and it matters:** it is **NEGATIVE**, so shear **LOWERS** the sea energy rather than
+costing it. The loop doesn't merely give the cone a mass, it **DESTABILISES the symmetric cone**; the medium's own
+shear rigidity must overcome it. *Either* sign settles the issue: the `q=0` term is O(1) and nothing forbids it.
+**CONSISTENT, NOT FATAL:** an O(1) `q=0` term ⇒ **not a massless long-range mediator** ⇒ exactly why
+`test_tetrad_force` found **NO** long-range force from the tetrad's `1/r²` field and why the elastic route is dead
+(Eshelby–Crum). **Two unrelated calculations agree**, and the negative sign explains why that route could never be
+rescued by tuning — the fermion contribution **pushes the wrong way**.
+**WHAT IT DOES NOT SHOW:** the claimed gravity is the **DECONFINED CURVATURE sector** (§8.11–8.12), *not* the tetrad;
+its masslessness rests on the **biharmonic structure**, not on any symmetry protecting the cone shape. **Not measured
+here.** ⇒ assumption **NARROWED, NOT REMOVED**: masslessness **cannot be inherited from the tetrad**, so the curvature
+sector must supply it alone. **This is now the sharpest load-bearing assumption left in the gravity arc.**
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

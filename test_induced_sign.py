@@ -1,6 +1,22 @@
 """
 The sign of the induced gravitational coupling: is mu > 0?  (Closing the tensor-gravity crux.)
 
+*** STATUS UPDATE -- the quantity this file DISCARDS has since been measured, and it is not zero.
+    The extraction below takes mu as the q^2 coefficient of Pi(q) - Pi(0), subtracting Pi(0) as a
+    contact term. That subtraction was never justified, and Pi(0) is exactly the GRAVITON MASS
+    candidate: test_ir_fixed_point then showed a mass is the one RELEVANT deformation, so whether
+    Pi(0) vanishes decides whether the infrared attractor exists at all.
+    test_graviton_mass measured it, avoiding the bubble/seagull bookkeeping entirely by computing the
+    filled-sea energy under a CONSTANT deformation (the q -> 0 limit, to all orders at once). For the
+    PHOTON the q = 0 term is -1.5e-10 and falls under refinement, because an exact lattice symmetry
+    forbids it. For the TETRAD cone shear it is -0.27 -- order unity, eight orders larger, stable
+    across gap and grid, and NEGATIVE, so it destabilises the symmetric cone rather than merely making
+    it massive.
+    Nothing measured below is retracted: the SIGN result mu > 0 stands, and so does the calibration
+    against the healthy photon. What is no longer available is the tacit assumption that the
+    discarded contact term was harmless. Masslessness cannot be inherited from the tetrad; the
+    deconfined curvature sector of test_deconfinement must supply it, and that remains unmeasured. ***
+
 test_deconfinement reduced tensor gravity to ONE number's sign. The confining spin-2 sector
 deconfines into a massless Newtonian graviton -- turning the biharmonic +R into a -1/r -- for ANY
 POSITIVE induced Einstein/Newton coefficient mu. So the whole question is:

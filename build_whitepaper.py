@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-17")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-18")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1361,7 +1361,48 @@ result("Result 8.26 — the fixed-point claim, measured and narrowed.", "What is
 "symmetry-protected masslessness. The analysis is of the linearised propagator and reaches neither the nonlinear "
 "Einstein equations nor a measurement of γ = 1, which remains an argument from Weinberg because the direct check is "
 "regulator-limited. The report accordingly claims a linearised infrared attractor, not general relativity as a fixed "
-"point.")
+"point. Section 8.27 then measures that lack of protection directly, and finds it: the tetrad "
+"sector acquires an O(1) term at q = 0 while the photon's stays at 1e-10.")
+
+heading("8.27  Is a graviton mass induced? The assumption the arc rests on", 2)
+body("Section 8.26 identified a graviton mass as the one relevant deformation, so the infrared attractor stands or "
+"falls on its absence — but that section bounded only a mass it had itself inserted into the propagator. The "
+"propagator used everywhere else in this report, κ∇⁴ - μ∇², has no mass term written in it at all. Masslessness has "
+"therefore been an assumption of the operator form throughout, never a measurement. The induced-gravity calculation "
+"makes the omission explicit: Section 8.12 extracts μ as the q² coefficient of Π(q) - Π(0) and discards Π(0) as a "
+"contact term. That discarded number is exactly the mass candidate, and it had never been examined.")
+body("The question is posed so that no perturbative bookkeeping can conceal the answer. Rather than assembling a "
+"bubble and a seagull and hoping the set is complete, the ground-state energy of the filled fermion sea is computed "
+"as a function of a constant deformation. A constant deformation is precisely the q → 0 limit, and the sea energy "
+"contains every order at once — bubble, seagull, and everything above — so nothing can be left out. Two deformations "
+"are compared in the same regulator. A constant gauge field, k → k + A, is the photon's mass term, and gauge "
+"invariance requires it to vanish: on a torus a constant A merely re-samples a complete period. A constant traceless "
+"cone anisotropy, v = (1+ε, 1-ε, 1), is the h₊ polarisation of the tetrad metric of Section 8.5.")
+body("The contrast is unambiguous. The photon's curvature is -1.5e-10 and improves steadily under refinement "
+"(1.9e-7 at N = 24 falling to 5.6e-10 at N = 48): zero, and zero because a symmetry forbids it. The tetrad "
+"graviton's is -0.27 — order unity, eight orders above the control, and stable both across the fermion gap and "
+"under refinement. The sign is worth stating carefully, because it is not the naive expectation: it is negative, so a "
+"uniform shear lowers the sea energy rather than costing it. The fermion loop does not merely give the cone a mass, "
+"it destabilises the symmetric cone, and the medium's own shear rigidity must overcome that for the undeformed cone "
+"to be stable at all. Either sign settles the question at issue: the q = 0 term is order unity and nothing forbids it.")
+body("This is consistent with the report rather than damaging to it, and it corroborates an earlier result by a "
+"completely different route. A tetrad mode carrying an order-unity term at q = 0 is not a massless long-range "
+"mediator — which is precisely why Section 8.9 measured NO long-range force from the tetrad's inverse-square field, "
+"and why the elastic route was declared dead on Eshelby-Crum grounds. Two unrelated calculations agree, and the "
+"negative sign explains further why that route could never have been rescued by tuning: the fermion contribution "
+"pushes the wrong way.")
+result("Result 8.27 — masslessness cannot be inherited from the tetrad.", "Under a constant deformation, which is "
+"the q → 0 limit computed to all orders at once, the photon's q = 0 term is -1.5e-10 and falls under refinement "
+"while the tetrad graviton's is -0.27: order unity, eight orders larger, stable across gap and grid. The photon is "
+"massless because an exact lattice symmetry forbids the term; the tetrad mode has no such protection and acquires "
+"one, with a negative sign that destabilises the symmetric cone rather than simply making it massive. This is the "
+"concrete content of Section 8.26's finding that the infrared attractor is empirical rather than protected, and it "
+"independently corroborates the death of the elastic route in Section 8.9. What it does not show: the gravity this "
+"report claims is the DECONFINED CURVATURE sector of Sections 8.11-8.12, not the tetrad, and its masslessness rests "
+"on the biharmonic structure of the curvature field rather than on any symmetry protecting the cone shape. That "
+"sector's q = 0 term is not measured here. The assumption is therefore narrowed, not removed — masslessness cannot "
+"be inherited from the tetrad, so the curvature sector must supply it on its own, and that is now the sharpest "
+"load-bearing assumption remaining in the gravitational arc.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -1409,6 +1450,7 @@ table(["Barrier","Status","Key result"],
   ["Orbital decay (Peters-Mathews)","binary inspiral reproduced, second hard number (§8.24)","the consequence of the radiation law for a bound system, against a second independent closed form -- the law confirmed on the Hulse-Taylor pulsar. GR has one Newton constant, so g_N = g^2/8 locks the binding and radiative sectors and nothing is tunable per quantity. Grid luminosity of a Keplerian binary vs Peters: 0.9903/0.9924/0.9939/0.9973; exponent L ~ a^-4.983 (required -5); da/dt tracks Peters at the same accuracy; integrating gives the (t_c-t)^{1/4} chirp. The residual shrinks as v/c falls (0.160 → 0.131) -- the signature of neglected higher PN terms, not error. Scope: adiabatic reaction (grid L through energy balance), not a self-force; measured at fixed separation because a moving-orbit energy budget conflates radiation with changing near-zone energy"],
   ["Classical geometry","semiclassical gravity shown inconsistent (§8.25)","an honest-negative on the framework used from 8.18 on: sourcing a classical field on <T> breaks the superposition principle (2.8×10^-15 off vs 4.6×10^-1 on), makes a single particle attract itself with the full Newtonian force of a partner that does not exist (ratio 1.000), and gets wrong the Page-Geilker case where the randomness is classical and no interpretation can rescue it (branch-wise 0.776 vs semiclassical 0.000). The model's own structure indicates the repair -- h is a collective mode of a quantum medium, so it should be quantised -- and quantising one mode gives matter-geometry entanglement plus decoherence, matching the exact answer to 10^-16. Limit: linearised quantum gravity, the easy part; the measurement problem is untouched"],
   ["Infrared fixed point (the claim itself)","measured, and narrowed to an attractor (§8.26)","the report's largest claim, audited. earned: the far field forgets the ultraviolet coefficient exponentially (Newton to ten figures across 10000× in κ), and the operators sort as a fixed point requires -- higher-derivative structure irrelevant, a graviton mass relevant, with any induced mass excluded above ~3e-5 of the Einstein scale. not earned: the fixed point is empirical not protected (no exact lattice symmetry forbids the relevant deformation), the analysis is linearised, and γ=1 stays argued. Wording corrected from 'general relativity as a fixed point' to 'the linearised Einstein term as an infrared attractor'"],
+  ["Induced graviton mass","measured: the tetrad is not protected (§8.27)","the assumption under the whole arc, tested. The propagator has no mass term written in it, and 8.12 discards Π(0) as a contact term -- that discarded number IS the mass candidate. Computed with no perturbative bookkeeping, as the sea energy under a constant deformation (the q→0 limit to all orders at once): the photon gives -1.5e-10, falling under refinement, because a symmetry forbids it; the tetrad cone shear gives -0.27, order unity, eight orders larger, stable across gap and grid -- and negative, so it destabilises the symmetric cone rather than merely making it massive. Corroborates the dead elastic route (8.9) by an unrelated route. Does not measure the deconfined curvature sector, so the assumption is narrowed, not removed"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1601,7 +1643,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_quadrupole_luminosity.py (§8.23); "
 "test_inspiral_peters.py (§8.24); "
 "test_semiclassical_inconsistency.py (§8.25); "
-"test_ir_fixed_point.py (§8.26).")
+"test_ir_fixed_point.py (§8.26); "
+"test_graviton_mass.py (§8.27).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

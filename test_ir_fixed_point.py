@@ -1,6 +1,22 @@
 """
 Does the infrared fixed-point claim survive scrutiny? Measuring what "fixed point" actually asserts.
 
+*** STATUS UPDATE -- section [C] below is weaker than it reads, and the gap it leaves has since been
+    partly closed. [C] sweeps a graviton mass m that is an INPUT to green(), and compares against a
+    tail computed from the same formula at m = 0. It therefore establishes the SENSITIVITY of the
+    diagnostic ("a mass this large would have shifted the exponent detectably"), NOT that the model's
+    induced mass vanishes. The same assumption runs through the whole arc: the operator kappa*lap^2 -
+    mu*lap has masslessness built into its form.
+    test_graviton_mass asks the question [C] could not: it computes the filled-sea energy under a
+    CONSTANT deformation -- the q -> 0 limit to all orders at once, with no bubble/seagull bookkeeping
+    to get wrong. The photon's q = 0 term is -1.5e-10 and falls under refinement (symmetry-protected);
+    the TETRAD cone shear's is -0.27, order unity and eight orders larger. So the "empirical rather
+    than protected" language in the verdict below is now MEASURED rather than inferred, for the tetrad
+    sector at least.
+    [A] and [B] stand unchanged -- universality and the operator sorting are unaffected. What is
+    sharpened is [C]: masslessness cannot be inherited from the tetrad, so the deconfined curvature
+    sector must supply it on its own, and THAT sector's q = 0 term is still not measured. ***
+
 The report's largest single claim is that general relativity is reached as an INFRARED FIXED POINT.
 It is also the least supported, and the gap is worth naming precisely rather than defending. "Fixed
 point" is a renormalisation-group term. Until now nothing in this project performed a

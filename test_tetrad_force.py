@@ -1,6 +1,18 @@
 """
 Does the tetrad graviton actually PULL?  (The last assumed-but-unmeasured link.)
 
+*** STATUS UPDATE -- this result now has independent corroboration from a completely different
+    calculation. The finding below is that the tetrad's long-range 1/r^2 FIELD exerts no long-range
+    FORCE (Eshelby-Crum; the isotropic force collapses 69x from R ~ 10 to 22).
+    test_graviton_mass reaches the same conclusion from the fermion loop instead of from elasticity:
+    a constant traceless cone shear changes the filled-sea energy by -0.27, an order-unity term at
+    q = 0, against a photon control of -1.5e-10 that is protected by an exact lattice symmetry. A mode
+    carrying an order-unity q = 0 term is not a massless long-range mediator, so it cannot produce a
+    long-range force -- exactly what was measured here by other means.
+    The negative SIGN adds something this file could not see: the fermion contribution destabilises
+    the symmetric cone rather than stiffening it, so the elastic route could never have been rescued
+    by tuning the medium. It pushes the wrong way. ***
+
 test_tetrad_shielding showed the tetrad graviton is LONG-RANGE from ordinary energy density:
 the deviatoric (traceless) strain around a mass falls as 1/r^2, escaping the Bitter-Crum
 screening that kills the trace. It is tempting -- and the project has been tempted -- to read
