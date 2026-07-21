@@ -1492,6 +1492,32 @@ through emergent **spin-2 gravity with back-reaction**) is *not* done — gravit
 integration problem. What's shown: the first pair of emergent sectors runs together, and the topological accounting
 survives contact with real dynamics.
 
+### Gravitational back-reaction, run as a conserving simulation (`test_backreaction.py`)
+The step that makes this a **scientific** simulation of gravity, not a toy: gravity's defining feature is
+back-reaction (matter curves geometry, geometry moves matter, solved *together*), and this runs it. Evolves the
+**Schrödinger–Newton** system `i∂_tψ = −½∇²ψ + Φψ`, `∇²Φ = g|ψ|²` (`g=4πG`) — self-gravitating quantum matter, using
+the derived IR gravity (Newtonian, `G=1/4πμ`, `μ>0` from `test_deconfinement`/`test_induced_sign`). The four things a
+toy fails: **[A] conservation** — energy to `3×10⁻⁹`, norm to `4×10⁻¹⁴` through the full nonlinear evolution (vs the
+~80%-leaking Phase-3 artifact); **[B] self-binding** — gravity ON → bound soliton (`E<0`, width finite), OFF → disperses
+(2.45→5.02); the self-bound lump the near-incompressible Phase-3 medium couldn't make; **[C] virial** — relaxed soliton
+has `2T+W=−0.03≈0` (needs **isolated** free-space BC via Hockney zero-padding; periodic box gives spurious +0.95 —
+methodological check); **[D] convergence** — `E`=−1.180,−1.183,−1.185 and virial residual −0.032→−0.027→−0.024 as
+N=24→32→40. Runtime ~2–3 min (the N=40 isolated-BC step pads to 80³). **Honest scope:** non-relativistic (Schrödinger,
+not Dirac matter), scalar/Newtonian (`h₀₀` sector; radiative spin-2 not evolved), classical field. Full target (chiral
+quantum matter through emergent spin-2 gravity with radiative back-reaction) stays open. Closed: gravity here is a
+**force that can be run**, self-consistently and without leaking, making the bound states self-gravity is meant to make.
+
+### The magnitude of G — order the Planck area, no tuning (`test_newton_constant.py`)
+Resolves the "cutoff-dependent `G`" caveat. `G=1/(4πμ)`, `μ`= induced Newtonian stiffness (`q²` coefficient of
+`⟨T₀₀T₀₀⟩`). The Sakharov caveat (`μ` is UV-dominated, so `G` depends on the cutoff) **does not apply**: the cutoff is
+the **physical** lattice scale `1/a₀` (`a₀=l_Planck`, `test_scale_fixing`). Over the full 3+1D lattice BZ, `μ` is an O(1)
+number in lattice units → **`G = O(1)·a₀² = O(1)·l_Planck²`** (`μ≈0.17`→`G≈0.46 a₀²`, one fermion). `N_f` scaling is
+standard Sakharov: `G~a₀²/N_f` (SM-like `N_f≈45` → `~0.01 a₀²`, still Planckian). So gravity is weak because `a₀` is
+Planckian — no hierarchy, no tuning; the induced coefficient is order unity. **Honest scope:** the *scale* (order `a₀²`)
+and *sign* (positive/attractive, per `test_induced_sign`) are robust; the precise O(1) coefficient is scheme-sensitive
+(residual Sakharov ambiguity). With `test_scale_fixing` this closes the loop: the node spacing *is* the Planck length,
+and the gravity it induces has Planck strength.
+
 ### Self-binding on a compressible medium — NOT achieved (artifact caught)
 Since the LJ medium is nearly incompressible, we tried a softer (Morse) medium to
 see if a single lump could self-bind. **A cautionary result:** with a naive
