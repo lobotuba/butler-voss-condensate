@@ -1,6 +1,19 @@
 """
 The cosmological constant: why the model's huge vacuum energy does not gravitate.
 
+*** STATUS UPDATE -- this result turns out to do more work than it claimed. The remark below that
+    "Pi(0,0) is the induced cosmological piece" is exactly right, and test_curvature_mass follows it
+    through: that q = 0 term is the GRAVITON MASS. Expanding sqrt(g) about flat space gives a
+    derivative-free quadratic term -(Lambda/8)[2 h_ij h_ij - (tr h)^2], whose transverse-traceless
+    part -(Lambda/4) h_ij h_ij is a mass for the propagating spin-2 modes, so m^2 is proportional to
+    Lambda exactly.
+    That matters because test_ir_fixed_point established a graviton mass as the one RELEVANT
+    deformation -- the deformation that destroys the infrared attractor -- and test_graviton_mass then
+    showed the tetrad sector acquires one. The mechanism established here, that a self-sustained
+    vacuum gravitates -P rather than eps, is therefore also what keeps the deconfined curvature
+    sector's graviton massless. This file is load-bearing for the gravity arc, not only for the
+    cosmological constant, and if the Volovik argument fails both fall together. ***
+
 Integrating out the medium's modes gives a vacuum (zero-point) energy density of order the
 microscopic scale -- in this model the lattice/node scale, ~ 1/a0^4 = M_Planck^4 (a0 = l_Planck was
 fixed in test_scale_fixing). The observed dark-energy density is ~ (2 meV)^4, about 10^122 times

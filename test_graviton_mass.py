@@ -1,6 +1,25 @@
 """
 Is a graviton mass induced? Testing the assumption the whole gravity arc rests on.
 
+*** STATUS UPDATE -- the gap this file names at the end has since been CLOSED, and it turned out not
+    to be a separate question. The verdict below leaves the DECONFINED CURVATURE sector's q = 0 term
+    unmeasured and calls it the sharpest load-bearing assumption remaining in the arc.
+    test_curvature_mass shows it is the COSMOLOGICAL CONSTANT in different words. A vacuum energy
+    enters the action as sqrt(g) Lambda, and expanding sqrt(g) = 1 + tr h/2 + (tr h)^2/8 - tr(h^2)/4
+    gives a quadratic-in-h term carrying NO derivatives -- which is what a mass term is:
+    S ⊃ -(Lambda/8)[2 h_ij h_ij - (tr h)^2]. For transverse-traceless h that is -(Lambda/4) h_ij h_ij,
+    so m^2 is proportional to Lambda for the propagating spin-2 modes (verified against the closed
+    form to 8e-10, with the TT cases at exactly -0.5).
+    Bare, it is order unity -- as fatal as the tetrad result measured below. What removes it is the
+    self-sustained condensate vacuum of test_cosmological_constant: the gravitating quantity is the
+    grand potential -P, which cancels to the available precision across 122 decades, against a
+    rigid-vacuum control that retains 0.75. Residual mass ~2e-8 of the bare scale, some 1000x below
+    the exclusion bound of test_ir_fixed_point.
+    Nothing measured below is retracted: the tetrad is still unprotected, and masslessness still
+    cannot be inherited from it. What has changed is that the curvature sector does not need to
+    inherit it. HONEST: that protection is an EQUILIBRIUM CONDITION, not a symmetry, and is the same
+    Volovik mechanism as the cosmological-constant result, so the two stand or fall together. ***
+
 Section 8.26 established that a graviton mass is the one RELEVANT deformation: it grows with
 distance and destroys the inverse-square tail, so the infrared attractor stands or falls on its
 absence. But that section only bounded a mass it had inserted BY HAND into the propagator, and the

@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-18")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-19")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1401,8 +1401,43 @@ result("Result 8.27 — masslessness cannot be inherited from the tetrad.", "Und
 "report claims is the DECONFINED CURVATURE sector of Sections 8.11-8.12, not the tetrad, and its masslessness rests "
 "on the biharmonic structure of the curvature field rather than on any symmetry protecting the cone shape. That "
 "sector's q = 0 term is not measured here. The assumption is therefore narrowed, not removed — masslessness cannot "
-"be inherited from the tetrad, so the curvature sector must supply it on its own, and that is now the sharpest "
-"load-bearing assumption remaining in the gravitational arc.")
+"be inherited from the tetrad, so the curvature sector must supply it on its own. Section 8.28 then shows that this "
+"is not a separate assumption at all: the curvature sector's q = 0 term IS the cosmological constant, and it "
+"vanishes by the mechanism of Section 8.13.")
+
+heading("8.28  The curvature sector's q = 0 term is the cosmological constant", 2)
+body("Section 8.27 left the deconfined curvature sector's q = 0 term as the sharpest load-bearing assumption in "
+"the gravitational arc. It is not a separate assumption. The q = 0 term of the induced graviton action is the "
+"cosmological constant, as Section 8.13 already noted in passing — the induced Pi(0,0) and the vacuum stress ⟨T^{ij}⟩ "
+"are the same object — and the algebra connecting them is elementary. A vacuum energy enters the action as √g Λ, and "
+"expanding the metric determinant about flat space, g = δ + h, gives √g = 1 + ½ tr h + ⅛(tr h)² - ¼ tr(h²) + O(h³). "
+"The piece quadratic in h therefore carries no derivatives at all, which is precisely what a mass term is:")
+add_eq("S = -(Λ/8) [ 2 h_{ij} h_{ij} - (tr h)^{2} ]", "8.28a")
+body("For a transverse-traceless perturbation this reduces to -(Λ/4) h_{ij} h_{ij}, a mass for the propagating "
+"spin-2 modes themselves rather than merely a trace or conformal term — a point verified numerically here rather "
+"than asserted, the quadratic expansion agreeing with the closed form to 8e-10 with the transverse-traceless cases "
+"coming out at exactly -0.5. So m² is proportional to Λ, and whether the curvature graviton acquires a mass is the "
+"cosmological-constant question in different words.")
+body("Taken bare, the answer is as fatal as the tetrad's: the filled-sea energy density is 1.62 per site, order "
+"unity in lattice units. What removes it is the result of Section 8.13. A self-sustained condensate vacuum "
+"gravitates not its bare energy density but its grand potential, ρ_Λ = ε - μn = -P, and P vanishes identically at "
+"self-sustained equilibrium. Measured across bare energies from 1 to 10^{122}, that cancellation holds to the "
+"floating-point precision available — the largest cases cancel exactly in double precision, so their residual is "
+"bounded by rather than equal to zero. Since m² is proportional to Λ, a relative residual of 1e-16 in Λ is 1e-8 in "
+"the mass. A control confirms this is not a trivial identity: a rigid vacuum whose density cannot self-adjust "
+"retains a ratio of 0.75 at every scale, so the equilibrium condition is doing real work.")
+result("Result 8.28 — the last assumption is the cosmological-constant result.", "The curvature sector's q = 0 "
+"term is the cosmological constant: expanding √g gives the derivative-free quadratic term -(Λ/8)[2h_{ij}h_{ij} - "
+"(tr h)²], whose transverse-traceless part is nonzero, so m² is proportional to Λ for the propagating spin-2 modes. "
+"Bare it is order unity, as fatal as the tetrad's; the self-sustained condensate vacuum removes it, because the "
+"gravitating quantity is the grand potential -P, which cancels to the available precision over 122 decades against a "
+"rigid-vacuum control that retains 0.75. The residual induced mass is ~2e-8 of the bare scale, roughly a "
+"thousandfold below the ~3e-5 exclusion bound of Section 8.26, so the linearised infrared attractor survives its own "
+"decisive test. Honest ceiling: this is protection by an equilibrium condition, not by a symmetry. It is exact at "
+"equilibrium, but a self-sustained vacuum is a dynamical state rather than a redundancy of description, so it is "
+"weaker than the photon's protection, which no dynamics can spoil. It is also not independent evidence — it is the "
+"same Volovik mechanism as Section 8.13, so the two stand or fall together. What is genuinely gained is that the arc "
+"has one fewer open assumption than it appeared to.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -1451,6 +1486,7 @@ table(["Barrier","Status","Key result"],
   ["Classical geometry","semiclassical gravity shown inconsistent (§8.25)","an honest-negative on the framework used from 8.18 on: sourcing a classical field on <T> breaks the superposition principle (2.8×10^-15 off vs 4.6×10^-1 on), makes a single particle attract itself with the full Newtonian force of a partner that does not exist (ratio 1.000), and gets wrong the Page-Geilker case where the randomness is classical and no interpretation can rescue it (branch-wise 0.776 vs semiclassical 0.000). The model's own structure indicates the repair -- h is a collective mode of a quantum medium, so it should be quantised -- and quantising one mode gives matter-geometry entanglement plus decoherence, matching the exact answer to 10^-16. Limit: linearised quantum gravity, the easy part; the measurement problem is untouched"],
   ["Infrared fixed point (the claim itself)","measured, and narrowed to an attractor (§8.26)","the report's largest claim, audited. earned: the far field forgets the ultraviolet coefficient exponentially (Newton to ten figures across 10000× in κ), and the operators sort as a fixed point requires -- higher-derivative structure irrelevant, a graviton mass relevant, with any induced mass excluded above ~3e-5 of the Einstein scale. not earned: the fixed point is empirical not protected (no exact lattice symmetry forbids the relevant deformation), the analysis is linearised, and γ=1 stays argued. Wording corrected from 'general relativity as a fixed point' to 'the linearised Einstein term as an infrared attractor'"],
   ["Induced graviton mass","measured: the tetrad is not protected (§8.27)","the assumption under the whole arc, tested. The propagator has no mass term written in it, and 8.12 discards Π(0) as a contact term -- that discarded number IS the mass candidate. Computed with no perturbative bookkeeping, as the sea energy under a constant deformation (the q→0 limit to all orders at once): the photon gives -1.5e-10, falling under refinement, because a symmetry forbids it; the tetrad cone shear gives -0.27, order unity, eight orders larger, stable across gap and grid -- and negative, so it destabilises the symmetric cone rather than merely making it massive. Corroborates the dead elastic route (8.9) by an unrelated route. Does not measure the deconfined curvature sector, so the assumption is narrowed, not removed"],
+  ["Curvature-sector q=0 mass","it IS the cosmological constant, and it vanishes (§8.28)","the last load-bearing assumption, closed. Expanding √g Λ gives a derivative-free quadratic term -(Λ/8)[2h_ij h_ij - (tr h)^2] whose transverse-traceless part is nonzero, so m^2 is proportional to Λ for the propagating spin-2 modes (verified against the closed form to 8e-10). Bare it is order unity, as fatal as the tetrad's; the self-sustained condensate vacuum removes it, since what gravitates is the grand potential -P, cancelling to available precision over 122 decades against a rigid-vacuum control retaining 0.75. Residual mass ~2e-8 of the bare scale, ~1000x below 8.26's exclusion bound. Ceiling: protection by an equilibrium condition, not a symmetry, and not independent of 8.13"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1644,7 +1680,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_inspiral_peters.py (§8.24); "
 "test_semiclassical_inconsistency.py (§8.25); "
 "test_ir_fixed_point.py (§8.26); "
-"test_graviton_mass.py (§8.27).")
+"test_graviton_mass.py (§8.27); "
+"test_curvature_mass.py (§8.28).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

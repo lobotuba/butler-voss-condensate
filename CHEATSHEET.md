@@ -1704,6 +1704,31 @@ its masslessness rests on the **biharmonic structure**, not on any symmetry prot
 here.** ⇒ assumption **NARROWED, NOT REMOVED**: masslessness **cannot be inherited from the tetrad**, so the curvature
 sector must supply it alone. **This is now the sharpest load-bearing assumption left in the gravity arc.**
 
+### The curvature sector's q=0 mass IS the cosmological constant — and it vanishes (`test_curvature_mass.py`)
+**THE DECISIVE TEST.** `test_graviton_mass` showed masslessness **cannot be inherited from the tetrad** ⇒ the
+deconfined curvature sector's `q=0` term was the **last load-bearing assumption** in the arc.
+⚑ **IT IS NOT A SEPARATE ASSUMPTION.** The `q=0` term of the induced graviton action **IS the cosmological constant**
+— §8.13 already said it (*"Π(0,0) is the induced cosmological piece, and ⟨T^ij⟩≠0 is the same vacuum stress"*).
+Algebra: vacuum energy enters as `√g Λ`; `√g = 1 + ½tr h + ⅛(tr h)² − ¼tr(h²) + O(h³)` ⇒ the **quadratic-in-h piece
+carries NO derivatives** = a mass term:
+`S ⊃ −(Λ/8)[2 h_ij h_ij − (tr h)²]`, and for **TT** `h` that is `−(Λ/4) h_ij h_ij` ⇒ **a mass for the propagating
+spin-2 modes**, so **`m² ∝ Λ` exactly**.
+**[A] Identification verified, not asserted:** numerical quadratic expansion vs closed form → agrees to **8e-10**;
+**TT rows = exactly −0.5** (nonzero ⇒ real spin-2 mass, *not* merely trace/conformal). Use a **5-point stencil** —
+a 3-point one at e=1e-4 loses digits to cancellation (only ~1e-8).
+**[B] Bare = as fatal as the tetrad:** `|ε| = 1.62`/site, O(1) in lattice units.
+**[C] Self-sustained vacuum removes it:** what gravitates is `ρ_Λ = ε − μn = −P`; `P = ½Gn² − ε₀ = 0` at
+`n = √(2ε₀/G)`. Cancels to available precision across `ε₀ = 1…1e122`. ⚠️ **Largest rows cancel EXACTLY in double
+precision ⇒ report the residual as BOUNDED BY, not equal to, zero.** `m² ∝ Λ` ⇒ 1e-16 in Λ is **1e-8 in m**.
+**[D] Control (not a trivial zero):** a **rigid** vacuum (n held off equilibrium) retains `|ρ_Λ|/ε₀ = 0.75` at every
+scale ⇒ the equilibrium condition is doing real work.
+**[E] vs §8.26's bound:** residual `m ≈ 2e-8` of bare scale vs `~3e-5` exclusion ⇒ **~1000× below. Attractor
+survives.**
+**HONEST CEILING:** protection by an **EQUILIBRIUM CONDITION, not a symmetry**. Exact at equilibrium, but a
+self-sustained vacuum is a **dynamical state**, not a redundancy of description ⇒ **weaker than the photon's**, which
+no dynamics can spoil. **NOT independent evidence** — same Volovik mechanism as §8.13 ⇒ **the two stand or fall
+together.** Gain: the arc has **one fewer open assumption** than it appeared to.
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**
