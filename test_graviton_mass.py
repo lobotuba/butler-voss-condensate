@@ -20,6 +20,18 @@ Is a graviton mass induced? Testing the assumption the whole gravity arc rests o
     inherit it. HONEST: that protection is an EQUILIBRIUM CONDITION, not a symmetry, and is the same
     Volovik mechanism as the cosmological-constant result, so the two stand or fall together. ***
 
+*** SECOND STATUS UPDATE -- the verdict below says the tetrad mode is unprotected but stops at the
+    MASS. test_graviton_transversality measured the rest of its induced two-derivative action and the
+    picture is worse, and more coherent: the tetrad action also violates linearised diffeomorphism
+    invariance MARGINALLY (a flat ratio to the invariant term as q -> 0, so it never flows away),
+    breaks rotational invariance by a converged ~12.4%, and fits Einstein-Hilbert coefficients
+    (1, -2, 2, -1) so badly that one of them comes out with the wrong sign. The instrument used there
+    reproduces the -0.2746 measured below to ten digits by an independent code path, which is the
+    cross-calibration for both files.
+    The door this file left open is therefore now shut in both directions: the tetrad can supply
+    neither masslessness NOR Einstein structure. That strengthens rather than weakens the reading
+    below, since the project's gravity was never the tetrad. ***
+
 Section 8.26 established that a graviton mass is the one RELEVANT deformation: it grows with
 distance and destroys the inverse-square tail, so the infrared attractor stands or falls on its
 absence. But that section only bounded a mass it had inserted BY HAND into the propagator, and the

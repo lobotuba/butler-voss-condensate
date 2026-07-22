@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-19")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-20")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1439,6 +1439,47 @@ result("Result 8.28 — the last assumption is the cosmological-constant result.
 "same Volovik mechanism as Section 8.13, so the two stand or fall together. What is genuinely gained is that the arc "
 "has one fewer open assumption than it appeared to.")
 
+heading("8.29  Is the induced graviton action diffeomorphism invariant?", 2)
+body("Every statement about γ = 1 in this report has rested on Weinberg's theorem, and that theorem has two "
+"hypotheses, not one: a massless spin-2 field, and a quadratic action invariant under the linearised "
+"diffeomorphism h_{ij} → h_{ij} + ∂_{i}ξ_{j} + ∂_{j}ξ_{i}, coupled to a conserved source. Sections 8.27 and 8.28 "
+"addressed the first. The second has always been assumed. Two earlier attempts to measure it failed and, between "
+"them, concluded that it could not be measured: Section 8.12's Ward identity was broken by a hard-cutoff surface "
+"term severe enough to spoil even the photon validation, after which the lattice analysis identified two "
+"obstructions — the identity is inhomogeneous because the induced vacuum stress ⟨T^{ij}⟩ is nonzero, and "
+"diffeomorphism invariance is not a lattice symmetry.")
+body("The first obstruction has since dissolved. That ⟨T^{ij}⟩ is the same object as the q = 0 graviton mass, which "
+"Section 8.28 identified as the cosmological constant and cancelled through the self-sustained vacuum, so the "
+"identity can legitimately be made homogeneous and the question reopened. It is reopened here with the instrument "
+"of Sections 8.27 and 8.28 rather than a perturbative bubble: the ground-state energy of the filled sea under a "
+"finite-wavelength background deformation, which contains every order and every seagull at once. The point is not "
+"pedantic — the earlier graviton bubble carried no seagull at all while the photon bubble beside it did, so the two "
+"were never comparable.")
+body("The instrument is calibrated twice before use. At q = 0 it reproduces Section 8.27's tetrad mass to ten "
+"digits by an independent code path. At finite q the photon, whose U(1) invariance is exact on the lattice under "
+"the Peierls substitution, shows a pure-gauge response of 2.2e-11 — the round-off floor of the derivative stencil — "
+"against a transverse response of 6.4e-4, a ratio of 3e-8. That is the calibration the earlier attempt lacked.")
+body("The graviton then fails. Its pure-gauge response is nonzero, and although most of that is the q = 0 mass "
+"riding along, removing the mass leaves a two-derivative violation that does not go away. The decisive feature is "
+"that the ratio of the violating response to the invariant one is flat in q, at 1.07 and 4.06 for the two "
+"independent gauge modes. A diffeomorphism-violating operator holding a fixed fraction of the invariant one is "
+"marginal rather than irrelevant, and by the criterion established in Section 8.26 it therefore never flows away: "
+"diffeomorphism invariance is not emerging in the infrared. Rotational invariance fails in the same way. The two "
+"transverse-traceless polarisations for q along z are related by a 45-degree rotation and must be degenerate; they "
+"split by 12.4 per cent, converged in q and in the transverse grid alike. Fitting the four two-derivative "
+"invariants against the unique linearised Einstein-Hilbert combination (1, -2, 2, -1) returns (1, 8.18, -0.56, "
+"-0.12) — not a small deformation of Einstein-Hilbert, and the second coefficient does not even have the right sign.")
+result("Result 8.29 — Einstein structure cannot be inherited from the tetrad.", "Measured rather than inferred, "
+"with an instrument calibrated against both a known q = 0 result and an exact finite-q photon Ward identity. The "
+"induced tetrad action does not annihilate the pure-gauge modes, is not rotationally invariant, and is not "
+"Einstein-Hilbert. The residual diffeomorphism violation is marginal rather than irrelevant, so it survives the "
+"infrared limit that Section 8.26 requires it to fail. This is a negative on a route already known to be dead: the "
+"tetrad is not this model's gravity, as Sections 8.9 and 8.27 established from different directions, and the "
+"deconfined curvature sector is untouched by the measurement. What changes is that the door Section 8.27 left ajar "
+"is now shut in both directions — the tetrad supplies neither masslessness nor Einstein structure — and γ = 1 rests "
+"entirely on Weinberg applied to the curvature sector. Measuring that directly is the outstanding problem of the "
+"gravitational arc, and it can no longer be shortcut through the cone.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1487,6 +1528,7 @@ table(["Barrier","Status","Key result"],
   ["Infrared fixed point (the claim itself)","measured, and narrowed to an attractor (§8.26)","the report's largest claim, audited. earned: the far field forgets the ultraviolet coefficient exponentially (Newton to ten figures across 10000× in κ), and the operators sort as a fixed point requires -- higher-derivative structure irrelevant, a graviton mass relevant, with any induced mass excluded above ~3e-5 of the Einstein scale. not earned: the fixed point is empirical not protected (no exact lattice symmetry forbids the relevant deformation), the analysis is linearised, and γ=1 stays argued. Wording corrected from 'general relativity as a fixed point' to 'the linearised Einstein term as an infrared attractor'"],
   ["Induced graviton mass","measured: the tetrad is not protected (§8.27)","the assumption under the whole arc, tested. The propagator has no mass term written in it, and 8.12 discards Π(0) as a contact term -- that discarded number IS the mass candidate. Computed with no perturbative bookkeeping, as the sea energy under a constant deformation (the q→0 limit to all orders at once): the photon gives -1.5e-10, falling under refinement, because a symmetry forbids it; the tetrad cone shear gives -0.27, order unity, eight orders larger, stable across gap and grid -- and negative, so it destabilises the symmetric cone rather than merely making it massive. Corroborates the dead elastic route (8.9) by an unrelated route. Does not measure the deconfined curvature sector, so the assumption is narrowed, not removed"],
   ["Curvature-sector q=0 mass","it IS the cosmological constant, and it vanishes (§8.28)","the last load-bearing assumption, closed. Expanding √g Λ gives a derivative-free quadratic term -(Λ/8)[2h_ij h_ij - (tr h)^2] whose transverse-traceless part is nonzero, so m^2 is proportional to Λ for the propagating spin-2 modes (verified against the closed form to 8e-10). Bare it is order unity, as fatal as the tetrad's; the self-sustained condensate vacuum removes it, since what gravitates is the grand potential -P, cancelling to available precision over 122 decades against a rigid-vacuum control retaining 0.75. Residual mass ~2e-8 of the bare scale, ~1000x below 8.26's exclusion bound. Ceiling: protection by an equilibrium condition, not a symmetry, and not independent of 8.13"],
+  ["Graviton diffeo invariance","measured: the tetrad action is not Einstein-Hilbert (§8.29)","Weinberg's theorem needs a diffeomorphism-invariant quadratic action as well as a massless spin-2, and that hypothesis had always been assumed. Reopened because 8.28 removed the inhomogeneous <T> obstruction, and measured nonperturbatively as the sea energy under a finite-wavelength deformation, so no seagull can be missing. Calibrated against 8.27 at q=0 to ten digits and against an exact finite-q photon Ward identity (pure gauge 2.2e-11 vs transverse 6.4e-4). The tetrad fails: the pure-gauge response survives removal of the mass term, its ratio to the invariant response is flat in q (marginal, not irrelevant, so it never flows away), rotational invariance breaks by 12.4 per cent, and the fitted coefficients (1, 8.18, -0.56, -0.12) miss Einstein-Hilbert (1, -2, 2, -1) with one sign wrong. Does not touch the deconfined curvature sector; gamma = 1 now rests on it alone"],
   ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1681,7 +1723,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_semiclassical_inconsistency.py (§8.25); "
 "test_ir_fixed_point.py (§8.26); "
 "test_graviton_mass.py (§8.27); "
-"test_curvature_mass.py (§8.28).")
+"test_curvature_mass.py (§8.28); "
+"test_graviton_transversality.py (§8.29).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

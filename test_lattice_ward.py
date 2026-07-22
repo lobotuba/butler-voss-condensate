@@ -1,6 +1,27 @@
 """
 The symmetry-preserving regulator: why the photon Ward identity is exact and gamma=1 is not.
 
+*** STATUS UPDATE -- of the two obstructions named below, the FIRST has since been removed and the
+    SECOND has been measured and found worse than "not exact".
+    Obstruction (i), that the graviton Ward identity is INHOMOGENEOUS because <T^ij> =/= 0: that
+    <T^ij> is the same object as the q = 0 graviton mass, which test_curvature_mass identified as the
+    COSMOLOGICAL CONSTANT and cancelled via the self-sustained vacuum (what gravitates is the grand
+    potential -P, which vanishes at equilibrium). So the identity can legitimately be made
+    homogeneous, and this file's reason for calling the question closed no longer holds.
+    Obstruction (ii), that diffeomorphism invariance is not a lattice symmetry: test_graviton_transversality
+    reopened the measurement with a NONPERTURBATIVE method (finite-q sea energy, which contains every
+    seagull at once) calibrated by an EXACT finite-q photon Ward identity. The residual violation does
+    not merely fail to vanish -- it is MARGINAL, holding a flat ratio to the invariant term as q
+    falls, so it does not flow away in the infrared. Rotational invariance fails too, by a converged
+    ~12.4%, and the fitted two-derivative coefficients are nowhere near Einstein-Hilbert.
+    One methodological correction, recorded rather than buried: the PHOTON bubble below includes its
+    diamagnetic seagull while the GRAVITON bubble in [B] has none, so the two are not like-for-like
+    and [B] understates the graviton case. The energy method avoids the issue entirely.
+    Nothing below is retracted -- the photon calibration is exact and the structural diagnosis was
+    right. What changed is the conclusion drawn from it: gamma = 1 cannot be routed through the
+    TETRAD sector at all. It still rests on Weinberg applied to the deconfined CURVATURE sector,
+    which remains unmeasured. ***
+
 test_graviton_ward tried to measure the graviton transversality q_i Pi^{ij,kl} = 0 (the Ward
 identity that forces gamma = 1) and found it REGULATOR-LIMITED: a hard momentum cutoff breaks the
 identity through a surface term, and even the PHOTON validation q_i Pi^{ij} = 0 (charge conservation,

@@ -1729,6 +1729,46 @@ self-sustained vacuum is a **dynamical state**, not a redundancy of description 
 no dynamics can spoil. **NOT independent evidence** — same Volovik mechanism as §8.13 ⇒ **the two stand or fall
 together.** Gain: the arc has **one fewer open assumption** than it appeared to.
 
+### Is the induced graviton action diffeo-invariant? Weinberg's first factor (`test_graviton_transversality.py`)
+**`γ=1` has NEVER been measured here.** It rests on **Weinberg's theorem**, which needs TWO things:
+(1) a massless spin-2, and (2) a quadratic action invariant under `h_ij → h_ij + ∂_iξ_j + ∂_jξ_i`, coupled to a
+conserved source. The project worked hard on (1) and always **ASSUMED (2)**.
+⚑ **OBSTRUCTION (i) OF `test_lattice_ward` WAS ALREADY DEAD.** It refused the measurement because the graviton Ward
+identity is *inhomogeneous* (`⟨T^ij⟩≠0`). **That `⟨T^ij⟩` is the same object as the `q=0` graviton mass** = the
+cosmological constant (§8.28) ⇒ cancelled by the self-sustained vacuum. **Reopen the question.**
+**METHOD — nonperturbative, so no seagull can be missing.** Finite-`q` filled-sea energy on a periodic torus;
+deformation = one commensurate Fourier mode ⇒ the Hamiltonian **closes on a finite momentum ladder**, diagonalised
+exactly. ⚠️ **Both earlier attempts used BUBBLES — and `test_lattice_ward`'s graviton bubble had NO seagull while its
+photon bubble did.** Never compare those two as like-for-like.
+⚠️ **Architecture that makes the photon control exact:** momentum space in `(x,y)`, **real space in `z`** ⇒ a Peierls
+phase can be applied *exactly* on the z-links. Pure lattice gauge = `χ(z+1)−χ(z)` (the **lattice** difference, not the
+continuum derivative) ⇒ machine zero.
+⚠️ **Use the EXACT tetrad** `V = ` symmetric `sqrt(inv(δ+h))`, not `δ−h/2` — otherwise the O(h²) metric→tetrad
+remapping contaminates a second-derivative measurement.
+⚠️ **Anchor the mass subtraction on the IDENTICAL k-point set** (and halve it, since `⟨cos²⟩=½`). Subtracting an
+anchor computed on a *different* grid swamps the signal — it cost a whole run (TT drifted `0.0069→0.0055`).
+**[A] CALIBRATION:** reproduces §8.27's tetrad mass `−0.2746043896` to **10 digits** by an independent code path.
+**[B] PHOTON CONTROL at finite q (the thing `test_graviton_ward` lacked):** pure gauge `2.2e-11` (stencil round-off
+floor) vs transverse `6.4e-4` ⇒ ratio **3e-8**. Real cancellation, not a trivial zero.
+**[C] Graviton pure-gauge response:** nonzero — but **mostly the `q=0` mass riding along**, not a 2-derivative effect.
+**[D] MASS REMOVED (§8.28's equilibrium) ⇒ THE VIOLATION SURVIVES, AND THE RATIOS ARE FLAT IN `q`**
+(`gxz/TT ≈ 1.07`, `gzz/TT ≈ 4.06`). ⚑ **A diffeo-violating operator holding a fixed fraction of the invariant one is
+MARGINAL, NOT IRRELEVANT** ⇒ by §8.26's own criterion it **never flows away** ⇒ diffeomorphism invariance is **not
+emerging in the IR**.
+**[E] NOT EVEN ROTATIONALLY INVARIANT.** `h₊` and `h×` are both TT for `q‖z` ⇒ must be degenerate. They split by
+**12.42%**, flat in `q` AND converged in the transverse grid (`Nperp 20→56`). ⚠️ **You must check the Nperp
+convergence** — that grid is symmetric under x↔y but **not under 45°**, so a coarse grid could manufacture exactly
+this effect (it reads 13.79% at Nperp=10).
+**[F] vs EINSTEIN–HILBERT.** Fit the 4 two-derivative invariants `F1=h_ij h_ij`, `F2=h_zj h_zj`, `F3=h_zz tr h`,
+`F4=(tr h)²`. **EH is the unique `(1,−2,2,−1)`** — verify it annihilates every gauge mode (it does, exactly).
+Measured: **`(1, +8.18, −0.56, −0.12)`** — not close, **second coefficient has the WRONG SIGN**; residual `3.6e-2`
+because the cubic anisotropy of [E] isn't representable in a rotationally invariant basis at all.
+**VERDICT: Einstein structure CANNOT be inherited from the tetrad** — measured, not inferred.
+⚠️ **SCOPE — this is the TETRAD sector, NOT the project's gravity.** §8.27 found it unprotected; `test_light_bending`
+found it inert at range. The **deconfined curvature sector is untouched.** What changed: the door §8.27 left ajar is
+shut in **both** directions (tetrad supplies neither masslessness nor Einstein structure), and `γ=1` still rests on
+Weinberg applied to the **curvature** sector — **the open problem, no longer shortcuttable through the cone.**
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

@@ -20,6 +20,20 @@ Is the induced graviton transverse? The Ward identity that forces gamma = 1.
     conserved IR Dirac stress tensor), now with the missing measured ingredient supplied: the spin-2
     graviton genuinely propagates and is healthy (test_spin2_dynamical). ***
 
+*** SECOND STATUS UPDATE -- the regulator this file asked for has now been built, and the measurement
+    it could not make has been made. test_graviton_transversality supplies both missing pieces: a
+    NONPERTURBATIVE instrument (the finite-q filled-sea energy, which contains every seagull at once,
+    so it cannot be incomplete the way a bubble can) and the calibration this file lacked -- an EXACT
+    finite-q PHOTON Ward identity, pure-gauge response at the round-off floor against a nonzero
+    transverse response. The diagnosis here was therefore exactly right: the failure was the hard
+    cutoff's surface term, not the physics.
+    The answer, for the TETRAD sector, is negative and quantitative. The induced two-derivative action
+    does not annihilate the pure-gauge modes, is not rotationally invariant (~12.4%), and its fitted
+    coefficients are not Einstein-Hilbert -- one of them has the wrong sign. So the ANALYTIC fallback
+    argued below, Weinberg applied to the emergent Dirac sector, cannot be routed through the tetrad:
+    the theorem's first hypothesis fails there by O(1). It remains available for the deconfined
+    CURVATURE sector, which is the model's actual gravity and is untouched by either measurement. ***
+
 test_einstein_source reduced the spin-2 wall to ONE question: does mass source the curvature
 sector with the Einstein strength (gamma = 1)? Weinberg's answer: a massless spin-2 field coupled
 to a CONSERVED stress tensor is forced to be Einstein (gamma = 1). Conservation shows up as
