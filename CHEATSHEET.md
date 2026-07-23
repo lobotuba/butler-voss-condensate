@@ -1900,6 +1900,31 @@ NONE of its spatial polarizations by any medium mechanism.** **γ=1 not recovera
 survives only as emergent-Weinberg (premise contradicted). Newtonian real & quantitative; Einstein completion argued,
 not demonstrated. Fast (3.7s). Answers Robert's "is there a path forward" = the flagged opening is shut.
 
+### The negative-space sublattice — is fcc + its bcc void the missing Fierz–Pauli term? No (`test_gamma_sublattice.py`)
+**Robert's own idea after the arc "closed" — and the FIRST one that hits the real premise §8.35 rests on.** Every γ=0
+result assumed a **single Bravais lattice, central forces**, which forces the Cauchy relations AND makes the light-seen
+strain the gradient of **one** displacement `u` (Saint-Venant ⇒ compatible ⇒ flat). A **fcc + negative-space (bcc-like)
+two-sublattice** medium breaks that: it has a **relative/optical mode `w = u_A − u_B`** that is *not* `∇u` — two
+interpenetrating fcc = **diamond**, which violates Cauchy via this internal-strain (**Kleinman**) mode. Measured in the
+clean 2D proxy (**honeycomb** = two triangular sublattices).
+**[A] The fork — gapped or gapless?** Optical-mode gap `∝ k_inter` (`ω_opt = 0.87 / 1.73 / 3.46` at `k_inter = 0.25 /
+1 / 4`): a MECHANICAL second sublattice's relative mode is **GAPPED ⇒ adiabatically SLAVED** (renormalises elastic
+constants, not an independent long-range field). Only a **GAPLESS** relative mode (a Goldstone of a *second condensate*)
+would be one. **[B]** Cauchy genuinely broken: relaxed `C₁₂−C₆₆ = +0.29` (frozen `5e-7`); **bulk modulus K invariant to
+14 digits**, only **shear** softens ⇒ the optical mode couples to **shear, not compression**. ⚑ **[B2] SELECTION RULE,
+exact:** slaved shift `|s(ε)| = 4e-10` (machine 0) for **isotropic** strain, `1.0` for **shear** — a mass sources no
+internal shift (3 bond forces on B cancel by 3-fold symmetry). ⚑ **[C] DECISIVE:** the **FULL** two-sublattice response
+to a mass (macro `u` + slaved `s`) has **incompatibility/Ricci `8e-11` = machine 0** vs live probe (raw eigenstrain `θ*δ`)
+`0.125`. Because `s` is slaved it is **itself a displacement** ⇒ total strain = symmetric gradient ⇒ **compatible ⇒ flat.**
+📌 **VERDICT: the second sublattice adds a second DISPLACEMENT, not an INCOMPATIBLE d.o.f. — cannot escape the
+compatibility trap of §8.34/8.35. γ=0 survives.** It would help only if the relative mode were **gapless** AND a mass
+could source its **shear** channel — forbidden by the isotropy of a point mass ([B2]); the crystallographic 3θ wiggle it
+does make carries **zero net disclination** (Gauss–Bonnet). **What a candidate mechanism would need, made sharp: couple a
+SCALAR (mass) source to a GAPLESS SHEAR internal mode — forbidden by symmetry, not merely absent.** ⚠️ Two failed
+measurements first (noisy real-space cluster curl; a net-circulation measure that's 0 for any localized field) — the clean
+tool was the **Fourier incompatibility of the full slaved response** (parallels §8.35's Ricci-of-relaxation) + the exact
+q=0 internal-strain map. Same lesson: for a tiny (deviatoric, 2nd-order) signal, use the spectral/exact tool, not a box.
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**
