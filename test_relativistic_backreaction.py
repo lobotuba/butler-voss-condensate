@@ -19,6 +19,21 @@ Past the toy: RELATIVISTIC QUANTUM matter, NONLINEAR gravity, and the coupling t
     that is LINEARISED quantum gravity, the easy part, and leaves the measurement problem untouched.
     Everything measured below stands. ***
 
+*** SECOND STATUS UPDATE -- the self-coupling strength lambda, swept below as a free parameter, was
+    NOT free, and none of the values used here was the physical one. test_deser_bootstrap shows that
+    lambda and the matter coupling g enter the field equation as two source terms of identical form --
+    matter at g/2 and the field's own stress tensor at lambda/2 -- so their ratio lambda/g is a
+    Nordtvedt parameter and the strong equivalence principle (Deser's bootstrap, which iterates to
+    Einstein-Hilbert) fixes it at lambda = g. The values used below, lambda = 0, 0.4, 0.8, 1.6, 200
+    against g = 6, are lambda/g = 0, 0.067, 0.13, 0.27, 33.3. The headline self-interaction figure of
+    section [D] (a 2.0% shift in the radiated energy) was measured at lambda/g = 33.3 -- a theory in
+    which gravitational binding energy gravitates thirty-three times too strongly. At the bootstrap
+    value lambda = g the same shift is 0.06%. Nothing in the integration is retracted: the budget
+    closes at lambda = g exactly as it does below (to ~3e-11), and the identification lambda/g is
+    verified independently, by the field energy's response to a coordinate deformation, to 1e-10 on
+    every stress component. What is corrected is the interpretation -- the nonlinearity of GENERAL
+    RELATIVITY is the lambda = g line, not the lambda = 200 one. ***
+
 test_radiative_backreaction closed the three-way integration -- matter sourcing a radiative field,
 feeling it back, and losing exactly the energy the field carries away -- but with three admitted
 caveats, restated verbatim in the limitations section: the matter was a CLASSICAL, NON-RELATIVISTIC

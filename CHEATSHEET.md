@@ -1769,6 +1769,47 @@ found it inert at range. The **deconfined curvature sector is untouched.** What 
 shut in **both** directions (tetrad supplies neither masslessness nor Einstein structure), and `γ=1` still rests on
 Weinberg applied to the **curvature** sector — **the open problem, no longer shortcuttable through the cone.**
 
+### The induced graviton form has NO gauge null space — why projection can't rescue γ=1 (`test_graviton_nullspace.py`)
+**Closes the loophole §8.29 left.** The model's gravity is the deconfined **curvature** sector (incompatible strain,
+`test_light_bending`), so one might hope the diffeo violation lives in a gauge subspace a projection discards.
+⚑ **That hope is precise: it asks whether the induced quadratic form is BLOCK-DIAGONAL between physical and gauge
+modes.** Only the off-diagonal blocks answer it ⇒ you MUST measure the full 6×6, not one polarisation at a time.
+**METHOD:** full 6×6 form on symmetric `h_ij` at fixed q; cross terms by the polarisation identity
+`P_ab = ½[D(e_a+e_b) − D(e_a) − D(e_b)]`; orthonormal basis in `⟨e,e'⟩ = e_ij e'_ij`; `q=0` mass removed per §8.29.
+Basis: physical `{h+, hx, trp}`, gauge `{xz, yz, zz}`.
+⚑ **PREDICTION STATED FIRST:** linearised diffeo invariance = a **rank-3 null space** (one zero per `ξ` component);
+EH's own 6×6 (built here from the bilinear invariants) has exactly that kernel.
+**[A/B]** induced eigenvalues (×1e3) `[0.65, 0.81, 0.93, 3.97, 3.97, 7.60]` vs EH `[−1,0,0,0,1,1]` ⇒ **NO kernel**, and
+the gauge directions are the **STIFFEST** modes (4–8×), not the flat ones.
+**[C] THE DECISIVE BLOCK:** physical↔gauge mixing = **0.42 of the physical block** (EH: exactly 0), concentrated in
+the **spin-0 sector** (`trp`–`zz`) where `Ψ`, hence `γ`, is set for a spherical source. *Cannot project out a mode
+that feeds the one you keep.* **[D]** spin-2 `h+` vs `hx` split **12.6%** — no projection onto incompatible strain
+reaches it (spin-2 can't mix with spin-1 gauge). **VERDICT: §8.29's negative is STRUCTURAL, not a near miss** — the
+induced tetrad action is not a deformation of EH in **any** subspace. Tetrad route to `γ=1` **fully closed**.
+
+### The nonlinear self-coupling is fixed by Deser's bootstrap, not free (`test_deser_bootstrap.py`)
+**§8.22 SWEPT λ AS A FREE PARAMETER (`λ=0,0.4,0.8,1.6,200` at `g=6`). IT IS NOT FREE.**
+**Deser's bootstrap:** a spin-2 field coupled to matter's stress tensor is *inconsistent* unless it couples to its
+**own** stress tensor at the **same** strength (matter's stress stops being conserved once the field reacts back);
+iterating rebuilds Einstein–Hilbert.
+⚑ **VISIBLE DIRECTLY IN THE HAMILTONIAN** — both source terms sit side by side in `rhs()`:
+matter `(g/2) h_ab S_ab`, field `(λ/2) h_ab ∂_a h_ij ∂_b h_ij`. So **`λ/g` is a Nordtvedt parameter** and the strong
+equivalence principle fixes **`λ = g`**.
+⚠️ **SUBTLETY (why λ=g is exactly right here):** `nl_force`'s source piece `t1 = ½λ ∂_a h ∂_b h` OMITS the
+`−½δ_ab(∂h)²` trace piece of the true stress tensor — but `tt6` (transverse-traceless projection) kills that trace
+anyway, so the identification is exact in this TT-projected setting. [A] confirms it: the genuine stress (from the
+deformation response) = contraction − trace piece.
+**[A]** identification verified **independently** by the field energy's response to a coordinate deformation (§8.27–8.28
+method, never touches the contraction) ⇒ agrees on all 6 components incl. shears to **1e-10**.
+**[B]** §8.22's values ⇒ `λ/g = 0, 0.067, 0.13, 0.27, 33.3` — **none is 1**; headline case overcouples binding energy
+**33×**. **[C]** redone at `λ=g`: radiated-energy shift **0.06%** (not §8.22's **2.0%** at λ=200); budget still closes
+to `3.5e-11`. **Nothing in the integration was wrong — the parameter was.**
+⚠️ **[D] honest tension:** the amplitude used `h_max=0.224` is *above* the breakdown scale `1/g=0.167` (1.34×) ⇒ the
+cubic term is the first correction of a series, not the whole story (in §8.24's `g²=32πG`, `1/g` = the Planck scale).
+**SCOPE:** fixes the *cubic* term **given** a Fierz–Pauli *quadratic* term — which §8.20–8.24's postulated field has by
+construction. Does **NOT** connect it to §8.29's **induced** action, which isn't Fierz–Pauli. That gap = central open
+problem. (Corrects §8.22; annotated `test_relativistic_backreaction`.)
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-20")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-21")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1480,6 +1480,62 @@ result("Result 8.29 — Einstein structure cannot be inherited from the tetrad."
 "entirely on Weinberg applied to the curvature sector. Measuring that directly is the outstanding problem of the "
 "gravitational arc, and it can no longer be shortcut through the cone.")
 
+heading("8.30  Can a projection rescue it? The induced form has no gauge null space", 2)
+body("Section 8.29 leaves one hope standing. Its measurement is of the tetrad sector, whose degrees of freedom are "
+"the compatible strain of the Dirac cone, whereas the gravity the model actually claims is the deconfined curvature "
+"sector, which propagates only incompatible strain. If the physical curvature modes were cleanly separated from the "
+"pure-gauge modes that carry the violation, the failure might live entirely in a subspace the curvature propagator "
+"projects away, and γ = 1 could survive for the gravity that matters. That hope is a precise statement — it asks "
+"whether the induced quadratic form is block-diagonal between physical and gauge modes — and it can be measured.")
+body("It is measured here as the full six-by-six quadratic form on symmetric h_{ij} at fixed q, every diagonal and "
+"every cross term, in an orthonormal basis split into three physical modes (the two transverse-traceless "
+"polarisations and the transverse trace) and three gauge modes (the two spin-1 shears and the longitudinal mode). "
+"Linearised diffeomorphism invariance makes an unambiguous prediction, stated before the result: the three gauge "
+"directions must be exact null vectors, so the form must have a rank-three kernel spanned by them. Einstein-Hilbert's "
+"own form on the same basis has exactly that kernel.")
+body("The induced form has none. Its six eigenvalues are all nonzero, and the gauge directions are not its flat "
+"directions but its stiffest, four to eight times larger than the physical modes. The block that decides the hope is "
+"the physical-gauge mixing, and it is 42 per cent of the physical block itself, concentrated in the spin-0 sector — "
+"the transverse trace coupled to the longitudinal gauge mode — which is exactly the sector that sets the spatial "
+"curvature Ψ, hence γ, for a spherical source. A projection cannot remove a violation that is coupled into the modes "
+"it retains. The spin-2 doublet fails independently, through the 12.6 per cent rotational-anisotropy split of Section "
+"8.29, which no projection onto incompatible strain can reach at all because spin-2 cannot mix with the spin-1 gauge "
+"modes.")
+result("Result 8.30 — the projection loophole is closed.", "The induced tetrad form has no gauge null space: six "
+"nonzero eigenvalues where Einstein-Hilbert has three zeros, with the gauge directions the stiffest modes rather than "
+"the flat ones. It is not block-diagonal between physical and gauge subspaces — the mixing is 42 per cent of the "
+"physical block, in the spin-0 sector where γ lives — so no projection onto the incompatible/curvature subspace can "
+"recover an Einstein-Hilbert form. Section 8.29's negative is therefore structural rather than a near miss: the "
+"induced tetrad action is not a deformation of Einstein-Hilbert in any subspace, and γ = 1 rests entirely on the "
+"deconfined curvature sector measured directly.")
+
+heading("8.31  The nonlinear self-coupling is fixed by the bootstrap, not free", 2)
+body("Section 8.22 gave the gravitational field the cubic self-coupling that makes gravity gravitate and swept its "
+"strength λ as a free parameter. It is not free. Deser's bootstrap requires a spin-2 field coupled to matter's stress "
+"tensor to couple to its own stress tensor at the same strength, since the matter stress alone ceases to be conserved "
+"once the field reacts back; iterating the requirement rebuilds the Einstein-Hilbert action, and its first step fixes "
+"the cubic vertex. In this project's Hamiltonian the constraint is visible directly, because matter and the field "
+"enter the same field equation as two source terms of identical form — matter as (g/2) h_{ab} S_{ab} and the field "
+"as (λ/2) h_{ab} ∂_a h_{ij} ∂_b h_{ij}, whose contraction is the field's own stress tensor. Their ratio λ/g is a "
+"Nordtvedt parameter, the amount by which gravitational binding energy gravitates relative to ordinary energy, and "
+"the strong equivalence principle sets it to one.")
+body("The identification is verified independently, by the response of the field energy to a coordinate deformation "
+"— the constant-deformation method of Sections 8.27 and 8.28, which never refers to the contraction — agreeing on "
+"all six stress components, shears included, to 1e-10. Against it, Section 8.22's five values λ = 0, 0.4, 0.8, 1.6, "
+"200 at g = 6 are λ/g = 0, 0.067, 0.13, 0.27 and 33.3. None is one. The headline self-interaction figure of that "
+"section, a two per cent shift in the radiated energy, was taken at λ/g = 33.3, a theory in which gravitational "
+"binding energy gravitates thirty-three times too strongly; at the bootstrap value λ = g the same shift is six "
+"hundredths of a per cent, and the energy budget still closes to a few parts in 10^{11}.")
+result("Result 8.31 — the self-coupling was never free.", "Deser's bootstrap fixes the cubic vertex once the "
+"quadratic term is Fierz-Pauli: in this Hamiltonian matter sources the field at g/2 and the field sources itself at "
+"λ/2, so the strong equivalence principle reads λ = g and λ/g is a Nordtvedt parameter. The identification is "
+"verified independently to 1e-10 on every stress component. Section 8.22's values are λ/g = 0, 0.067, 0.13, 0.27 and "
+"33.3, none of them physical, and its headline self-interaction was measured at λ/g = 33.3; at λ = g the effect is "
+"far smaller and the budget still closes. Nothing in the integration was wrong — the parameter was. The bootstrap "
+"fixes the cubic term for the postulated Fierz-Pauli field of Sections 8.20-8.24, which reproduced the quadrupole "
+"luminosity law and the Peters-Mathews inspiral; it does not connect that field to the induced action of Section "
+"8.29, which is not Fierz-Pauli, and that gap remains the central open problem.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1529,7 +1585,9 @@ table(["Barrier","Status","Key result"],
   ["Induced graviton mass","measured: the tetrad is not protected (§8.27)","the assumption under the whole arc, tested. The propagator has no mass term written in it, and 8.12 discards Π(0) as a contact term -- that discarded number IS the mass candidate. Computed with no perturbative bookkeeping, as the sea energy under a constant deformation (the q→0 limit to all orders at once): the photon gives -1.5e-10, falling under refinement, because a symmetry forbids it; the tetrad cone shear gives -0.27, order unity, eight orders larger, stable across gap and grid -- and negative, so it destabilises the symmetric cone rather than merely making it massive. Corroborates the dead elastic route (8.9) by an unrelated route. Does not measure the deconfined curvature sector, so the assumption is narrowed, not removed"],
   ["Curvature-sector q=0 mass","it IS the cosmological constant, and it vanishes (§8.28)","the last load-bearing assumption, closed. Expanding √g Λ gives a derivative-free quadratic term -(Λ/8)[2h_ij h_ij - (tr h)^2] whose transverse-traceless part is nonzero, so m^2 is proportional to Λ for the propagating spin-2 modes (verified against the closed form to 8e-10). Bare it is order unity, as fatal as the tetrad's; the self-sustained condensate vacuum removes it, since what gravitates is the grand potential -P, cancelling to available precision over 122 decades against a rigid-vacuum control retaining 0.75. Residual mass ~2e-8 of the bare scale, ~1000x below 8.26's exclusion bound. Ceiling: protection by an equilibrium condition, not a symmetry, and not independent of 8.13"],
   ["Graviton diffeo invariance","measured: the tetrad action is not Einstein-Hilbert (§8.29)","Weinberg's theorem needs a diffeomorphism-invariant quadratic action as well as a massless spin-2, and that hypothesis had always been assumed. Reopened because 8.28 removed the inhomogeneous <T> obstruction, and measured nonperturbatively as the sea energy under a finite-wavelength deformation, so no seagull can be missing. Calibrated against 8.27 at q=0 to ten digits and against an exact finite-q photon Ward identity (pure gauge 2.2e-11 vs transverse 6.4e-4). The tetrad fails: the pure-gauge response survives removal of the mass term, its ratio to the invariant response is flat in q (marginal, not irrelevant, so it never flows away), rotational invariance breaks by 12.4 per cent, and the fitted coefficients (1, 8.18, -0.56, -0.12) miss Einstein-Hilbert (1, -2, 2, -1) with one sign wrong. Does not touch the deconfined curvature sector; gamma = 1 now rests on it alone"],
-  ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
+  ["Graviton gauge null space","projection cannot rescue it (§8.30)","the loophole 8.29 left. The model's gravity is the incompatible curvature sector, so one might hope the diffeo violation lives in a gauge subspace a projection discards. Measuring the full 6x6 induced quadratic form settles it: the form has NO gauge null space (six nonzero eigenvalues where Einstein-Hilbert has three zeros), the gauge directions are its STIFFEST modes, and the physical-gauge mixing is 42 per cent of the physical block -- concentrated in the spin-0 sector where gamma is defined. A projection cannot remove a violation coupled into the modes it keeps. The 8.29 negative is structural, not a near miss"],
+  ["Nonlinear self-coupling","fixed by Deser's bootstrap, not free (§8.31)","8.22 swept the cubic coupling lambda as a free parameter. It is not one: matter and the field enter the same equation as g/2 h S and lambda/2 h dh dh, so lambda/g is a Nordtvedt parameter and the strong equivalence principle fixes lambda = g. Verified independently by the field energy's deformation response to 1e-10 on every stress component. 8.22's five values are lambda/g = 0, 0.067, 0.13, 0.27, 33.3 -- none physical; its headline self-interaction was taken at 33.3, where gravitational binding energy gravitates 33x too strongly. At lambda = g the effect is far smaller and the budget still closes. The parameter was wrong, not the integration"],
+    ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
@@ -1724,7 +1782,9 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_ir_fixed_point.py (§8.26); "
 "test_graviton_mass.py (§8.27); "
 "test_curvature_mass.py (§8.28); "
-"test_graviton_transversality.py (§8.29).")
+"test_graviton_transversality.py (§8.29); "
+"test_graviton_nullspace.py (§8.30); "
+"test_deser_bootstrap.py (§8.31).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

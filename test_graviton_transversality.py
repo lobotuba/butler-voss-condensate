@@ -1,6 +1,16 @@
 """
 Is the induced graviton action diffeomorphism invariant? Weinberg's first factor, measured.
 
+*** STATUS UPDATE -- the one hope this file leaves open is now closed. The verdict below notes that the
+    model's actual gravity is the deconfined CURVATURE sector, which propagates only incompatible
+    strain, leaving room to hope the diffeomorphism violation lives in a gauge subspace a projection
+    could discard. test_graviton_nullspace measured the FULL 6x6 quadratic form and shut that door:
+    the induced form has NO gauge null space at all (six nonzero eigenvalues where Einstein-Hilbert has
+    exactly three zeros), the gauge directions are its STIFFEST modes, and the physical-gauge mixing is
+    42% of the physical block itself -- concentrated in the spin-0 sector where gamma is defined. A
+    projection cannot remove a violation coupled into the modes it keeps, so the failure measured here
+    is structural, not a near miss. Nothing below is retracted; the loophole is removed. ***
+
 gamma = 1 -- the Eddington factor of two, the one observable that separates Einstein gravity from
 scalar gravity -- has never been measured in this project. It rests on Weinberg's theorem, which
 needs TWO ingredients: a massless spin-2 field, and a quadratic action invariant under linearised
