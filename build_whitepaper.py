@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-21")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-22")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1536,6 +1536,38 @@ result("Result 8.31 — the self-coupling was never free.", "Deser's bootstrap f
 "luminosity law and the Peters-Mathews inspiral; it does not connect that field to the induced action of Section "
 "8.29, which is not Fierz-Pauli, and that gap remains the central open problem.")
 
+heading("8.32  Does mass source curvature? The smooth coupling behind γ = 1, measured", 2)
+body("The gap named at the end of Section 8.31 — that the model's actual gravity, the deconfined curvature sector, "
+"has never been shown to reach γ = 1 — is the central open problem, and this section takes the first direct measurement "
+"of it. Section 8.10 had already reduced γ to a single number: γ = κ/(4πG), where 4πG is the coupling with which a "
+"static mass sources the Newtonian time potential Φ, and κ is the strength with which the same mass sources the "
+"spatial curvature Ψ. The first half is measured and healthy; the question is the second. A static point mass is a "
+"localized energy density, so it sources gravity only through its T^{00} component, and any spatial curvature it "
+"produces must come from the induced coupling of that energy density to the spatial stress, Π^{00,ij}(q). γ = 1 needs "
+"that coupling present at the Newtonian strength; γ = 0 is the value if the energy density sources no spatial stress "
+"at all.")
+body("Measured on the gapped Dirac cone with the static interband bubble of Section 8.12, calibrated against the "
+"healthy induced photon, the coupling vanishes identically. Π^{00,ij}(q) is zero for every component, the trace "
+"included, to machine precision and at every momentum, mass and cutoff, while the Newtonian Π^{00,00} is everywhere "
+"nonzero. The reason is a selection rule rather than a small number: the energy-density vertex is proportional to the "
+"identity, a scalar, and a scalar cannot source the spin-2 spatial stress. That the bubble is not simply blind is "
+"confirmed by replacing the scalar mass with a genuine spin-2 source, which couples to the same stress at order unity. "
+"Through the smooth induced loop a mass sources Φ and not Ψ, so the smooth-sector γ is zero.")
+result("Result 8.32 — every smooth mechanism gives γ = 0; γ = 1 rests on emergent Weinberg alone.", "A static mass "
+"presents a scalar energy density to gravity, and its induced coupling to the spatial stress vanishes identically — "
+"Π^{00,ij} = 0 for every component including the trace, to machine precision across mass, cutoff and momentum — while "
+"a genuine spin-2 source couples to the same stress at order unity, so the zero is a selection rule. This is the "
+"fourth independent statement that the smooth route to γ = 1 is closed, joining the non-dynamical induced spatial "
+"graviton (Section 8.12), the non-Einstein induced tetrad action (Section 8.29) and its absent gauge null space "
+"(Section 8.30); pure elasticity gave the same zero from the other side (Section 8.10, a mass relaxing to a "
+"compatible displacement). Every smooth mechanism the model has returns γ = 0. What is not touched is the topological "
+"channel: genuine curvature here is incompatible strain, disclination density, which a smooth stress-stress bubble "
+"cannot see, and whether a mass sources curvature through that channel is the remaining and harder measurement. As it "
+"stands γ = 1 rests entirely on the emergent-Weinberg argument — a massless spin-2 on a conserved infrared stress "
+"tensor is forced to be Einstein — which, unlike the model's emergent Lorentz invariance, has no direct in-model "
+"confirmation and now has direct evidence against it in the smooth sector. This is the sharpest honest statement of "
+"where the gravitational arc actually stands.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1587,6 +1619,7 @@ table(["Barrier","Status","Key result"],
   ["Graviton diffeo invariance","measured: the tetrad action is not Einstein-Hilbert (§8.29)","Weinberg's theorem needs a diffeomorphism-invariant quadratic action as well as a massless spin-2, and that hypothesis had always been assumed. Reopened because 8.28 removed the inhomogeneous <T> obstruction, and measured nonperturbatively as the sea energy under a finite-wavelength deformation, so no seagull can be missing. Calibrated against 8.27 at q=0 to ten digits and against an exact finite-q photon Ward identity (pure gauge 2.2e-11 vs transverse 6.4e-4). The tetrad fails: the pure-gauge response survives removal of the mass term, its ratio to the invariant response is flat in q (marginal, not irrelevant, so it never flows away), rotational invariance breaks by 12.4 per cent, and the fitted coefficients (1, 8.18, -0.56, -0.12) miss Einstein-Hilbert (1, -2, 2, -1) with one sign wrong. Does not touch the deconfined curvature sector; gamma = 1 now rests on it alone"],
   ["Graviton gauge null space","projection cannot rescue it (§8.30)","the loophole 8.29 left. The model's gravity is the incompatible curvature sector, so one might hope the diffeo violation lives in a gauge subspace a projection discards. Measuring the full 6x6 induced quadratic form settles it: the form has NO gauge null space (six nonzero eigenvalues where Einstein-Hilbert has three zeros), the gauge directions are its STIFFEST modes, and the physical-gauge mixing is 42 per cent of the physical block -- concentrated in the spin-0 sector where gamma is defined. A projection cannot remove a violation coupled into the modes it keeps. The 8.29 negative is structural, not a near miss"],
   ["Nonlinear self-coupling","fixed by Deser's bootstrap, not free (§8.31)","8.22 swept the cubic coupling lambda as a free parameter. It is not one: matter and the field enter the same equation as g/2 h S and lambda/2 h dh dh, so lambda/g is a Nordtvedt parameter and the strong equivalence principle fixes lambda = g. Verified independently by the field energy's deformation response to 1e-10 on every stress component. 8.22's five values are lambda/g = 0, 0.067, 0.13, 0.27, 33.3 -- none physical; its headline self-interaction was taken at 33.3, where gravitational binding energy gravitates 33x too strongly. At lambda = g the effect is far smaller and the budget still closes. The parameter was wrong, not the integration"],
+  ["Does mass source curvature?","no, in the smooth channel: gamma_smooth = 0 (§8.32)","gamma = kappa/(4 pi G) reduces the light-bending parameter to one number: does a mass source spatial curvature, and at what strength. A static mass is a scalar energy density (T00 ~ E*I), and its induced coupling to the spatial stress vanishes identically -- Pi^{00,ij} = 0 for every component including the trace, to machine precision across mass, cutoff and momentum -- while a genuine spin-2 source couples at O(1), so the zero is a selection rule. The fourth independent closure of the smooth route to gamma = 1 (with 8.12, 8.29, 8.30), and elasticity gave the same zero from the other side (8.10). Every smooth mechanism gives gamma = 0. Untouched: the TOPOLOGICAL (disclination) channel, where real curvature lives. gamma = 1 now rests entirely on emergent Weinberg, which -- unlike emergent Lorentz -- has no direct confirmation and now has direct evidence against it in the smooth sector"],
     ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1784,7 +1817,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_curvature_mass.py (§8.28); "
 "test_graviton_transversality.py (§8.29); "
 "test_graviton_nullspace.py (§8.30); "
-"test_deser_bootstrap.py (§8.31).")
+"test_deser_bootstrap.py (§8.31); "
+"test_gamma_source.py (§8.32).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

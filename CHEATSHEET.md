@@ -1810,6 +1810,28 @@ cubic term is the first correction of a series, not the whole story (in §8.24's
 construction. Does **NOT** connect it to §8.29's **induced** action, which isn't Fierz–Pauli. That gap = central open
 problem. (Corrects §8.22; annotated `test_relativistic_backreaction`.)
 
+### Does mass source curvature? The smooth coupling behind γ=1 — measured, = 0 (`test_gamma_source.py`)
+**First direct measurement of the CENTRAL open problem** (the harder build). `test_einstein_source` reduced γ to one
+number: **γ = κ/(4πG)** — 4πG sources the Newtonian Φ, κ sources spatial curvature Ψ.
+⚑ **A static point mass is a scalar energy density ⇒ sources gravity ONLY through `T⁰⁰`.** So any curvature it makes
+must come from the induced `⟨T00, T_ij⟩ = Π⁰⁰’ⁱʲ(q)` coupling.
+**THE SELECTION RULE:** `⟨T00, T_ij⟩ = 0` exactly (all components incl. trace, `~1e-19`, all q/M/cutoff) while
+`⟨T00, T00⟩ ≠ 0`. ⚑ **A symmetry zero, not a small number:** `T00 = E·I` is a **scalar**, and a scalar can't source
+the **spin-2** spatial stress.
+⚠️ **THE CONTRAST is mandatory** (else the zero could be a numb instrument): a genuine spin-2 source (xx−yy pol.)
+couples to the same stress at **O(1)** (`1.03`). Bubble works; the scalar mass just doesn't elicit a response.
+**⇒ smooth loop: mass sources Φ not Ψ ⇒ γ_smooth = 0.**
+**FOURTH independent closure of the smooth route to γ=1:** non-dynamical induced spatial graviton (`test_induced_sign`),
+non-Einstein induced tetrad action (§8.29), no gauge null space (§8.30), + elasticity gave the same zero from the
+other side (`test_einstein_source`: mass → compatible displacement). **Every smooth mechanism ⇒ γ=0.**
+⚠️ **SCOPE (negative, stated carefully):** this is the **smooth** channel. Real curvature = **incompatible strain /
+disclination density** (`test_light_bending`, `test_disclination_force`), invisible to a smooth stress-stress bubble.
+The **TOPOLOGICAL channel is untouched** = the remaining harder measurement (option 1, next).
+📌 **γ=1 now rests ENTIRELY on emergent-Weinberg** (massless spin-2 + conserved IR stress → Einstein) — which, unlike
+emergent Lorentz (directly measured, `test_lorentz`), has **no direct in-model confirmation and now direct evidence
+against it in the smooth sector.** The sharpest honest statement of where the gravity arc stands. (Annotated
+`test_einstein_source` — "the one calculation left" = 0 in the smooth channel.)
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

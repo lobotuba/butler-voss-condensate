@@ -1,6 +1,23 @@
 """
 Is the coupling Einstein? gamma = 1 needs mass to source CURVATURE, not displacement.
 
+*** STATUS UPDATE -- the "one calculation left" named at the end of this file has now been done in the
+    SMOOTH channel, and it comes back zero. This file reduces gamma to a single number, the induced
+    Einstein source coupling kappa (gamma = kappa/(4 pi G)), and leaves whether the fermion loop
+    supplies it as the one open calculation. test_gamma_source measures it: the induced coupling of a
+    static energy density to the spatial stress, <T00, T_ij>(q), vanishes identically -- for every
+    component including the trace, to machine precision, across mass, cutoff and momentum -- while a
+    genuine spin-2 source couples to the same stress at O(1), so the zero is a selection rule, not a
+    numb instrument. The energy density is a scalar (T00 ~ E*I) and sources no spin-2 curvature. So in
+    the smooth channel kappa = 0 and gamma = 0, from the loop side, exactly as this file found it = 0
+    from the ELASTIC side ([A] here: a mass relaxes to a compatible displacement, eta/rho ~ 1e-15).
+    Both smooth mechanisms agree. What is NOT retracted, and is the reason gamma = 0 is not yet the
+    final word: real curvature here is INCOMPATIBLE strain -- disclination density -- and a smooth
+    stress-stress bubble cannot see the topological channel. Whether a mass sources curvature through
+    THAT channel is the remaining measurement. gamma = 1 now rests entirely on the emergent-Weinberg
+    argument (this file's route C), which has no direct in-model confirmation and now has direct
+    evidence against it in the smooth sector. ***
+
 *** STATUS UPDATE: the missing ingredient this file isolated has since been SUPPLIED. The analysis
     below stands -- gamma is set by ONE number, the strength with which mass sources curvature
     relative to the Newtonian potential, and the medium's ELASTIC response supplies none of it
