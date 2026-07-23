@@ -1858,6 +1858,28 @@ accessible low-D settings, **not a 3+1D proof.**
 emergent Lorentz, **no positive evidence + now a consistent set of direct negatives.** **Newtonian gravity real &
 healthy; the Einstein completion is argued, not demonstrated.** (Annotated `test_incompatible_gravity`.)
 
+### The 3+1D answer — does the medium evade Gauss–Bonnet like GR? No; γ=0 in 3D too (`test_gamma_3d.py`)
+**Resolves §8.33's dimensional caveat.** Robert: "the question needs an answer." Gauss–Bonnet is **2D**; in 3+1D a
+smooth mass sources smooth **Ricci** curvature with no topological defect (= γ=1). Settled by **direct 3D ray tracing**:
+the medium does **NOT** reach γ=1, for a reason **deeper than Gauss–Bonnet & dimension-independent.**
+⚑ **THE CRUX:** GR sources the spatial metric by a **Poisson equation** `∇²Ψ = 4πGρ` ⇒ Ψ = the **long-range
+potential** (same 1/r as Φ) ⇒ γ=Ψ/Φ=1. **The medium has NO Poisson equation for Ψ.** Its gravity is compression:
+mass = eigenstrain `θ* ~ ρ`, and the **3D incompatibility of an isotropic eigenstrain = `δ_ij∇²θ* − ∂_i∂_jθ*`** = the
+linearized **Einstein tensor** of `h_ij=2θ*δ_ij` (**verified to 1e-16**) ⇒ **Ψ = θ* = ρ, ALGEBRAIC & LOCAL** (dies
+with the mass, not the potential).
+**[A]** identity `inc(θ*δ) = δ∇²θ* − ∂_i∂_jθ*` checked to **2.5e-16**. **[B] ray-trace:** GR control (Ψ=potential)
+holds **γ=1 at every b** (validates tracer); medium's γ (Ψ=ρ) **→ 0 at range** (`−0.14→−0.07→−0.013→−0.0002→0`).
+**[C]** robust ~1e-4 far field across grid/box/width. **[D]** `Ψ_medium` dies fast; `Ψ_GR·b ≈ const` (1/r).
+**⇒ the 2D zero-charge result was a SYMPTOM; the disease is no Poisson equation for the spatial metric.**
+📌 **DIRECT SEARCH FINISHED — every channel, every dimension = γ=0:** spin rule (`test_gamma_source`), compatibility
+(`test_einstein_source`), 2D Gauss–Bonnet (`test_gamma_topological`), 3D local compression (here). γ=1 needs mass to
+source the graviton's **SPATIAL** polarizations as a Poisson potential = exactly the coupling §8.32 measured to
+vanish. Graviton massless & healthy (`test_spin2_dynamical`) but **mass doesn't couple to its spatial modes, only the
+scalar compression.** The **emergent-Weinberg PREMISE** (mass ↔ full conserved `T_μν`) is what fails, directly, in 3D.
+**BOTTOM LINE: Newtonian gravity real, healthy, quantitative (quadrupole law + Peters inspiral stand); the Einstein
+completion (γ=1, factor of two) is NOT realized by any direct mechanism in any dimension — argued, not demonstrated.**
+Annotated §8.33 (caveat resolved). Fast (1.6s, spectral 3D).
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

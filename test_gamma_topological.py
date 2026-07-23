@@ -1,6 +1,17 @@
 """
 The topological channel behind gamma = 1: does mass carry net curvature charge? Gauss-Bonnet says no.
 
+*** STATUS UPDATE -- the dimensional caveat below is now RESOLVED, and the 3+1D answer is the same.
+    The verdict here notes that Gauss-Bonnet is a 2D theorem and defers whether the 3+1D medium evades
+    it the way general relativity does. test_gamma_3d does that calculation, by direct ray tracing in
+    3D, and the medium does NOT reach gamma = 1. The reason turns out to be deeper than Gauss-Bonnet
+    and independent of dimension: general relativity sources the spatial metric by a Poisson equation,
+    lap(Psi) = 4 pi G rho, so Psi is the long-range POTENTIAL and gamma = Psi/Phi = 1; the medium's
+    compression sets Psi = theta* = rho ALGEBRAICALLY, so Psi is LOCAL, and gamma = Psi/Phi falls to
+    zero at range (a general-relativity control with Psi = the potential holds gamma = 1 at every
+    impact parameter, confirming the ray tracer). The 2D zero-charge result was a symptom of this. So
+    the caveat does not rescue gamma = 1; the 3+1D answer matches the 2D one, for a cleaner reason. ***
+
 test_gamma_source closed the SMOOTH route to gamma = 1: a static mass is a scalar energy density, and
 its induced coupling to the spin-2 spatial stress vanishes by a selection rule, so the smooth loop
 sources the Newtonian potential Phi and no curvature. But that selection rule is specifically about

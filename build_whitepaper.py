@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-23")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-24")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1601,6 +1601,40 @@ result("Result 8.33 — every accessible direct channel gives γ = 0, each for i
 "emergent Lorentz invariance, has no positive in-model evidence and now a consistent set of direct results against it. "
 "Newtonian gravity is real and healthy; the Einstein completion is argued, not demonstrated.")
 
+heading("8.34  The 3+1D answer: the medium does not evade the obstruction, and why", 2)
+body("Section 8.33 left one honest opening: Gauss-Bonnet is a two-dimensional theorem, and in 3+1D a smooth mass "
+"sources smooth Ricci curvature with no topological defect, which is γ = 1, so whether the medium reaches the Einstein "
+"value in the dimension that matters was not yet settled. This section settles it, in genuine 3D by direct ray "
+"tracing, and the answer is that the medium does not reach γ = 1 — for a reason deeper than Gauss-Bonnet and "
+"independent of dimension. In general relativity the spatial potential obeys a Poisson equation, ∂²Ψ = 4πGρ, so Ψ is "
+"the long-range Newtonian potential, the same 1/r that carries the time potential Φ, and γ = Ψ/Φ = 1. The medium does "
+"not solve a Poisson equation for its spatial metric. Its gravity is compression: a mass is an eigenstrain θ* ∼ ρ, and "
+"the 3D incompatibility of an isotropic eigenstrain is δ_{ij}∂²θ* − ∂_i∂_j θ*, exactly the linearized Einstein tensor "
+"of h_{ij} = 2θ*δ_{ij} — verified numerically to 10^{-16} — so the spatial metric follows the compression "
+"algebraically, Ψ = θ* = ρ. That is local, dying with the mass rather than with the potential.")
+body("Ray-traced in 3D, the consequence is unambiguous. A general-relativity control with Ψ set to the potential "
+"holds γ = 1 at every impact parameter, confirming the method; the medium's γ, with Ψ = ρ, falls to zero with "
+"distance — measured to a few parts in 10^{4} at the far field and stable under refinement, box size and source "
+"width — because its spatial bending is short-range while the Newtonian bending is long-range. The 2D zero-charge "
+"result of Section 8.33 was a symptom of this single fact: the medium sets the spatial metric equal to the local "
+"compression, where general relativity sets it equal to the potential.")
+result("Result 8.34 — γ = 0 in 3+1D too; the spatial metric follows the density, not the potential.", "The direct "
+"search is now finished in the dimension that matters. In 3D, as in 2D, a mass entering as a compression eigenstrain "
+"gives a spatial metric Ψ = θ* = ρ that follows the mass density locally, while the Newtonian Φ is the long-range "
+"potential, so γ = Ψ/Φ falls to zero at range — measured by ray tracing against a general-relativity control that "
+"holds γ = 1 at every impact parameter. The reason is dimension-independent: general relativity sources the spatial "
+"metric through a Poisson equation and the medium sets it algebraically by compression, so Gauss-Bonnet was a symptom, "
+"not the cause. Every channel in every accessible setting now gives γ = 0 — a spin selection rule (Section 8.32), "
+"strain compatibility (Section 8.10), 2D Gauss-Bonnet (Section 8.33), and 3D local compression (here). γ = 1 requires "
+"mass to source the propagating graviton's spatial polarizations as a Poisson-sourced potential, which is precisely "
+"the coupling Section 8.32 measured to vanish: the graviton is massless and healthy (Section 8.12), but mass does not "
+"couple to its spatial modes, only to the scalar compression. The premise of the emergent-Weinberg argument — that "
+"mass couples to the full conserved stress tensor — is what fails, and it fails directly, in 3D. The bottom line for "
+"the gravitational arc is now precise: Newtonian gravity is real, healthy and quantitative — the quadrupole law and "
+"the Peters-Mathews inspiral stand — while the Einstein completion, γ = 1 and the light-bending factor of two, is not "
+"realized by any direct mechanism in any dimension the model exposes, and survives only as an emergent-Weinberg "
+"argument whose premise these measurements contradict. It is argued, not demonstrated.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1653,7 +1687,8 @@ table(["Barrier","Status","Key result"],
   ["Graviton gauge null space","projection cannot rescue it (§8.30)","the loophole 8.29 left. The model's gravity is the incompatible curvature sector, so one might hope the diffeo violation lives in a gauge subspace a projection discards. Measuring the full 6x6 induced quadratic form settles it: the form has NO gauge null space (six nonzero eigenvalues where Einstein-Hilbert has three zeros), the gauge directions are its STIFFEST modes, and the physical-gauge mixing is 42 per cent of the physical block -- concentrated in the spin-0 sector where gamma is defined. A projection cannot remove a violation coupled into the modes it keeps. The 8.29 negative is structural, not a near miss"],
   ["Nonlinear self-coupling","fixed by Deser's bootstrap, not free (§8.31)","8.22 swept the cubic coupling lambda as a free parameter. It is not one: matter and the field enter the same equation as g/2 h S and lambda/2 h dh dh, so lambda/g is a Nordtvedt parameter and the strong equivalence principle fixes lambda = g. Verified independently by the field energy's deformation response to 1e-10 on every stress component. 8.22's five values are lambda/g = 0, 0.067, 0.13, 0.27, 33.3 -- none physical; its headline self-interaction was taken at 33.3, where gravitational binding energy gravitates 33x too strongly. At lambda = g the effect is far smaller and the budget still closes. The parameter was wrong, not the integration"],
   ["Does mass source curvature?","no, in the smooth channel: gamma_smooth = 0 (§8.32)","gamma = kappa/(4 pi G) reduces the light-bending parameter to one number: does a mass source spatial curvature, and at what strength. A static mass is a scalar energy density (T00 ~ E*I), and its induced coupling to the spatial stress vanishes identically -- Pi^{00,ij} = 0 for every component including the trace, to machine precision across mass, cutoff and momentum -- while a genuine spin-2 source couples at O(1), so the zero is a selection rule. The fourth independent closure of the smooth route to gamma = 1 (with 8.12, 8.29, 8.30), and elasticity gave the same zero from the other side (8.10). Every smooth mechanism gives gamma = 0. Untouched: the TOPOLOGICAL (disclination) channel, where real curvature lives. gamma = 1 now rests entirely on emergent Weinberg, which -- unlike emergent Lorentz -- has no direct confirmation and now has direct evidence against it in the smooth sector"],
-  ["Topological channel (curvature charge)","also 0, by Gauss-Bonnet (§8.33)","the one route left after 8.32: curvature is a scalar, so a scalar mass CAN source it, through the model's own compression mechanism (mass = eigenstrain theta* ~ rho). It does curve the medium locally (eta = lap theta* =/= 0), but the net curvature charge integral(eta) = integral(lap theta*) is a total derivative, exactly zero -- a curvature dipole (dome core, saddle ring) with no deficit angle, bending no light at range, vs a genuine charge eta ~ rho that does. gamma = 1 needs mass to carry net curvature charge = nucleate a disclination density ~ rho, which the model does not. So every accessible direct channel gives gamma = 0: spin rule (8.32), compatibility (8.10), Gauss-Bonnet (8.33). CAVEAT: 2D theorem, 2D/2+1D measurements; in 3+1D smooth mass sources smooth Ricci curvature (= gamma=1), so whether the 3+1D medium evades this is a further calculation. gamma = 1 rests on emergent Weinberg; Newtonian gravity real, the Einstein completion argued not demonstrated"],
+  ["Topological channel (curvature charge)","also 0, by Gauss-Bonnet (§8.33)","the one route left after 8.32: curvature is a scalar, so a scalar mass CAN source it, through the model's own compression mechanism (mass = eigenstrain theta* ~ rho). It does curve the medium locally (eta = lap theta* =/= 0), but the net curvature charge integral(eta) = integral(lap theta*) is a total derivative, exactly zero -- a curvature dipole (dome core, saddle ring) with no deficit angle, bending no light at range, vs a genuine charge eta ~ rho that does. gamma = 1 needs mass to carry net curvature charge = nucleate a disclination density ~ rho, which the model does not. So every accessible direct channel gives gamma = 0: spin rule (8.32), compatibility (8.10), Gauss-Bonnet (8.33). The 2D-theorem caveat is resolved in 8.34"],
+  ["The 3+1D answer (does the medium evade it?)","no; gamma = 0 in 3D too (§8.34)","settles 8.33's caveat by direct 3D ray tracing. The medium does NOT reach gamma = 1, for a reason deeper than Gauss-Bonnet and independent of dimension: general relativity sources the spatial metric by a Poisson equation (lap Psi = 4 pi G rho, Psi = the long-range potential, gamma = 1), while the medium's compression sets Psi = theta* = rho ALGEBRAICALLY -- local, dying with the mass. The 3D incompatibility of an isotropic eigenstrain is the linearized Einstein tensor delta lap theta* - d_i d_j theta* (verified to 1e-16), so Psi = theta* = rho. Ray-traced: a GR control (Psi = potential) holds gamma = 1 at every impact parameter; the medium's gamma falls to zero at range (few parts in 1e4, stable under grid/box/width). The 2D zero-charge result was a symptom. Every channel in every dimension gives gamma = 0. gamma = 1 needs mass to source the graviton's SPATIAL polarizations as a Poisson potential -- exactly the coupling 8.32 measured to vanish. Newtonian gravity real and quantitative; the Einstein completion argued, not demonstrated"],
     ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
@@ -1853,7 +1888,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_graviton_nullspace.py (§8.30); "
 "test_deser_bootstrap.py (§8.31); "
 "test_gamma_source.py (§8.32); "
-"test_gamma_topological.py (§8.33).")
+"test_gamma_topological.py (§8.33); "
+"test_gamma_3d.py (§8.34).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
