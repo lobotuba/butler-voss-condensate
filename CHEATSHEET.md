@@ -1880,6 +1880,26 @@ scalar compression.** The **emergent-Weinberg PREMISE** (mass ↔ full conserved
 completion (γ=1, factor of two) is NOT realized by any direct mechanism in any dimension — argued, not demonstrated.**
 Annotated §8.33 (caveat resolved). Fast (1.6s, spectral 3D).
 
+### The last route — can the Poisson ratio make the graviton Fierz–Pauli? No (`test_gamma_elastic.py`)
+**Closes the ONE opening I'd flagged as still open.** §8.32–8.34 closed the **source** routes. One remained at the
+**PROPAGATOR** level: γ=1 also follows if the graviton kinetic term is **Fierz–Pauli** (then a `T₀₀` source →
+spatial curvature via the propagator's trace structure). §8.29–8.30 ruled that out for the **induced tetrad**, but the
+deconfined curvature sector's kinetic term is the **medium's own biharmonic elasticity** = set by its **Poisson ratio**
+— never measured. Classic **elasticity-as-gravity** (a special ν could in principle give Fierz–Pauli).
+**[A]** LJ condensate ν measured by straining a perfect lattice: **central-force Cauchy solid, ν ≈ 1/3**
+(`C₁₂/C₁₁=0.330`). ⚑ **[B] DECISIVE:** the medium's response = elastic **relaxation** (ν-dependent) + **eigenstrain**
+(ν-independent). A relaxation is a **displacement ⇒ COMPATIBLE ⇒ curvature ≡ 0** — verified **machine-zero Ricci
+(`~1e-8` vs eigenstrain `0.667`) for EVERY ν ∈ [−0.9, 0.49]**. The Poisson ratio tunes only how the **flat**
+displacement is distributed. **[C] γ(ν) ray-traced = IDENTICAL for every ν** (light-bending curvature = the
+incompatible eigenstrain part, ν-untouchable) = the zero of §8.34.
+📌 **Fierz–Pauli reason:** elastic constants multiply only the **compatible (gauge) sector**, which drops out of the
+gauge-invariant curvature ⇒ can't move the trace structure toward Fierz–Pauli.
+**⇒ EVERY ROUTE TO γ=1 NOW CLOSED:** neither **source** (spin rule §8.32 / Gauss–Bonnet §8.33 / local compression
+§8.34) nor **propagator** (§8.29–8.30 induced, §8.35 medium). Graviton massless/healthy but **static mass couples to
+NONE of its spatial polarizations by any medium mechanism.** **γ=1 not recoverable by any property of the medium** —
+survives only as emergent-Weinberg (premise contradicted). Newtonian real & quantitative; Einstein completion argued,
+not demonstrated. Fast (3.7s). Answers Robert's "is there a path forward" = the flagged opening is shut.
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**

@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-24")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-25")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1635,6 +1635,40 @@ result("Result 8.34 — γ = 0 in 3+1D too; the spatial metric follows the densi
 "realized by any direct mechanism in any dimension the model exposes, and survives only as an emergent-Weinberg "
 "argument whose premise these measurements contradict. It is argued, not demonstrated.")
 
+heading("8.35  The last route: can the medium's Poisson ratio make the graviton Fierz-Pauli?", 2)
+body("Sections 8.32-8.34 closed every way a mass could SOURCE spatial curvature, but one route remained at the level "
+"of the PROPAGATOR: γ = 1 also follows if the graviton's kinetic term is Fierz-Pauli, so that a mass sourcing the "
+"time potential produces spatial curvature through the propagator's trace structure. Sections 8.29-8.30 showed the "
+"fermion-induced tetrad action is not Fierz-Pauli, but the deconfined curvature sector's kinetic term is the medium's "
+"own biharmonic elasticity, whose trace structure is set by its elastic constants — its Poisson ratio. This is the "
+"classic elasticity-as-gravity question: a linear-elastic medium yields an effective linearised gravity whose "
+"parameters depend on its Poisson ratio, and for one special value the graviton could in principle be Fierz-Pauli. "
+"That was the last opening, and this section shuts it.")
+body("Measured by straining the Lennard-Jones medium, the condensate is a central-force Cauchy solid with Poisson "
+"ratio ν ≈ 1/3, but the value turns out not to matter. The medium's response to a mass splits into an elastic "
+"relaxation — a displacement field chosen by the elastic constants — and the eigenstrain the mass imposes. Only the "
+"relaxation depends on the Poisson ratio, and a relaxation is by construction a displacement, so its strain is "
+"compatible and its curvature is identically zero: solving the 3D relaxation across the whole physical range of "
+"Poisson ratios, from ν = −0.9 to ν = 0.49, the linearised Ricci scalar of the relaxed strain is machine zero at "
+"every value. The light-bending curvature comes entirely from the incompatible part of the eigenstrain, which is "
+"fixed by the mass and independent of the Poisson ratio, so γ ray-traced across the whole range is the same at every "
+"value — the zero of Section 8.34. Tuning the medium's elasticity moves only a gauge degree of freedom, which drops "
+"out of the gauge-invariant curvature, so it cannot carry the graviton's trace structure toward Fierz-Pauli.")
+result("Result 8.35 — no Poisson ratio makes the graviton Fierz-Pauli; every route is now closed.", "The medium's "
+"response to a mass is an elastic relaxation plus the imposed eigenstrain, and only the relaxation depends on the "
+"Poisson ratio. A relaxation is a displacement, so its strain is compatible and its curvature is identically zero at "
+"every Poisson ratio (verified from ν = −0.9 to 0.49, machine zero throughout), and it bends no light; the "
+"light-bending curvature is the incompatible eigenstrain part, independent of ν, so γ ray-traced across the whole "
+"range is the same value zero. The condensate's own ν ≈ 1/3 (a central-force Cauchy solid, measured by straining the "
+"Lennard-Jones medium) is therefore irrelevant. This closes the propagator route the way Sections 8.29-8.30 closed "
+"the induced-tetrad one: the trace structure that would give γ = 1 cannot be reached by tuning the elastic constants, "
+"because they multiply only the compatible sector. With this, γ = 1 is reachable neither by the source — a mass "
+"sources no curvature, by a spin rule, Gauss-Bonnet and local compression, in every channel and dimension — nor by "
+"the propagator. The graviton is massless and healthy, but a static mass couples to none of its spatial polarisations "
+"by any mechanism the medium provides. The gravitational arc rests where the measurements put it: Newtonian gravity "
+"real, healthy and quantitative; the Einstein completion argued through emergent Weinberg, its premise directly "
+"contradicted, and now shown not to be recoverable by any property of the medium the model can adjust.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1688,6 +1722,7 @@ table(["Barrier","Status","Key result"],
   ["Nonlinear self-coupling","fixed by Deser's bootstrap, not free (§8.31)","8.22 swept the cubic coupling lambda as a free parameter. It is not one: matter and the field enter the same equation as g/2 h S and lambda/2 h dh dh, so lambda/g is a Nordtvedt parameter and the strong equivalence principle fixes lambda = g. Verified independently by the field energy's deformation response to 1e-10 on every stress component. 8.22's five values are lambda/g = 0, 0.067, 0.13, 0.27, 33.3 -- none physical; its headline self-interaction was taken at 33.3, where gravitational binding energy gravitates 33x too strongly. At lambda = g the effect is far smaller and the budget still closes. The parameter was wrong, not the integration"],
   ["Does mass source curvature?","no, in the smooth channel: gamma_smooth = 0 (§8.32)","gamma = kappa/(4 pi G) reduces the light-bending parameter to one number: does a mass source spatial curvature, and at what strength. A static mass is a scalar energy density (T00 ~ E*I), and its induced coupling to the spatial stress vanishes identically -- Pi^{00,ij} = 0 for every component including the trace, to machine precision across mass, cutoff and momentum -- while a genuine spin-2 source couples at O(1), so the zero is a selection rule. The fourth independent closure of the smooth route to gamma = 1 (with 8.12, 8.29, 8.30), and elasticity gave the same zero from the other side (8.10). Every smooth mechanism gives gamma = 0. Untouched: the TOPOLOGICAL (disclination) channel, where real curvature lives. gamma = 1 now rests entirely on emergent Weinberg, which -- unlike emergent Lorentz -- has no direct confirmation and now has direct evidence against it in the smooth sector"],
   ["Topological channel (curvature charge)","also 0, by Gauss-Bonnet (§8.33)","the one route left after 8.32: curvature is a scalar, so a scalar mass CAN source it, through the model's own compression mechanism (mass = eigenstrain theta* ~ rho). It does curve the medium locally (eta = lap theta* =/= 0), but the net curvature charge integral(eta) = integral(lap theta*) is a total derivative, exactly zero -- a curvature dipole (dome core, saddle ring) with no deficit angle, bending no light at range, vs a genuine charge eta ~ rho that does. gamma = 1 needs mass to carry net curvature charge = nucleate a disclination density ~ rho, which the model does not. So every accessible direct channel gives gamma = 0: spin rule (8.32), compatibility (8.10), Gauss-Bonnet (8.33). The 2D-theorem caveat is resolved in 8.34"],
+  ["The Poisson-ratio / propagator route","closed; no nu makes it Fierz-Pauli (§8.35)","the last opening: gamma=1 could come from the PROPAGATOR (a Fierz-Pauli graviton kinetic term turns the time potential into spatial curvature), and the curvature sector's kinetic term is the medium's biharmonic elasticity, set by its Poisson ratio -- not covered by 8.29-8.30 (the induced tetrad). Measured: the LJ condensate is a central-force Cauchy solid, nu ~ 1/3. But the medium's response splits into an elastic RELAXATION (nu-dependent, but a displacement, so COMPATIBLE = zero curvature = bends no light -- verified machine-zero Ricci from nu=-0.9 to 0.49) plus the eigenstrain (nu-independent). So the Poisson ratio tunes only a gauge mode; gamma ray-traced is the same value zero for every nu. The trace structure for gamma=1 cannot be reached by tuning elastic constants. Every route now closed: neither the source (8.32-8.34) nor the propagator (8.29-8.30, 8.35) gives gamma=1. Newtonian gravity real; the Einstein completion not recoverable by any property of the medium"],
   ["The 3+1D answer (does the medium evade it?)","no; gamma = 0 in 3D too (§8.34)","settles 8.33's caveat by direct 3D ray tracing. The medium does NOT reach gamma = 1, for a reason deeper than Gauss-Bonnet and independent of dimension: general relativity sources the spatial metric by a Poisson equation (lap Psi = 4 pi G rho, Psi = the long-range potential, gamma = 1), while the medium's compression sets Psi = theta* = rho ALGEBRAICALLY -- local, dying with the mass. The 3D incompatibility of an isotropic eigenstrain is the linearized Einstein tensor delta lap theta* - d_i d_j theta* (verified to 1e-16), so Psi = theta* = rho. Ray-traced: a GR control (Psi = potential) holds gamma = 1 at every impact parameter; the medium's gamma falls to zero at range (few parts in 1e4, stable under grid/box/width). The 2D zero-charge result was a symptom. Every channel in every dimension gives gamma = 0. gamma = 1 needs mass to source the graviton's SPATIAL polarizations as a Poisson potential -- exactly the coupling 8.32 measured to vanish. Newtonian gravity real and quantitative; the Einstein completion argued, not demonstrated"],
     ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
@@ -1889,7 +1924,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_deser_bootstrap.py (§8.31); "
 "test_gamma_source.py (§8.32); "
 "test_gamma_topological.py (§8.33); "
-"test_gamma_3d.py (§8.34).")
+"test_gamma_3d.py (§8.34); "
+"test_gamma_elastic.py (§8.35).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
