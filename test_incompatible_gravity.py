@@ -1,6 +1,23 @@
 """
 The way through the spin-2 wall: incompatible bond fluctuations carry curvature.
 
+*** STATUS UPDATE -- the door this file opens is real, but the dynamical question it defers has since
+    been measured and the news is not good. [B] below POSTULATES that a mass sources curvature with
+    the Einstein shape eta ~ rho, and shows that IF it does, the incompatible strain bends light. The
+    honest remaining content named at the end -- "that mass DYNAMICALLY sources this sector with the
+    Einstein coefficient" -- is exactly what test_gamma_source and test_gamma_topological then tested.
+    The model's own gravity mechanism is compression: a mass is an eigenstrain theta* ~ rho, which
+    DOES leave curvature -- but eta = lap(theta*) ~ lap(rho), not eta ~ rho. The difference is
+    Gauss-Bonnet: the net curvature charge of a smooth compression, integral(lap theta*), is exactly
+    zero, so it makes a curvature dipole (a dome in the core, a saddle in the ring) that bends no
+    light at range. The Einstein shape eta ~ rho of [B] here is precisely a topological DISCLINATION
+    density proportional to the mass -- a net curvature charge -- which the model does not nucleate
+    from mass. So the sector CAN carry curvature (this file, correct), but mass does not source it
+    with net charge (the smooth loop coupling vanishes by a spin rule, test_gamma_source; the
+    compression coupling vanishes by Gauss-Bonnet, test_gamma_topological). Nothing here is retracted;
+    the door is open, and the measurement is that mass does not walk through it in any direct channel
+    at the accessible (2D / 2+1D) scale. gamma = 1 rests on the emergent-Weinberg argument alone. ***
+
 test_light_bending derived the wall: a mass makes the medium's NODES move (a displacement u),
 and displacement-strain is COMPATIBLE = flat = gauge = bends no light (gamma = 0). But that
 tested only the displacement sector. The medium has more.

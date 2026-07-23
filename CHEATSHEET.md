@@ -1832,6 +1832,32 @@ emergent Lorentz (directly measured, `test_lorentz`), has **no direct in-model c
 against it in the smooth sector.** The sharpest honest statement of where the gravity arc stands. (Annotated
 `test_einstein_source` — "the one calculation left" = 0 in the smooth channel.)
 
+### The topological channel behind γ=1 — Gauss–Bonnet: mass carries no net curvature charge (`test_gamma_topological.py`)
+**The one route left after §8.32** (option 1 of "2 then 1"). §8.32's selection rule only forbids a *scalar* mass from
+sourcing the *spin-2* spatial stress. ⚑ **Curvature is itself a SCALAR** (Ricci / incompatibility η), and
+`test_incompatible_gravity` located a scalar curvature DOF (3rd bond mode) ⇒ a scalar mass sourcing scalar curvature is
+**not** spin-forbidden. Runs through the model's OWN mechanism: **compression** = mass as **eigenstrain** `θ* ~ ρ`
+(preferred-density change; the heated-plate buckle). Unlike a body force (→ compatible displacement, η=0), an
+inhomogeneous eigenstrain leaves **real** curvature `η = ∇²θ*` on the bond metric.
+**[A]** nonzero locally (`max\|η\|/max\|θ*\| = 0.22`) — mass DOES curve the medium.
+**[B] ⚑ BUT NET CURVATURE CHARGE = 0 (GAUSS–BONNET):** `∫η = ∫∇²θ*` is a total derivative, **exactly zero** (`~1e-15`,
+every profile width; use a **real-space** Laplacian so it's exact not spectral). A smooth compression = a curvature
+**dipole** (dome core + saddle ring), no deficit angle.
+**[C]** zero net charge ⇒ **zero long-range bending** (`\|α\|=0` at every b) vs a genuine charge `η~ρ` (`12.96→8.25`).
+⇒ **compression: γ=0.**
+**[D] EVERY accessible direct channel ⇒ γ=0**, each for its own reason: spin rule (`test_gamma_source`), compatibility
+(`test_einstein_source`), Gauss–Bonnet (here). γ=1 needs mass to carry **net curvature charge** = nucleate a
+**disclination density ∝ ρ**, which no sector supplies.
+⚠️ **DIMENSIONAL CAVEAT (mandatory — it's a negative):** Gauss–Bonnet is **2D**; these probes are 2D/2+1D (where the
+incompatible-curvature picture lives). In **3+1D** GR a smooth mass sources smooth **Ricci** curvature with NO
+topological defect (= γ=1) — the 3D incompatibility of an isotropic eigenstrain is the Einstein-tensor-shaped
+`δ_ij ∇²θ* − ∂_i∂_j θ*`, a separate calc **not done**. So "every direct channel = 0" is a statement about the
+accessible low-D settings, **not a 3+1D proof.**
+📌 **NET:** model's gravity as directly realized couples to mass as a **scalar** (`T⁰⁰` alone) ⇒ **Nordström, γ=0.**
+γ=1 rests entirely on **emergent-Weinberg** (IR-emergent, like the graviton Ward identity) — unlike directly-confirmed
+emergent Lorentz, **no positive evidence + now a consistent set of direct negatives.** **Newtonian gravity real &
+healthy; the Einstein completion is argued, not demonstrated.** (Annotated `test_incompatible_gravity`.)
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**
