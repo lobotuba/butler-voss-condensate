@@ -12,7 +12,17 @@ The cosmological constant: why the model's huge vacuum energy does not gravitate
     showed the tetrad sector acquires one. The mechanism established here, that a self-sustained
     vacuum gravitates -P rather than eps, is therefore also what keeps the deconfined curvature
     sector's graviton massless. This file is load-bearing for the gravity arc, not only for the
-    cosmological constant, and if the Volovik argument fails both fall together. ***
+    cosmological constant, and if the Volovik argument fails both fall together.
+    FURTHER UPDATE (test_vacuum_gravitates) -- that load-bearing Volovik assumption, "the emergent
+    metric couples to the vacuum STRESS (-P), not the bare energy density eps", is no longer assumed:
+    it is measured. With the induced-gravity bubble, the energy density T00 sources the Newtonian h00
+    (<T00 T00> =/= 0) but sources NO spatial curvature (<T00, T_ij> = 0, a symmetry zero), while the
+    spatial stress T_ij does source the spatial metric. So the vacuum's huge eps gravitates only as an
+    unobservable uniform h00, and the cosmological constant (spatial curvature) is sourced by the
+    pressure P, which self-tunes to zero. And the same <T00, T_ij> = 0 is the gamma-arc selection rule:
+    gamma = 0 (a mass's energy density does not bend light) and Lambda ~ 0 (the vacuum's energy density
+    does not gravitate) are ONE measured fact -- the model does not reach Einstein gravity for the very
+    reason it has no cosmological-constant problem. ***
 
 Integrating out the medium's modes gives a vacuum (zero-point) energy density of order the
 microscopic scale -- in this model the lattice/node scale, ~ 1/a0^4 = M_Planck^4 (a0 = l_Planck was
