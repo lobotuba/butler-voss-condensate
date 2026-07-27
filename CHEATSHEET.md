@@ -1925,6 +1925,27 @@ measurements first (noisy real-space cluster curl; a net-circulation measure tha
 tool was the **Fourier incompatibility of the full slaved response** (parallels §8.35's Ricci-of-relaxation) + the exact
 q=0 internal-strain map. Same lesson: for a tiny (deviatoric, 2nd-order) signal, use the spectral/exact tool, not a box.
 
+### The whole γ arc in one number — the propagator trace coefficient, and its RG fate (`test_gamma_trace.py`)
+**A synthesis, not a new probe.** §8.29–8.36 measured γ≠1 from every side; this names the single quantity it
+lives in and answers the question the arc was really about. **The reduction:** a static source → a metric via the
+graviton propagator, whose only free piece (massless spin-2) is the **trace-term coefficient λ**. With
+`ds² = −(1+2Φ)dt² + (1−2Ψ)δ_ij dxⁱdxʲ` and source `diag(ρ,p,p,p)`, `γ = Ψ/Φ = [p+λ(ρ−3p)]/[ρ−λ(ρ−3p)]`.
+Fierz–Pauli/Einstein = **λ=½**. **[A]** For a realistic **pressureless** light-bending source, this is
+**`γ = λ/(1−λ)`** (numerically verified: `λ=½→γ=1`, `λ=0→γ=0`) — **the factor of two IS the trace term.**
+**[B] Pressure is a red herring:** the Sun bends light at `p/ρ~10⁻⁵`, which moves γ by `~10⁻⁵`; real sources are dust,
+so γ is fixed by λ alone — a source's pressure cannot substitute for the propagator's trace term. **[C] The model's
+measured λ → 0 both ways:** the source coupling `⟨T00,T_ij⟩=0` (§8.32) is precisely *no trace term* (λ=0 → γ=0); the
+induced propagator coefficients `(1,+8.18,−0.56,−0.12)` vs EH `(1,−2,2,−1)` (§8.29) are off by O(1), 2nd **wrong sign**.
+⚑ **[D] THE RG FATE — the decisive point.** γ=1 and emergent Lorentz are the *same kind of statement* (a continuum
+symmetry the lattice breaks), so does γ **emerge** in the IR as Lorentz does? **Opposite RG fates:** Lorentz's cone
+anisotropy is **irrelevant** (`~(k/k_Planck)²→0`) — flows away, Lorentz emerges; the graviton's diffeomorphism
+violation is **marginal** (§8.29's flat ratios `1.07, 4.06` unchanged as `q→0`, converged `12.4%` anisotropy) — holds a
+fixed fraction, so **γ stays pinned off 1 at every scale**. Side-by-side γ(scale): irrelevant `0→1`, marginal flat `≈−0.23`.
+📌 **Verdict: γ=1 fails not for want of measurement but because the one coefficient that would deliver it is MARGINAL,
+not irrelevant — no continuum limit of *this* lattice recovers it.** The Einstein factor of two needs a
+background-independent construction (no fixed lattice), not a refinement of this one. This is the honest capstone of the
+γ arc: emergent SR ✅, fermions ✅, most of QM ✅, EM ✅, Newtonian gravity ✅; Einstein γ=1 ✗ (marginal, does not emerge).
+
 ### Semiclassical gravity is INCONSISTENT — the classical geometry, costed (`test_semiclassical_inconsistency.py`)
 **Honest negative.** §8.22 named "the geometry is classical" and left it as an asterisk. It is not an asterisk: the
 prescription used throughout §8.18–§8.23 is **demonstrably wrong, not merely approximate.**
