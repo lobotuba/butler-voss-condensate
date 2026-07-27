@@ -1,6 +1,18 @@
 """
 Frontier 1: the model's falsifiable prediction -- Lorentz violation vs experiment.
 
+*** STATUS UPDATE (test_lv_confrontation) -- the confrontation in [C]/[D] below is too generous, and
+    the "safe by many orders" verdict is superseded. It compared the model's E_QG against the UHECR
+    *energy* (1e11 GeV) as if that were the bound on E_QG; it is not. For n=2 (quadratic) LV the effect
+    grows as E^2, so the strongest bounds come from ultra-high-energy astrophysics and sit near the
+    PLANCK scale (E_QG,2 ~ 1e18-1e19 GeV: UHECR/GZK, PeV gammas, Crab electrons). The model predicts
+    E_QG,2 ~ 2.5e19 GeV, only ~1 order above them; its effect is ~1e-3 of current UHECR sensitivity, not
+    1e-16. So the n=2 prediction is NEAR the frontier, not far from it. Also added there: the one-cone
+    universality is a prediction the model has already PASSED (GW170817 + multimessenger timing, to 1e-15),
+    and the crystallographic anisotropy likely AVERAGES AWAY in a poly-domained medium, leaving one-cone
+    universality (not the cubic pattern) as the real discriminator. Nothing below is retracted except the
+    over-generous margin; the coefficient extraction and the structural falsifiers stand. ***
+
 Every result so far REPRODUCES known physics. A theory must also PREDICT something
 nature could veto. The model's most distinctive, quantitative feature is the Lorentz
 violation it already measured: the emergent light cone is exact only as E -> 0, with
