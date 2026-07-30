@@ -2,6 +2,17 @@
 Why does the universe sit so near the medium's equilibrium? An attractor, an aging universe -- and the
 coincidence rho_Lambda ~ rho_crit, if the medium tracks the expansion.
 
+*** STATUS UPDATE (test_cc_tracking) -- part [C] below, the rho_Lambda ~ rho_crit "tracking" lead, was
+    explicitly CONDITIONAL on efficient tracking, and deriving that efficiency shows it does NOT hold.
+    The residual dark energy is rho_Lambda ~ B(1-epsilon)H, so the second-order result delta ~ (H tau)^2
+    needs a tracking short by exactly a fractional H tau (epsilon = 1 - H tau) -- a fine-tuned, non-generic
+    value. But node creation in a condensate is DEFICIT-driven (it responds to the local chemical potential
+    / tension P = B delta, a state variable, measured), not to the global rate H, which gives epsilon = 0
+    and the LINEAR residual delta ~ -3 H tau, hence rho_Lambda ~ 10^-61 -- 61 orders too big. Perfect
+    growth (epsilon = 1) gives zero. Neither natural mechanism reaches 10^-122. Parts [A] (attractor erases
+    initial conditions) and [B] (Lambda decays with cosmic age) STAND; part [C] does not, and the observed
+    nonzero Lambda remains underived -- the honest boundary of the CC solution. ***
+
 test_cc_offequilibrium left the honest gap: the equilibrium cosmological constant is zero, but the
 observed nonzero value needs the vacuum a fraction ~10^-122 off equilibrium, while the naive expansion
 lag gives ~10^-61 (61 orders too big). This file pushes on WHY the universe is so extraordinarily near
