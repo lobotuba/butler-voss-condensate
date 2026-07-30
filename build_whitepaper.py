@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-28")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-29")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1834,6 +1834,33 @@ result("Result 8.42 — the hypercharges are fixed to the Standard-Model values;
 "domain-wall construction of Section 8.15 can park an anomaly in the bulk, so a truly four-dimensional symmetry with "
 "no accessible bulk is where the constraint bites.")
 
+heading("8.43  Where the gauge group and the generations come from: discrete band topology", 2)
+body("Section 8.42 fixed the hypercharges but left the deepest inputs open: the gauge group SU(3)×SU(2)×U(1), the "
+"fermion representations, and the number three of generations. Deriving those specific values from a specific lattice "
+"is a genuine open problem and is not attempted here. What this section establishes is the category of the answer, "
+"which reframes the question. In an emergent-fermion medium these are not continuous parameters to be fine-tuned but "
+"discrete data — the symmetry and topology of the band structure — so they are quantised by their nature. Two pieces "
+"make this concrete. First, the low-energy fermions live at the isolated Dirac points of the lattice, whose number is "
+"fixed by fermion doubling and not tunable: the honeycomb has exactly two (the valleys K and K', verified as the two "
+"inequivalent zeros of the structure factor), so its low-energy theory carries a two-fold flavour multiplet, and the "
+"symmetry rotating that degenerate multiplet — gauged by the fermion loop of Section 8.14 — is the emergent gauge "
+"group. A richer lattice gives more Dirac points and a larger group; the group is the symmetry of the multiplet and "
+"the multiplet size is a discrete lattice output. Second, the number of chiral generations is a topological index: "
+"the Chern number of a Wilson-Dirac band, computed from its Berry curvature, is an integer (0, ±1 across the mass "
+"regimes here) that jumps only when the gap closes, and by bulk-boundary correspondence (Section 8.15) the number of "
+"chiral families on a domain wall equals the jump in that integer across it.")
+result("Result 8.43 — the gauge group and generation count are discrete band-structure data, not continuous tunings.", "The "
+"honeycomb's two inequivalent Dirac points give a two-fold flavour multiplet whose rotation symmetry is the seed of a "
+"non-Abelian gauge group; the Wilson-Dirac Chern number comes out 0, −1, +1, 0 across the mass regimes, so the number "
+"of chiral generations on a domain wall is a quantised topological integer, changing only at a gap closing. This "
+"answers 'why a specific compact group and a small integer of generations' — because these are the symmetry and "
+"topology of the emergent fermion band structure, discrete and robust, rather than arbitrary continuous inputs. It "
+"does NOT derive SU(3)×SU(2)×U(1), the representations, or the number three: those are properties of the physical "
+"medium's actual lattice, which is not fixed here. But taken with Section 8.42, the character of the remaining input "
+"has changed — with the hypercharges forced by anomaly cancellation and the group and generation count established as "
+"discrete band data, what is left to specify is which single lattice the medium realises, a discrete structural "
+"question rather than a list of continuous fine-tunings.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1898,7 +1925,7 @@ table(["Barrier","Status","Key result"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
   ["Electroweak breaking","mechanism achieved (§8.41)","the condensate as a doublet with hypercharge 1/2 breaks the induced SU(2)xU(1) to one U(1): the gauge spectrum is {0, m_W, m_W, m_Z} -- exactly one massless photon and three massive weak bosons, m_W=gv/2, m_Z=sqrt(g^2+g'^2)v/2, for any couplings. m_W/m_Z = cos(theta_W) (sin^2 = 0.223 at the physical point); the surviving photon is Q=T3+Y, massless because the vacuum is Q-neutral. The breaking pattern and mass relations are reproduced, not fitted. The group, rep and Y=1/2 are inputs (as in 8.14); why Y=1/2 -- fixed with the fermion charges by anomaly cancellation -- is open"],
   ["Hypercharges / charge quantisation","derived from anomaly cancellation (§8.42)","the model's exact emergent gauge invariance forbids a gauge anomaly, so anomaly cancellation is mandatory. Given only the one-generation representations, the four conditions ([SU3]^2U1, [SU2]^2U1, grav^2 U1, U1^3) fix the five hypercharges uniquely (up to scale and the u<->d relabelling) to the SM values 1/6,-2/3,1/3,-1/2,1. Hence Q=T3+Y is quantised: quarks +2/3,-1/3, leptons 0,-1, proton+electron charge = 0 to 1e-16. Charge quantisation as a consistency requirement. Scope: fixes hypercharges GIVEN reps and content"],
-  ["SM group / reps / generations","open","the hypercharges are now fixed by anomaly cancellation (§8.42), but the gauge group SU(3)xSU(2)xU(1) itself, the fermion representations, the number of generations, and the Yukawa/flavour structure remain inputs"]],
+  ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2103,7 +2130,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_vacuum_gravitates.py, test_cc_weinberg.py, test_cc_offequilibrium.py, test_cc_attractor.py, "
 "test_cc_tracking.py (§8.40); "
 "test_electroweak.py (§8.41); "
-"test_anomaly_hypercharge.py (§8.42).")
+"test_anomaly_hypercharge.py (§8.42); "
+"test_sm_structure.py (§8.43).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
