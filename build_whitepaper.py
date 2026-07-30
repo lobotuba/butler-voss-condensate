@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-25")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-26")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1669,6 +1669,123 @@ result("Result 8.35 — no Poisson ratio makes the graviton Fierz-Pauli; every r
 "real, healthy and quantitative; the Einstein completion argued through emergent Weinberg, its premise directly "
 "contradicted, and now shown not to be recoverable by any property of the medium the model can adjust.")
 
+heading("8.36  The negative-space sublattice: does a second lattice supply the missing term?", 2)
+body("Sections 8.29-8.35 all rested on one premise: the medium is a single Bravais lattice with central forces. "
+"That premise forces the Cauchy relations and, more deeply, makes the light-seen strain the gradient of a single "
+"displacement field, which Saint-Venant compatibility then makes flat. A medium of two interpenetrating lattices — "
+"fcc plus its negative space, the bcc-like interstitial — breaks it: it carries a relative, or optical, mode "
+"w = u_A − u_B that is not the gradient of the acoustic displacement. This is textbook — two interpenetrating fcc "
+"lattices form diamond, which violates the Cauchy relations badly through exactly this internal-strain (Kleinman) "
+"mode — so it is the one construction that attacks the real assumption. Measured in the clean 2D proxy, the "
+"honeycomb of two triangular sublattices.")
+result("Result 8.36 — the second sublattice adds a displacement, not an incompatible degree of freedom.", "The "
+"optical mode is gapped, its q = 0 frequency scaling with the inter-sublattice coupling, so it is adiabatically "
+"slaved to the strain — a second displacement, not an independent long-range field. It does genuinely break the "
+"Cauchy relations (relaxed C₁₂ − C₆₆ = +0.29, the diamond departure) while leaving the compression modulus invariant "
+"to fourteen digits and softening only shear: the internal mode couples to shear, never to compression, and an "
+"isotropic strain sources zero internal shift (machine zero, by the three-fold symmetry). The full two-sublattice "
+"response to a mass — macro displacement plus slaved optical shift — has incompatibility (linearised Ricci) machine "
+"zero, against a live eigenstrain probe at 0.125: because the optical mode is slaved it is itself a displacement, so "
+"the total strain is a symmetric gradient, compatible, flat. The negative-space sublattice cannot escape the "
+"compatibility trap of Sections 8.34-8.35; γ = 0 survives the two-sublattice generalisation.")
+
+heading("8.37  The whole γ arc in one number: the graviton propagator's trace coefficient", 2)
+body("The entire Einstein question collapses to a single coefficient. Linearised gravity sends a static source to a "
+"metric through the graviton propagator, whose only free piece for a massless spin-2 is the coefficient λ of the "
+"trace term. For the pressureless sources that actually bend light this gives γ = λ/(1 − λ): the factor of two is the "
+"trace term and nothing else, and pressure is a red herring — a source at the Sun's p/ρ ~ 10⁻⁵ moves γ by ~10⁻⁵, "
+"nowhere near the factor of two. Fierz-Pauli, and general relativity, sit at λ = 1/2. Both of the model's measured "
+"routes put it at λ = 0: the source coupling ⟨T00, T_ij⟩ = 0 of Section 8.32 (no trace term), and the induced "
+"tetrad action's coefficients (1, +8.18, −0.56, −0.12) of Section 8.29 against Einstein-Hilbert (1, −2, 2, −1), off "
+"by order one with the second sign wrong.")
+result("Result 8.37 — γ = 1 and emergent Lorentz have opposite renormalisation-group fates; that is the whole answer.", "γ = 1 "
+"and emergent Lorentz invariance are the same kind of statement — a continuum symmetry the lattice breaks — decided "
+"by the same renormalisation-group question, and they get opposite answers. Lorentz's cone anisotropy is irrelevant, "
+"scaling as (k/k_Planck)² → 0, so it flows away and the symmetry becomes exact in the infrared; this is why "
+"relativity is real here. The graviton's diffeomorphism violation is marginal — Section 8.29's ratios 1.07 and 4.06 "
+"hold flat as q → 0, and the rotational anisotropy converges to 12.4 per cent — so it holds a fixed fraction of the "
+"invariant term and never flows away, leaving γ pinned off 1 at every scale. The model earns emergent special "
+"relativity, fermions, most of quantum mechanics, electromagnetism and a real Newtonian gravity, but not the "
+"Einstein factor of two, because the one coefficient that would deliver it is marginal, not irrelevant: no continuum "
+"limit of this lattice recovers it. γ = 1 would require a background-independent construction, where the metric is "
+"the field rather than a displacement on a fixed lattice — a different model, not a refinement of this one.")
+
+heading("8.38  Does the photon's width bend light?", 2)
+body("Every γ measurement so far ray-traced light as a zero-width geodesic, so 'light is a thin ray' is a genuine "
+"buried premise, worth testing rather than assuming. The factor of two, however, is not a property of the photon but "
+"of the geometry it moves through. Deflection is (1 + γ) × Newton, the '1' the time warp g₀₀ carried by a scalar "
+"refractive index n = 1 − Φ, the 'γ' the spatial curvature Ψ that adds a second −Ψ to the index. Light samples both, "
+"and samples them equally, for one reason — it moves at c: on a null path dx = c dt the space and time parts of the "
+"metric enter with equal weight. That null-ness, not any transverse width, is the origin of the factor of two, and "
+"the model already has null light while sourcing no Ψ.")
+result("Result 8.38 — width multiplies whatever γ the geometry carries, and never creates it.", "A finite-width "
+"photon — its centroid deflection exact by Ehrenfest's theorem, hence diffraction-independent — through the model's "
+"index bends by the ray amount, implied γ climbing only from 0.0004 to 0.15 as the width grows to a third of the "
+"impact parameter, an O((w/b)²) tidal correction. Through a general-relativistic index the same beam bends by twice "
+"the Newtonian amount at every width. So the width average sees the factor of two when the geometry has it and not "
+"when it does not: width multiplies the γ the geometry carries but never manufactures it. The model's γ = 0 is "
+"robust to giving the photon any width, because a mass sources no spatial curvature for a probe of any size to feel. "
+"Einstein's factor of two is about light's speed, not its width; the model has the speed and not the curvature.")
+
+heading("8.39  The Lorentz-violation prediction, confronted with data", 2)
+body("The model's one falsifiable empirical claim (Section 8.8) is a quadratic, mass-dimension-6 Lorentz violation, "
+"subluminal and species-universal, with an effective scale E_QG ≈ 2.5 × 10¹⁹ GeV. Confronting it properly corrects an "
+"over-generous earlier reading. For a quadratic (n = 2) violation the effect grows as E², so the strongest bounds "
+"come from ultra-high-energy astrophysics and sit near the Planck scale — UHECR and the GZK threshold near "
+"10¹⁸ GeV, PeV photons near 10¹⁹ — not the 10¹¹ GeV that a naive comparison against the UHECR energy suggests. The "
+"model's effect is about 10⁻³ of current UHECR sensitivity: within roughly one to two orders of falsification, the "
+"closest its predictions ever come, and a real target for next-generation ultra-high-energy observatories.")
+result("Result 8.39 — consistent, partly confirmed, and near the frontier.", "The model has already passed a test it "
+"could have failed. Its one universal cone forces c_photon = c_electron = c_graviton = c_neutrino at leading order, "
+"and GW170817 confirmed it — gravitational waves and light within about a second over 130 million light years, "
+"|Δc|/c < 3 × 10⁻¹⁵ — backed by neutrino multimessenger timing. Many Lorentz-violation scenarios predict a "
+"species-dependent maximal speed and are constrained by exactly these observations; the one-structure construction "
+"forbids the difference, and the data agree. The model's distinctive crystallographic anisotropy is a genuine "
+"preferred-frame effect but doubly suppressed and likely averaged away in a poly-domained medium, so one-cone "
+"universality, not the cubic pattern, is the practical discriminator. Its kill conditions need no Planck-energy "
+"access — a confirmed linear (n = 1) photon dispersion, a species-dependent speed, or a superluminal photon would "
+"each falsify it — and all are consistent with present data. The real experimental home is ultra-high-energy "
+"astrophysics, not laboratory cavities.")
+
+heading("8.40  The cosmological constant: the fine-tuning catastrophe dissolved, the observed value open", 2)
+body("Integrating out the medium's modes gives a vacuum energy of order the node scale — with the node spacing fixed "
+"at the Planck length, of order M_Planck⁴, about 10¹²² times the observed dark-energy density. Taken at face value "
+"this is the worst prediction in physics. But the model's vacuum is a self-bound condensate, and what gravitates "
+"cosmologically is not the bare energy density but the pressure: a self-sustained medium sits at its energy minimum, "
+"where the pressure P = 0, so the cosmological constant is zero regardless of how large the energy density is. This "
+"is Volovik's condensed-matter mechanism, and it is now measured rather than assumed. Its load-bearing claim — that "
+"emergent gravity couples to the vacuum stress −P and not to the energy density — is verified by the induced-gravity "
+"bubble: the energy density sources the Newtonian potential h₀₀ (⟨T00 T00⟩ ≠ 0) but sources no spatial curvature "
+"(⟨T00, T_ij⟩ = 0, a symmetry zero), while a genuine spatial stress does. So the vacuum's enormous energy gravitates "
+"only as an unobservable uniform h₀₀, and the cosmological constant is its pressure, which self-tunes to zero.")
+body("Strikingly, that verifying fact is the same one that closes the light-bending arc. The selection rule "
+"⟨T00, T_ij⟩ = 0 means energy density sources no spatial curvature, and it has two faces: a static mass sources no "
+"spatial curvature, so γ = 0 (no factor of two, Sections 8.32-8.37), and the uniform vacuum sources no spatial "
+"curvature, so Λ ≈ 0 (its energy does not drive expansion). The model does not reach Einstein gravity for the very "
+"reason it has no cosmological-constant problem; the factor of two and the 10¹²² are one fact, and a theory that "
+"bent light like general relativity would carry the catastrophe this one avoids. The zero is robust. On the real "
+"Lennard-Jones condensate a large energy density coexists with machine-zero pressure at equilibrium, restored to "
+"zero after a phase transition that shifts the vacuum; and it survives Weinberg's no-go, because absorbing a uniform "
+"vacuum-energy change is a pure dilatation of the medium — all energies and lengths rescale together — leaving every "
+"dimensionless observable, the emergent sound speeds and cone ratios, invariant to machine precision across vacua "
+"spanning eight orders of energy. The self-adjusting field, the medium's overall scale, is a flat direction the "
+"vacuum energy couples to and observable physics does not. And equilibrium is a dynamical attractor: any initial "
+"vacuum energy decays to it within a few Planck times, so there is no initial cosmological constant to fine-tune.")
+result("Result 8.40 — the 10¹²² fine-tuning is dissolved; the observed nonzero value is not predicted.", "What the "
+"model settles is the equilibrium cosmological constant: exactly zero, self-tuned by the condition P = 0 that also "
+"defines equilibrium, robust to phase transitions and to Weinberg's no-go, and reached from any initial condition by "
+"an attractor in a Planck time. The 10¹²² fine-tuning catastrophe is genuinely removed — not by cancelling constants "
+"but because the equilibrium vacuum gravitates zero by thermodynamics — and it is unified with the light-bending "
+"result as one measured selection rule. What the model does not settle is the small observed nonzero value, ~10⁻¹²² "
+"in Planck units. The natural off-equilibrium source, a cosmic expansion lag holding the medium a fraction ~Hτ off "
+"equilibrium, gives a dynamical dark energy ρ_Λ ~ M_Planck³H ~ 10⁻⁶¹ — the geometric mean of the problem, still 61 "
+"orders too large, and with the wrong equation of state (w ~ −½ in the matter era). A node-creation that tracked the "
+"expansion could in principle give ρ_Λ ~ ρ_crit, but deriving the tracking efficiency shows the medium's node "
+"creation is deficit-driven — it responds to the local chemical potential, the tension P = Bδ, not to the global "
+"Hubble rate — so the efficiency is zero and the residual is the linear 10⁻⁶¹, while perfect growth gives zero; "
+"neither reaches 10⁻¹²². The catastrophe is removed; the observed dark-energy density is relocated to why the vacuum "
+"sits so extraordinarily near equilibrium, and remains open.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1724,9 +1841,12 @@ table(["Barrier","Status","Key result"],
   ["Topological channel (curvature charge)","also 0, by Gauss-Bonnet (§8.33)","the one route left after 8.32: curvature is a scalar, so a scalar mass CAN source it, through the model's own compression mechanism (mass = eigenstrain theta* ~ rho). It does curve the medium locally (eta = lap theta* =/= 0), but the net curvature charge integral(eta) = integral(lap theta*) is a total derivative, exactly zero -- a curvature dipole (dome core, saddle ring) with no deficit angle, bending no light at range, vs a genuine charge eta ~ rho that does. gamma = 1 needs mass to carry net curvature charge = nucleate a disclination density ~ rho, which the model does not. So every accessible direct channel gives gamma = 0: spin rule (8.32), compatibility (8.10), Gauss-Bonnet (8.33). The 2D-theorem caveat is resolved in 8.34"],
   ["The Poisson-ratio / propagator route","closed; no nu makes it Fierz-Pauli (§8.35)","the last opening: gamma=1 could come from the PROPAGATOR (a Fierz-Pauli graviton kinetic term turns the time potential into spatial curvature), and the curvature sector's kinetic term is the medium's biharmonic elasticity, set by its Poisson ratio -- not covered by 8.29-8.30 (the induced tetrad). Measured: the LJ condensate is a central-force Cauchy solid, nu ~ 1/3. But the medium's response splits into an elastic RELAXATION (nu-dependent, but a displacement, so COMPATIBLE = zero curvature = bends no light -- verified machine-zero Ricci from nu=-0.9 to 0.49) plus the eigenstrain (nu-independent). So the Poisson ratio tunes only a gauge mode; gamma ray-traced is the same value zero for every nu. The trace structure for gamma=1 cannot be reached by tuning elastic constants. Every route now closed: neither the source (8.32-8.34) nor the propagator (8.29-8.30, 8.35) gives gamma=1. Newtonian gravity real; the Einstein completion not recoverable by any property of the medium"],
   ["The 3+1D answer (does the medium evade it?)","no; gamma = 0 in 3D too (§8.34)","settles 8.33's caveat by direct 3D ray tracing. The medium does NOT reach gamma = 1, for a reason deeper than Gauss-Bonnet and independent of dimension: general relativity sources the spatial metric by a Poisson equation (lap Psi = 4 pi G rho, Psi = the long-range potential, gamma = 1), while the medium's compression sets Psi = theta* = rho ALGEBRAICALLY -- local, dying with the mass. The 3D incompatibility of an isotropic eigenstrain is the linearized Einstein tensor delta lap theta* - d_i d_j theta* (verified to 1e-16), so Psi = theta* = rho. Ray-traced: a GR control (Psi = potential) holds gamma = 1 at every impact parameter; the medium's gamma falls to zero at range (few parts in 1e4, stable under grid/box/width). The 2D zero-charge result was a symptom. Every channel in every dimension gives gamma = 0. gamma = 1 needs mass to source the graviton's SPATIAL polarizations as a Poisson potential -- exactly the coupling 8.32 measured to vanish. Newtonian gravity real and quantitative; the Einstein completion argued, not demonstrated"],
+  ["The negative-space sublattice","adds a displacement, not curvature (§8.36)","a second interpenetrating (bcc-like) sublattice was the one construction attacking the single-lattice premise: its relative (optical) mode is not a gradient of the acoustic displacement, and two fcc = diamond, which violates Cauchy through it. Measured (honeycomb): the optical mode is gapped, so slaved -- a second displacement. It genuinely breaks Cauchy (relaxed C12-C66=+0.29) but leaves the bulk modulus invariant, couples only to shear (isotropic strain sources zero shift, machine zero), and the full response to a mass has curvature machine zero. It adds a displacement, not an incompatible degree of freedom; gamma=0 survives"],
+  ["The whole gamma arc in one number","marginal, not irrelevant (§8.37)","the Einstein question reduces to the graviton propagator's trace coefficient lambda: for pressureless (light-bending) sources gamma=lambda/(1-lambda), so the factor of two IS the trace term and pressure is a red herring. Einstein sits at lambda=1/2; both measured routes put the model at lambda=0 (source <T00,Tij>=0; induced coefficients (1,+8.18,-0.56,-0.12) vs (1,-2,2,-1)). gamma=1 and emergent Lorentz are the same lattice-broken symmetry with opposite RG fates: Lorentz's anisotropy is irrelevant (~(k/kP)^2, flows away, emerges), the graviton's diffeo violation is marginal (flat ratio, converged 12.4%), so gamma stays off 1 at every scale. That asymmetry is why the model earns SR but not the factor of two"],
+  ["Does the photon's width bend light?","no; width is not the missing term (§8.38)","the factor of two is the geometry, not the probe: light samples the spatial curvature Psi equally with the time warp because it moves at c (null path, dx=c dt), not because of any width. A finite-width photon (centroid exact by Ehrenfest) through the model's index bends by the ray amount, implied gamma 0.0004->0.15 across w/b=0.02->0.33 (O((w/b)^2) tidal correction); through a GR index it bends by 2x at every width. Width multiplies whatever gamma the geometry carries, never creates it. gamma=0 robust to any width -- a mass sources no Psi for a probe of any size"],
     ["Gravitational radiation","spin-2, monopole forbidden (§8.20)","the linearised TT field propagates at c with exactly 2 polarizations, and a spherically pulsating source radiates ~10^-14 of an equal quadrupole (ratio 3×10^-13, machine zero). Scalar gravity would radiate the monopole; spin-2 forbids it. Scope: linearised, prescribed source -- inspiral back-reaction and the quadrupole luminosity law are not tested"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
-  ["Cosmological constant","fine-tuning dissolved (§8.13)","the self-sustained condensate vacuum gravitates its grand potential -P, which vanishes at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The equilibrium value is exactly zero; the observed nonzero Λ is relocated to a departure from equilibrium (open)"],
+  ["Cosmological constant","fine-tuning dissolved, and unified with gamma=0 (§8.13, §8.40)","the self-sustained condensate vacuum gravitates its grand potential -P, zero at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The load-bearing claim -- gravity couples to -P, not the energy density -- is now MEASURED: energy density sources h00 but not spatial curvature (<T00,Tij>=0), the SAME selection rule that gives gamma=0. So gamma=0 and Lambda=0 are one fact; a GR-like light-bending theory would carry the 10^122. Robust: survives Weinberg's no-go (absorbing vacuum energy is a pure dilatation, dimensionless observables invariant to machine precision across 8 orders), and equilibrium is an attractor erasing initial conditions in a Planck time. Open: the observed nonzero value -- the expansion lag gives 10^-61 (wrong size and w~-1/2), tracking needs a deficit-driven efficiency the medium lacks; relocated to why the vacuum sits so near equilibrium"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
   ["SM group / reps / constants","open","the group is an input; the derivation of SU(3)xSU(2)xU(1), the chiral coupling, fermion representations, hypercharges, anomaly cancellation, and the Higgs is not attempted"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
@@ -1925,7 +2045,13 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_gamma_source.py (§8.32); "
 "test_gamma_topological.py (§8.33); "
 "test_gamma_3d.py (§8.34); "
-"test_gamma_elastic.py (§8.35).")
+"test_gamma_elastic.py (§8.35); "
+"test_gamma_sublattice.py (§8.36); "
+"test_gamma_trace.py (§8.37); "
+"test_photon_width.py (§8.38); "
+"test_lv_confrontation.py (§8.39); "
+"test_vacuum_gravitates.py, test_cc_weinberg.py, test_cc_offequilibrium.py, test_cc_attractor.py, "
+"test_cc_tracking.py (§8.40).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
