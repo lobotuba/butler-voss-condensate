@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-27")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-28")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1808,6 +1808,32 @@ result("Result 8.41 — the condensate reproduces the electroweak breaking patte
 "Why the condensate carries Y = ½ — the assignment that leaves electromagnetism unbroken, fixed together with the "
 "fermion charges by anomaly cancellation — is the next question, not settled here.")
 
+heading("8.42  Anomaly cancellation fixes the hypercharges: the Standard Model's charges, derived", 2)
+body("Sections 8.14 and 8.41 realized the Standard Model's gauge dynamics and its electroweak breaking, but took the "
+"fermion hypercharges — and so the electric charges — as inputs. This section derives them. The lever is anomaly "
+"cancellation: a chiral gauge symmetry is quantum-mechanically consistent only if its anomalies cancel, and the "
+"model's emergent gauge symmetries are exact, realized as Wilson-link lattice gauge invariances (Section 8.14) with an "
+"exact photon Ward identity (Section 8.16's regulator). An exact chiral gauge symmetry cannot be anomalous — one "
+"cannot keep gauge invariance exact on a lattice while carrying a gauge anomaly — so here anomaly cancellation is not "
+"optional but forced, and it constrains the hypercharges. Given only the observed representations of one generation — "
+"the quark doublet (3, 2), the singlets (3̄, 1) and (3̄, 1), the lepton doublet (1, 2) and the singlet (1, 1), with "
+"the five hypercharges left unknown — the four conditions [SU(3)²U(1)], [SU(2)²U(1)], [grav²U(1)] and the cubic "
+"[U(1)³] apply.")
+result("Result 8.42 — the hypercharges are fixed to the Standard-Model values; charge quantisation is derived.", "The "
+"three linear conditions leave a two-parameter family (Y₄ = −3Y₁, Y₅ = 6Y₁, Y₂ + Y₃ = −2Y₁), and the cubic collapses "
+"it: with r = Y₂/Y₁ it reads r² + 2r − 8 = 0, so r = −4 or r = +2, the two branches being the same theory with the two "
+"quark singlets relabelled. Up to that relabelling and one overall scale, the hypercharges are unique — the "
+"Standard-Model assignment 1/6, −2/3, 1/3, −1/2, 1 (each anomaly coefficient machine zero) — derived rather than "
+"input. The electric charges Q = T₃ + Y then come out quantised and Standard-Model-valued: quarks at +2/3 and −1/3, "
+"leptons at 0 and −1, so the proton (uud) and electron charges cancel to 10⁻¹⁶. Charge quantisation — the exact "
+"equality of the proton and electron charge — is thus a consistency requirement, not a coincidence: it is the unique "
+"anomaly-free assignment, forced by the model's exact gauge invariance. This is the sharpest Standard-Model prediction "
+"in the report. Its scope is honest: anomaly cancellation fixes the hypercharges given the representations and the "
+"one-generation content, which remain inputs, as do the gauge group and the number of generations; the one continuous "
+"freedom, the U(1) hypercharge, is what is newly forced. And it presumes a genuine exact 4D gauge symmetry — the "
+"domain-wall construction of Section 8.15 can park an anomaly in the bulk, so a truly four-dimensional symmetry with "
+"no accessible bulk is where the constraint bites.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1871,7 +1897,8 @@ table(["Barrier","Status","Key result"],
   ["Cosmological constant","fine-tuning dissolved, and unified with gamma=0 (§8.13, §8.40)","the self-sustained condensate vacuum gravitates its grand potential -P, zero at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The load-bearing claim -- gravity couples to -P, not the energy density -- is now MEASURED: energy density sources h00 but not spatial curvature (<T00,Tij>=0), the SAME selection rule that gives gamma=0. So gamma=0 and Lambda=0 are one fact; a GR-like light-bending theory would carry the 10^122. Robust: survives Weinberg's no-go (absorbing vacuum energy is a pure dilatation, dimensionless observables invariant to machine precision across 8 orders), and equilibrium is an attractor erasing initial conditions in a Planck time. Open: the observed nonzero value -- the expansion lag gives 10^-61 (wrong size and w~-1/2), tracking needs a deficit-driven efficiency the medium lacks; relocated to why the vacuum sits so near equilibrium"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
   ["Electroweak breaking","mechanism achieved (§8.41)","the condensate as a doublet with hypercharge 1/2 breaks the induced SU(2)xU(1) to one U(1): the gauge spectrum is {0, m_W, m_W, m_Z} -- exactly one massless photon and three massive weak bosons, m_W=gv/2, m_Z=sqrt(g^2+g'^2)v/2, for any couplings. m_W/m_Z = cos(theta_W) (sin^2 = 0.223 at the physical point); the surviving photon is Q=T3+Y, massless because the vacuum is Q-neutral. The breaking pattern and mass relations are reproduced, not fitted. The group, rep and Y=1/2 are inputs (as in 8.14); why Y=1/2 -- fixed with the fermion charges by anomaly cancellation -- is open"],
-  ["SM group / reps / constants","open","the group is an input; the derivation of SU(3)xSU(2)xU(1), the chiral coupling, fermion representations, hypercharges, anomaly cancellation, and the Higgs is not attempted"]],
+  ["Hypercharges / charge quantisation","derived from anomaly cancellation (§8.42)","the model's exact emergent gauge invariance forbids a gauge anomaly, so anomaly cancellation is mandatory. Given only the one-generation representations, the four conditions ([SU3]^2U1, [SU2]^2U1, grav^2 U1, U1^3) fix the five hypercharges uniquely (up to scale and the u<->d relabelling) to the SM values 1/6,-2/3,1/3,-1/2,1. Hence Q=T3+Y is quantised: quarks +2/3,-1/3, leptons 0,-1, proton+electron charge = 0 to 1e-16. Charge quantisation as a consistency requirement. Scope: fixes hypercharges GIVEN reps and content"],
+  ["SM group / reps / generations","open","the hypercharges are now fixed by anomaly cancellation (§8.42), but the gauge group SU(3)xSU(2)xU(1) itself, the fermion representations, the number of generations, and the Yukawa/flavour structure remain inputs"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2075,7 +2102,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_confrontation.py (§8.39); "
 "test_vacuum_gravitates.py, test_cc_weinberg.py, test_cc_offequilibrium.py, test_cc_attractor.py, "
 "test_cc_tracking.py (§8.40); "
-"test_electroweak.py (§8.41).")
+"test_electroweak.py (§8.41); "
+"test_anomaly_hypercharge.py (§8.42).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
