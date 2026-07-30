@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-26")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-27")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1786,6 +1786,28 @@ result("Result 8.40 — the 10¹²² fine-tuning is dissolved; the observed nonz
 "neither reaches 10⁻¹²². The catastrophe is removed; the observed dark-energy density is relocated to why the vacuum "
 "sits so extraordinarily near equilibrium, and remains open.")
 
+heading("8.41  The electroweak Higgs mechanism: SU(2)×U(1) broken to one massless photon", 2)
+body("Section 8.14 induced non-Abelian Yang-Mills, and the screening arc measured the Abelian Higgs mechanism — a "
+"gauged condensate giving its photon a Meissner mass. The Standard Model's electroweak sector is their non-Abelian "
+"marriage: a Higgs doublet condensate breaks SU(2)_L × U(1)_Y down to a single U(1)_EM, so that three weak bosons "
+"acquire a mass while the photon stays exactly massless. This runs in the model's own terms. The condensate — the "
+"same amplitude mode that gaps for gravity (§8.10) and self-tunes the cosmological constant (§8.40) — is placed in a "
+"doublet of SU(2)_L with hypercharge Y = ½, and its equilibrium amplitude is a vacuum expectation value ⟨Φ⟩ = "
+"(0, v/√2). The induced gauge kinetic term |D_μ Φ|² then costs a mass for whichever gauge directions move the vacuum, "
+"mixing the four fields (W¹, W², W³, B) into a mass matrix whose spectrum is the electroweak prediction.")
+result("Result 8.41 — the condensate reproduces the electroweak breaking pattern and mass relations.", "Diagonalising "
+"the induced 4×4 mass matrix gives the spectrum {0, m_W, m_W, m_Z} — exactly one massless boson and three massive, for "
+"any couplings, with m_W = gv/2 and m_Z = √(g²+g'²) v/2 to the digit and the photon at machine zero. This is the "
+"SU(2)×U(1) → U(1) signature: not zero massless bosons and not two. The measured W/Z mass ratio is exactly the cosine "
+"of the weak mixing angle, m_W/m_Z = cos θ_W = g/√(g²+g'²) (sin²θ_W = 0.223 at the physical point), so the mixing "
+"angle is not a separate input but the geometry of the W³–B mixing the condensate induces. And the surviving massless "
+"photon is the electric-charge direction Q = T₃ + Y, kept massless because the vacuum is Q-neutral (Q⟨Φ⟩ = 0) while "
+"the three orthogonal generators move it and gain mass — the single photon forced by the doublet's representation and "
+"its hypercharge. As in Section 8.14 this is the mechanism, not a derivation: the group, the doublet representation "
+"and Y = ½ are inputs, and what is shown is that the model's condensate breaks them the way the Standard Model does. "
+"Why the condensate carries Y = ½ — the assignment that leaves electromagnetism unbroken, fixed together with the "
+"fermion charges by anomaly cancellation — is the next question, not settled here.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1848,6 +1870,7 @@ table(["Barrier","Status","Key result"],
   ["Chirality + anomalies","consistent by inflow (§8.15)","a chiral gauge theory is inconsistent unless anomalies cancel; here bulk Chern number = chiral modes per wall = charge pumped per flux quantum = one integer (measured -1, +1/-1, Σ 0). Each wall is anomalous, the lattice is vector-like, the bulk supplies the inflow. not the SM's own 4D cancellation — the bulk does the work"],
   ["Cosmological constant","fine-tuning dissolved, and unified with gamma=0 (§8.13, §8.40)","the self-sustained condensate vacuum gravitates its grand potential -P, zero at equilibrium for any bare zero-point energy (measured across 122 orders, no tuning). The load-bearing claim -- gravity couples to -P, not the energy density -- is now MEASURED: energy density sources h00 but not spatial curvature (<T00,Tij>=0), the SAME selection rule that gives gamma=0. So gamma=0 and Lambda=0 are one fact; a GR-like light-bending theory would carry the 10^122. Robust: survives Weinberg's no-go (absorbing vacuum energy is a pure dilatation, dimensionless observables invariant to machine precision across 8 orders), and equilibrium is an attractor erasing initial conditions in a Planck time. Open: the observed nonzero value -- the expansion lag gives 10^-61 (wrong size and w~-1/2), tracking needs a deficit-driven efficiency the medium lacks; relocated to why the vacuum sits so near equilibrium"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
+  ["Electroweak breaking","mechanism achieved (§8.41)","the condensate as a doublet with hypercharge 1/2 breaks the induced SU(2)xU(1) to one U(1): the gauge spectrum is {0, m_W, m_W, m_Z} -- exactly one massless photon and three massive weak bosons, m_W=gv/2, m_Z=sqrt(g^2+g'^2)v/2, for any couplings. m_W/m_Z = cos(theta_W) (sin^2 = 0.223 at the physical point); the surviving photon is Q=T3+Y, massless because the vacuum is Q-neutral. The breaking pattern and mass relations are reproduced, not fitted. The group, rep and Y=1/2 are inputs (as in 8.14); why Y=1/2 -- fixed with the fermion charges by anomaly cancellation -- is open"],
   ["SM group / reps / constants","open","the group is an input; the derivation of SU(3)xSU(2)xU(1), the chiral coupling, fermion representations, hypercharges, anomaly cancellation, and the Higgs is not attempted"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
@@ -2051,7 +2074,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_photon_width.py (§8.38); "
 "test_lv_confrontation.py (§8.39); "
 "test_vacuum_gravitates.py, test_cc_weinberg.py, test_cc_offequilibrium.py, test_cc_attractor.py, "
-"test_cc_tracking.py (§8.40).")
+"test_cc_tracking.py (§8.40); "
+"test_electroweak.py (§8.41).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
