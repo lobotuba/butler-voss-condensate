@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-30")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-31")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1899,6 +1899,40 @@ result("Result 8.44 — the fermion lattice requires order-unity angular rigidit
 "central medium. It does not derive which lattice the medium realises; it converts that input from an unstructured "
 "choice into a specific question about the interaction.")
 
+heading("8.45  One stiffness, three jobs: the angular sector selects the lattice and carries the cone", 2)
+body("Section 8.44 found that the fermion lattice needs an order-unity angular stiffness, and Section 8.1 found that a "
+"purely central medium has two acoustic cones (a longitudinal speed above the transverse) and needs a non-central "
+"stiffness to give one. This section asks whether those are the same stiffness by using the same force model — "
+"Lennard-Jones plus λ Σ (cos θ + ½)² — and reading the medium's acoustic cone off its elastic constants as a function "
+"of the same λ. The elastic constants are computed by homogeneous strain of a periodic cell with the atoms relaxed "
+"internally, giving the two-dimensional bulk modulus K from a dilation and the shear modulus μ from a shear, whence "
+"c_L = √((K+μ)/ρ) and c_T = √(μ/ρ). Two controls fix the method: the triangular lattice under the central force alone "
+"returns c_L/c_T = √3 and Poisson ratio 1/3 (the central-force Cauchy solid, matching the medium's measured 1.7330 and "
+"0.330), and the honeycomb under the central force alone returns μ = 0 — it is floppy, its coordination three lying "
+"below the two-dimensional Maxwell threshold of four, so a central-force honeycomb has no transverse cone at all. The "
+"honeycomb cone is elastically isotropic (the shear modulus is the same in two orientations to one part in 10^7), so "
+"the cone is well defined. Sweeping λ then separates the two sectors cleanly: the bulk modulus K is independent of λ to "
+"machine precision (compression is central), while the shear modulus μ — and therefore the entire transverse cone c_T "
+"— is sourced entirely by the angular term, rising from zero at λ = 0 roughly linearly, so c_T grows as √λ. At the "
+"selection threshold λ* ≈ 0.57 the honeycomb already carries an order-unity transverse cone (c_T/c_L ≈ 0.33). A fully "
+"round cone c_L = c_T is the μ ≫ K limit, reached as λ grows past λ*, which is the equal-stretch-and-bend (vector-Hooke) "
+"point of Section 8.1.")
+result("Result 8.45 — one order-unity angular stiffness does the work of three: it selects the honeycomb, makes it "
+"mechanically stable, and is the sole source of its transverse cone.", "In the same force model as Section 8.44, a "
+"purely central medium (λ = 0) leaves the honeycomb floppy — zero shear modulus, no transverse cone, not the ground "
+"state — while the triangular control gives the central-force values c_L/c_T = √3 and ν = 1/3. Turning on an angular "
+"stiffness of order the bond energy does three things at once, none of which a central force does: it selects the "
+"honeycomb (λ* ≈ 0.57, Section 8.44), it rigidifies it, and it supplies its entire transverse acoustic cone. The split "
+"is exact: the bulk modulus is λ-independent to machine precision (compression is central), and the shear modulus, "
+"hence c_T, is sourced wholly by the angular term (zero at λ = 0, order unity by λ*). Full cone universality c_L = c_T "
+"is the same knob turned further, into the μ ≫ K regime that reproduces Section 8.1's single round cone. So the "
+"non-central stiffness that Section 8.44 identified as the requirement for emergent fermions is the same one Section "
+"8.1 required for the medium's single (phonon-sector) cone; the two independent barriers turn on the same property of "
+"the medium, and the mechanical sector — lattice selection, stability, and the acoustic cone — lives in the angular "
+"stiffness while compression stays central. The scope is the mechanical cone: the fermion cone v_F is set by the "
+"electronic hopping (v_F = (3/2) t a) and is an independent scale, so locking it to the boson cone — cross-statistics "
+"universality — remains the composite-boson question of Section 8.1, which this stiffness does not by itself settle.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1964,7 +1998,8 @@ table(["Barrier","Status","Key result"],
   ["Electroweak breaking","mechanism achieved (§8.41)","the condensate as a doublet with hypercharge 1/2 breaks the induced SU(2)xU(1) to one U(1): the gauge spectrum is {0, m_W, m_W, m_Z} -- exactly one massless photon and three massive weak bosons, m_W=gv/2, m_Z=sqrt(g^2+g'^2)v/2, for any couplings. m_W/m_Z = cos(theta_W) (sin^2 = 0.223 at the physical point); the surviving photon is Q=T3+Y, massless because the vacuum is Q-neutral. The breaking pattern and mass relations are reproduced, not fitted. The group, rep and Y=1/2 are inputs (as in 8.14); why Y=1/2 -- fixed with the fermion charges by anomaly cancellation -- is open"],
   ["Hypercharges / charge quantisation","derived from anomaly cancellation (§8.42)","the model's exact emergent gauge invariance forbids a gauge anomaly, so anomaly cancellation is mandatory. Given only the one-generation representations, the four conditions ([SU3]^2U1, [SU2]^2U1, grav^2 U1, U1^3) fix the five hypercharges uniquely (up to scale and the u<->d relabelling) to the SM values 1/6,-2/3,1/3,-1/2,1. Hence Q=T3+Y is quantised: quarks +2/3,-1/3, leptons 0,-1, proton+electron charge = 0 to 1e-16. Charge quantisation as a consistency requirement. Scope: fixes hypercharges GIVEN reps and content"],
   ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"],
-  ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"]],
+  ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"],
+  ["Angular stiffness does triple duty","fermion lattice + stability + Lorentz cone from one knob (§8.45)","the non-centrality §8.44 needs for the honeycomb is the same one §8.1 needs for a single Lorentz cone. Same force model, elastic constants vs the same lambda: triangular control gives c_L/c_T=sqrt3 and nu=1/3 (matches the medium's 1.7330, 0.330); central-force honeycomb has mu=0 (floppy, coordination 3 < Maxwell 4, no transverse cone). Turning on O(1) angular stiffness selects the honeycomb (lambda*~0.57), rigidifies it, AND is the SOLE source of its transverse cone: bulk modulus K is lambda-independent to machine precision (compression is central), shear modulus mu and c_T are entirely angular-sourced (0 -> O(1), c_T~sqrt(lambda)). Full c_L=c_T is the mu>>K limit past lambda* (§8.1's vector-Hooke). Two independent barriers turn on one property of the medium"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2171,7 +2206,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_electroweak.py (§8.41); "
 "test_anomaly_hypercharge.py (§8.42); "
 "test_sm_structure.py (§8.43); "
-"test_lattice_selection.py (§8.44).")
+"test_lattice_selection.py (§8.44); "
+"test_cone_unification.py (§8.45).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
