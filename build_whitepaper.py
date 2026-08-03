@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-29")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-30")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1861,6 +1861,44 @@ result("Result 8.43 — the gauge group and generation count are discrete band-s
 "discrete band data, what is left to specify is which single lattice the medium realises, a discrete structural "
 "question rather than a list of continuous fine-tunings.")
 
+heading("8.44  Which lattice: the fermion lattice requires angular rigidity", 2)
+body("Section 8.43 reduced the remaining Standard-Model input to a single discrete choice — the lattice the medium "
+"realises — because the gauge group and the generation count are band-structure data of that lattice. This section "
+"characterises that choice. The medium self-assembles under a central pair force (the Lennard-Jones interaction of the "
+"integration sections), whose ground state is the close-packed triangular lattice in two dimensions and the "
+"face-centred cubic lattice in three; its coordination is six and it carries no Dirac point, so a purely central medium "
+"hosts bosons but no fermions. Whether it can instead select the bipartite honeycomb — the coordination-three lattice "
+"whose two inequivalent Dirac points give the emergent fermions of Section 8.2 — is a question about the interaction, "
+"and three measurements answer it. First, a zero-temperature lattice sum ranks the candidates: under Lennard-Jones the "
+"triangular lattice is lowest and the honeycomb highest, and adding a second isotropic length scale (a repulsive "
+"shoulder) can move the ground state to the square lattice but never to the honeycomb, across the whole scan — a "
+"close-packed lattice escapes any single isotropic barrier by dilating until its second-neighbour shell clears it, so "
+"no number of central length scales forces coordination three. Second, an angular three-body term of Stillinger-Weber "
+"form λ Σ (cos θ + ½)², minimised at 120°, is identically zero on the honeycomb (all bonds meet at 120°) and large on "
+"the triangular lattice (60° bonds); as λ grows the ground state passes from triangular through square to honeycomb, "
+"the honeycomb winning above λ* ≈ 0.57 of the nearest-neighbour bond energy, an order-unity amount of directional "
+"bonding. Third, the same force — analytic, checked against finite differences to one part in 10^10 — is annealed "
+"dynamically: a heated honeycomb seed is preserved under the angular force (coordination three, angles 120°) but "
+"densifies to coordination six under the central force alone, and a disordered droplet close-packs under the central "
+"force while forming honeycomb domains under the angular one. The collapse has a simple cause: coordination three is "
+"below the two-dimensional Maxwell rigidity threshold of four, so the honeycomb is mechanically floppy under central "
+"forces and rigid only once angular bonds are added. The bond-orientational order ψ₆ is near one for both the "
+"honeycomb and the triangular lattice, so coordination, not ψ₆, is the order parameter that separates them.")
+result("Result 8.44 — the fermion lattice requires order-unity angular rigidity, a property the medium's bonding either "
+"has or lacks.", "A central pair potential selects the close-packed triangular or face-centred-cubic lattice "
+"(coordination six, no Dirac point) and, with any number of isotropic length scales, at most the square lattice; the "
+"bipartite honeycomb that carries the emergent fermions is never the ground state of a central interaction and is "
+"mechanically floppy in one, its coordination three lying below the Maxwell threshold four. A 120° three-body term "
+"makes the honeycomb both the energetic ground state, above λ* ≈ 0.57 of the bond energy, and the dynamically "
+"self-assembled and stable lattice (the force gated against finite differences to 10^-10; a heated seed held at "
+"coordination three, against densification to six without it). So the discrete lattice choice that Section 8.43 "
+"isolated as the last Standard-Model input maps onto one physical property of the medium: whether its bonding carries "
+"order-unity angular rigidity. This is the same non-central stiffness the emergent-Lorentz construction already "
+"required (Section 8.1, where bare central forces give a longitudinal speed above the transverse and only shear-bearing "
+"bonds give a single round cone), so two independent parts of the program demand the same departure from a purely "
+"central medium. It does not derive which lattice the medium realises; it converts that input from an unstructured "
+"choice into a specific question about the interaction.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1925,7 +1963,8 @@ table(["Barrier","Status","Key result"],
   ["Non-Abelian gauge fields","mechanism achieved (§8.14)","the fermion loop induces genuine Yang-Mills for SU(2) and SU(3): a uniform non-commuting field costs ~A^4 = Tr[A,A]^2 (self-interaction), a commuting one is pure gauge. Universal coupling from exact lattice gauge invariance"],
   ["Electroweak breaking","mechanism achieved (§8.41)","the condensate as a doublet with hypercharge 1/2 breaks the induced SU(2)xU(1) to one U(1): the gauge spectrum is {0, m_W, m_W, m_Z} -- exactly one massless photon and three massive weak bosons, m_W=gv/2, m_Z=sqrt(g^2+g'^2)v/2, for any couplings. m_W/m_Z = cos(theta_W) (sin^2 = 0.223 at the physical point); the surviving photon is Q=T3+Y, massless because the vacuum is Q-neutral. The breaking pattern and mass relations are reproduced, not fitted. The group, rep and Y=1/2 are inputs (as in 8.14); why Y=1/2 -- fixed with the fermion charges by anomaly cancellation -- is open"],
   ["Hypercharges / charge quantisation","derived from anomaly cancellation (§8.42)","the model's exact emergent gauge invariance forbids a gauge anomaly, so anomaly cancellation is mandatory. Given only the one-generation representations, the four conditions ([SU3]^2U1, [SU2]^2U1, grav^2 U1, U1^3) fix the five hypercharges uniquely (up to scale and the u<->d relabelling) to the SM values 1/6,-2/3,1/3,-1/2,1. Hence Q=T3+Y is quantised: quarks +2/3,-1/3, leptons 0,-1, proton+electron charge = 0 to 1e-16. Charge quantisation as a consistency requirement. Scope: fixes hypercharges GIVEN reps and content"],
-  ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"]],
+  ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"],
+  ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2131,7 +2170,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_cc_tracking.py (§8.40); "
 "test_electroweak.py (§8.41); "
 "test_anomaly_hypercharge.py (§8.42); "
-"test_sm_structure.py (§8.43).")
+"test_sm_structure.py (§8.43); "
+"test_lattice_selection.py (§8.44).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
