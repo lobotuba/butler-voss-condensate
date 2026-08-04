@@ -102,6 +102,7 @@ than new predictions.
 | 8.46 | Two cones, mismatch benign | **K** + O | phonon = pseudo-gauge field (Volovik); the boson rides v_F (ω_min/\|q\| → v_F measured) |
 | 8.47 | Chiral protection to all orders | **K** + N | exact chiral-symmetry theorem (gapless); whether v_F and c_T *merge* is regulator-limited and open |
 | 8.48 | Generation number a measured band invariant | **C** + K | winding chosen, winding measured (G1 ≈ identity, G4 ≈ fundamental theorem of algebra); bulk-boundary + NN are theorems, measured independently; **tooling validated un-tuned** (`test_validation_anchors`) |
+| 8.49 | Mass nucleates no net disclination charge | **N** + O | seventh γ=0, first at the microscopic level; compression measured (spacing 1.12→1.04) yet zero net charge; positive control (injected density, long-range) confirms the measurement is not blind; closes §8.33's last continuum assumption on the lattice |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -147,9 +148,22 @@ a claim the old synthesis made.
 Net: §8.12's firm output is the healthy dynamical spin-2 graviton; "Einstein in the
 infrared" is the conclusion of a conditional the model's own later measurements contradict.
 As realized the model is **Nordström (γ = 0)** carrying a matter-decoupled spin-2 graviton
-alongside it; the Einstein completion rests solely on the one untested topological
-(disclination) coupling. No claims now stand side by side — the headline is demoted to a
-conditional at the point of assertion, with a forward reference to the arc that closes it.
+alongside it. No claims now stand side by side — the headline is demoted to a conditional at
+the point of assertion, with a forward reference to the arc that closes it.
+
+**Update (WP-36): the last channel is now measured, not deferred.** The reconciliation
+above named the topological disclination coupling as the one remaining route to γ = 1. §8.49
+(`test_gamma_nucleation`) measures it directly on the lattice: reading coordination through a
+compression-covariant cutoff separates a change of bond *length* (compression) from a change
+of bond *connectivity* (a disclination — the only carrier of net curvature charge). The
+positive control confirms the measurement sees genuine net charge and that it is long-range;
+the total charge is a topological invariant (Gauss-Bonnet); and the model's mass — a
+compression well that demonstrably compresses the medium — nucleates **zero** net disclination
+charge at every amplitude, staying purely elastic. This is §8.33's ∫η = 0 measured on the
+lattice, a **seventh independent γ = 0** and the first at the microscopic level. γ = 1 is now
+closed in every channel the model exposes, continuum and discrete; it would require a gravity
+mechanism that changes the medium's connectivity, which is a different construction. (Audit
+type: **N + O** — an honest negative carrying a measured positive control.)
 
 ## What would raise the grade
 
