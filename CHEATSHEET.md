@@ -1349,6 +1349,16 @@ correction, and gravity proper is the **spin-2 graviton**: the confining curvatu
 conserved IR stress tensor. **✅ Full GR is reached as an INFRARED FIXED POINT** — not lattice-exact, because
 diffeomorphism invariance (unlike U(1)) is emergent rather than a lattice symmetry. The criticality fine-tuning is
 **retracted**.
+> ⚠️ **OVERTURNED by the completed γ arc (§8.32–8.51, WP-37/40).** The "γ→1 / Full GR reached" claim above did not
+> survive. A static mass sources the graviton's *time* component (the Newtonian attraction, real and healthy) but
+> **never its spatial modes** — measured zero in *every* channel: the smooth induced loop (spin selection rule, §8.32),
+> the elastic body force (§8.10), 3D compression (§8.34), the Poisson-ratio/Fierz–Pauli route (§8.35), the second
+> sublattice (§8.36), and the topological disclination-nucleation channel directly on the lattice (§8.49). §8.37 shows
+> the diffeomorphism breaking is RG-**marginal** (pinned off 1), the *opposite* fate to Lorentz's irrelevant breaking,
+> so γ=1 and emergent Lorentz are **not** the same kind of statement. Weinberg is a *conditional* whose premise (matter
+> couples to the spin-2 graviton) the arc measures to fail. **Net: γ=0 at every scale; the model's gravity is Nordström
+> — real, healthy, Newtonian, not Einstein — and GR would require a background-independent construction, not a
+> refinement of this lattice.** The retraction of the criticality tuning still stands (a range argument, γ-independent).
 **🟡 Standard-Model gauge group:** the *mechanism* is achieved — the same fermion loop induces genuine non-Abelian
 Yang-Mills for SU(2)/SU(3), and chirality is consistent via quantized anomaly **inflow** — but the **group, chiral
 content, representations and hypercharges remain inputs**; the SM is not derived. **🟡 Cosmology:** the CC

@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-40")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-41")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -317,10 +317,13 @@ A=[
 "medium's own bond fluctuations, read off the fermion dispersion, are an emergent photon (the Dirac-node "
 "position) and an emergent graviton (the cone's tetrad) — so fermions, electromagnetism and gravity share one "
 "cone by construction. Even quantum mechanics proves largely emergent — the Schrödinger wave, ℏ as a material "
-"property, the Born rule as a stochastic attractor, and de Broglie's λ = h/p all follow from the condensate, "
-"leaving only the measurement problem's hard core. Cast against experiment, the model makes a specific, falsifiable "
-"prediction: a Planck-suppressed, cross-species-universal, crystallographically-anisotropic quadratic Lorentz "
-"violation. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
+"property, de Broglie's λ = h/p, and the Born rule as a stochastic attractor (given the wave, at the medium's own ℏ) "
+"all follow from the condensate; decoherence in the medium's own phonon bath then einselects a pointer basis and "
+"Born-weighted branches at a rate ∝ (separation)², leaving only the selection of a single definite outcome — the "
+"measurement problem's hard core — as a postulate. Cast against experiment, the model makes one specific, falsifiable "
+"prediction: a Planck-suppressed, species-universal, quadratic and subluminal Lorentz violation whose falsifiable "
+"content is robust across the microscopic lattice rather than a tuned coefficient — near-Planckian, and roughly 1.4 "
+"orders of magnitude below the ultra-high-energy astrophysical frontier. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
 "resolution came from applying the paper's own range principle to gravity's mediator for the first time: it is the "
@@ -328,8 +331,15 @@ A=[
 "screened — and which couples monopolarly to positive-definite energy, so that scalar exchange between like charges "
 "attracts. Its range is measured to be the inverse gap (λ m_A = 1.00), and the potential is exactly a screening "
 "exponential times a 1/r Newtonian core; at criticality the exponential goes to unity and Newton's law survives "
-"alone, universally attractive. This is scalar (Nordström) gravity: full general relativity, the measurement problem "
-"and the Standard Model remain open, but the barriers are shown to be surmountable rather than fatal.",
+"alone, universally attractive. This is scalar (Nordström) gravity, and an exhaustive arc of measurements then shows "
+"it is not a way-station to Einstein: a static mass sources the Newtonian time potential but never the spatial "
+"curvature that bends light, in every channel tested — smooth loop, elastic body force, compression, and the "
+"topological disclination channel, in the continuum and directly on the lattice — so the light-bending parameter γ "
+"is zero at every scale, and general relativity would require a background-independent construction rather than a "
+"refinement of this one. The barriers usually fatal to a 'space is a medium' theory are surmountable one at a time; "
+"the honest ceiling is that most results are internal consistency or the reproduction of known physics, that the "
+"single-outcome problem, the specific Standard-Model group and the observed cosmological constant remain open, and "
+"that the reach beyond reproduction is the one structurally-robust, still-unfalsified Lorentz-violation prediction.",
 ]
 for para in A:
     p=body(para, size=10); p.paragraph_format.left_indent=Inches(0.25); p.paragraph_format.right_indent=Inches(0.25)
