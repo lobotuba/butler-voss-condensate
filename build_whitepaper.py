@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-33")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-34")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1995,6 +1995,50 @@ result("Result 8.47 — the Dirac cone survives phonon fluctuations to all order
 "symmetry-preserving scheme is required to settle it. The two-cone mismatch is thus established as harmless; whether it "
 "vanishes is open.")
 
+heading("8.48  The generation number as a measured band-structure invariant", 2)
+body("Section 8.43 reframed the number of fermion families as a Chern index rather than a continuous parameter, but it "
+"only computed a Chern number of one, for a Wilson band, and it asserted rather than measured the bulk-boundary count "
+"that ties that index to a family of chiral fermions. This section makes the statement a measurement, on the medium's "
+"own two-band structure. The emergent low-energy fermion has two sublattices, H(k) = d(k)·σ, and the generation content "
+"is the Chern number of the occupied band — which is exactly the number of times the inter-sublattice coupling winds "
+"around the Brillouin zone. Taking a coupling that winds n times, (sin k_x + i sin k_y)^n, gapped by a Wilson mass, the "
+"family number is read out two independent ways that must agree. In the bulk, the Fukui–Hatsugai–Suzuki lattice flux — "
+"a gauge-invariant integer on any grid — gives Chern number C = −n for n = 1, 2, 3. On the boundary, a cylinder "
+"(periodic in one direction, open in the other) carries exactly n in-gap chiral branches crossing zero energy on each "
+"edge, counted directly from the ribbon spectrum. Bulk and boundary agree: the generation number is a measured integer, "
+"the winding of one structural function, quantized by topology rather than tuned.")
+body("The two edges carry their n branches with opposite chirality, so the closed lattice nets to zero — the "
+"Nielsen–Ninomiya theorem, here measured (the fitted branch slopes give +n on one edge and −n on the other). This has a "
+"concrete structural consequence: n net-chiral generations cannot be a property of a bulk two-dimensional medium, they "
+"must live on a defect — an edge or domain wall — with the opposite chirality residing elsewhere as a compensating "
+"mirror sector, consistent with the domain-wall mechanism by which the model produces a chiral fermion at all. What this "
+"does not do is derive the number three. The winding is a free integer; nothing in the medium's currently-known "
+"structure pins it. The result converts 'why three generations' into 'the inter-sublattice coupling winds three times' — "
+"a measured geometric restatement of the same input, with the count now a band-structure invariant rather than an "
+"arbitrary continuous parameter.")
+body("The winding also reconciles the two mechanisms that Section 8.43 had left as separate statements. A winding-n "
+"point is a multi-Weyl point — the inter-sublattice coupling has a degree-n zero — and such points are protected only by "
+"crystalline symmetry, hence fine-tuned. A generic perturbation (a uniform inter-sublattice coupling suffices) splits "
+"the degree-n zero into exactly n unit-winding Dirac points, with the total winding conserved at n; this is measured by "
+"the contour winding of the coupling, which reads n around the multi-Weyl point and one around each fragment, summing to "
+"n. The robust content of 'n generations' is therefore n ordinary Dirac points — a count of fermion doublers — rather "
+"than a fragile n-fold degeneracy, and the single multi-Weyl point is only the symmetric limit. That identifies Section "
+"8.43's flavour count (the number of Dirac points) and its generation index (the Chern number) as one and the same "
+"conserved integer: the Chern number is the summed chirality, i.e. the summed winding, of the Dirac points, so counting "
+"them and computing the topological index return the same number.")
+result("Result 8.48 — the generation number is a measured topological invariant of the emergent band, not a tuned "
+"parameter.", "The number of fermion families equals the Chern number of the two-band medium fermion — the winding of "
+"its inter-sublattice coupling around the Brillouin zone — and is read out two agreeing ways for winding n = 1, 2, 3: "
+"the bulk Fukui–Hatsugai–Suzuki lattice flux gives C = −n exactly, and a cylinder carries exactly n chiral edge "
+"branches, measured from the ribbon spectrum rather than asserted (upgrading §8.43). The two edges carry opposite "
+"chirality (fitted slopes ±n), so by Nielsen–Ninomiya the closed lattice nets to zero: the n net-chiral generations "
+"must live on a defect (edge/domain wall) with a compensating mirror sector. The winding-n point is a fine-tuned "
+"multi-Weyl degeneracy that a generic perturbation fragments into n unit-winding Dirac points (total winding conserved), "
+"so the robust family number is a count of ordinary Dirac points — which unifies §8.43's flavour count and Chern index "
+"as one conserved integer. Honest scope: this does not derive three — "
+"the winding is a free integer, so 'why three' becomes the measured, geometric statement 'the coupling winds three "
+"times', the family count now a quantized band invariant rather than a continuous input.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2063,7 +2107,8 @@ table(["Barrier","Status","Key result"],
   ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"],
   ["Angular stiffness does triple duty","fermion lattice + stability + Lorentz cone from one knob (§8.45)","the non-centrality §8.44 needs for the honeycomb is the same one §8.1 needs for a single Lorentz cone. Same force model, elastic constants vs the same lambda: triangular control gives c_L/c_T=sqrt3 and nu=1/3 (matches the medium's 1.7330, 0.330); central-force honeycomb has mu=0 (floppy, coordination 3 < Maxwell 4, no transverse cone). Turning on O(1) angular stiffness selects the honeycomb (lambda*~0.57), rigidifies it, AND is the SOLE source of its transverse cone: bulk modulus K is lambda-independent to machine precision (compression is central), shear modulus mu and c_T are entirely angular-sourced (0 -> O(1), c_T~sqrt(lambda)). Full c_L=c_T is the mu>>K limit past lambda* (§8.1's vector-Hooke). Two independent barriers turn on one property of the medium"],
   ["Mechanical vs fermion cone","two cones, but the mismatch is benign (§8.46)","the angular stiffness gives a mechanical cone c_T (§8.45) while the Dirac fermions have their own cone v_F=(3/2)ta from the hopping -- independent knobs, equal only by tuning (t~1.11). But the emergent matter and the composite photon/graviton ride v_F (the interband particle-hole collective mode -> v_F|q|), and a phonon is an off-diagonal bond perturbation = a pseudo-gauge field: it moves the Dirac point without gapping it (chiral protection; only an O(1) Lifshitz distortion annihilates the cone, and an on-site sublattice mass -- which a phonon cannot make -- gaps it at once). So v_F, the emergent Lorentz cone, is insulated from the mechanical sound; c_T is a decoupled sub-quantum spectator (Volovik). Scope: static-phonon (gauge-field) protection; the dynamical self-energy is a further computation"],
-  ["Dirac cone vs phonon fluctuations","survives to all orders; whether cones merge is regulator-limited (§8.47)","a phonon is a bond (off-diagonal) term, chiral-odd under S H S=-H, so it cannot make the chiral-even sublattice mass that gaps the cone -- at any order (bond and mass carry exactly opposite chiral parity, machine zero; random bond disorder stays gapless to O(1), a staggered mass gaps at once). Closes the DYNAMICAL two-cone seam: the mechanical sound can't spoil the fermion cone, statically or dynamically, by exact symmetry. OPEN (regulator-limited): whether v_F and c_T actually MERGE (full Lorentz) is a two-velocity RG with no covariant cutoff -- one loop fails its own gamma_v=gamma_c gate at v=c, like §8.29's Ward identity. So the mismatch is harmless; whether it vanishes is open"]],
+  ["Dirac cone vs phonon fluctuations","survives to all orders; whether cones merge is regulator-limited (§8.47)","a phonon is a bond (off-diagonal) term, chiral-odd under S H S=-H, so it cannot make the chiral-even sublattice mass that gaps the cone -- at any order (bond and mass carry exactly opposite chiral parity, machine zero; random bond disorder stays gapless to O(1), a staggered mass gaps at once). Closes the DYNAMICAL two-cone seam: the mechanical sound can't spoil the fermion cone, statically or dynamically, by exact symmetry. OPEN (regulator-limited): whether v_F and c_T actually MERGE (full Lorentz) is a two-velocity RG with no covariant cutoff -- one loop fails its own gamma_v=gamma_c gate at v=c, like §8.29's Ward identity. So the mismatch is harmless; whether it vanishes is open"],
+  ["Generation number","a measured band invariant, not a tuned parameter (§8.48)","the family number is the Chern number of the two-band medium fermion = the winding of its inter-sublattice coupling around the BZ. Read out two agreeing ways for winding n=1,2,3: the bulk Fukui-Hatsugai-Suzuki lattice flux gives C=-n exactly, and a cylinder carries exactly n chiral edge branches, MEASURED from the ribbon spectrum (upgrades §8.43's asserted bulk-boundary count to a measurement). The two edges carry opposite chirality (fitted slopes +-n), so by Nielsen-Ninomiya the closed lattice nets to zero: the n net-chiral generations must live on a defect (edge/domain wall) with a compensating mirror sector. The winding-n point is a fine-tuned multi-Weyl degeneracy that a generic perturbation fragments into n unit Dirac points (total winding conserved), so the robust count is n ordinary Dirac points -- unifying §8.43's flavour count [A] and Chern index [B] as one conserved integer. Does NOT derive three -- the winding is a free integer, so 'why three' becomes the measured geometric statement 'the coupling winds three times', the count now a quantized band invariant rather than a continuous input"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2273,7 +2318,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lattice_selection.py (§8.44); "
 "test_cone_unification.py (§8.45); "
 "test_two_cones.py (§8.46); "
-"test_chiral_protection.py (§8.47).")
+"test_chiral_protection.py (§8.47); "
+"test_generations.py (§8.48).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
