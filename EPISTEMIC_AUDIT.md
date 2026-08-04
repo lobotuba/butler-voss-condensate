@@ -60,7 +60,7 @@ than new predictions.
 | 8.9 | Shielding / gravity claim retracted | **N** | retraction |
 | 8.10 | Working long-range gravity (amplitude mode) | **X** | mechanism: gravity as a massless amplitude mode |
 | 8.11 | Graviton deconfines | **X** + K | the long-range force is the massless deconfined tensor mode |
-| 8.12 | Induced gravity healthy, spin-2, "Einstein in the IR" | **O** | μ > 0 (attractive sign) *measured*, healthy spin-2 in 3+1D — a strong output. **⚠ the "Einstein in IR" clause is in tension with §8.32–8.37 (γ=0); see coherence flag below** |
+| 8.12 | Induced gravity healthy + dynamical spin-2 graviton | **O** | μ > 0 (attractive sign) *measured*, healthy dynamical spin-2 in 3+1D — a strong output. The Einstein limit is stated as a conditional (Weinberg), premise measured to fail in §8.32–8.37; coherence flag resolved (WP-35) |
 | 8.13 | Cosmological constant dissolved | **O** | vacuum gravitates −P, zero at equilibrium across 122 orders with no tuning — a structural cancellation |
 | 8.14 | Emergent Yang–Mills | **K** + C | induced non-Abelian gauge action from the fermion loop; the *group* is an input |
 | 8.15 | Chirality consistent by anomaly inflow | **K** + O | Callan–Harvey inflow instantiated; the integers (Chern = modes = pumped charge) measured |
@@ -122,13 +122,34 @@ prediction, the "semiclassical geometry is demonstrably wrong" self-finding (§8
 the §8.45 over-claim self-correction, and the open velocity-merge (§8.47). A program
 that reverses itself this often under its own scrutiny is behaving authentically.
 
-## Coherence flag (for a future consolidation pass)
+## Coherence flag — RESOLVED (WP-35)
 
-One apparent internal tension the audit surfaces: §8.12 asserts the induced graviton is
-"Einstein in the infrared" (via the lattice-Ward result), while §8.32–§8.37 conclude
-γ = 0 at every scale. These are likely two different sectors — the deconfined tensor
-graviton vs the scalar amplitude mode that couples to matter — but the whitepaper should
-state the reconciliation explicitly rather than leave both claims standing side by side.
+The audit surfaced an apparent internal tension: §8.12's result headline asserted the
+induced graviton is "Einstein in the infrared," while §8.32–§8.37 conclude γ = 0 at every
+scale. WP-35 resolves it, in §8.12 itself (new reconciliation paragraph + tightened
+result), in the closing synthesis, in the §8 scorecard, and in the Table-5 row.
+
+The reconciliation is not "two sectors" but one conditional whose premise fails. Two
+distinct objects were being read under one "γ": (a) whether the spin-2 graviton **exists
+and is healthy** — a property of the induced propagator, *measured* and affirmative; and
+(b) whether a static mass **couples to that graviton's spatial polarizations** — the PPN
+ratio γ = Ψ/Φ, the thing an experiment weighs. Weinberg's theorem joins them only
+conditionally: *if* the mass couples to the massless spin-2, the coupling is forced to be
+Einstein (γ = 1); it says nothing if the coupling is absent. §8.32–§8.37 measure exactly
+that coupling and find it zero in every smooth channel (a scalar energy density cannot
+source the spin-2 spatial stress — a selection rule; every elastic/compressive route sets
+the spatial metric by local compression, not the Newtonian potential). So the premise
+fails as measured. §8.37 adds that the diffeomorphism breaking pinning γ off unity is
+*marginal* (does not flow away), the opposite RG fate from the *irrelevant* Lorentz
+breaking — so γ = 1 and emergent Lorentz are **not** emergent in the same sense, correcting
+a claim the old synthesis made.
+
+Net: §8.12's firm output is the healthy dynamical spin-2 graviton; "Einstein in the
+infrared" is the conclusion of a conditional the model's own later measurements contradict.
+As realized the model is **Nordström (γ = 0)** carrying a matter-decoupled spin-2 graviton
+alongside it; the Einstein completion rests solely on the one untested topological
+(disclination) coupling. No claims now stand side by side — the headline is demoted to a
+conditional at the point of assertion, with a forward reference to the arc that closes it.
 
 ## What would raise the grade
 

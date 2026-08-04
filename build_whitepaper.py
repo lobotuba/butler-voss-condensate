@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-34")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-35")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -852,17 +852,34 @@ body("The Einstein normalization γ = 1 is the transversality (Ward identity) of
 "model's emergent Lorentz invariance. It is read from Weinberg's theorem — a massless spin-2 coupled to the conserved "
 "infrared (Dirac) stress tensor is forced to be Einstein — now with the previously-missing ingredient supplied by "
 "measurement: the spin-2 graviton genuinely propagates and is healthy.")
-result("Result 8.12 — induced gravity is healthy, spin-2, and Einstein in the infrared.", "The induced Newtonian "
+body("Two distinct objects are in play here, and the report keeps them apart. One is whether the spin-2 graviton "
+"exists and is healthy — a property of the induced propagator, measured in this section and affirmative. The other "
+"is whether a static mass couples to that graviton's spatial polarizations — the coupling that fixes the "
+"post-Newtonian ratio γ = Ψ/Φ, and the quantity an experiment actually weighs. Weinberg's theorem joins them only "
+"conditionally: if the mass couples to the massless spin-2 at all, that coupling is forced to be Einstein; it says "
+"nothing when the coupling is absent. Sections 8.32-8.37 measure precisely this coupling and find it zero in every "
+"smooth channel — a scalar energy density cannot source the spin-2 spatial stress (a selection rule, Section 8.32), "
+"and every elastic and compressive route sets the spatial metric by local compression rather than by the Newtonian "
+"potential (Sections 8.33-8.36). The honest reconciliation is therefore that this section's genuine output is the "
+"healthy, dynamical spin-2 graviton, whereas the 'Einstein in the infrared' clause is the conclusion of a conditional "
+"whose premise the model's own later measurements contradict. As realized, the model is Nordström — scalar gravity, "
+"γ = 0 — with a healthy but matter-decoupled spin-2 mode also present; the Einstein completion would require the one "
+"untested channel, the topological disclination coupling, to be nonzero and proportional to the mass.")
+result("Result 8.12 — induced gravity is healthy and spin-2; its Einstein infrared limit is argued, not realized (resolved negatively in Sections 8.32-8.37).", "The induced Newtonian "
 "coupling has the same sign as the model's working photon: μ > 0, so the graviton of 8.11 deconfines into real "
-"attraction. In 3+1D the radiative spin-2 graviton is dynamical, doubly degenerate (helicity 2), and healthy. And "
-"γ = 1 follows from Weinberg on the conserved infrared stress tensor — an emergent identity, since diffeomorphism "
-"invariance (unlike the exactly-closing U(1) Ward identity) is not a lattice symmetry. The linearised Einstein term is thus reached as an infrared "
-"attractor, and Section 8.26 measures what that means: the far field forgets the ultraviolet "
-"coefficient exponentially, and the operators sort as a fixed point requires — higher-derivative "
-"structure irrelevant, a graviton mass relevant. Open still: the fixed point is empirical rather than "
-"protected, since no exact lattice symmetry forbids the one relevant deformation; the magnitude of G is "
-"cutoff-dependent (the Sakharov feature); γ = 1 remains argued rather than measured; and nothing here "
-"reaches the nonlinear Einstein equations.")
+"attraction. In 3+1D the radiative spin-2 graviton is dynamical, doubly degenerate (helicity 2), and healthy — the "
+"section's firm output. On the Einstein normalization the report draws a conditional line: Weinberg forces γ = 1 for "
+"a massless spin-2 coupled to the conserved infrared stress tensor, but this is emergent rather than lattice-exact "
+"(diffeomorphism invariance, unlike the exactly-closing U(1) Ward identity, is not a lattice symmetry) and, more "
+"decisively, conditional on the mass coupling to the graviton's spatial modes at all. The linearised Einstein term is "
+"thus reached as an infrared attractor only in that conditional sense, and Section 8.26 measures what the attractor "
+"language itself can carry: the far field forgets the ultraviolet coefficient exponentially, and the operators sort "
+"as a fixed point requires — higher-derivative structure irrelevant, a graviton mass relevant. Open still, and "
+"sharper than before: the fixed point is empirical rather than protected, since no exact lattice symmetry forbids the "
+"one relevant deformation; the magnitude of G is cutoff-dependent (the Sakharov feature); and γ = 1 is not merely "
+"unmeasured but resolved against — Sections 8.32-8.37 measure its Weinberg premise, that a static mass sources the "
+"graviton's spatial stress, to vanish in every smooth channel, leaving the model Nordström (γ = 0) in every realized "
+"coupling. Nothing here reaches the nonlinear Einstein equations.")
 
 heading("8.13  The cosmological constant", 2)
 body("The same induced vacuum stress that made the graviton Ward identity inhomogeneous is, physically, the "
@@ -2061,8 +2078,10 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "screened, and which at criticality yields Newton's law, 1/r^2, universally attractive. Sections 8.11-8.12 then carry "
 "gravity from that scalar force to the tensor theory: the confining curvature sector deconfines into a Newtonian "
 "graviton once the Sakharov loop supplies a positive Einstein term (and that sign is measured, μ > 0, by calibration "
-"against the model's own healthy photon), the radiative spin-2 graviton is dynamical and healthy in 3+1D, and γ = 1 "
-"follows from Weinberg as an infrared-emergent identity. Section 8.26 then tests the fixed-point language "
+"against the model's own healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. The "
+"Einstein normalization γ = 1 follows from Weinberg only conditionally — for a mass that couples to the graviton's "
+"spatial modes — and §8.32-8.37 measure that premise to fail in every smooth channel, so the realized theory is "
+"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Section 8.26 then tests the fixed-point language "
 "itself and narrows it: what is measured is that the linearised Einstein term is the infrared attractor, "
 "empirically rather than by protection. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
@@ -2082,7 +2101,7 @@ table(["Barrier","Status","Key result"],
   ["Quantum mechanics","largely emergent","quantizes to a relativistic QFT; and from the condensate directly (§8.6): the Schrödinger wave + ℏ as a material property, the Born rule as a stochastic attractor, and de Broglie v=∇(S)/m for a particle's own wave. Only guidance by a separate pilot wave + definite outcomes (measurement) stay a postulate"],
   ["Emergent photon","achieved","the Dirac-node position: a fluctuation of the medium's own bonds, on the fermion cone"],
   ["Long-range gravity","achieved as scalar gravity (§8.10)","the mediator is the condensate's amplitude mode: unprotected, hence gapped — which is why gravity always looked screened. It couples monopolarly to positive-definite energy, and scalar exchange between like charges attracts. Measured: λ*m_A = 1.00, and E = -C exp(-R/λ)/R exactly, so at criticality Newton's law, 1/r^2, universally attractive. The elastic route is provably dead (§8.9: Bitter-Crum + Eshelby-Crum)"],
-  ["Linearised general relativity","reached as an IR attractor, measured (§8.11-8.12, §8.26)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon); γ=1 follows from Weinberg on the conserved IR stress tensor. Diffeomorphism invariance is emergent (not a lattice symmetry), so γ=1 is an IR identity, not lattice-exact; the magnitude of G stays cutoff-dependent"],
+  ["Newtonian gravity + healthy spin-2 graviton","the graviton measured; the Einstein limit argued, not realized (§8.11-8.12, §8.26, §8.32-8.37)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. γ=1 follows from Weinberg only conditionally — for a mass that couples to the graviton's spatial modes — and §8.32-8.37 measure that premise to vanish in every smooth channel, so the realized theory is Nordström (γ=0). The Einstein normalization is emergent (diffeomorphism invariance is not a lattice symmetry), not lattice-exact; the magnitude of G stays cutoff-dependent; the one untested route to γ=1 is the topological disclination coupling"],
   ["Spin-2 graviton (dynamical)","achieved in 3+1D (§8.12)","the transverse-traceless graviton is non-dynamical in 2+1D (0 polarizations) but dynamical in 3+1D (2 polarizations): the induced TT kinetic term is nonzero, the two polarizations are degenerate (helicity 2), and the mode is healthy (same sign as the transverse photon)"],
   ["Empirical prediction","one testable, one out of reach (§8.16)","the n=2 Lorentz violation is safe vs every bound by ~16 orders — but being quadratic it is ~10^-16 below current sensitivity and not presently falsifiable (§8.8 tempered). The reachable prediction is gravitational: a scale-dependent γ below 1/m_A (§8.11), for which short-range tests already require m_A >~ 4 meV — within a factor 1.6 of the dark-energy scale, in the sub-mm window now being probed"],
   ["Gravitational back-reaction","runs as a conserving simulation (§8.18)","matter sources the potential and the potential moves matter, solved together: energy conserved to ~10^-9 and norm to ~10^-14, a self-gravitating bound soliton forms (a gravity-off control disperses), the relaxed soliton satisfies the virial identity 2T+W=0, and both converge under mesh refinement. Scope: non-relativistic, scalar/Newtonian, classical matter; the radiative spin-2 sector is not evolved"],
@@ -2230,9 +2249,14 @@ body("That scalar gravity was then carried the rest of the way to the tensor the
 "that induces the photon induces an Einstein term that deconfines it into a Newtonian graviton, and the sign that "
 "decides whether this works was measured, positive, by holding the induced gravity against the model's own healthy "
 "photon. In the physical four dimensions that graviton is a genuine dynamical spin-2 wave with two degenerate "
-"helicity-2 polarizations, and its Einstein normalization — light bending by the famous factor of two — follows from "
-"Weinberg's theorem as an infrared-emergent identity, in exactly the sense the model's Lorentz invariance is "
-"emergent, since diffeomorphism invariance is not a symmetry of any lattice. The same condensate structure then "
+"helicity-2 polarizations — a firm output. Its Einstein normalization — light bending by the famous factor of two — "
+"is another matter. Weinberg's theorem forces it only conditionally, for a mass that actually couples to the spin-2 "
+"mode's spatial polarizations, and Sections 8.32-8.37 measure that coupling to vanish in every smooth channel the "
+"model exposes; so the factor of two is argued, not realized. And unlike the model's emergent Lorentz invariance — "
+"whose lattice breaking is irrelevant and flows to zero in the infrared — the diffeomorphism breaking that pins γ "
+"off unity is marginal and does not flow away (Section 8.37), so the two are not, in fact, emergent in the same "
+"sense. As realized the model is Nordström: a healthy scalar gravity carrying a matter-decoupled spin-2 graviton "
+"alongside it, with the Einstein completion resting on the one untested topological channel. The same condensate structure then "
 "disarms the deepest quantitative disaster in physics: the vacuum's enormous zero-point energy does not gravitate, "
 "because a self-sustained condensate gravitates its grand potential, which vanishes at equilibrium for any bare "
 "value — the cosmological-constant fine-tuning dissolved, though not its observed residue derived. And the induction "
