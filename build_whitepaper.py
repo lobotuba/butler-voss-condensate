@@ -2038,6 +2038,14 @@ result("Result 8.48 — the generation number is a measured topological invarian
 "as one conserved integer. Honest scope: this does not derive three — "
 "the winding is a free integer, so 'why three' becomes the measured, geometric statement 'the coupling winds three "
 "times', the family count now a quantized band invariant rather than a continuous input.")
+body("A construction that measures a winding it was built to have invites an authenticity check: does the topological "
+"machinery compute real invariants, or does it reflect the input back? The guard is to run the identical code on "
+"independent models it was not built for. The same Fukui–Hatsugai–Suzuki flux reproduces the Haldane model's analytic "
+"topological phase boundary |M| = 3√3 t₂ sin φ (the number 3√3 = 5.196, recovered for three values of φ) with its ±1 "
+"Chern lobes, and the same honeycomb tight-binding reproduces graphene's bandwidth 6t and Fermi velocity v_F = (3/2) t a "
+"to five digits — all un-tuned. So the §8.48 integers are the code computing real topology, not a construction "
+"reflecting itself. This validates the tooling's correctness, and only that; it is not a claim of contact with "
+"experiment.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -2319,7 +2327,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_cone_unification.py (§8.45); "
 "test_two_cones.py (§8.46); "
 "test_chiral_protection.py (§8.47); "
-"test_generations.py (§8.48).")
+"test_generations.py (§8.48); "
+"test_validation_anchors.py (§8.48, un-tuned Haldane + graphene cross-checks).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
