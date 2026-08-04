@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-31")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-32")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1933,6 +1933,35 @@ result("Result 8.45 — one order-unity angular stiffness does the work of three
 "electronic hopping (v_F = (3/2) t a) and is an independent scale, so locking it to the boson cone — cross-statistics "
 "universality — remains the composite-boson question of Section 8.1, which this stiffness does not by itself settle.")
 
+heading("8.46  Two cones, one of them physical: the mechanical sound does not spoil the fermion cone", 2)
+body("Section 8.45 gave the honeycomb a mechanical acoustic cone c_T. The matter that lives on the honeycomb, though, "
+"are the Dirac fermions of Section 8.2, whose cone v_F = (3/2) t a is set by the electronic hopping t — a different "
+"scale. This asks whether the two are one cone and, if not, whether the mismatch spoils the emergent Lorentz "
+"invariance. Three measurements answer it. First, the cones answer to independent knobs: the hopping t moves v_F with "
+"the mechanics fixed, while the angular stiffness λ moves c_T with the hopping fixed, so they coincide only at a tuned "
+"hopping (t ≈ 1.11 here) that no symmetry enforces — the cross-statistics two-cone problem of Section 8.5, now between "
+"the mechanical phonon and the fermion. Second, the physical emergent boson rides v_F, not c_T: the lower edge of the "
+"interband particle-hole continuum, ω_min(q) = min_k t(|f(k+q)| + |f(k)|), goes to v_F |q| as q → 0, so the composite "
+"photon and graviton of Sections 8.5 and 8.7 are on the fermion cone. Third, and decisively, the mismatch is benign. A "
+"phonon is a bond-length modulation — a strain-dependent hopping, an off-diagonal Bloch term — so it preserves the "
+"sublattice (chiral) symmetry and cannot make a mass; it only moves the Dirac point, a pseudo-gauge field, keeping the "
+"cone gapless. At realistic (small) amplitude every phonon pattern leaves the gap at zero, and only an order-unity "
+"distortion annihilates the cone in a Lifshitz transition (a uniform stretch never does; a shear doublet at u ≈ 1, a "
+"single bond at u ≈ 1.5). The contrast is an on-site sublattice mass, which gaps the cone at once — exactly the term a "
+"bond phonon is forbidden from producing.")
+result("Result 8.46 — the medium has two cones, but only the fermionic one is physical, and the mechanical one cannot "
+"spoil it.", "The mechanical acoustic cone c_T (Section 8.45) and the fermion cone v_F (the electronic hopping) are "
+"independent knobs that coincide only by tuning. But the emergent relativistic matter, and the composite photon and "
+"graviton, ride v_F — the interband particle-hole collective mode goes to v_F |q| — and a phonon, being an off-diagonal "
+"bond perturbation, acts on the fermions only as a pseudo-gauge field: it moves the Dirac point without gapping it, and "
+"cannot make the on-site mass that would. The cone's survival is topological, holding until an order-unity Lifshitz "
+"distortion. So the two-cone mismatch is harmless: the fermion cone, which is the emergent Lorentz cone, is insulated "
+"from the medium's own sound, and c_T is a decoupled sub-quantum spectator — the Volovik picture, in which the "
+"underlying atoms' sound and the emergent light live on different cones without conflict. The photon and graviton "
+"kinetic terms are induced by the fermion loop (Sections 8.5, 8.7), so they inherit v_F rather than the bare "
+"elasticity. Scope: the protection is shown for a static (frozen) phonon acting as a gauge field; the dynamical phonon "
+"self-energy on the cone is a further computation, but the cone's survival is topological rather than perturbative.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -1999,7 +2028,8 @@ table(["Barrier","Status","Key result"],
   ["Hypercharges / charge quantisation","derived from anomaly cancellation (§8.42)","the model's exact emergent gauge invariance forbids a gauge anomaly, so anomaly cancellation is mandatory. Given only the one-generation representations, the four conditions ([SU3]^2U1, [SU2]^2U1, grav^2 U1, U1^3) fix the five hypercharges uniquely (up to scale and the u<->d relabelling) to the SM values 1/6,-2/3,1/3,-1/2,1. Hence Q=T3+Y is quantised: quarks +2/3,-1/3, leptons 0,-1, proton+electron charge = 0 to 1e-16. Charge quantisation as a consistency requirement. Scope: fixes hypercharges GIVEN reps and content"],
   ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"],
   ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"],
-  ["Angular stiffness does triple duty","fermion lattice + stability + Lorentz cone from one knob (§8.45)","the non-centrality §8.44 needs for the honeycomb is the same one §8.1 needs for a single Lorentz cone. Same force model, elastic constants vs the same lambda: triangular control gives c_L/c_T=sqrt3 and nu=1/3 (matches the medium's 1.7330, 0.330); central-force honeycomb has mu=0 (floppy, coordination 3 < Maxwell 4, no transverse cone). Turning on O(1) angular stiffness selects the honeycomb (lambda*~0.57), rigidifies it, AND is the SOLE source of its transverse cone: bulk modulus K is lambda-independent to machine precision (compression is central), shear modulus mu and c_T are entirely angular-sourced (0 -> O(1), c_T~sqrt(lambda)). Full c_L=c_T is the mu>>K limit past lambda* (§8.1's vector-Hooke). Two independent barriers turn on one property of the medium"]],
+  ["Angular stiffness does triple duty","fermion lattice + stability + Lorentz cone from one knob (§8.45)","the non-centrality §8.44 needs for the honeycomb is the same one §8.1 needs for a single Lorentz cone. Same force model, elastic constants vs the same lambda: triangular control gives c_L/c_T=sqrt3 and nu=1/3 (matches the medium's 1.7330, 0.330); central-force honeycomb has mu=0 (floppy, coordination 3 < Maxwell 4, no transverse cone). Turning on O(1) angular stiffness selects the honeycomb (lambda*~0.57), rigidifies it, AND is the SOLE source of its transverse cone: bulk modulus K is lambda-independent to machine precision (compression is central), shear modulus mu and c_T are entirely angular-sourced (0 -> O(1), c_T~sqrt(lambda)). Full c_L=c_T is the mu>>K limit past lambda* (§8.1's vector-Hooke). Two independent barriers turn on one property of the medium"],
+  ["Mechanical vs fermion cone","two cones, but the mismatch is benign (§8.46)","the angular stiffness gives a mechanical cone c_T (§8.45) while the Dirac fermions have their own cone v_F=(3/2)ta from the hopping -- independent knobs, equal only by tuning (t~1.11). But the emergent matter and the composite photon/graviton ride v_F (the interband particle-hole collective mode -> v_F|q|), and a phonon is an off-diagonal bond perturbation = a pseudo-gauge field: it moves the Dirac point without gapping it (chiral protection; only an O(1) Lifshitz distortion annihilates the cone, and an on-site sublattice mass -- which a phonon cannot make -- gaps it at once). So v_F, the emergent Lorentz cone, is insulated from the mechanical sound; c_T is a decoupled sub-quantum spectator (Volovik). Scope: static-phonon (gauge-field) protection; the dynamical self-energy is a further computation"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2207,7 +2237,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_anomaly_hypercharge.py (§8.42); "
 "test_sm_structure.py (§8.43); "
 "test_lattice_selection.py (§8.44); "
-"test_cone_unification.py (§8.45).")
+"test_cone_unification.py (§8.45); "
+"test_two_cones.py (§8.46).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
