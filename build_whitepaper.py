@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-37")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-38")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -619,13 +619,17 @@ body("So a slow wave packet of the emergent field must spread at the exact Schr�
 "gap alone (0.4%). Superposition and interference are automatic, since it is a linear wave. Half of quantum "
 "mechanics — the wave mechanics and ℏ — is free.")
 body("probabilistic half. That |ψ|^2 is a probability is the genuinely hard part, and linear wave dynamics do not "
-"supply it. Nelson's theorem provides the mechanism the condensate already contains: |ψ|^2 is the equilibrium of a "
-"diffusion whose noise is the medium's own fluctuations (the same ℏ/2m) and whose osmotic drift, u = (ℏ/2m) "
-"d/dx ln|ψ|^2, is nothing but the ordinary entropic force down a density gradient. The decisive, non-trivial "
-"claim (Valentini's quantum relaxation) is that |ψ|^2 is not merely consistent but an attractor. Started in a "
-"wrong (uniform, non-Born) ensemble, the density relaxes to |ψ|^2 — the Kullback-Leibler divergence falling from "
-"4.39 to 10^-4 for a ground state and from 2.82 to 2×10^-4 for a structured interference density. The Born rule is thus "
-"dynamically inevitable, not postulated.")
+"supply it. Nelson's construction supplies the mechanism, and the condensate supplies its one scale: |ψ|^2 is the "
+"equilibrium of a diffusion whose noise is set by the medium's own fluctuation strength (the same ℏ/2m derived in "
+"8.6a) and whose osmotic drift, u = (ℏ/2m) d/dx ln|ψ|^2, is the ordinary entropic force down a density gradient. The "
+"decisive, non-trivial claim (Valentini's quantum relaxation) is that |ψ|^2 is not merely consistent but an "
+"attractor. Started in a wrong (uniform, non-Born) ensemble, the density relaxes to |ψ|^2 — the Kullback-Leibler "
+"divergence falling from 4.39 to 10^-4 for a ground state and from 2.82 to 2×10^-4 for a structured interference "
+"density. So |ψ|^2 is the unique equilibrium probability, an attractor rather than a postulate — with one boundary "
+"stated the same way in the underlying test: the osmotic drift is read from |ψ| itself (the guiding wave, as in "
+"Nelson/Bohm), so the wavefunction is still needed and it is only its modulus-squared that is derived. Deriving the "
+"drift from the sub-quantum medium, rather than reading it off |ψ|, is not done here; what the medium genuinely "
+"fixes is the diffusion scale ℏ/2m, and the Born statistics then follow as that diffusion's equilibrium.")
 body("the guidance, and the honest boundary. What still linked the two halves by hand was the guidance rule — that a "
 "particle moves with its wave, v = ∇(S)/m. de Broglie's double solution offers to derive it from one field: far "
 "from the particle the smooth pilot wave, at the particle a localized soliton core of the same field. Realized in "
@@ -637,8 +641,11 @@ body("the guidance, and the honest boundary. What still linked the two halves by
 "scatters it weakly. de Broglie's full double solution — a soliton phase-locked to and steered by a distinct pilot "
 "wave — is not realized by naive non-linear superposition, the very step he never rigorously closed.")
 result("Result 8.6 — most of quantum mechanics is condensate mechanics.", "Emergent from the medium alone: the "
-"Schrödinger wave and ℏ as a material property (8.6a), the Born rule as a stochastic attractor, and de Broglie's "
-"v = ∇(S)/m for a particle's own wave. not emergent: the guidance of a particle by a separate pilot wave and the "
+"Schrödinger wave and ℏ as a material property (8.6a), and de Broglie's v = ∇(S)/m for a particle's own wave. "
+"Emergent given the wave: the Born rule as the unique equilibrium of a Nelson diffusion whose scale is the medium's "
+"ℏ/2m — a Valentini attractor, not a postulate, though its osmotic drift is read from |ψ| rather than derived from "
+"the sub-quantum medium (the wavefunction is still needed; only its modulus-squared is derived). not emergent: the "
+"guidance of a particle by a separate pilot wave and the "
 "selection of a single definite outcome — the hard core of the measurement problem, which stays a postulate here as "
 "it does everywhere. The honest boundary is clean: most of quantum mechanics is mechanics of the condensate; the "
 "residue is exactly the piece that is unsolved for everyone.")
@@ -2162,7 +2169,7 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 table(["Barrier","Status","Key result"],
  [["Emergent Lorentz","achieved","one round universal cone, violations ~ (E/E_Planck)^2; cross-statistics universality holds once the boson is a fermion composite (§8.5)"],
   ["Fermions","achieved","Dirac cone on honeycomb; single chiral fermion on a domain wall (evades Nielsen-Ninomiya)"],
-  ["Quantum mechanics","largely emergent","quantizes to a relativistic QFT; and from the condensate directly (§8.6): the Schrödinger wave + ℏ as a material property, the Born rule as a stochastic attractor, and de Broglie v=∇(S)/m for a particle's own wave. Only guidance by a separate pilot wave + definite outcomes (measurement) stay a postulate"],
+  ["Quantum mechanics","largely emergent","quantizes to a relativistic QFT; and from the condensate directly (§8.6): the Schrödinger wave + ℏ as a material property, the Born rule as a Valentini attractor (the unique equilibrium of a Nelson diffusion at the medium's own ℏ/2m — though its drift is read from |ψ|, not yet derived from the sub-quantum medium), and de Broglie v=∇(S)/m for a particle's own wave. Only guidance by a separate pilot wave + definite outcomes (measurement) stay a postulate"],
   ["Emergent photon","achieved","the Dirac-node position: a fluctuation of the medium's own bonds, on the fermion cone"],
   ["Long-range gravity","achieved as scalar gravity (§8.10)","the mediator is the condensate's amplitude mode: unprotected, hence gapped — which is why gravity always looked screened. It couples monopolarly to positive-definite energy, and scalar exchange between like charges attracts. Measured: λ*m_A = 1.00, and E = -C exp(-R/λ)/R exactly, so at criticality Newton's law, 1/r^2, universally attractive. The elastic route is provably dead (§8.9: Bitter-Crum + Eshelby-Crum)"],
   ["Newtonian gravity + healthy spin-2 graviton","the graviton measured; the Einstein limit argued, not realized (§8.11-8.12, §8.26, §8.32-8.37)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. γ=1 follows from Weinberg only conditionally — for a mass that couples to the graviton's spatial modes — and §8.32-8.37 measure that premise to vanish in every smooth channel, so the realized theory is Nordström (γ=0). The Einstein normalization is emergent (diffeomorphism invariance is not a lattice symmetry), not lattice-exact; the magnitude of G stays cutoff-dependent; and §8.49 measures even the topological disclination channel to give zero (the mass compresses the medium but nucleates no net curvature charge), so γ=1 is closed in every channel, continuum and discrete"],

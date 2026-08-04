@@ -185,6 +185,22 @@ the prediction it promoted (gravitational γ) is dead. Edits: §8.11 re-scoped, 
 README `test_two_gravities` / `test_experimental_bounds` rows flagged superseded. This is the
 kind of self-catch the report's closing line calls the point of the exercise.
 
+## Third catch (WP-38): the Born rule aligned to its own test
+
+Extending the sweep to the boldest non-gravity claim — "we derived the Born rule" (§8.6) —
+found a mild overclaim relative to §8.6's *own* test. `test_born_rule` simulates a Nelson/
+Valentini diffusion whose osmotic drift is read from the target |ψ| and whose scale ν = ℏ/2m is
+put in, and its verdict says so plainly ("the drift is set by |ψ|… deriving the guiding wave's
+drift from the sub-quantum medium is the remaining depth"). But §8.6's prose called it "the
+mechanism the condensate *already contains*" and its result listed the Born rule as "emergent
+from the medium **alone**." Tightened to match the test: the medium genuinely fixes the diffusion
+*scale* (ℏ/2m, derived in 8.6a and in `test_emergent_qm`), and |ψ|² is then the unique Valentini
+equilibrium — an attractor, not a postulate — but the osmotic *drift* is read from |ψ|, not
+derived from the sub-quantum medium, so the wavefunction is still needed and only its
+modulus-squared is derived. Net: no result changes, the claim is re-scoped from "from the medium
+alone" to "from the medium's ℏ, given the wave." §8.6, §8.6 result, and the Table-5 QM row edited;
+the "guidance not emergent / measurement a postulate" boundary was already honest and stands.
+
 ## What would raise the grade
 
 The audit's ceiling is **external validation**. Two concrete moves:
