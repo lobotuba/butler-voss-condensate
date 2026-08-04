@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-38")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-39")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2135,12 +2135,49 @@ result("Result 8.49 — the model's mass nucleates no net disclination charge; �
 "defined, and is the one thing this measurement cannot exclude by construction. Within the mechanism the model "
 "actually has, γ = 1 has now been sought and found absent in every channel, continuum and discrete.")
 
+heading("8.50  The measurement problem, as far as physics reaches: einselection by the medium", 2)
+body("Section 8.6 took quantum mechanics apart and left one residue it would not claim: the measurement problem's "
+"hard core, the selection of a single definite outcome, kept as a postulate. That residue has structure worth "
+"resolving, because the measurement problem is really two questions and only one of them is metaphysics. The first "
+"— why measurements have a preferred basis (position, not its superpositions) and why the interference between "
+"branches vanishes — is ordinary physics: decoherence, the environment monitoring the system, einselecting the "
+"basis that survives. The second — why one branch is realized rather than all of them — is the genuine hard core. "
+"This section measures exactly how far the first reaches, with the environment being nothing added: the condensate's "
+"own phonons.")
+body("The bath is the medium's measured spectrum. Relaxing the node medium and diagonalizing its dynamical matrix "
+"(the Hessian of the Lennard-Jones energy) gives the condensate's phonon modes; a which-path superposition of a "
+"system particle at two positions couples to the local displacement of the medium at the particle's site — the same "
+"'the medium responds to where the energy is' coupling that produces compression-gravity. The independent-boson "
+"(pure-dephasing) evolution is then exact, and four things follow. The off-diagonal coherence decays to zero while "
+"the populations stay frozen to machine precision — a superposition becomes a mixture (a coherence of 1.000 falls "
+"to 0.01 while the branch weights hold at 0.5). The basis that goes diagonal is position, the operator the bath "
+"couples to: a position eigenstate has nothing to dephase and is robust (its decoherence function is identically "
+"zero), while its superpositions die — the medium einselects the pointer basis rather than having one assumed. The "
+"rate scales as the square of the which-path separation — a fitted log-log slope of 2.0000 — so a mesoscopic "
+"superposition decoheres astronomically faster than a microscopic one, which is the quantitative origin of the "
+"quantum-classical boundary. And the surviving mixture carries the Born weights on its diagonal, unchanged.")
+result("Result 8.50 — the medium einselects pointer states and Born-weighted branches; the single outcome stays the "
+"only postulate.", "Decoherence is the part of the measurement problem that is physics, and the model supplies it "
+"from its own structure: coupling a which-path superposition to the condensate's measured phonon bath — through the "
+"same local coupling that makes compression-gravity — destroys the coherence between branches (1.000 → 0.01) while "
+"preserving their populations, einselects the position basis the bath monitors (a position eigenstate does not "
+"dephase; its superpositions do), and does so at a rate ∝ (separation)² (log-log slope 2.0000) that makes anything "
+"mesoscopic instantly classical. The classical mixture left behind carries the Born weights of §8.6 on its diagonal. "
+"The honest boundary, reached now from the other side: this is an improper mixture — the reduced system purity falls "
+"to Σ|c_i|² -weighted Tr(ρ²) = 0.50, the equal-branch floor, while the global system-plus-bath state stays pure "
+"(the evolution is unitary), so no single branch is selected. Einselection and Born weights are mechanism; which "
+"outcome occurs is untouched, exactly the hard core §8.6 marked — now shown to be genuinely all that remains, not a "
+"placeholder for missing physics. Scope: linear (pure-dephasing) system-bath coupling, for which the model is exact; "
+"the coupling strength sets only the decoherence timescale, not any of the four structural results.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
 "the individual results is that one principle — everything from one structure — surmounts several at once. Even quantum "
 "mechanics is largely condensate mechanics (§8.6): the Schrödinger wave, ℏ, the Born rule and de Broglie's "
-"λ = h/p emerge, leaving only the measurement problem's hard core as a postulate. Cast against experiment, the "
+"λ = h/p emerge; §8.50 then einselects the pointer basis and Born-weighted branches from the medium's own phonon "
+"bath (decoherence rate ∝ separation², an improper mixture), leaving only the single-outcome selection — the "
+"measurement problem's hard core — as a postulate. Cast against experiment, the "
 "model yields a specific, falsifiable Lorentz-violation signature (§8.8), its first genuine prediction. Gravity "
 "took the longest and required a retraction: §8.9 records the failure of every elastic route (the curvature sector is "
 "unshieldable but repulsive and growing; the tetrad is long-range in field but shieldable and force-free by "
@@ -2430,7 +2467,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_chiral_protection.py (§8.47); "
 "test_generations.py (§8.48); "
 "test_validation_anchors.py (§8.48, un-tuned Haldane + graphene cross-checks); "
-"test_gamma_nucleation.py (§8.49, disclination-nucleation channel).")
+"test_gamma_nucleation.py (§8.49, disclination-nucleation channel); "
+"test_decoherence.py (§8.50, einselection from the medium's phonon bath).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

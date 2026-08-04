@@ -103,6 +103,7 @@ than new predictions.
 | 8.47 | Chiral protection to all orders | **K** + N | exact chiral-symmetry theorem (gapless); whether v_F and c_T *merge* is regulator-limited and open |
 | 8.48 | Generation number a measured band invariant | **C** + K | winding chosen, winding measured (G1 ≈ identity, G4 ≈ fundamental theorem of algebra); bulk-boundary + NN are theorems, measured independently; **tooling validated un-tuned** (`test_validation_anchors`) |
 | 8.49 | Mass nucleates no net disclination charge | **N** + O | seventh γ=0, first at the microscopic level; compression measured (spacing 1.12→1.04) yet zero net charge; positive control (injected density, long-range) confirms the measurement is not blind; closes §8.33's last continuum assumption on the lattice |
+| 8.50 | Einselection + Born branches from the medium; single outcome not | **O** + N | decoherence from the medium's *own* measured phonon bath: pointer-basis einselection, coherence 1→0.01 with frozen populations, rate ∝ Δx² (slope 2.0000), Born-weighted improper mixture (reduced purity→0.50, global pure). The single-outcome hard core stays a postulate — the §8.6 boundary reached from the other side and shown to be all that remains |
 
 ## Phase-3 empirical core (pre-§8)
 
