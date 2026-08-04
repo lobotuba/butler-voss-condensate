@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-32")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-33")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -1962,6 +1962,39 @@ result("Result 8.46 — the medium has two cones, but only the fermionic one is 
 "elasticity. Scope: the protection is shown for a static (frozen) phonon acting as a gauge field; the dynamical phonon "
 "self-energy on the cone is a further computation, but the cone's survival is topological rather than perturbative.")
 
+heading("8.47  The Dirac cone survives phonon fluctuations to all orders: chiral protection", 2)
+body("Section 8.46 showed a static phonon acts as a pseudo-gauge field and cannot gap the Dirac cone. This closes the "
+"dynamical version, and by a symmetry that holds to all orders. A phonon is a bond-length modulation — an off-diagonal "
+"hopping term — and the honeycomb Dirac Hamiltonian carries the sublattice (chiral) symmetry S H S = −H with S the "
+"sublattice sign. A bond term is chiral-odd (it transforms like H), so it cannot generate the chiral-even mass that "
+"would open a gap, at any order, static or dynamical; the only gapping term is an on-site sublattice mass, which a bond "
+"phonon does not produce. The parities are exact numerically (the bond perturbation gives S δH S + δH = 0, the "
+"staggered mass gives S M S − M = 0, both to machine precision), and the consequence is verified on the spectrum: "
+"random bond disorder — a frozen-phonon ensemble, the fluctuation content a dynamical phonon supplies — keeps the "
+"honeycomb gapless at zero energy up to order-unity amplitude, while a staggered mass of 0.1 opens a hard gap. So the "
+"fermion cone survives phonon fluctuations, not by cancellation but by an exact symmetry.")
+body("What this does not settle is whether the two cones actually merge. The mechanical cone c_T and the fermion cone "
+"v_F coexist without conflict, but whether the velocity mismatch flows to zero in the infrared — v_F = c_T, a single "
+"cone rather than mere coexistence — is a two-velocity renormalisation-group question, and that calculation is "
+"regulator-limited. With two velocities there is no single Lorentz-covariant cutoff, so a hard momentum/frequency "
+"cutoff breaks the very symmetry it is meant to measure: the one-loop flow fails its own Lorentz gate — the anomalous "
+"velocity dimensions γ_v (fermion self-energy) and γ_c (boson polarisation), which must be equal at v = c, differ by an "
+"amount comparable to the signal, with a large non-logarithmic residual — exactly as the induced-graviton Ward identity "
+"of Section 8.29 failed under a hard cutoff. A symmetry-preserving scheme (dimensional regularisation, or the lattice "
+"Brillouin-zone regulator that rescued the lattice Ward identity) is needed to settle whether the cones merge. What is "
+"robust is the gaplessness, which rests on the exact chiral symmetry, not on a loop.")
+result("Result 8.47 — the Dirac cone survives phonon fluctuations to all orders, by chiral symmetry; whether the two "
+"cones merge is regulator-limited.", "A phonon is a bond (off-diagonal) term, chiral-odd under the sublattice symmetry "
+"S H S = −H, so it cannot generate the chiral-even mass that gaps the cone — at any order. Verified: the bond "
+"perturbation and the staggered mass carry exactly opposite chiral parity (machine zero), and random bond disorder "
+"keeps the spectrum gapless up to order-unity amplitude while a staggered mass gaps it at once. This closes the "
+"dynamical form of the two-cone seam — the mechanical sound cannot spoil the fermion cone, statically or dynamically, "
+"because the protection is an exact symmetry rather than a cancellation. The remaining refinement — whether v_F and c_T "
+"merge into one velocity in the infrared — is a two-velocity RG that is regulator-limited: no Lorentz-covariant cutoff "
+"exists for two velocities, so the one-loop flow fails its own γ_v = γ_c gate at v = c, as in Section 8.29, and a "
+"symmetry-preserving scheme is required to settle it. The two-cone mismatch is thus established as harmless; whether it "
+"vanishes is open.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2029,7 +2062,8 @@ table(["Barrier","Status","Key result"],
   ["SM group / generations","recast as discrete band topology (§8.43)","not derived, but the CATEGORY is fixed: the emergent gauge group is the symmetry of the lattice's Dirac-point multiplet (honeycomb = 2 valleys), and the generation count is a Chern index (integer, 0/+-1 computed, jumps only at gap closings), so a domain wall carries |ChernJump| chiral families. Why a compact group and a small integer of generations is answered (symmetry+topology of the band structure, quantized); why exactly SU(3)xSU(2)xU(1) and three is a discrete property of the physical medium's lattice, still input. The Yukawa/flavour structure also remains open"],
   ["Which lattice (the last SM input)","reduced to one property of the interaction: angular rigidity (§8.44)","the group and generation count are band data of the medium's lattice (§8.43), so the lattice is the remaining input. A central pair force gives the close-packed triangular/fcc lattice (coordination 6, no Dirac point); with any number of isotropic length scales at most the square lattice -- the bipartite honeycomb is never the ground state and is mechanically floppy (coordination 3 < the 2D Maxwell threshold 4). A 120-degree three-body term makes the honeycomb the ground state above λ* ~ 0.57 of the bond energy, and it then self-assembles and stays rigid (analytic force gated to 1e-10; a heated seed held at coordination 3 vs densifying to 6 without it). So the fermion lattice needs O(1) angular rigidity -- the same non-central stiffness emergent Lorentz required (§8.1). Does not derive which lattice; converts the input into one property of the interaction"],
   ["Angular stiffness does triple duty","fermion lattice + stability + Lorentz cone from one knob (§8.45)","the non-centrality §8.44 needs for the honeycomb is the same one §8.1 needs for a single Lorentz cone. Same force model, elastic constants vs the same lambda: triangular control gives c_L/c_T=sqrt3 and nu=1/3 (matches the medium's 1.7330, 0.330); central-force honeycomb has mu=0 (floppy, coordination 3 < Maxwell 4, no transverse cone). Turning on O(1) angular stiffness selects the honeycomb (lambda*~0.57), rigidifies it, AND is the SOLE source of its transverse cone: bulk modulus K is lambda-independent to machine precision (compression is central), shear modulus mu and c_T are entirely angular-sourced (0 -> O(1), c_T~sqrt(lambda)). Full c_L=c_T is the mu>>K limit past lambda* (§8.1's vector-Hooke). Two independent barriers turn on one property of the medium"],
-  ["Mechanical vs fermion cone","two cones, but the mismatch is benign (§8.46)","the angular stiffness gives a mechanical cone c_T (§8.45) while the Dirac fermions have their own cone v_F=(3/2)ta from the hopping -- independent knobs, equal only by tuning (t~1.11). But the emergent matter and the composite photon/graviton ride v_F (the interband particle-hole collective mode -> v_F|q|), and a phonon is an off-diagonal bond perturbation = a pseudo-gauge field: it moves the Dirac point without gapping it (chiral protection; only an O(1) Lifshitz distortion annihilates the cone, and an on-site sublattice mass -- which a phonon cannot make -- gaps it at once). So v_F, the emergent Lorentz cone, is insulated from the mechanical sound; c_T is a decoupled sub-quantum spectator (Volovik). Scope: static-phonon (gauge-field) protection; the dynamical self-energy is a further computation"]],
+  ["Mechanical vs fermion cone","two cones, but the mismatch is benign (§8.46)","the angular stiffness gives a mechanical cone c_T (§8.45) while the Dirac fermions have their own cone v_F=(3/2)ta from the hopping -- independent knobs, equal only by tuning (t~1.11). But the emergent matter and the composite photon/graviton ride v_F (the interband particle-hole collective mode -> v_F|q|), and a phonon is an off-diagonal bond perturbation = a pseudo-gauge field: it moves the Dirac point without gapping it (chiral protection; only an O(1) Lifshitz distortion annihilates the cone, and an on-site sublattice mass -- which a phonon cannot make -- gaps it at once). So v_F, the emergent Lorentz cone, is insulated from the mechanical sound; c_T is a decoupled sub-quantum spectator (Volovik). Scope: static-phonon (gauge-field) protection; the dynamical self-energy is a further computation"],
+  ["Dirac cone vs phonon fluctuations","survives to all orders; whether cones merge is regulator-limited (§8.47)","a phonon is a bond (off-diagonal) term, chiral-odd under S H S=-H, so it cannot make the chiral-even sublattice mass that gaps the cone -- at any order (bond and mass carry exactly opposite chiral parity, machine zero; random bond disorder stays gapless to O(1), a staggered mass gaps at once). Closes the DYNAMICAL two-cone seam: the mechanical sound can't spoil the fermion cone, statically or dynamically, by exact symmetry. OPEN (regulator-limited): whether v_F and c_T actually MERGE (full Lorentz) is a two-velocity RG with no covariant cutoff -- one loop fails its own gamma_v=gamma_c gate at v=c, like §8.29's Ward identity. So the mismatch is harmless; whether it vanishes is open"]],
  cap="Table 5.  The fundamental-physics barriers and their status in the model.")
 
 # ===== 9 Synthesis =====
@@ -2238,7 +2272,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_sm_structure.py (§8.43); "
 "test_lattice_selection.py (§8.44); "
 "test_cone_unification.py (§8.45); "
-"test_two_cones.py (§8.46).")
+"test_two_cones.py (§8.46); "
+"test_chiral_protection.py (§8.47).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
