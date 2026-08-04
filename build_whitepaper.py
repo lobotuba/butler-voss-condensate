@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-36")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-37")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -796,14 +796,22 @@ result("Result 8.10 — a working long-range gravity.", "Gravity is mediated by 
 
 heading("8.11  From scalar to tensor gravity: two gravities, and deconfinement", 2)
 body("Section 8.10 gives a scalar gravity, and the honest next question is whether the medium can reach the tensor "
-"theory — general relativity, with light bending and spin-2 waves. The model in fact carries two universal "
-"attractions that disagree on the light-bending parameter γ: the amplitude mode of 8.10 (spin-0, γ = 0) and "
-"the medium's incompatible-strain / curvature sector (spin-2, γ = 1). Which one dominates the long-range force is "
-"decided not by the couplings but by the mass: a massless mediator's 1/r always beats a massive mediator's Yukawa. So "
-"if the graviton is massless and the amplitude mode is gapped, γ climbs from 0 to 1 across the amplitude Compton "
-"wavelength 1/m_A — a falsifiable scale-dependent γ, GR at long range and scalar-contaminated below 1/m_A. This "
-"also reinterprets 8.10: making the scalar long-range by tuning m_A → 0 forces γ = 1/2, which is observationally "
-"excluded — so the amplitude mode should stay gapped, and gravity proper is the spin-2 graviton.")
+"theory — general relativity, with light bending and spin-2 waves. The model carries two universal attractions, the "
+"amplitude mode of 8.10 (spin-0) and the medium's incompatible-strain / curvature sector (spin-2). The program's "
+"working hypothesis at this point was that the two disagree on the light-bending parameter γ — 0 for the scalar, 1 "
+"for the spin-2 graviton — so that, a massless mediator's 1/r beating a massive Yukawa, γ would climb from 0 to 1 "
+"across the amplitude Compton wavelength 1/m_A: a scale-dependent γ, GR at long range and scalar-contaminated below "
+"1/m_A. That hypothesis is tested exhaustively in Sections 8.32–8.49, and the honest outcome, recorded here because "
+"the section is otherwise read as a positive step, is that it does not survive. The spin-2 sector as realized also "
+"gives γ = 0: a static mass sources the graviton's time component (Newtonian attraction) but not its spatial "
+"polarizations, in every channel, smooth and topological, continuum and discrete, so γ stays 0 at every scale "
+"(Section 8.37) and the realized theory is Nordström at all ranges, not GR at long range. The climb does not happen, "
+"and the scale-dependent γ it predicted is retracted with it. What survives this section, and is load-bearing, is "
+"narrower and genuinely a result: the confining spin-2 curvature sector deconfines into a real massless 1/r^2 "
+"Newtonian attraction once the induced Einstein term μ > 0 — the graviton exists and attracts, it simply does not "
+"bring the Einstein factor of two. This still reinterprets 8.10: tuning the scalar long-range by m_A → 0 forces "
+"γ = 1/2, observationally excluded, so the amplitude mode stays gapped and the long-range attraction is the "
+"deconfined graviton's — but as a Newtonian, not an Einstein, force.")
 body("But the spin-2 sector is confining in the pure medium. Its energy is the elastic cost of incompatible strain — "
 "the biharmonic (Kirchhoff-plate) action κ (∇²φ)^2 — whose 3D Green's function grows linearly with "
 "separation, giving a constant force between two curvature charges: a string tension, not a Newtonian force. To become "
@@ -978,7 +986,7 @@ body("The same confrontation retracts the 10^122 criticality tuning reported ear
 "on m_A, with no upper bound at all -- a larger gap is only safer -- and an untuned medium clears it by some thirty "
 "orders of magnitude. The fine-tuning is dissolved, not reduced. The scale-fixing result that a0 = l_Planck is "
 "unaffected and stands.")
-result("Result 8.16 — one prediction sharpened, one deflated, one tuning retracted.", "Confronted with data: the "
+result("Result 8.16 — one prediction sharpened, one deflated, one tuning retracted (the first two later inverted; see the correction that follows).", "Confronted with data: the "
 "quadratic Lorentz violation is safe by ~16 orders and, honestly, out of experimental reach -- not the testable "
 "prediction it was billed as. The gravitational prediction is testable: short-range tests already require the "
 "amplitude gap to exceed about 4 meV, coincidentally within a factor 1.6 of the dark-energy scale and squarely in "
@@ -987,6 +995,17 @@ result("Result 8.16 — one prediction sharpened, one deflated, one tuning retra
 "by the condensate's equilibrium thermodynamics, the model has now shed both of its 10^122 fine-tunings -- each "
 "removed by a structural result rather than a fitted parameter. (Scope: literature order-of-magnitude bounds, "
 "assuming comparable scalar and tensor couplings; loosening that weakens the gravitational bound proportionally.)")
+body("Later correction, kept explicit because both of this section's data verdicts were subsequently overturned by "
+"the program's own measurements. The Lorentz-violation signature deflated here is in fact the model's one surviving "
+"falsifiable prediction: Section 8.39 re-runs the confrontation against ultra-high-energy astrophysics, where a "
+"quadratic violation is bounded near the Planck scale rather than at the 10^10–10^12 GeV of photon time-of-flight, "
+"and finds the model only about 1.4 orders below the frontier — reachable by next-generation observatories, not out "
+"of reach. The gravitational scale-dependent γ promoted here to 'the real one' is, conversely, retracted: Sections "
+"8.32–8.49 measure γ = 0 at every scale and in every channel, so light-bending never climbs toward the Einstein "
+"value and there is no γ < 1 short-range deviation to detect. What stands unchanged is the third result — the "
+"retraction of the 10^122 criticality tuning — because it rests only on the long-range force being carried by the "
+"massless deconfined graviton (a Newtonian attraction whose range is 1/r regardless of γ), not on any light-bending "
+"claim. So the net of §8.16 inverts: the prediction it deflated is the live one, and the prediction it promoted is dead.")
 
 heading("8.17  The first dynamical integration: chiral matter and a gauge field, in real time", 2)
 body("Every result to this point -- emergent Lorentz invariance, chiral fermions, the induced photon and graviton, the "
@@ -2148,7 +2167,7 @@ table(["Barrier","Status","Key result"],
   ["Long-range gravity","achieved as scalar gravity (§8.10)","the mediator is the condensate's amplitude mode: unprotected, hence gapped — which is why gravity always looked screened. It couples monopolarly to positive-definite energy, and scalar exchange between like charges attracts. Measured: λ*m_A = 1.00, and E = -C exp(-R/λ)/R exactly, so at criticality Newton's law, 1/r^2, universally attractive. The elastic route is provably dead (§8.9: Bitter-Crum + Eshelby-Crum)"],
   ["Newtonian gravity + healthy spin-2 graviton","the graviton measured; the Einstein limit argued, not realized (§8.11-8.12, §8.26, §8.32-8.37)","the confining curvature sector deconfines into a Newtonian graviton once the induced Einstein term μ>0 (measured, by calibration against the healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. γ=1 follows from Weinberg only conditionally — for a mass that couples to the graviton's spatial modes — and §8.32-8.37 measure that premise to vanish in every smooth channel, so the realized theory is Nordström (γ=0). The Einstein normalization is emergent (diffeomorphism invariance is not a lattice symmetry), not lattice-exact; the magnitude of G stays cutoff-dependent; and §8.49 measures even the topological disclination channel to give zero (the mass compresses the medium but nucleates no net curvature charge), so γ=1 is closed in every channel, continuum and discrete"],
   ["Spin-2 graviton (dynamical)","achieved in 3+1D (§8.12)","the transverse-traceless graviton is non-dynamical in 2+1D (0 polarizations) but dynamical in 3+1D (2 polarizations): the induced TT kinetic term is nonzero, the two polarizations are degenerate (helicity 2), and the mode is healthy (same sign as the transverse photon)"],
-  ["Empirical prediction","one testable, one out of reach (§8.16)","the n=2 Lorentz violation is safe vs every bound by ~16 orders — but being quadratic it is ~10^-16 below current sensitivity and not presently falsifiable (§8.8 tempered). The reachable prediction is gravitational: a scale-dependent γ below 1/m_A (§8.11), for which short-range tests already require m_A >~ 4 meV — within a factor 1.6 of the dark-energy scale, in the sub-mm window now being probed"],
+  ["Empirical prediction","one genuine signature, near-Planckian (§8.8, §8.39)","the surviving falsifiable prediction is the n=2, species-universal, subluminal Lorentz violation; confronted with UHE astrophysics (§8.39) it sits ~1.4 orders below the frontier, not 16, and next-generation UHE observatories can reach it. The gravitational 'scale-dependent γ' once offered as the reachable prediction (§8.11) is RETRACTED: §8.32–8.49 measure γ = 0 at every scale, so γ does not climb to 1 and there is no GR-at-long-range to deviate from. Short-range gravity still bounds the scalar amplitude mode's gap (m_A >~ 4 meV, near the dark-energy scale), but that constrains the mode's range, not a light-bending signature"],
   ["Gravitational back-reaction","runs as a conserving simulation (§8.18)","matter sources the potential and the potential moves matter, solved together: energy conserved to ~10^-9 and norm to ~10^-14, a self-gravitating bound soliton forms (a gravity-off control disperses), the relaxed soliton satisfies the virial identity 2T+W=0, and both converge under mesh refinement. Scope: non-relativistic, scalar/Newtonian, classical matter; the radiative spin-2 sector is not evolved"],
   ["Magnitude of G","fixed at the Planck area (§8.19)","the Sakharov cutoff-ambiguity does not apply because the cutoff is physical (a0 = l_Planck): over the full Brillouin zone the induced stiffness is O(1) in lattice units, so G = O(1) a0^2, with G ~ a0^2/N_f. Gravity is weak because a0 is Planckian -- no hierarchy, no tuning. The O(1) coefficient stays scheme-sensitive"],
   ["Radiative back-reaction","integration closed for classical matter (§8.21)","matter, a dynamical radiative field and their energy exchange run in one evolution from one Hamiltonian: the matter energy falls by exactly what the field energy rises (2.0451×10^-2 vs 2.0452×10^-2, total conserved to 2×10^-6), a spherical control radiates 4×10^5 times less, and E_rad/g^2 is flat. Radiation reaction is derived, not inserted. Scope: classical, non-relativistic matter and linearised gravity, at exaggerated coupling"],
@@ -2270,10 +2289,14 @@ body("Starting from space as an active medium, the project produced persistent p
 "the guidance of a particle by a separate wave and the selection of a single outcome — the measurement problem's "
 "hard core — left as a postulate. And, for the first time, the model made a prediction rather than a reproduction: "
 "a Planck-suppressed, cross-species-universal, crystallographically-anisotropic quadratic Lorentz violation that "
-"survives every present bound. Put against real numbers, however, that particular signature proved safe but out of "
-"reach — a quadratic suppression sits some sixteen orders below current sensitivity — and the model's genuinely "
-"reachable prediction turned out to be gravitational instead: a scale-dependent light-bending parameter below the "
-"amplitude mode's Compton wavelength, in the sub-millimetre window short-range gravity experiments are entering now.")
+"survives every present bound. Put against real numbers in Section 8.39, that signature is not the safe-by-sixteen-"
+"orders curiosity it first seemed: because the violation is quadratic its strongest bounds are the near-Planckian "
+"ones from ultra-high-energy astrophysics, and the model's predicted quantum-gravity scale sits only about 1.4 "
+"orders above the current UHECR frontier — safe today, but within reach of next-generation ultra-high-energy "
+"observatories. That is the model's one genuine, still-open falsifiable prediction. The gravitational alternative "
+"once offered as the reachable one — a scale-dependent light-bending parameter below the amplitude mode's Compton "
+"wavelength — is retracted: Sections 8.32–8.49 measure γ = 0 at every scale, so light-bending never climbs toward "
+"the Einstein value and there is no scale-dependent deviation to look for.")
 body("The same discipline that produced those results also destroyed one, and then rebuilt it. Pressed on why gravity "
 "cannot be shielded, the model gave a clear answer -- screening is neutralization, not loss, and a "
 "topological charge is unneutralizable, so quantization does in the medium what the absence of negative mass does in "

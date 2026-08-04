@@ -64,7 +64,7 @@ than new predictions.
 | 8.13 | Cosmological constant dissolved | **O** | vacuum gravitates −P, zero at equilibrium across 122 orders with no tuning — a structural cancellation |
 | 8.14 | Emergent Yang–Mills | **K** + C | induced non-Abelian gauge action from the fermion loop; the *group* is an input |
 | 8.15 | Chirality consistent by anomaly inflow | **K** + O | Callan–Harvey inflow instantiated; the integers (Chern = modes = pumped charge) measured |
-| 8.16 | Data / retraction | **N** | one prediction deflated, one tuning retracted |
+| 8.16 | Data / retraction | **N** | net INVERTED by later work: the LV prediction it deflated is the live one (§8.39, ~1.4 orders from the UHE frontier), and the gravitational scale-dependent γ it promoted to "the real one" is retracted (γ=0 at every scale, §8.32–8.49); the 10¹²² tuning retraction stands (a range argument, γ-independent) |
 | 8.17 | First dynamical integration (matter + gauge) | **X** | it runs in real time |
 | 8.18 | Back-reaction as a conserving simulation | **X** | it runs, conserving |
 | 8.19 | Newton's constant = Planck area | **O** | a₀ = l_Planck forced by matching G (consistency output; the earlier 10¹²² read was retracted) |
@@ -164,6 +164,26 @@ lattice, a **seventh independent γ = 0** and the first at the microscopic level
 closed in every channel the model exposes, continuum and discrete; it would require a gravity
 mechanism that changes the medium's connectivity, which is a different construction. (Audit
 type: **N + O** — an honest negative carrying a measured positive control.)
+
+## Second coherence catch (WP-37): a stale prediction, retracted
+
+The consolidation pass turned up a second, more load-bearing incoherence than the §8.12 one,
+and it reached a *stated prediction*. §8.11 ("two gravities") labelled the spin-2 curvature
+sector **γ = 1** and predicted that γ **climbs 0 → 1** across the amplitude Compton wavelength —
+"GR at long range," a **scale-dependent γ** advertised in §8.16, Table 5, and the closing
+synthesis as the model's one *reachable* prediction. The completed γ arc (§8.32–§8.49) refutes
+its premise: the spin-2 sector as realized gives **γ = 0 at every scale** — a mass sources the
+graviton's time component (Newtonian attraction) but not its spatial modes, in every channel —
+so the climb never happens and the theory is Nordström at all ranges. The scale-dependent-γ
+prediction is therefore **retracted**. What survives: the graviton still deconfines into a real
+massless Newtonian attraction (range 1/r, γ-independent), so the 10¹²² criticality retraction
+stands; and the model's one genuine falsifiable prediction is the Lorentz-violation signature
+(§8.8, §8.39), which §8.39 places ~1.4 orders below the UHE frontier — reachable, and now the
+*only* live prediction. Net: §8.16 inverts — the prediction it deflated (LV) is the live one,
+the prediction it promoted (gravitational γ) is dead. Edits: §8.11 re-scoped, §8.16 given a
+"later correction" note, Table-5 "Empirical prediction" row and the closing synthesis rewritten,
+README `test_two_gravities` / `test_experimental_bounds` rows flagged superseded. This is the
+kind of self-catch the report's closing line calls the point of the exercise.
 
 ## What would raise the grade
 
