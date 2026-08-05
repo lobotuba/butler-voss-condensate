@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-41")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-42")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2207,6 +2207,39 @@ result("Result 8.51 — the prediction's falsifiable content is robust; only its
 "prediction the model has left is therefore a structural claim, not a tuned one, which is the strongest form an "
 "unfalsified prediction can take.")
 
+heading("8.52  The first real-data confrontation: GW170817 and the one universal cone", 2)
+body("Every confrontation with experiment to this point has either reproduced a textbook number (the graphene and "
+"Haldane anchors of Section 8.48) or cited published bounds (Sections 8.16, 8.39). This section takes an actual "
+"measurement and confronts the model's single firm, structural prediction against it: one universal light cone, so "
+"photons and gravitons travel at the same speed at leading order (Sections 8.4–8.5). The measurement is the "
+"multi-messenger detection of the binary-neutron-star merger GW170817 and its gamma-ray burst GRB 170817A. The "
+"burst arrived 1.74 ± 0.05 s after the gravitational-wave merger, from a source at a conservative distance of at "
+"least 26 Mpc; assuming the gamma rays were emitted within the standard 0–10 s intrinsic window after merger, the "
+"observed timing constrains the fractional difference in propagation speed to lie between −3×10⁻¹⁵ and +7×10⁻¹⁶ of c.")
+body("Reconstructing that bound from the raw timing reproduces the published interval to the figures given "
+"([−3.1×10⁻¹⁵, +6.5×10⁻¹⁶]), which validates the confrontation. The model's leading-order prediction is that "
+"photons and gravitons share one cone exactly, (v_gw − v_γ)/c = 0, and zero sits inside the measured interval — the "
+"firm structural prediction is consistent with a real measurement, a genuine pass rather than a reproduction. The "
+"model's own residual Lorentz violation is far below the reach of this event: its n = 2 dispersion gives "
+"v(E)/c − 1 = −ζ (E/E_Planck)², so at the burst's ~185 keV photons and ~100 Hz gravitons the predicted "
+"photon–graviton speed difference is about 6×10⁻⁴⁷, some thirty-one orders of magnitude inside the bound. GW170817 "
+"therefore tests the universality half of the prediction — one cone, no species-dependent speed — and passes it, "
+"while the dispersion coefficient stays untouched, because the quadratic suppression makes the effect negligible "
+"until the ultra-high-energy frontier (Section 8.39). The falsifiers this event can bear on are all currently "
+"passed: no leading-order species-dependent speed (predicted zero, bounded below 10⁻¹⁵), a subluminal rather than "
+"superluminal signal, and a quadratic rather than linear energy dependence.")
+result("Result 8.52 — the one-cone prediction passes its first confrontation with real data.", "The model's single "
+"firm falsifiable prediction — one universal cone, so light and gravity propagate at the same speed at leading "
+"order — is confronted with the GW170817 / GRB 170817A timing and passes: the measured |v_gw − v_γ|/c, bounded "
+"between −3×10⁻¹⁵ and +7×10⁻¹⁶ (reproduced here from the 1.74 s delay over ≥26 Mpc), contains the model's exact "
+"zero. This is the suite's first contact with an actual measurement rather than a textbook value, and it moves the "
+"program's weakest point — external validation — off zero. Its honest reach is narrow and stated plainly: the event "
+"tests the universality of the cone, not the Lorentz-violation coefficient, whose Planck-suppressed n = 2 signal is "
+"about 6×10⁻⁴⁷ at these energies — thirty-one orders below the bound. Confirming the coefficient, the part of the "
+"prediction that is genuinely new physics, still requires the ultra-high-energy astrophysical frontier, where the "
+"quadratic effect finally grows to a testable size. What GW170817 establishes is that the firm, structural half of "
+"the prediction survives contact with the sky.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2449,6 +2482,7 @@ refs=[
  "K. G. Wilson, Confinement of quarks, Phys. Rev. D 10, 2445 (1974). (Lattice gauge theory; exact lattice gauge invariance and the Wilson plaquette action.)",
  "S. L. Adler, Einstein gravity as a symmetry-breaking effect in quantum field theory, Rev. Mod. Phys. 54, 729 (1982). (Induced gravity; the sign of the induced Newton constant.)",
  "S. Weinberg, Photons and gravitons in S-matrix theory: derivation of charge conservation and equality of gravitational and inertial mass, Phys. Rev. 135, B1049 (1964). (A massless spin-2 coupled to a conserved stress tensor is Einstein; γ = 1.)",
+ "B. P. Abbott et al. (LIGO Scientific, Virgo, Fermi-GBM, INTEGRAL), Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A, Astrophys. J. Lett. 848, L13 (2017). (The 1.74 s delay bounds |v_gw − v_em|/c between −3×10⁻¹⁵ and +7×10⁻¹⁶; used in §8.52.)",
  "R. Voss, Butler–Voss Condensate — project reference (CHEATSHEET) and source repository, 2026 (private).",
 ]
 for i,rf in enumerate(refs,1):
@@ -2506,7 +2540,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_validation_anchors.py (§8.48, un-tuned Haldane + graphene cross-checks); "
 "test_gamma_nucleation.py (§8.49, disclination-nucleation channel); "
 "test_decoherence.py (§8.50, einselection from the medium's phonon bath); "
-"test_lv_robustness.py (§8.51, LV-coefficient robustness across lattices).")
+"test_lv_robustness.py (§8.51, LV-coefficient robustness across lattices); "
+"test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

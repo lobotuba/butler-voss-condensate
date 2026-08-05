@@ -105,6 +105,7 @@ than new predictions.
 | 8.49 | Mass nucleates no net disclination charge | **N** + O | seventh γ=0, first at the microscopic level; compression measured (spacing 1.12→1.04) yet zero net charge; positive control (injected density, long-range) confirms the measurement is not blind; closes §8.33's last continuum assumption on the lattice |
 | 8.50 | Einselection + Born branches from the medium; single outcome not | **O** + N | decoherence from the medium's *own* measured phonon bath: pointer-basis einselection, coherence 1→0.01 with frozen populations, rate ∝ Δx² (slope 2.0000), Born-weighted improper mixture (reduced purity→0.50, global pure). The single-outcome hard core stays a postulate — the §8.6 boundary reached from the other side and shown to be all that remains |
 | 8.51 | LV-coefficient robustness (sharpening the one prediction) | **O** | stress-test of the model's sole live prediction: ζ_boost = 0.250/0.245/0.243 across sc/bcc/fcc (E_QG,2 ≈ 2× Planck, lattice-independent), subluminal on every lattice, anisotropy subleading. Firm falsifiable content (n=2, subluminal, one-cone, near-Planckian) separated from soft detail (exact coefficient, anisotropy pattern) — the prediction is structural, not tuned. Moves toward external validation (the audit's ceiling) but is still internal-consistency, not contact with data |
+| 8.52 | First real-data confrontation (GW170817 one-cone) | **O** (external) | the *first* result in the suite to touch an actual measurement, not a textbook value: reproduces the published GW170817 speed bound (−3×10⁻¹⁵…+7×10⁻¹⁶) from the 1.74 s timing, and the model's firm one-cone prediction (Δv/c=0) sits inside it — a genuine pass against data. Honest reach: tests the universality only; the Planck-suppressed coefficient (~6×10⁻⁴⁷ here) is 31 orders below the bound and untested. **Moves external validation off zero** — the audit's former ceiling |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -205,11 +206,21 @@ the "guidance not emergent / measurement a postulate" boundary was already hones
 
 ## What would raise the grade
 
-The audit's ceiling is **external validation**. Two concrete moves:
+The audit's ceiling is **external validation** — and §8.52 (WP-42) takes the first real
+step against it, so the framing is updated rather than aspirational.
 
-1. **Un-tuned outputs** — reproduce numbers the model was not built for (done for the
-   *tooling* in `test_validation_anchors`: Haldane boundary 3√3, graphene v_F = 3ta/2).
-   The physics equivalent would be a measured constant of nature falling out unforced.
-2. **The one real prediction** — the Lorentz-violation signature (§8.8, §8.39) is the
-   only genuinely falsifiable, not-yet-decided output. Everything else is internal
-   consistency or known-physics reproduction.
+1. **First real-data contact — done, narrowly (§8.52).** The GW170817 / GRB 170817A
+   timing is confronted directly (not cited): the model's firm one-cone prediction
+   (Δv/c = 0) sits inside the measured speed bound, a genuine pass against data. This is
+   the first result to touch a measurement rather than a textbook value. Its reach is
+   honest-narrow: it validates the cone *universality*, not the LV *coefficient*, whose
+   Planck-suppressed n=2 signal (~6×10⁻⁴⁷ at these energies) is 31 orders below the bound.
+2. **The coefficient still needs the frontier.** Confirming the genuinely-new-physics part
+   — the near-Planckian n=2 dispersion — requires ultra-high-energy astrophysics (UHECR/
+   GZK, PeV γ, UHE ν). A *computed* confrontation with those datasets (Auger, LHAASO,
+   IceCube open data), rather than the order-of-magnitude bounds of §8.39, is the next
+   external-validation rung.
+3. **Un-tuned physics outputs** — still open. Done for the *tooling* (`test_validation_anchors`:
+   Haldane 3√3, graphene v_F); the physics equivalent — a measured constant of nature
+   falling out unforced — has not been found, and the model's reality-contact remains
+   genuinely thin (one near-Planckian prediction, now half-tested).
