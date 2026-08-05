@@ -110,6 +110,8 @@ than new predictions.
 | 8.54 | Universal-LV GZK threshold; the coefficient in ~1-order tension | **N** (external, against the model) + **O** | corrects 8.53: the n=2 GZK threshold does *not* cancel under universality (that's n=0); the shift is proton-dominated and survives. Numerically the model (ξ≈0.12) would need CMB photons ~30× hotter → predicts **no GZK cutoff**, vs the observed one; |η₄|≈0.12 vs JLM bound ≲10⁻² (×12 over). **First genuine tension with real data.** Loophole (composite-proton suppression) evaluated in 8.55 |
 | 8.55 | Proton compositeness → coefficient at the GZK frontier | **O** (external) | the deciding calculation: ξ_eff = ξ·⟨Σz³⟩ = ξ·⟨x²⟩_P (momentum density); toy PDFs give Σz³≈0.065, so ξ_eff≈8×10⁻³ ≈ **0.8× the GZK bound**. The ~12× bare tension is pulled to ~1×: the model is **marginal, right at the GZK frontier**. Error bars added in 8.56 |
 | 8.56 | Real PDF-moment error bars on the suppression | **O** (external) | anchors §8.55's toy Σz³ to measured data — world momentum fractions + physical-point lattice ⟨x²⟩_{u-d}=0.083(14) (arXiv:2605.02808) vs global-fit ~0.055 (a real ~2× tension). Σz³≈0.04–0.06 (global-fit) up to ~0.12 (lattice), so ξ_eff ≈ **0.5–1.5× the GZK bound** — straddles the boundary, real moments don't rescue it. Dominant residual (LV-operator UV scale) trends safer but uncomputed. The most falsifiable/exposed claim in the report |
+| 8.57 | Induced Einstein–Hilbert term is Sakharov: γ=1 not a continuum fact | **N** (clarifying) | root cause of the three "regulator-limited" walls (§8.35–8.37): the matter→graviton coupling is the conserved stress tensor (= tetrad vertex), and under symmetry-preserving Pauli–Villars the scheme-independent finite part of the physical graviton term **vanishes** (h₊→0) — induced gravity is entirely cutoff-scale, no finite continuum G to measure γ against. Structure is Weinberg-consistent (gauge modes fall faster than physical; spin-2 degenerate <0.1%); the spin connection ω is ruled out as the missing piece. γ decided by the substrate, not the field theory |
+| 8.58 | γ=0 is a crystalline-substrate artifact; isotropic substrate is the route to γ=1 | **O** (new mechanism) | explains §8.37's marginal-vs-irrelevant asymmetry: the substrate's rank-4 tensor A_ijkl is the whole obstruction — the fermion feels it at O(k⁴) (irrelevant, Lorentz works) but the spin-2 graviton feels it in its two-derivative term (marginal, diffeomorphism fails). Icosahedral shell: rank-4 isotropic to 10⁻¹⁶, graviton split machine-zero, first anisotropy at rank-6 (irrelevant); amorphous: ~1/√N→0. Both defer the breaking to irrelevant order — the concrete route to Einstein gravity. Scope: identifies the target; building emergent Dirac+graviton on such a substrate (no Bloch theorem) is the open construction |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -150,7 +152,15 @@ the spatial metric by local compression, not the Newtonian potential). So the pr
 fails as measured. §8.37 adds that the diffeomorphism breaking pinning γ off unity is
 *marginal* (does not flow away), the opposite RG fate from the *irrelevant* Lorentz
 breaking — so γ = 1 and emergent Lorentz are **not** emergent in the same sense, correcting
-a claim the old synthesis made.
+a claim the old synthesis made. §8.57–§8.58 then account for both facts. §8.57 shows *why*
+γ = 1 was never measurable: the induced Einstein–Hilbert term is a Sakharov effect with no
+regulator-independent finite part (under symmetry-preserving Pauli–Villars the physical
+graviton coefficient vanishes), so γ lives at the substrate scale, not in a clean continuum.
+§8.58 then explains the §8.37 asymmetry and turns it into a route: the substrate's rank-4
+tensor is the whole obstruction — the fermion feels it at O(k⁴) (irrelevant) but the spin-2
+graviton feels it in its two-derivative term (marginal), so γ = 0 is an artifact of the
+*crystalline* substrate; an isotropic (icosahedral or amorphous) substrate defers the breaking
+to irrelevant order, the one concrete — if unbuilt — path to Einstein gravity.
 
 Net: §8.12's firm output is the healthy dynamical spin-2 graviton; "Einstein in the
 infrared" is the conclusion of a conditional the model's own later measurements contradict.

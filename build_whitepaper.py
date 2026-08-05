@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-46")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-48")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2391,6 +2391,81 @@ result("Result 8.56 — real parton moments put the model's coefficient at 0.5�
 "pinned to the ultra-high-energy frontier, the program's most falsifiable and most exposed result, and a concrete "
 "target for the next round of cosmic-ray data and of lattice or global-fit moment calculations.")
 
+body("The gravity arc's one unmeasured number is γ = 1, the Eddington factor of two, and §8.32–8.37 left it as an "
+"argument from Weinberg that no direct measurement had confirmed, each attempt defeated by the regulator. Section "
+"8.57 explains why the regulator always won; §8.58 turns that explanation into the one concrete route by which the "
+"model's gravity could become Einstein.")
+
+heading("8.57  Why γ = 1 cannot be a continuum fact: the induced Einstein–Hilbert term is Sakharov", 2)
+body("Three files tried to measure the graviton transversality q_i Π^{ij,kl} = 0 — the Ward identity that forces "
+"γ = 1 — and each was defeated by the regulator: §8.35's hard momentum cutoff broke even the photon Ward identity "
+"through a surface term, §8.36 showed a periodic torus has an exact photon identity but only discrete translations, "
+"and §8.37's non-perturbative sea-energy found the residual violation marginal rather than irrelevant. Each named "
+"the regulator as the obstruction; none explained why no regulator settles it. The reason is structural: the induced "
+"Einstein–Hilbert term has no regulator-independent finite part at all. Matter couples to the metric through its "
+"conserved symmetric stress tensor T_ij = ½ α_i k_j — which is exactly the tetrad vertex of §8.37, since the linear "
+"tetrad is 1 − h/2 — so the induced quadratic action is the static stress bubble ⟨T T⟩, whose q² coefficient is the "
+"two-derivative (Einstein–Hilbert-order) term, and Weinberg's theorem makes it Einstein if the stress tensor is "
+"conserved.")
+body("A hard spherical cutoff breaks that conservation through a surface term: the pure-gauge modes cost energy, at "
+"about 70% of the physical modes — §8.35's disease, in the stress channel. A symmetry-preserving Pauli–Villars "
+"regulator (heavy regulator fermions, the momentum ball taken well beyond their masses) removes the surface term, "
+"and the decisive measurement follows: the scheme-independent finite part of the physical graviton term vanishes — "
+"h_+ falls toward zero as the ball grows. The induced Einstein–Hilbert term is entirely cutoff-scale, a Sakharov "
+"term; there is no finite continuum Newton constant, hence nothing for a regulator-independent γ to be measured "
+"against. What survives is the structure, and it is Weinberg-consistent: the gauge modes fall faster than the "
+"(already vanishing) physical ones, and the spin-2 doublet is degenerate to better than 0.1% — exact continuum "
+"rotational invariance, the very thing the lattice broke by 12.4%. The tetrad-determined spin connection ω, the one "
+"geometric coupling §8.37 omits, changes none of it: the linearised Ward identity comes from stress conservation, "
+"which ω does not affect, so it is not the missing ingredient.")
+result("Result 8.57 — the induced Einstein–Hilbert term is a Sakharov effect with no regulator-independent finite "
+"part, which is why γ = 1 was never measurable directly.", "The matter–graviton coupling is the conserved stress "
+"tensor, and its induced quadratic action is the ⟨T T⟩ bubble. Under a symmetry-preserving Pauli–Villars regulator "
+"the finite part of the physical graviton term vanishes (h_+ → 0 as the cutoff recedes): induced gravity is fixed at "
+"the substrate scale, with no finite continuum G. This is the single root cause behind the three earlier "
+"'regulator-limited' results (§8.35–8.37). In the continuum the structure is Weinberg-consistent — conserved stress "
+"tensor, gauge modes falling faster than physical, spin-2 degenerate to <0.1% — so by the theorem the continuum is "
+"Einstein; but that is a statement about a cutoff-scale term. The spin connection is not the missing piece. γ is "
+"therefore decided by the substrate, not the field theory — which §8.58 takes up.")
+
+heading("8.58  The substrate that would make gravity Einstein: rank-4 anisotropy and the crystal artifact", 2)
+body("Section 8.37 left the gravity arc on an unexplained asymmetry: emergent Lorentz invariance is "
+"irrelevant-protected (the fermion cone's anisotropy is a dimension-six operator that flows away, which is why the "
+"model's one live prediction is a tiny (E/E_Planck)² effect), while emergent diffeomorphism invariance is only "
+"marginal (the induced graviton's rotational anisotropy holds a flat ratio as q → 0 — a converged 12.4% split — and "
+"does not flow away, leaving the realized theory Nordström). The explanation is a single object, the substrate's "
+"rank-4 neighbour tensor A_ijkl = ⟨n_i n_j n_k n_l⟩. Every anisotropy the emergent fields can feel is built from the "
+"substrate's invariant tensors, and the lowest anisotropic one is rank four; the two fields couple to it at "
+"different orders. The fermion feels A_ijkl only at O(k⁴) in its dispersion — a dimension-six, irrelevant operator — "
+"so even on a crystal its Lorentz breaking flows away. The graviton, being spin two, contracts A_ijkl with its "
+"polarisation indices, so the same anisotropy enters its two-derivative kinetic term directly — dimension four, "
+"marginal. That one fact, spin two promoting rank-four anisotropy from irrelevant to marginal, is the whole of the "
+"asymmetry.")
+body("The obstruction to γ = 1 is therefore not the field theory — in the continuum it is Einstein (§8.57) — but the "
+"substrate's rank-4 anisotropy, and a substrate with none removes it. Two exist. The icosahedral shell has an "
+"exactly isotropic rank-4 tensor (measured to one part in 10¹⁶), with its first anisotropy deferred to rank six; the "
+"spin-2 h_+/h_× split read straight off A_ijkl is order one for a cubic shell and machine-zero for the icosahedral "
+"one — the geometric origin of the 12.4%. A tight-binding cone confirms the renormalisation-group order: cubic "
+"dispersion anisotropy grows as k², so the graviton's two-derivative term is anisotropic (marginal), while the "
+"icosahedral one grows as k⁴, deferred two orders, so the two-derivative term is isotropic and the first anisotropy "
+"is dimension-six (irrelevant) — the same footing as emergent Lorentz. An amorphous medium works as well: a "
+"statistically isotropic substrate has rank-4 anisotropy falling as 1/√N, vanishing in the continuum, and space as "
+"a condensate is more naturally amorphous than crystalline. What this settles is the target, not a construction: it "
+"identifies the substrate property that controls γ and shows the model's crystalline substrate is exactly the wrong "
+"one, but it does not build the emergent Dirac and graviton on an icosahedral or amorphous medium — neither has a "
+"Bloch theorem, and that remains the open problem.")
+result("Result 8.58 — γ = 0 is an artifact of the crystalline substrate; an isotropic (icosahedral or amorphous) "
+"medium would defer the diffeomorphism breaking to irrelevant order.", "The substrate's rank-4 neighbour tensor is "
+"the whole obstruction to γ = 1. The fermion feels it at O(k⁴), irrelevant, so emergent Lorentz works on a crystal; "
+"the graviton, spin two, feels it in its two-derivative term, marginal, so emergent diffeomorphism fails on a "
+"crystal — the asymmetry §8.37 recorded but did not explain. The model's triangular/cubic substrate carries an "
+"order-one rank-4 anisotropy, exactly the marginal breaking §8.37 measured. A substrate with no rank-4 anisotropy "
+"defers the breaking to rank six, dimension-six, irrelevant: the icosahedral shell (isotropic rank-4 to 10⁻¹⁶) and "
+"any amorphous medium (anisotropy ~ 1/√N → 0) both qualify, putting emergent diffeomorphism on the same footing as "
+"emergent Lorentz. So the model's γ = 0 follows from assuming a crystal, and an isotropic substrate is the one "
+"concrete route by which its gravity could become Einstein — the construction of the emergent fields on such a "
+"substrate being the open problem.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2410,7 +2485,7 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "against the model's own healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. The "
 "Einstein normalization γ = 1 follows from Weinberg only conditionally — for a mass that couples to the graviton's "
 "spatial modes — and §8.32-8.37 measure that premise to fail in every smooth channel, so the realized theory is "
-"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Section 8.26 then tests the fixed-point language "
+"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Sections 8.57-8.58 then locate that obstruction precisely: the induced Einstein term is a Sakharov effect with no regulator-independent finite part, so γ = 1 was never measurable as a continuum fact, only argued; and the realized γ = 0 is an artifact of the crystalline substrate, whose rank-4 anisotropy makes the spin-2 graviton's diffeomorphism breaking marginal where the fermion's Lorentz breaking is irrelevant — an isotropic (icosahedral or amorphous) substrate would defer it to irrelevant order, the one concrete route to Einstein gravity. Section 8.26 then tests the fixed-point language "
 "itself and narrows it: what is measured is that the linearised Einstein term is the infrared attractor, "
 "empirically rather than by protection. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
@@ -2698,7 +2773,9 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube); "
 "test_lv_gzk_threshold.py (§8.54, universal-LV GZK threshold: the coefficient in tension); "
 "test_lv_proton_compositeness.py (§8.55, the parton suppression that pulls it to the GZK frontier); "
-"test_lv_proton_moment_data.py (§8.56, real PDF-moment error bars on the suppression).")
+"test_lv_proton_moment_data.py (§8.56, real PDF-moment error bars on the suppression); "
+"test_induced_transversality.py (§8.57, induced Einstein–Hilbert is Sakharov — γ=1 not a regulator-independent continuum fact); "
+"test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
