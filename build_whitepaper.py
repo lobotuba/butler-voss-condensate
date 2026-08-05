@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-42")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-43")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -322,8 +322,11 @@ A=[
 "Born-weighted branches at a rate ∝ (separation)², leaving only the selection of a single definite outcome — the "
 "measurement problem's hard core — as a postulate. Cast against experiment, the model makes one specific, falsifiable "
 "prediction: a Planck-suppressed, species-universal, quadratic and subluminal Lorentz violation whose falsifiable "
-"content is robust across the microscopic lattice rather than a tuned coefficient — near-Planckian, and roughly 1.4 "
-"orders of magnitude below the ultra-high-energy astrophysical frontier. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
+"content is robust across the microscopic lattice rather than a tuned coefficient. Its universality half passes real "
+"data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — but its coefficient, the genuinely new "
+"physics, turns out to be beyond current reach for a reason internal to it: the same subluminal, one-cone character "
+"that passes those tests also evades the ultra-high-energy threshold and photon-decay bounds that would measure it. "
+"Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
 "resolution came from applying the paper's own range principle to gravity's mediator for the first time: it is the "
@@ -2236,9 +2239,45 @@ result("Result 8.52 — the one-cone prediction passes its first confrontation w
 "program's weakest point — external validation — off zero. Its honest reach is narrow and stated plainly: the event "
 "tests the universality of the cone, not the Lorentz-violation coefficient, whose Planck-suppressed n = 2 signal is "
 "about 6×10⁻⁴⁷ at these energies — thirty-one orders below the bound. Confirming the coefficient, the part of the "
-"prediction that is genuinely new physics, still requires the ultra-high-energy astrophysical frontier, where the "
-"quadratic effect finally grows to a testable size. What GW170817 establishes is that the firm, structural half of "
-"the prediction survives contact with the sky.")
+"prediction that is genuinely new physics, requires the ultra-high-energy frontier — and Section 8.53 works through "
+"it and finds, honestly, that even there the coefficient is out of reach, because the very properties that pass "
+"GW170817 (subluminal, one cone) evade the bounds that would test it. What GW170817 establishes is that the firm, "
+"structural half of the prediction survives contact with the sky.")
+
+heading("8.53  Working through the ultra-high-energy frontier: the coefficient evades its own tests", 2)
+body("GW170817 confronted the universality half of the prediction and passed. The coefficient half — the n = 2 "
+"dispersion v(E)/c = 1 − ζ(E/E_Planck)², ζ ≈ 0.245 — needs the ultra-high-energy frontier, where a quadratic effect "
+"finally grows, and this section works through the three datasets that define that frontier: the Pierre Auger "
+"cosmic-ray spectrum and its GZK suppression at ~4×10¹⁹ eV; LHAASO's gamma rays up to 1.4 PeV, the highest photons "
+"ever seen; and IceCube's ultra-high-energy neutrinos, including the 6.3 PeV Glashow-resonance event and the 290 TeV "
+"neutrino coincident with a gamma-ray flare of the blazar TXS 0506+056. The confrontation is consistent with all "
+"three, but the honest content is why, and it is not the reassuring answer.")
+body("Two properties the model relies on to pass GW170817 are exactly what make it evade the strongest "
+"ultra-high-energy bounds. First, it is subluminal (ζ > 0): the sharpest clean photon bounds at these energies are "
+"photon decay, γ → e⁺e⁻, and vacuum Cherenkov, which are kinematically allowed only for superluminal photons, so a "
+"subluminal photon does not decay and LHAASO's headline Lorentz-violation limits — superluminal-decay limits — do "
+"not constrain the model at all. Second, it is one cone: in the Coleman–Glashow / Jacobson–Liberati–Mattingly "
+"analysis, threshold reactions such as the GZK photopion process are anomalous only through the difference of the "
+"species' Lorentz-violating coefficients, and for a single universal cone that difference is zero, so the leading "
+"threshold shift cancels and the species-dependent GZK bound (E_QG,2 ≳ 10¹⁸ GeV) does not apply as stated. What the "
+"frontier does test is universality again, now at high energy: the TXS 0506+056 neutrino–gamma coincidence bounds "
+"the neutrino–photon speed difference to about 10⁻¹² at 290 TeV, and the model predicts about 10⁻²⁸ — a one-cone "
+"pass at 10⁵ GeV, complementing GW170817 at the MeV scale. Its own dispersion at every frontier energy is minute "
+"(~10⁻¹⁷ for the highest cosmic rays, ~10⁻²⁷ for PeV photons).")
+result("Result 8.53 — the frontier tests the model's universality, not its coefficient, and tempers §8.39.", "Worked "
+"through against real data: the model is consistent with the Auger GZK suppression, the LHAASO PeV gamma rays, and "
+"the IceCube ultra-high-energy neutrinos. But the reason is a genuine and slightly sobering one. The two features "
+"that carried the GW170817 pass — a subluminal sign and one universal cone — are precisely what disarm the frontier "
+"tests: photon-decay bounds require superluminal propagation, which the model does not have, and the species-"
+"dependent threshold (GZK) bounds require a difference between species' cones, which one cone sets to zero. So the "
+"coefficient ζ — the genuinely-new-physics part of the prediction — is not reached by any current UHE dataset; the "
+"frontier tests the universality (which passes again, now at 10⁵ GeV via TXS 0506+056, as well as at the MeV scale "
+"via GW170817). This tempers §8.39: its reading that the model sits ~1.4 orders below the frontier and is reachable "
+"by next-generation observatories compared E_QG against species-dependent bounds that a universal, subluminal model "
+"evades. The honest status is that the model's one live prediction is confirmed in its structural half (one cone, "
+"twice) and, in its quantitative half (the coefficient), currently beyond reach — for a reason internal to the "
+"prediction itself, not merely a matter of sensitivity. A dedicated universal-LV threshold analysis, or a genuinely "
+"new observable, would be needed to reach ζ.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -2541,7 +2580,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_gamma_nucleation.py (§8.49, disclination-nucleation channel); "
 "test_decoherence.py (§8.50, einselection from the medium's phonon bath); "
 "test_lv_robustness.py (§8.51, LV-coefficient robustness across lattices); "
-"test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing).")
+"test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing); "
+"test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
