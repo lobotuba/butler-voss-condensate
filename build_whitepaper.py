@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-43")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-44")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -323,9 +323,10 @@ A=[
 "measurement problem's hard core — as a postulate. Cast against experiment, the model makes one specific, falsifiable "
 "prediction: a Planck-suppressed, species-universal, quadratic and subluminal Lorentz violation whose falsifiable "
 "content is robust across the microscopic lattice rather than a tuned coefficient. Its universality half passes real "
-"data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — but its coefficient, the genuinely new "
-"physics, turns out to be beyond current reach for a reason internal to it: the same subluminal, one-cone character "
-"that passes those tests also evades the ultra-high-energy threshold and photon-decay bounds that would measure it. "
+"data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — but its coefficient does not fare so "
+"well: a proper dimension-six threshold analysis puts the model in roughly one order-of-magnitude tension with the "
+"observed GZK cutoff (|η₄| ≈ 0.12 against a bound ≲ 10⁻²), the model's first genuine tension with a real measurement, "
+"with only an uncomputed QCD compositeness factor of the same size standing between tension and outright exclusion. "
 "Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
@@ -2277,7 +2278,48 @@ result("Result 8.53 — the frontier tests the model's universality, not its coe
 "evades. The honest status is that the model's one live prediction is confirmed in its structural half (one cone, "
 "twice) and, in its quantitative half (the coefficient), currently beyond reach — for a reason internal to the "
 "prediction itself, not merely a matter of sensitivity. A dedicated universal-LV threshold analysis, or a genuinely "
-"new observable, would be needed to reach ζ.")
+"new observable, would be needed to reach ζ. Correction: one gate of this section was wrong, and Section 8.54 does "
+"exactly that threshold analysis and reverses the GZK conclusion — the n = 2 threshold, unlike a velocity shift, "
+"does not cancel under universality, so the coefficient is not evaded but is in fact in ~1 order-of-magnitude tension "
+"with the observed GZK cutoff.")
+
+heading("8.54  Correcting §8.53: the GZK threshold does not cancel, and the coefficient is in tension", 2)
+body("Section 8.53 concluded that the model's one-cone universality lets it evade the GZK bound, by a Coleman–Glashow "
+"cancellation. That was an error, and it is worth correcting precisely because it reverses the most consequential "
+"line in the whole external-validation arc. Coleman–Glashow cancellation is an n = 0 statement: a universal maximal "
+"velocity, shared by all species, is unobservable because it is a global rescaling of the speed of light. The "
+"model's Lorentz violation is n = 2 — a momentum-dependent p⁴ dispersion — and a universal n = 2 coefficient is not "
+"a rescaling and does not cancel in thresholds. Vacuum Čerenkov and photon decay do still cancel, because those are "
+"genuine relative-speed effects: a proton cannot out-run a photon with which it shares a cone, so those bounds "
+"(including LHAASO's) are correctly evaded. But the GZK photopion threshold is not a relative-speed effect, and it "
+"does not cancel.")
+body("Done properly, the threshold condition for p + γ → p + π with a universal dispersion E = p + m²/2p − ξp³/2M² "
+"carries a Lorentz-violating term (3/2)ξ x(1−x) p³/M², where x is the final proton's momentum fraction. Keeping the "
+"proton and pion coefficients separate, this term is ξ_p(1−x³) − ξ_π(1−x)³, and at the GZK kinematic optimum "
+"x ≈ 0.87 the proton piece (1 − x³ ≈ 0.34) dwarfs the pion piece ((1−x)³ ≈ 0.002): the shift is set by the absolute "
+"proton coefficient and survives universality, verified numerically (the universal and proton-only threshold "
+"obstructions agree to a per cent, while the pion-only one is negligible). The sign matters and is fixed: the model "
+"is subluminal (ξ > 0), which makes the term positive, raises the photon energy the reaction needs, and suppresses "
+"GZK — protons become stable and the cutoff is erased. At the model's coefficient ξ ≈ ζ/2 ≈ 0.12 the effect is not "
+"subtle: the reaction would require cosmic-microwave-background photons about thirty times hotter than they are, so "
+"it never proceeds, and the model predicts no GZK cutoff at all — in direct conflict with the suppression that Auger "
+"and Telescope Array observe near 4×10¹⁹ eV. The same statement in the standard parametrization: the model's "
+"|η₄| ≈ 0.12 exceeds the literature dimension-six proton bound |η₄| ≲ 10⁻² (Jacobson–Liberati–Mattingly) by about "
+"an order of magnitude.")
+result("Result 8.54 — the model's one prediction is in ~1-order tension with the GZK cutoff, and on the edge of "
+"falsification.", "This corrects the GZK gate of Section 8.53 and, with it, the external-validation verdict. The n = 2 "
+"GZK threshold does not cancel under one-cone universality — that cancellation is the n = 0 (velocity) theorem, and "
+"an n = 2 dispersion is not a velocity. A direct threshold calculation shows the model's universal, subluminal "
+"coefficient would suppress the photopion reaction so strongly (requiring CMB photons ~30× hotter than they are) "
+"that no GZK cutoff would form, contradicting the observed suppression; equivalently |η₄| ≈ 0.12 against the "
+"dimension-six proton bound |η₄| ≲ 10⁻². So the model's single live prediction, comfortably safe against the "
+"universality tests (GW170817, TXS 0506+056), is in roughly one order-of-magnitude tension with the ultra-high-"
+"energy cosmic-ray spectrum. Whether that is a clean exclusion or a survivable tension turns on one number the model "
+"does not compute: the composite proton inherits not the fundamental ξ but ξ times a parton sum Σ z_i³ ≈ 0.1 — of "
+"the very same order as the tension. So the honest status is sharp and uncomfortable: the model's one prediction now "
+"sits on the edge of falsification by existing data, decided by a QCD compositeness factor it has not supplied. This "
+"is the program's first genuine tension with a real measurement — external validation cutting against the model — "
+"and it is the most important item the report now carries.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -2522,6 +2564,7 @@ refs=[
  "S. L. Adler, Einstein gravity as a symmetry-breaking effect in quantum field theory, Rev. Mod. Phys. 54, 729 (1982). (Induced gravity; the sign of the induced Newton constant.)",
  "S. Weinberg, Photons and gravitons in S-matrix theory: derivation of charge conservation and equality of gravitational and inertial mass, Phys. Rev. 135, B1049 (1964). (A massless spin-2 coupled to a conserved stress tensor is Einstein; γ = 1.)",
  "B. P. Abbott et al. (LIGO Scientific, Virgo, Fermi-GBM, INTEGRAL), Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A, Astrophys. J. Lett. 848, L13 (2017). (The 1.74 s delay bounds |v_gw − v_em|/c between −3×10⁻¹⁵ and +7×10⁻¹⁶; used in §8.52.)",
+ "T. Jacobson, S. Liberati, D. Mattingly, Lorentz violation at high energy: concepts, phenomena and astrophysical constraints, Annals Phys. 321, 150 (2006), arXiv:astro-ph/0505267. (Dimension-six n=2 threshold analysis and the proton bound |η₄| ≲ 10⁻²; used in §8.54.)",
  "R. Voss, Butler–Voss Condensate — project reference (CHEATSHEET) and source repository, 2026 (private).",
 ]
 for i,rf in enumerate(refs,1):
@@ -2581,7 +2624,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_decoherence.py (§8.50, einselection from the medium's phonon bath); "
 "test_lv_robustness.py (§8.51, LV-coefficient robustness across lattices); "
 "test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing); "
-"test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube).")
+"test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube); "
+"test_lv_gzk_threshold.py (§8.54, universal-LV GZK threshold: the coefficient in tension).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

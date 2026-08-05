@@ -106,7 +106,8 @@ than new predictions.
 | 8.50 | Einselection + Born branches from the medium; single outcome not | **O** + N | decoherence from the medium's *own* measured phonon bath: pointer-basis einselection, coherence 1→0.01 with frozen populations, rate ∝ Δx² (slope 2.0000), Born-weighted improper mixture (reduced purity→0.50, global pure). The single-outcome hard core stays a postulate — the §8.6 boundary reached from the other side and shown to be all that remains |
 | 8.51 | LV-coefficient robustness (sharpening the one prediction) | **O** | stress-test of the model's sole live prediction: ζ_boost = 0.250/0.245/0.243 across sc/bcc/fcc (E_QG,2 ≈ 2× Planck, lattice-independent), subluminal on every lattice, anisotropy subleading. Firm falsifiable content (n=2, subluminal, one-cone, near-Planckian) separated from soft detail (exact coefficient, anisotropy pattern) — the prediction is structural, not tuned. Moves toward external validation (the audit's ceiling) but is still internal-consistency, not contact with data |
 | 8.52 | First real-data confrontation (GW170817 one-cone) | **O** (external) | the *first* result in the suite to touch an actual measurement, not a textbook value: reproduces the published GW170817 speed bound (−3×10⁻¹⁵…+7×10⁻¹⁶) from the 1.74 s timing, and the model's firm one-cone prediction (Δv/c=0) sits inside it — a genuine pass against data. Honest reach: tests the universality only; the Planck-suppressed coefficient (~6×10⁻⁴⁷ here) is 31 orders below the bound and untested. **Moves external validation off zero** — the audit's former ceiling |
-| 8.53 | UHE frontier: Auger/LHAASO/IceCube; the coefficient evades its tests | **O** (external) + **N** | worked through the three UHE datasets against real frontier energies. Consistent with all — but the honest finding is *why*: subluminal kills the photon-decay bounds (superluminal-only), one-cone kills the species-dependent GZK bound (Coleman–Glashow difference=0). So the coefficient is currently **unreachable**, for a reason internal to the prediction. TXS 0506+056 adds a second one-cone pass (at 10⁵ GeV). **Tempers §8.39** — its "~1.4 orders below the frontier, reachable" compared to species-dependent bounds a universal model evades |
+| 8.53 | UHE frontier: Auger/LHAASO/IceCube; the coefficient evades its tests | **O** (external) + **N**; ⚠ GZK gate erroneous, fixed in 8.54 | worked through the three UHE datasets. LHAASO (photon-decay/superluminal N/A) and IceCube (TXS one-cone pass at 10⁵ GeV) gates stand; the **GZK gate was wrong** (applied n=0 Coleman–Glashow cancellation to an n=2 dispersion) |
+| 8.54 | Universal-LV GZK threshold; the coefficient in ~1-order tension | **N** (external, against the model) + **O** | corrects 8.53: the n=2 GZK threshold does *not* cancel under universality (that's n=0); the shift is proton-dominated and survives. Numerically the model (ξ≈0.12) would need CMB photons ~30× hotter → predicts **no GZK cutoff**, vs the observed one; |η₄|≈0.12 vs JLM bound ≲10⁻² (×12 over). **First genuine tension with real data.** Loophole: composite-proton suppression Σz³~0.1, the same order as the tension — decides exclusion vs survival, and the model doesn't compute it |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -216,15 +217,17 @@ step against it, so the framing is updated rather than aspirational.
    the first result to touch a measurement rather than a textbook value. Its reach is
    honest-narrow: it validates the cone *universality*, not the LV *coefficient*, whose
    Planck-suppressed n=2 signal (~6×10⁻⁴⁷ at these energies) is 31 orders below the bound.
-2. **The coefficient is beyond current reach — §8.53 worked the frontier and found why.**
-   The computed confrontation with the UHE datasets (Auger GZK, LHAASO PeV γ, IceCube PeV ν
-   + the TXS 0506+056 coincidence) is done, and the honest result tempers §8.39: the model is
-   consistent with all of them, but its *subluminal* sign evades the photon-decay bounds and
-   its *one-cone universality* evades the species-dependent threshold bounds, so the
-   coefficient ζ is currently **unconstrained** — not for lack of sensitivity but for a reason
-   internal to the prediction. What the frontier *does* test is universality, which passes
-   twice (GW170817 at MeV, TXS at 10⁵ GeV). Reaching ζ would need a dedicated universal-LV
-   threshold calculation or a genuinely new observable.
+2. **The coefficient is in TENSION, not out of reach — §8.54 reverses §8.53.** The dedicated
+   universal-LV threshold calculation is now done, and it corrects an error: the n=2 GZK
+   threshold does *not* cancel under one-cone universality (that cancellation is the n=0
+   velocity theorem). The model's ξ≈0.12 (|η₄|≈0.12) exceeds the dimension-six proton bound
+   (|η₄|≲10⁻²) by ~10× and would erase the GZK cutoff that is observed — the program's **first
+   genuine tension with a real measurement**, external validation cutting *against* the model.
+   Whether it is a clean exclusion or a survivable tension hinges on one uncomputed number, the
+   composite-proton suppression Σz³~0.1, itself the same size as the tension. What still passes
+   cleanly is universality (GW170817 at MeV, TXS at 10⁵ GeV) and the relative-speed bounds
+   (Čerenkov, photon decay), which one cone genuinely evades. **The single most important open
+   item is now the composite-proton LV calculation that decides exclusion vs survival.**
 3. **Un-tuned physics outputs** — still open. Done for the *tooling* (`test_validation_anchors`:
    Haldane 3√3, graphene v_F); the physics equivalent — a measured constant of nature
    falling out unforced — has not been found, and the model's reality-contact remains
