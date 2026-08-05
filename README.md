@@ -221,6 +221,8 @@ Requires Python 3.11+.
 | `screening_gauged.py` | Gauged U(1) / Abelian Higgs (G-0/G-1/G-2): gauging the symmetry screens the vortex force (Meissner) — box-independent λ_L ~ 1/e, vs Screen-2's box-growing log |
 | `screening_gauged_mobile.py` | Mobile-vortex check: vortices move under the screened force (overdamped, adiabatic gauge); the force law from motion confirms λ_L ~ 1/e |
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
+| `EPISTEMIC_AUDIT.md` | Calibrates every §8 result by what it actually is (output / existence / known-physics / construction / honest-negative); coherence catches and the "what would raise the grade" ceiling |
+| `EXTERNAL_VALIDATION.md` | The one prediction against real data (§8.52–8.56): GW170817, the UHE frontier, the GZK threshold, and proton compositeness — the arc that put the model's coefficient on the GZK exclusion boundary, with its two self-corrections |
 
 Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to
 `figures/` (git-ignored). Personal documents (`*.docx`) are git-ignored.
