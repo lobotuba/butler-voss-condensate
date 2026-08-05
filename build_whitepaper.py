@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-44")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-45")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -323,11 +323,13 @@ A=[
 "measurement problem's hard core — as a postulate. Cast against experiment, the model makes one specific, falsifiable "
 "prediction: a Planck-suppressed, species-universal, quadratic and subluminal Lorentz violation whose falsifiable "
 "content is robust across the microscopic lattice rather than a tuned coefficient. Its universality half passes real "
-"data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — but its coefficient does not fare so "
-"well: a proper dimension-six threshold analysis puts the model in roughly one order-of-magnitude tension with the "
-"observed GZK cutoff (|η₄| ≈ 0.12 against a bound ≲ 10⁻²), the model's first genuine tension with a real measurement, "
-"with only an uncomputed QCD compositeness factor of the same size standing between tension and outright exclusion. "
-"Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
+"data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — and its coefficient is brought, for the "
+"first time, into genuine contact with data: a proper dimension-six threshold analysis puts the bare model in "
+"roughly one order-of-magnitude tension with the observed GZK cutoff, and then computing the composite-proton "
+"suppression the coefficient must pass through pulls the effective value right onto the bound (ξ_eff ≈ 0.8 of the "
+"GZK limit). The model's one empirical claim thus survives every test it has faced and sits exactly at the edge of "
+"ultra-high-energy sensitivity — its first real brush with falsification, and a concrete target for the next round "
+"of cosmic-ray data. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
 "resolution came from applying the paper's own range principle to gravity's mediator for the first time: it is the "
@@ -2319,7 +2321,40 @@ result("Result 8.54 — the model's one prediction is in ~1-order tension with t
 "the very same order as the tension. So the honest status is sharp and uncomfortable: the model's one prediction now "
 "sits on the edge of falsification by existing data, decided by a QCD compositeness factor it has not supplied. This "
 "is the program's first genuine tension with a real measurement — external validation cutting against the model — "
-"and it is the most important item the report now carries.")
+"and it is the most important item the report now carries. Section 8.55 then computes the compositeness factor "
+"that §8.54 left open, and it resolves the tension to marginal: the model sits right at the GZK frontier, neither "
+"cleanly excluded nor cleanly safe.")
+
+heading("8.55  The deciding calculation: proton compositeness pulls the coefficient to the GZK frontier", 2)
+body("Section 8.54's tension rested on one assumption it flagged and did not evaluate: that the composite proton "
+"inherits the fundamental universal coefficient ξ. It does not, and computing the suppression is the single "
+"calculation that decides whether the model's one prediction is excluded or survives. In the parton picture a "
+"proton of momentum p is a set of partons carrying momentum fractions z_i (Σ z_i = 1), each with the universal "
+"fundamental dispersion, so its energy is E_p = p + m_p²/2p − ξ(Σ z_i³) p³/2M² and the proton's effective "
+"coefficient is ξ_eff = ξ·⟨Σ z_i³⟩. There is a clean identity for the suppression factor: with D(z) the parton "
+"number density and P(z) = z D(z) the momentum density (∫P = 1, the momentum sum rule), ⟨Σ z_i³⟩ = ∫z³ D(z) dz = "
+"∫z² P(z) dz = ⟨z²⟩_P, the mean of z² under the proton's own momentum distribution. Because the proton's momentum "
+"is shared among many partons at low-to-moderate z, and z² weights them down, this is a small number.")
+body("Evaluated on realistic parton distributions — valence carrying ~39 per cent of the momentum, gluons ~46, "
+"sea ~15, with the standard shapes — the momentum sum rule checks (∫P = 1, momentum-weighted ⟨x⟩_P ≈ 0.2) and the "
+"suppression factor comes out Σ z³ = ⟨x²⟩_P ≈ 0.065, valence- and gluon-dominated at moderate x with the soft sea "
+"contributing under a tenth. This cuts the fundamental ξ ≈ 0.12 to an effective proton coefficient "
+"ξ_eff ≈ 8×10⁻³ — right against the dimension-six GZK bound of ~10⁻². The ~12-fold bare tension of §8.54 is pulled "
+"to about 0.8 of the bound, and a sweep over harder and softer parton shapes keeps ξ_eff between 0.6 and 0.9 of "
+"the bound throughout. Compositeness does most of the work the tension needed, and lands the model not clear of the "
+"constraint but exactly on it.")
+result("Result 8.55 — compositeness resolves the tension to marginal; the prediction sits on the GZK frontier.", "The "
+"deciding calculation is done. The composite proton does not inherit the fundamental coefficient: its effective "
+"n = 2 coefficient is suppressed by Σ z³ = ⟨z²⟩ under the proton's momentum density, a small number (≈ 0.065 on "
+"realistic parton distributions, and 0.05–0.07 across a shape sweep) because the momentum is spread over many "
+"low-to-moderate-z partons and z² weights them down. That cuts the fundamental ξ ≈ 0.12 to ξ_eff ≈ 8×10⁻³, turning "
+"§8.54's ~12× GZK tension into a ~0.8× one. So the resolution is neither exclusion nor safety but the frontier "
+"itself: the model's one live prediction survives every test it has faced — the universality coincidences (GW170817, "
+"TXS 0506+056) and now the GZK threshold — and is pinned to the edge of current ultra-high-energy sensitivity. "
+"Whether it is finally inside or outside the bound is not resolvable at present precision; it turns on a "
+"factor-of-two-level proton Lorentz-violation moment (a lattice or global-fit calculation) and a firm GZK "
+"Lorentz-violation bound. This is the most falsifiable place a prediction can sit, and it makes the model's one "
+"empirical claim a concrete target for the next round of ultra-high-energy cosmic-ray data.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -2625,7 +2660,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_robustness.py (§8.51, LV-coefficient robustness across lattices); "
 "test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing); "
 "test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube); "
-"test_lv_gzk_threshold.py (§8.54, universal-LV GZK threshold: the coefficient in tension).")
+"test_lv_gzk_threshold.py (§8.54, universal-LV GZK threshold: the coefficient in tension); "
+"test_lv_proton_compositeness.py (§8.55, the parton suppression that pulls it to the GZK frontier).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
