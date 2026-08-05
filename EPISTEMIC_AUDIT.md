@@ -108,7 +108,8 @@ than new predictions.
 | 8.52 | First real-data confrontation (GW170817 one-cone) | **O** (external) | the *first* result in the suite to touch an actual measurement, not a textbook value: reproduces the published GW170817 speed bound (−3×10⁻¹⁵…+7×10⁻¹⁶) from the 1.74 s timing, and the model's firm one-cone prediction (Δv/c=0) sits inside it — a genuine pass against data. Honest reach: tests the universality only; the Planck-suppressed coefficient (~6×10⁻⁴⁷ here) is 31 orders below the bound and untested. **Moves external validation off zero** — the audit's former ceiling |
 | 8.53 | UHE frontier: Auger/LHAASO/IceCube; the coefficient evades its tests | **O** (external) + **N**; ⚠ GZK gate erroneous, fixed in 8.54 | worked through the three UHE datasets. LHAASO (photon-decay/superluminal N/A) and IceCube (TXS one-cone pass at 10⁵ GeV) gates stand; the **GZK gate was wrong** (applied n=0 Coleman–Glashow cancellation to an n=2 dispersion) |
 | 8.54 | Universal-LV GZK threshold; the coefficient in ~1-order tension | **N** (external, against the model) + **O** | corrects 8.53: the n=2 GZK threshold does *not* cancel under universality (that's n=0); the shift is proton-dominated and survives. Numerically the model (ξ≈0.12) would need CMB photons ~30× hotter → predicts **no GZK cutoff**, vs the observed one; |η₄|≈0.12 vs JLM bound ≲10⁻² (×12 over). **First genuine tension with real data.** Loophole (composite-proton suppression) evaluated in 8.55 |
-| 8.55 | Proton compositeness → coefficient at the GZK frontier | **O** (external) | the deciding calculation: ξ_eff = ξ·⟨Σz³⟩ = ξ·⟨x²⟩_P (momentum density); realistic PDFs give Σz³≈0.065, so ξ_eff≈8×10⁻³ ≈ **0.8× the GZK bound** (robust across shapes: 0.6–0.9×). The ~12× bare tension is pulled to ~1×: the model is **marginal, right at the GZK frontier** — survives every test faced, pinned to the edge of UHECR sensitivity. In-vs-out needs a factor-2 proton LV moment + firm GZK bound + new data |
+| 8.55 | Proton compositeness → coefficient at the GZK frontier | **O** (external) | the deciding calculation: ξ_eff = ξ·⟨Σz³⟩ = ξ·⟨x²⟩_P (momentum density); toy PDFs give Σz³≈0.065, so ξ_eff≈8×10⁻³ ≈ **0.8× the GZK bound**. The ~12× bare tension is pulled to ~1×: the model is **marginal, right at the GZK frontier**. Error bars added in 8.56 |
+| 8.56 | Real PDF-moment error bars on the suppression | **O** (external) | anchors §8.55's toy Σz³ to measured data — world momentum fractions + physical-point lattice ⟨x²⟩_{u-d}=0.083(14) (arXiv:2605.02808) vs global-fit ~0.055 (a real ~2× tension). Σz³≈0.04–0.06 (global-fit) up to ~0.12 (lattice), so ξ_eff ≈ **0.5–1.5× the GZK bound** — straddles the boundary, real moments don't rescue it. Dominant residual (LV-operator UV scale) trends safer but uncomputed. The most falsifiable/exposed claim in the report |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -225,13 +226,16 @@ step against it, so the framing is updated rather than aspirational.
    (|η₄|≲10⁻²) by ~10× and would erase the GZK cutoff that is observed — the program's **first
    genuine tension with a real measurement**, external validation cutting *against* the model.
    Whether it is a clean exclusion or a survivable tension hinged on one number — the
-   composite-proton suppression — and §8.55 computes it: ξ_eff = ξ·⟨x²⟩_P ≈ 8×10⁻³ ≈ 0.8× the GZK
-   bound (robust across parton shapes, 0.6–0.9×). So the tension resolves to **marginal: the model
-   sits right at the GZK frontier**, surviving every test it has faced — the universality
-   coincidences (GW170817, TXS) *and* the threshold. **The prediction is now pinned to the edge of
-   current UHECR sensitivity; deciding in-vs-out needs a factor-2-level proton LV moment (lattice or
-   global-fit), a firm GZK LV bound, and the next round of cosmic-ray data — a concrete, near-term
-   falsification path, which is the strongest position the program's external validation has reached.**
+   composite-proton suppression — computed in §8.55 (ξ_eff ≈ 0.8× the bound with toy PDFs) and given
+   real error bars in §8.56: anchored to the world momentum fractions and the physical-point lattice
+   second moment ⟨x²⟩_{u-d}=0.083(14) (vs global-fit ~0.055), ξ_eff ≈ **0.5–1.5× the GZK bound** —
+   the model **straddles** the exclusion boundary, just inside on global-fit moments, just outside on
+   the lattice. Real parton data confirm the frontier picture and decline to rescue it. The dominant
+   residual — the LV operator's ultraviolet scale — trends the answer safer but is uncomputed.
+   **The prediction is pinned to the edge of current UHECR sensitivity; deciding in-vs-out needs the
+   lattice-vs-global-fit moment tension resolved, a firm GZK LV bound, and the operator-scale
+   calculation — a concrete, near-term falsification path, and the strongest position the program's
+   external validation has reached.**
 3. **Un-tuned physics outputs** — still open. Done for the *tooling* (`test_validation_anchors`:
    Haldane 3√3, graphene v_F); the physics equivalent — a measured constant of nature
    falling out unforced — has not been found, and the model's reality-contact remains

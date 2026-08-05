@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-45")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-46")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -326,10 +326,11 @@ A=[
 "data twice — the GW170817 and TXS 0506+056 multi-messenger coincidences — and its coefficient is brought, for the "
 "first time, into genuine contact with data: a proper dimension-six threshold analysis puts the bare model in "
 "roughly one order-of-magnitude tension with the observed GZK cutoff, and then computing the composite-proton "
-"suppression the coefficient must pass through pulls the effective value right onto the bound (ξ_eff ≈ 0.8 of the "
-"GZK limit). The model's one empirical claim thus survives every test it has faced and sits exactly at the edge of "
-"ultra-high-energy sensitivity — its first real brush with falsification, and a concrete target for the next round "
-"of cosmic-ray data. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
+"suppression the coefficient must pass through pulls the effective value down onto the bound — ξ_eff ≈ 0.5–1.5 times "
+"the GZK limit once real parton moments and their uncertainties are folded in, straddling the exclusion boundary "
+"rather than clearing it. The model's one empirical claim thus survives every test it has faced and sits exactly at "
+"the edge of ultra-high-energy sensitivity — its first real brush with falsification, and a concrete target for the "
+"next round of cosmic-ray data. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
 "resolution came from applying the paper's own range principle to gravity's mediator for the first time: it is the "
@@ -2354,7 +2355,41 @@ result("Result 8.55 — compositeness resolves the tension to marginal; the pred
 "Whether it is finally inside or outside the bound is not resolvable at present precision; it turns on a "
 "factor-of-two-level proton Lorentz-violation moment (a lattice or global-fit calculation) and a firm GZK "
 "Lorentz-violation bound. This is the most falsifiable place a prediction can sit, and it makes the model's one "
-"empirical claim a concrete target for the next round of ultra-high-energy cosmic-ray data.")
+"empirical claim a concrete target for the next round of ultra-high-energy cosmic-ray data. Section 8.56 puts real "
+"error bars on the factor and confirms it: anchored to measured parton moments, ξ_eff spans roughly half to one and "
+"a half times the bound, so the model straddles the frontier rather than clearing it.")
+
+heading("8.56  Real error bars on the compositeness factor: the model straddles the GZK frontier", 2)
+body("Section 8.55 computed the suppression factor Σ z³ = ⟨x²⟩_P with Beta-function toy parton distributions and got "
+"a single value, ≈ 0.065, landing ξ_eff at about 0.8 of the GZK bound. A toy shape deserves real error bars, and "
+"anchoring the factor to measured data both sharpens it and — honestly — widens it, because two systematics enter "
+"that the toy hid. The parton momentum fractions are taken from the world global fits (gluon ~0.42, u+ū ~0.34, "
+"d+d̄ ~0.19, s+s̄ ~0.035, summing to one by the momentum sum rule), and the hardness of the valence distribution — "
+"which controls the moment — is pinned to the measured isovector second moment. There the data themselves disagree: "
+"physical-point lattice QCD gives ⟨x²⟩_{u-d} = 0.083(14), while global fits give about 0.055, a roughly "
+"two-fold tension that is itself part of the error bar, and one the model inherits directly because Σ z³ scales "
+"with it.")
+body("Carried through, parton distributions consistent with the global-fit moment give Σ z³ = ⟨x²⟩_P ≈ 0.042–0.064, "
+"and scaling to the higher lattice moment pushes the top of the range toward ≈ 0.12, so ξ_eff spans about 0.5 to "
+"1.5 times the GZK bound: the global-fit end sits just inside, the lattice end just outside. Real parton data, in "
+"other words, confirm §8.55's picture with quantified uncertainty and decline to rescue the model — it straddles "
+"the exclusion boundary rather than clearing it. One caveat runs the other way and is the single largest remaining "
+"uncertainty: the moment Σ z³ = ∫x³ D(x,Q²) dx decreases as the scale Q² rises and the soft-parton content grows, "
+"and the fundamental Lorentz-violating operator's natural scale is the deep ultraviolet, so the physically relevant "
+"factor is at or below the ~2 GeV reference value used here — the reference-scale band is an upper estimate, "
+"trending safer. Quantifying that shift is a real calculation, the operator's anomalous dimension, not done here.")
+result("Result 8.56 — real parton moments put the model's coefficient at 0.5–1.5× the GZK bound; it straddles the "
+"frontier.", "Replacing §8.55's toy parton distributions with measured inputs — the world momentum fractions and "
+"the physical-point lattice second moment ⟨x²⟩_{u-d} = 0.083(14), against the global-fit ~0.055 — gives the "
+"compositeness factor Σ z³ = ⟨x²⟩_P ≈ 0.04–0.06 on global-fit-consistent distributions, rising toward ≈ 0.12 if the "
+"higher lattice moment is taken at face value. So the effective proton coefficient is ξ_eff ≈ 0.5–1.5 times the "
+"dimension-six GZK bound: just inside on global fits, just outside on the lattice moment. The toy 0.8× of §8.55 "
+"becomes a data-anchored band that straddles the exclusion boundary, and the real moments do not move the model "
+"clear of it. Two numbers would decide it — the lattice-versus-global-fit moment tension, and a firm GZK "
+"Lorentz-violation bound — with a third, the Lorentz-violating operator's ultraviolet scale, trending the answer "
+"safer but uncomputed. The bottom line is unchanged and now carries error bars: the model's one empirical claim is "
+"pinned to the ultra-high-energy frontier, the program's most falsifiable and most exposed result, and a concrete "
+"target for the next round of cosmic-ray data and of lattice or global-fit moment calculations.")
 
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
@@ -2600,6 +2635,7 @@ refs=[
  "S. Weinberg, Photons and gravitons in S-matrix theory: derivation of charge conservation and equality of gravitational and inertial mass, Phys. Rev. 135, B1049 (1964). (A massless spin-2 coupled to a conserved stress tensor is Einstein; γ = 1.)",
  "B. P. Abbott et al. (LIGO Scientific, Virgo, Fermi-GBM, INTEGRAL), Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A, Astrophys. J. Lett. 848, L13 (2017). (The 1.74 s delay bounds |v_gw − v_em|/c between −3×10⁻¹⁵ and +7×10⁻¹⁶; used in §8.52.)",
  "T. Jacobson, S. Liberati, D. Mattingly, Lorentz violation at high energy: concepts, phenomena and astrophysical constraints, Annals Phys. 321, 150 (2006), arXiv:astro-ph/0505267. (Dimension-six n=2 threshold analysis and the proton bound |η₄| ≲ 10⁻²; used in §8.54.)",
+ "Physical-point lattice-QCD determination of nucleon PDF moments, arXiv:2605.02808 (2026). (The isovector second moment ⟨x²⟩_{u-d} = 0.083(14) at μ = 2 GeV; used in §8.56 to bound the proton compositeness suppression.)",
  "R. Voss, Butler–Voss Condensate — project reference (CHEATSHEET) and source repository, 2026 (private).",
 ]
 for i,rf in enumerate(refs,1):
@@ -2661,7 +2697,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_gw170817_onecone.py (§8.52, first real-data confrontation: GW170817 one-cone timing); "
 "test_lv_uhe_reach.py (§8.53, UHE-frontier confrontation: Auger/LHAASO/IceCube); "
 "test_lv_gzk_threshold.py (§8.54, universal-LV GZK threshold: the coefficient in tension); "
-"test_lv_proton_compositeness.py (§8.55, the parton suppression that pulls it to the GZK frontier).")
+"test_lv_proton_compositeness.py (§8.55, the parton suppression that pulls it to the GZK frontier); "
+"test_lv_proton_moment_data.py (§8.56, real PDF-moment error bars on the suppression).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
