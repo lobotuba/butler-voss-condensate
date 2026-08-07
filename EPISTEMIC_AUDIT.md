@@ -111,7 +111,8 @@ than new predictions.
 | 8.55 | Proton compositeness → coefficient at the GZK frontier | **O** (external) | the deciding calculation: ξ_eff = ξ·⟨Σz³⟩ = ξ·⟨x²⟩_P (momentum density); toy PDFs give Σz³≈0.065, so ξ_eff≈8×10⁻³ ≈ **0.8× the GZK bound**. The ~12× bare tension is pulled to ~1×: the model is **marginal, right at the GZK frontier**. Error bars added in 8.56 |
 | 8.56 | Real PDF-moment error bars on the suppression | **O** (external) | anchors §8.55's toy Σz³ to measured data — world momentum fractions + physical-point lattice ⟨x²⟩_{u-d}=0.083(14) (arXiv:2605.02808) vs global-fit ~0.055 (a real ~2× tension). Σz³≈0.04–0.06 (global-fit) up to ~0.12 (lattice), so ξ_eff ≈ **0.5–1.5× the GZK bound** — straddles the boundary, real moments don't rescue it. Dominant residual (LV-operator UV scale) trends safer but uncomputed. The most falsifiable/exposed claim in the report |
 | 8.57 | Induced Einstein–Hilbert term is Sakharov: γ=1 not a continuum fact | **N** (clarifying) | root cause of the three "regulator-limited" walls (§8.35–8.37): the matter→graviton coupling is the conserved stress tensor (= tetrad vertex), and under symmetry-preserving Pauli–Villars the scheme-independent finite part of the physical graviton term **vanishes** (h₊→0) — induced gravity is entirely cutoff-scale, no finite continuum G to measure γ against. Structure is Weinberg-consistent (gauge modes fall faster than physical; spin-2 degenerate <0.1%); the spin connection ω is ruled out as the missing piece. γ decided by the substrate, not the field theory |
-| 8.58 | γ=0 is a crystalline-substrate artifact; isotropic substrate is the route to γ=1 | **O** (new mechanism) | explains §8.37's marginal-vs-irrelevant asymmetry: the substrate's rank-4 tensor A_ijkl is the whole obstruction — the fermion feels it at O(k⁴) (irrelevant, Lorentz works) but the spin-2 graviton feels it in its two-derivative term (marginal, diffeomorphism fails). Icosahedral shell: rank-4 isotropic to 10⁻¹⁶, graviton split machine-zero, first anisotropy at rank-6 (irrelevant); amorphous: ~1/√N→0. Both defer the breaking to irrelevant order — the concrete route to Einstein gravity. Scope: identifies the target; building emergent Dirac+graviton on such a substrate (no Bloch theorem) is the open construction |
+| 8.58 | γ=0 is a crystalline-substrate artifact; isotropic substrate is the route to γ=1 | **O** (new mechanism) → **mechanism corrected in §8.59** | explains §8.37's marginal-vs-irrelevant asymmetry: proposed the substrate's rank-4 tensor A_ijkl as the whole obstruction — the fermion feels it at O(k⁴) (irrelevant, Lorentz works) but the spin-2 graviton feels it in its two-derivative term (marginal, diffeomorphism fails). Icosahedral shell: rank-4 isotropic to 10⁻¹⁶, graviton split machine-zero, first anisotropy at rank-6 (irrelevant); amorphous: ~1/√N→0. **But this was read off substrate *geometry* only; §8.59 puts it on the induced graviton and finds the rank-4 neighbour tensor does *not* control the split.** The amorphous conclusion survives; the rank-4 mechanism does not. Scope: identifies the target; building emergent Dirac+graviton on such a substrate (no Bloch theorem) is the open construction |
+| 8.59 | The rank-4 mechanism, measured on the induced graviton: it is a whole-zone effect | **N** (self-correction, against §8.58's mechanism) | puts §8.58's claim on the §8.37 sea-energy instrument: a (110) shell of weight w, added to the cubic one, sweeps the effective rank-4 anisotropy through **exact zero at w*=½** while the lattice stays periodic (Bloch holds). §8.58 predicts the induced h₊/h× split collapses there; **it does not** — the split falls monotonically straight through w* with no feature, is still ≈8% at w* (rank-4 ≡ 0, converged, flat in q), and is <1% at w=2 where rank-4 is *larger*. A monotone curve can't be tracked by a neighbour-tensor measure with an interior zero. Unifies §8.57–§8.58: the induced two-derivative term is a whole-Brillouin-zone integral, so like the Sakharov *magnitude* (§8.57) its *anisotropy* is substrate-scale, not a small-k moment. Corrects §8.58's mechanism; confirms its amorphous conclusion for the stronger reason that only all-orders isotropy removes a whole-zone anisotropy |
 
 ## Phase-3 empirical core (pre-§8)
 
@@ -156,11 +157,18 @@ a claim the old synthesis made. §8.57–§8.58 then account for both facts. §8
 γ = 1 was never measurable: the induced Einstein–Hilbert term is a Sakharov effect with no
 regulator-independent finite part (under symmetry-preserving Pauli–Villars the physical
 graviton coefficient vanishes), so γ lives at the substrate scale, not in a clean continuum.
-§8.58 then explains the §8.37 asymmetry and turns it into a route: the substrate's rank-4
-tensor is the whole obstruction — the fermion feels it at O(k⁴) (irrelevant) but the spin-2
-graviton feels it in its two-derivative term (marginal), so γ = 0 is an artifact of the
-*crystalline* substrate; an isotropic (icosahedral or amorphous) substrate defers the breaking
-to irrelevant order, the one concrete — if unbuilt — path to Einstein gravity.
+§8.58 then proposed a route: the substrate's rank-4
+tensor as the whole obstruction — the fermion feeling it at O(k⁴) (irrelevant) but the spin-2
+graviton in its two-derivative term (marginal) — read off substrate geometry alone. §8.59 put
+that mechanism on the induced graviton (a periodic-lattice tuning that drives the effective
+rank-4 anisotropy through exact zero) and **refuted it**: the induced split is unmoved by nulling
+the rank-4 neighbour tensor and is smallest where that tensor is largest, so it is not the handle.
+The correction unifies the sub-arc: the induced two-derivative term is a whole-Brillouin-zone
+integral, so — exactly like the Sakharov *magnitude* §8.57 pinned to the substrate scale — its
+*anisotropy* is substrate-scale too, and no small-k moment controls it. §8.58's conclusion stands
+but sharpened: γ = 0 is a crystalline-substrate artifact, and only a substrate isotropic at *all*
+orders — an amorphous medium, not a crystal tuned to rank-4 isotropy — is the concrete (if unbuilt)
+path to Einstein gravity, an even icosahedral quasicrystal expected to leave a small rank-6 residual.
 
 Net: §8.12's firm output is the healthy dynamical spin-2 graviton; "Einstein in the
 infrared" is the conclusion of a conditional the model's own later measurements contradict.

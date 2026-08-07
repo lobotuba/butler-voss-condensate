@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-48")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-49")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2393,8 +2393,9 @@ result("Result 8.56 — real parton moments put the model's coefficient at 0.5�
 
 body("The gravity arc's one unmeasured number is γ = 1, the Eddington factor of two, and §8.32–8.37 left it as an "
 "argument from Weinberg that no direct measurement had confirmed, each attempt defeated by the regulator. Section "
-"8.57 explains why the regulator always won; §8.58 turns that explanation into the one concrete route by which the "
-"model's gravity could become Einstein.")
+"8.57 explains why the regulator always won; §8.58 proposes that an isotropic substrate is the one concrete route by "
+"which the model's gravity could become Einstein; and §8.59 puts §8.58's mechanism on the instrument, corrects it, "
+"and — in doing so — ties the whole sub-arc back to §8.57.")
 
 heading("8.57  Why γ = 1 cannot be a continuum fact: the induced Einstein–Hilbert term is Sakharov", 2)
 body("Three files tried to measure the graviton transversality q_i Π^{ij,kl} = 0 — the Ward identity that forces "
@@ -2466,6 +2467,45 @@ result("Result 8.58 — γ = 0 is an artifact of the crystalline substrate; an i
 "concrete route by which its gravity could become Einstein — the construction of the emergent fields on such a "
 "substrate being the open problem.")
 
+heading("8.59  The rank-4 mechanism, measured on the induced graviton: it is a whole-zone effect, not a neighbour tensor", 2)
+body("Section 8.58 read its mechanism off the substrate geometry alone — the rank-4 tensor of the bare neighbour "
+"vectors, and a small-k tight-binding dispersion — and never put the induced graviton itself on a substrate whose "
+"rank-4 tensor had been tuned away. This section does, on the exact sea-energy instrument that produced the 12.4%. "
+"The Wilson-Dirac hopping is generalised to run over an arbitrary neighbour shell, and a (110)-type diagonal shell "
+"of weight w is added to the nearest-neighbour cubic one. This keeps the lattice periodic — Bloch holds, the "
+"instrument is unchanged — while sweeping the effective shell's rank-4 anisotropy through exact zero: the cubic shell "
+"has A₁₁₁₁ = 2, A₁₁₂₂ = 0; the (110) shell has A₁₁₁₁ = 8, A₁₁₂₂ = 4; the combination is rank-4 isotropic "
+"(A₁₁₁₁ = 3A₁₁₂₂) at w* = ½. Section 8.58 predicts the induced h_+/h_× split collapses there.")
+body("It does not. Calibrated against §8.37, the pure cubic shell reproduces the converged 12.4% split. As w runs "
+"from zero, the substrate's rank-4 anisotropy dips to exact zero at w* = ½ and climbs back, but the measured split "
+"does nothing of the kind: it falls monotonically straight through w* with no feature there, and its smallest values "
+"occur where the rank-4 anisotropy is large. At w* — rank-4 identically zero — the split is still ≈ 8% (converged in "
+"the transverse grid and flat in q); at w = 2, where the shell is more rank-4-anisotropic than the cubic lattice, "
+"the split is under 1%. A single point settles it: rank-4 exactly zero, split manifestly nonzero. No weighting of "
+"the neighbour rank-4 tensor — a curve with an interior zero — can track a monotone one. The induced graviton "
+"anisotropy is not the substrate's rank-4 neighbour tensor.")
+body("What it is unifies §8.58 with §8.57. The induced two-derivative term is a whole-Brillouin-zone integral, and "
+"§8.57 already showed its magnitude is a Sakharov term fixed at the substrate (cutoff) scale, with no long-wavelength "
+"finite part. Its anisotropy is the same kind of object — a whole-zone, substrate-scale quantity — so tuning a "
+"single small-k moment to zero does nothing (it is the wrong scale), and what actually shrinks the split is adding "
+"hopping directions until the whole dispersion samples the sphere evenly. Section 8.58's conclusion survives and is "
+"sharpened: removing a whole-zone anisotropy requires a substrate isotropic at all orders, not at rank four alone — "
+"precisely a statistically isotropic amorphous medium (no Brillouin zone, no preferred direction at any scale), the "
+"naturally-condensate substrate. Even the icosahedral quasicrystal is now expected to be imperfect rather than exact: "
+"its rank-4 tensor is isotropic but its whole-zone integral carries its rank-6 anisotropy, leaving a small residual "
+"split rather than the machine zero §8.58 read off the geometry.")
+result("Result 8.59 — the induced graviton anisotropy is a substrate-scale, whole-zone effect, correcting §8.58's "
+"rank-4 mechanism while confirming its amorphous conclusion.", "Put on the instrument that produced the 12.4%, "
+"§8.58's mechanism fails: tuning the substrate's rank-4 neighbour tensor to exact zero (a (110) shell at weight "
+"w* = ½, the lattice kept periodic) leaves the induced h_+/h_× split near 8%, and a shell that is more "
+"rank-4-anisotropic has a smaller split — the split is monotone in the tuning while the rank-4 anisotropy is not, so "
+"no weighting of the neighbour tensor can control it. The reason unifies the sub-arc: the induced two-derivative "
+"term is a whole-Brillouin-zone integral, and §8.57 fixed its magnitude at the substrate scale as a Sakharov term; "
+"its anisotropy lives at the same scale, which is why a small-k moment is the wrong handle. Section 8.58's route to "
+"γ = 1 stands but for a stronger reason — an amorphous substrate, isotropic at all orders, not a crystal tuned to "
+"rank-4 isotropy, and even an icosahedral quasicrystal should leave a rank-6 residual. The obstruction to Einstein "
+"gravity is substrate-scale physics, exactly where §8.57 located it.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2485,7 +2525,7 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "against the model's own healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. The "
 "Einstein normalization γ = 1 follows from Weinberg only conditionally — for a mass that couples to the graviton's "
 "spatial modes — and §8.32-8.37 measure that premise to fail in every smooth channel, so the realized theory is "
-"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Sections 8.57-8.58 then locate that obstruction precisely: the induced Einstein term is a Sakharov effect with no regulator-independent finite part, so γ = 1 was never measurable as a continuum fact, only argued; and the realized γ = 0 is an artifact of the crystalline substrate, whose rank-4 anisotropy makes the spin-2 graviton's diffeomorphism breaking marginal where the fermion's Lorentz breaking is irrelevant — an isotropic (icosahedral or amorphous) substrate would defer it to irrelevant order, the one concrete route to Einstein gravity. Section 8.26 then tests the fixed-point language "
+"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Sections 8.57-8.59 then locate that obstruction precisely: the induced Einstein term is a Sakharov effect with no regulator-independent finite part, so γ = 1 was never measurable as a continuum fact, only argued; and the realized γ = 0 is an artifact of the crystalline substrate, its diffeomorphism breaking a substrate-scale, whole-Brillouin-zone effect — measured directly (§8.59) to be untouched by tuning the substrate's rank-4 neighbour tensor to zero, and so, like the Sakharov magnitude, a property of the whole zone rather than any small-k moment. The route to Einstein gravity is therefore an amorphous substrate, isotropic at all orders (not a crystal tuned to rank-4 isotropy), which removes the whole-zone anisotropy the way an isotropic medium alone can. Section 8.26 then tests the fixed-point language "
 "itself and narrows it: what is measured is that the linearised Einstein term is the infrared attractor, "
 "empirically rather than by protection. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
@@ -2775,7 +2815,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_proton_compositeness.py (§8.55, the parton suppression that pulls it to the GZK frontier); "
 "test_lv_proton_moment_data.py (§8.56, real PDF-moment error bars on the suppression); "
 "test_induced_transversality.py (§8.57, induced Einstein–Hilbert is Sakharov — γ=1 not a regulator-independent continuum fact); "
-"test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1).")
+"test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1); "
+"test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
