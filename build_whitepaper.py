@@ -2505,7 +2505,9 @@ result("Result 8.59 — the induced graviton anisotropy is a substrate-scale, wh
 "its anisotropy lives at the same scale, which is why a small-k moment is the wrong handle. Section 8.58's route to "
 "γ = 1 stands but for a stronger reason — an amorphous substrate, isotropic at all orders, not a crystal tuned to "
 "rank-4 isotropy, and even an icosahedral quasicrystal should leave a rank-6 residual. The obstruction to Einstein "
-"gravity is substrate-scale physics, exactly where §8.57 located it.")
+"gravity is substrate-scale physics, exactly where §8.57 located it. (That route, still an argument from an unbuilt "
+"construction here, is built in §8.60 — and refuted: the amorphous substrate is no more transverse than the crystal, "
+"so even this stronger version fails.)")
 
 heading("8.60  Does an amorphous substrate make gravity Einstein? The direct construction says no", 2)
 body("Sections 8.58-8.59 left one thing unbuilt: the emergent Dirac and induced graviton on the isotropic "
