@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-49")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-50")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2394,8 +2394,9 @@ result("Result 8.56 — real parton moments put the model's coefficient at 0.5�
 body("The gravity arc's one unmeasured number is γ = 1, the Eddington factor of two, and §8.32–8.37 left it as an "
 "argument from Weinberg that no direct measurement had confirmed, each attempt defeated by the regulator. Section "
 "8.57 explains why the regulator always won; §8.58 proposes that an isotropic substrate is the one concrete route by "
-"which the model's gravity could become Einstein; and §8.59 puts §8.58's mechanism on the instrument, corrects it, "
-"and — in doing so — ties the whole sub-arc back to §8.57.")
+"which the model's gravity could become Einstein; §8.59 puts §8.58's mechanism on the instrument and corrects it; "
+"and §8.60 builds the deferred construction — emergent Dirac plus induced graviton on a genuine amorphous medium — "
+"and refutes the route: gravity stays Nordström there too, and the obstruction is substrate-independent.")
 
 heading("8.57  Why γ = 1 cannot be a continuum fact: the induced Einstein–Hilbert term is Sakharov", 2)
 body("Three files tried to measure the graviton transversality q_i Π^{ij,kl} = 0 — the Ward identity that forces "
@@ -2506,6 +2507,49 @@ result("Result 8.59 — the induced graviton anisotropy is a substrate-scale, wh
 "rank-4 isotropy, and even an icosahedral quasicrystal should leave a rank-6 residual. The obstruction to Einstein "
 "gravity is substrate-scale physics, exactly where §8.57 located it.")
 
+heading("8.60  Does an amorphous substrate make gravity Einstein? The direct construction says no", 2)
+body("Sections 8.58-8.59 left one thing unbuilt: the emergent Dirac and induced graviton on the isotropic "
+"substrate they pointed to. That construction has no Bloch theorem, which is why it was deferred. This section "
+"builds it and measures γ's deciding quantity directly, and the answer overturns the hope that ran through the "
+"whole sub-arc: an amorphous substrate does not make gravity Einstein. A four-component Wilson-Dirac fermion is "
+"written as bond operators so it runs on any point set — on a cubic lattice it is the ordinary Wilson-Dirac, on a "
+"blue-noise-relaxed amorphous torus it is the same physics on a statistically isotropic medium — with the metric "
+"entering as a tetrad deformation of the bonds, exactly as in §8.37. The induced graviton is the second-order "
+"response of the filled-sea energy, and because that energy is a pure spectral sum with Tr H = 0, "
+"E_sea = -(1/2N) Tr|H|, it is evaluated by the kernel polynomial method (a Chebyshev expansion of |E| with a "
+"stochastic trace over fixed probe vectors, so the second-derivative response is low-noise), which needs only "
+"sparse matrix-vector products and reaches N in the thousands where dense diagonalisation cannot. The engine is "
+"validated against dense results to one to two percent.")
+body("The observable is chosen to survive §8.57. Because the induced Einstein-Hilbert term is Sakharov — its "
+"magnitude a substrate-scale quantity, not a regulator-independent number — γ is decided by structure, not "
+"magnitude: whether the induced action is transverse (annihilates the diffeomorphism/gauge directions). The induced "
+"action at wavevector q is a six-by-six quadratic form Π on symmetric metric perturbations, splitting into a "
+"three-dimensional gauge subspace and a three-dimensional physical one; Einstein gravity requires Π to annihilate "
+"the gauge subspace. The transverse-projection observable T = ‖Π G‖ / ‖Π‖ (G the gauge subspace) is zero for a "
+"transverse action and order one for a non-transverse one, and — being a ratio inside a single Π — is immune to the "
+"Sakharov suppression that makes raw responses uninformative. It is the amorphous-capable version of §8.30's "
+"null-space test. On the cubic crystal it reproduces that result: T ≈ 0.67, with no gauge null space (Π's three "
+"smallest eigenvalues are not near zero) — the known Nordström crystal. On the amorphous medium two things happen. "
+"The induced action is Sakharov-suppressed, its overall magnitude falling roughly five-to-tenfold below the crystal "
+"as the isotropic (symmetry-preserving) substrate drives the finite induced Einstein-Hilbert term toward zero, "
+"exactly §8.57 now seen on the physically-correct substrate. But the scale-free T does not fall: T ≈ 0.84, no "
+"better than — slightly worse than — the crystal, and stable from N = 512 to N = 1000. The isotropic substrate does "
+"not restore transversality; Einstein structure does not emerge.")
+result("Result 8.60 — an amorphous substrate does not make gravity Einstein; the obstruction is substrate-"
+"independent.", "The construction §8.58-8.59 deferred — emergent Dirac plus induced graviton on a genuine "
+"amorphous 3D medium, built here via a kernel-polynomial sea-energy engine that reaches the required system sizes — "
+"refutes §8.58's route by direct measurement. Removing the crystal's anisotropy suppresses the induced graviton "
+"magnitude toward zero (§8.57's Sakharov result, now on the isotropic substrate), but the scale-free transverse-"
+"projection observable T = ‖Π G‖/‖Π‖ — immune to that suppression — stays at ≈ 0.84, no better than the crystal's "
+"≈ 0.67: the amorphous induced action is not transverse, so its structure is not Einstein. (Its Π does carry "
+"low-lying modes, but they are misaligned with the gauge directions, which is why the gauge-projected T, not a bare "
+"eigenvalue count, is the right discriminator.) The obstruction to γ = 1 is therefore not the crystallinity of the "
+"substrate but the Sakharov character of induced gravity itself, and it is substrate-independent: gravity stays "
+"Nordström on crystalline and amorphous media alike. A 2D version of the construction shows an apparent restoration "
+"of the Ward identity, but 2+1D gravity has no propagating graviton, so that restoration is of a non-dynamical mode "
+"and does not carry to 3D. The induced-gravity route to Einstein, pursued since §8.12, is now closed from both ends "
+"— the field theory (§8.57, Sakharov) and the substrate (§8.60, crystalline and amorphous alike).")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2525,7 +2569,7 @@ result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a me
 "against the model's own healthy photon), and the radiative spin-2 graviton is dynamical and healthy in 3+1D. The "
 "Einstein normalization γ = 1 follows from Weinberg only conditionally — for a mass that couples to the graviton's "
 "spatial modes — and §8.32-8.37 measure that premise to fail in every smooth channel, so the realized theory is "
-"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Sections 8.57-8.59 then locate that obstruction precisely: the induced Einstein term is a Sakharov effect with no regulator-independent finite part, so γ = 1 was never measurable as a continuum fact, only argued; and the realized γ = 0 is an artifact of the crystalline substrate, its diffeomorphism breaking a substrate-scale, whole-Brillouin-zone effect — measured directly (§8.59) to be untouched by tuning the substrate's rank-4 neighbour tensor to zero, and so, like the Sakharov magnitude, a property of the whole zone rather than any small-k moment. The route to Einstein gravity is therefore an amorphous substrate, isotropic at all orders (not a crystal tuned to rank-4 isotropy), which removes the whole-zone anisotropy the way an isotropic medium alone can. Section 8.26 then tests the fixed-point language "
+"Nordström (γ = 0) with a healthy but matter-decoupled spin-2 graviton alongside it. Sections 8.57-8.60 then locate that obstruction precisely and close the route. The induced Einstein term is a Sakharov effect with no regulator-independent finite part (§8.57), so γ = 1 was never measurable as a continuum fact; the diffeomorphism breaking is a substrate-scale, whole-Brillouin-zone effect, not the rank-4 neighbour tensor §8.58 named (§8.59); and building the deferred construction — emergent Dirac plus induced graviton on a genuine amorphous medium, via a kernel-polynomial engine (§8.60) — refutes the amorphous route by direct measurement: removing the anisotropy suppresses the induced graviton toward zero (Sakharov again) but a scale-free transverse-projection observable shows the amorphous induced action is no more transverse than the crystal's. So the obstruction is substrate-independent — the Sakharov character of induced gravity itself — and gravity stays Nordström on crystalline and amorphous substrates alike. Section 8.26 then tests the fixed-point language "
 "itself and narrows it: what is measured is that the linearised Einstein term is the infrared attractor, "
 "empirically rather than by protection. Section 8.13 dissolves the cosmological-constant fine-tuning (the self-sustained condensate "
 "vacuum gravitates its grand potential -P, which vanishes at equilibrium for any zero-point energy), and Section 8.14 "
@@ -2816,7 +2860,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_proton_moment_data.py (§8.56, real PDF-moment error bars on the suppression); "
 "test_induced_transversality.py (§8.57, induced Einstein–Hilbert is Sakharov — γ=1 not a regulator-independent continuum fact); "
 "test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1); "
-"test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion).")
+"test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion); "
+"test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
