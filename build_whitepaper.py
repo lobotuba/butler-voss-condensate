@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-51")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-52")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2059,7 +2059,9 @@ result("Result 8.47 — the Dirac cone survives phonon fluctuations to all order
 "merge into one velocity in the infrared — is a two-velocity RG that is regulator-limited: no Lorentz-covariant cutoff "
 "exists for two velocities, so the one-loop flow fails its own γ_v = γ_c gate at v = c, as in Section 8.29, and a "
 "symmetry-preserving scheme is required to settle it. The two-cone mismatch is thus established as harmless; whether it "
-"vanishes is open.")
+"vanishes is open. (§8.62 settles it by regulator-independent power counting: it does not vanish — the coupling is "
+"irrelevant, so there is no marginal flow to merge them — but it need not, the observable sector riding the single "
+"fermion cone while the mechanical phonon decouples.)")
 
 heading("8.48  The generation number as a measured band-structure invariant", 2)
 body("Section 8.43 reframed the number of fermion families as a Chern index rather than a continuous parameter, but it "
@@ -2586,6 +2588,42 @@ result("Result 8.61 — running the LV operator to its ultraviolet scale resolve
 "claim survives at the price of becoming harder to test. The remaining external unknown is the GZK Lorentz-violation "
 "bound itself; the operator-scale uncertainty §8.56 flagged is now removed, and it removed in the safe direction.")
 
+heading("8.62  The two-cone seam, closed by power counting: v_F and c_T do not merge, and need not", 2)
+body("Section 8.47 closed the dynamical two-cone seam — a phonon cannot gap the Dirac cone, by an exact chiral "
+"symmetry — but left one refinement flagged as regulator-limited: whether the fermion cone v_F and the mechanical "
+"acoustic cone c_T actually merge into one Lorentz cone, or merely coexist. Posed as a two-velocity renormalisation-"
+"group flow, it had no Lorentz-covariant cutoff, so a hard cutoff broke the very symmetry it measured and the "
+"one-loop flow failed its own gate (γ_v ≠ γ_c at v = c), exactly as the graviton Ward identity failed under a hard "
+"cutoff (§8.29). This settles it without that problem, because the deciding fact is regulator-independent power "
+"counting. A phonon is a bond modulation coupling to the strain — translation invariance forbids coupling to the "
+"displacement itself — so its vertex carries a factor of the phonon wavevector q. Integrating the acoustic phonon "
+"out gives a fermion-fermion interaction V_eff(q) = |vertex(q)|² D_phonon(q,0), and the vertex's q² cancels the "
+"acoustic propagator's 1/q² exactly: V_eff is q-independent, a contact term. (With the real honeycomb strain vertex "
+"the cancellation is exact and, by the three-fold symmetry, even isotropic.) A contact four-fermion interaction "
+"between 2+1D Dirac fermions has dimension −1 — irrelevant — so its dimensionless coupling falls as λ(E) ~ E to "
+"zero in the infrared. There is no marginal coupling to drive a logarithmic velocity flow: §8.47's flow was hunting "
+"a merge that cannot happen.")
+body("The cones therefore do not merge — and the merge is unnecessary, which is the point. The same irrelevance "
+"decouples the two sectors in the infrared, and the observable relativistic sector rides the single fermion cone by "
+"construction. Matter is the fermions, at v_F; the photon and the graviton are not independent fields but "
+"composite/induced modes of those fermions — the particle-hole edge rides v_F exactly (§8.5, the cone-lock), and "
+"the graviton's Einstein-Hilbert kinetic term is Sakharov-induced from the fermion loop (§8.12) — so both inherit "
+"v_F. The bare mechanical phonon at c_T is the irrelevantly-coupled spectator: it decouples in the infrared, its "
+"cross-sector Lorentz violation suppressed by (E/E_Planck)² — the dimension-six leading operator of §8.8. So there "
+"is effectively one observable light cone, v_F, and the second (mechanical) cone is decoupled; the physical "
+"sector's Lorentz invariance does not rest on a fine-tuned v_F = c_T, and detuning is irrelevant-protected.")
+result("Result 8.62 — the v_F = c_T merge does not occur, by regulator-independent power counting, and it is "
+"unnecessary: one observable cone.", "The refinement §8.47 left open is resolved without its regulator problem. The "
+"acoustic electron-phonon coupling integrates out to a contact four-fermion interaction — the strain vertex's q² "
+"cancelling the acoustic propagator's 1/q² exactly (isotropic, with the honeycomb vertex) — which is irrelevant "
+"(dimension −1) for 2+1D Dirac fermions, its dimensionless coupling falling as λ(E) ~ E. So there is no marginal "
+"flow, which is precisely why §8.47's hard-cutoff one-loop flow was ill-posed: it hunted a merge that cannot "
+"happen. But the merge is not needed. Matter, the induced photon and the Sakharov graviton all ride the single "
+"fermion cone v_F by construction, while the bare mechanical phonon at c_T is an irrelevant spectator that "
+"decouples in the infrared, its cross-sector violation (E/E_Planck)²-suppressed. There is one observable cone, not "
+"two, and the one-cone Lorentz invariance of the physical sector does not rest on a fine-tuned equality — a "
+"regulator-independent statement, settling what the two-velocity loop could not.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2898,7 +2936,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1); "
 "test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion); "
 "test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent); "
-"test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach).")
+"test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach); "
+"test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

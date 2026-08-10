@@ -100,7 +100,8 @@ than new predictions.
 | 8.44 | Fermion lattice requires angular rigidity | **O** | the honeycomb needs O(1) angular stiffness (λ* ≈ 0.57) *measured* by lattice sums + gated MD; could have come out otherwise. Does not derive *which* lattice |
 | 8.45 | One stiffness does three jobs | **O** + N | c_L/c_T = √3, ν = ⅓ match the medium's *own* measured elastic constants — a cross-consistency output; an earlier over-claim here was self-retracted |
 | 8.46 | Two cones, mismatch benign | **K** + O | phonon = pseudo-gauge field (Volovik); the boson rides v_F (ω_min/\|q\| → v_F measured) |
-| 8.47 | Chiral protection to all orders | **K** + N | exact chiral-symmetry theorem (gapless); whether v_F and c_T *merge* is regulator-limited and open |
+| 8.47 | Chiral protection to all orders | **K** + N | exact chiral-symmetry theorem (gapless); whether v_F and c_T *merge* was regulator-limited and open — **settled in §8.62** |
+| 8.62 | v_F=c_T merge resolved by power counting: cones don't merge, need not | **O** (structural) | closes §8.47 *without* its regulator problem: relevance is regulator-independent. Acoustic phonon couples to strain (vertex ~ q), so integrating it out gives V_eff(q)=|vertex|²·D(q) with the q² cancelling the propagator's 1/q² **exactly** → a **contact** 4-fermion term (confirmed with the real honeycomb vertex: flat, isotropic =2.25). Contact 4-fermion for 2+1D Dirac = **dim −1, irrelevant** (λ(E)~E→0), so no marginal flow to merge the cones — which is *why* §8.47's hard-cutoff one-loop flow was ill-posed (hunting a flow that isn't there). But the merge is unnecessary: matter, the composite photon (rides v_F, test_cone_lock) and the Sakharov graviton (§8.12) all inherit the single fermion cone, while the bare mechanical phonon (c_T) is an irrelevant spectator that decouples in the IR (cross-violation (E/E_Planck)²). One observable cone, not two; Lorentz invariance not fine-tuned. Regulator-independent, settling what the loop could not |
 | 8.48 | Generation number a measured band invariant | **C** + K | winding chosen, winding measured (G1 ≈ identity, G4 ≈ fundamental theorem of algebra); bulk-boundary + NN are theorems, measured independently; **tooling validated un-tuned** (`test_validation_anchors`) |
 | 8.49 | Mass nucleates no net disclination charge | **N** + O | seventh γ=0, first at the microscopic level; compression measured (spacing 1.12→1.04) yet zero net charge; positive control (injected density, long-range) confirms the measurement is not blind; closes §8.33's last continuum assumption on the lattice |
 | 8.50 | Einselection + Born branches from the medium; single outcome not | **O** + N | decoherence from the medium's *own* measured phonon bath: pointer-basis einselection, coherence 1→0.01 with frozen populations, rate ∝ Δx² (slope 2.0000), Born-weighted improper mixture (reduced purity→0.50, global pure). The single-outcome hard core stays a postulate — the §8.6 boundary reached from the other side and shown to be all that remains |
@@ -132,7 +133,7 @@ concluding **γ = 0**, i.e. the model is a Nordström (scalar) theory of gravity
 Einstein — the opposite of what the program wanted. Add the retracted gravity routes
 (§8.4, §8.9), the retracted 10¹²² tuning (§8.19/§8.40), the refuted critical-nucleus
 prediction, the "semiclassical geometry is demonstrably wrong" self-finding (§8.25),
-the §8.45 over-claim self-correction, and the open velocity-merge (§8.47). A program
+the §8.45 over-claim self-correction, and the velocity-merge (§8.47, resolved in §8.62). A program
 that reverses itself this often under its own scrutiny is behaving authentically.
 
 ## Coherence flag — RESOLVED (WP-35)
