@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-52")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-53")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2624,6 +2624,40 @@ result("Result 8.62 — the v_F = c_T merge does not occur, by regulator-indepen
 "two, and the one-cone Lorentz invariance of the physical sector does not rest on a fine-tuned equality — a "
 "regulator-independent statement, settling what the two-velocity loop could not.")
 
+heading("8.63  An un-tuned constant of nature: sin²θ_W = 3/8 from induced couplings", 2)
+body("The report's honest ceiling is that no measured dimensionless constant of nature has fallen out of the model "
+"unforced. This supplies one, by combining two ingredients the model already had and had not put together. First, "
+"the gauge couplings are not fundamental but induced — the Sakharov/Volovik mechanism of §8.5 and §8.14 — so "
+"integrating the fermions out gives 1/g_a² = (1/12π²) Tr(T_a²) ln(Λ²/μ²) + …, in which the loop factor and the "
+"logarithm are common to all three gauge groups and the ratio of couplings is fixed purely by the fermion content: "
+"1/g_a² : 1/g_b² = Tr(T_a²) : Tr(T_b²). Second, the hypercharges are not input but derived — anomaly cancellation "
+"on the exact lattice gauge symmetry (§8.42) fixes Y = 1/6, −2/3, 1/3, −1/2, 1. For one Standard-Model generation "
+"with those hypercharges, Tr(T_a²) is equal for all three groups in grand-unified normalisation (colour 2, weak 2, "
+"and (3/5)Tr(Y²) = 2), so the induced couplings unify — g₁ = g₂ = g₃ at the substrate scale — and "
+"sin²θ_W = Tr(T₂²)/(Tr(T₂²) + Tr(Y²)) = 2/(2 + 10/3) = 3/8, with no tuning and no grand-unified gauge group "
+"assumed. It is the SU(5) value, reached by a different mechanism.")
+body("Confronted with data by one-loop running, it lands where the measured couplings actually go. Run upward from "
+"their measured values at the Z mass, the electroweak couplings meet at μ ≈ 10¹³ GeV, where sin²θ_W passes exactly "
+"through 3/8, and the third (colour) coupling arrives within about thirteen percent — the familiar non-"
+"supersymmetric near-miss. Run the other way, predicting sin²θ_W(M_Z) from unification and the measured α_em and "
+"α_s, gives ≈ 0.20 against the measured 0.231 — right to about ten to twelve percent. So the model reproduces both "
+"the success of minimal unification (the 3/8, the approximate meeting) and its blemishes (the ten-percent M_Z miss, "
+"a unification scale a few orders below the Planck substrate). The scope is stated plainly: 3/8 is the standard "
+"grand-unified-normalisation number, and the model's contribution is that here it is un-tuned — a consequence of the "
+"model's own derived hypercharges and its induced-coupling mechanism, not of an assumed unifying group — and it "
+"carries the standard imperfections. One loop, and a genuine constant of nature the model does not tune.")
+result("Result 8.63 — sin²θ_W = 3/8 is an un-tuned output: the induced couplings unify because the SM fermion "
+"content makes Tr(T_a²) equal across the three groups.", "The first measured dimensionless constant of nature to "
+"fall out of the model unforced. Because the gauge couplings are induced (1/g_a² ∝ Tr(T_a²), a common loop factor "
+"— §8.5, §8.14) and the hypercharges are anomaly-derived (§8.42), one Standard-Model generation gives equal "
+"Tr(T_a²) for the three groups in grand-unified normalisation, so the couplings unify and "
+"sin²θ_W = Tr(T₂²)/(Tr(T₂²)+Tr(Y²)) = 3/8 = 0.375 — the SU(5) value, but with no grand-unified group assumed and no "
+"tuning, following from ingredients the model already had. One-loop running confronts it with data: the electroweak "
+"couplings meet at ≈ 10¹³ GeV with sin²θ_W = 3/8 there and the three couplings unifying to ≈ 13%, while the reverse "
+"prediction sin²θ_W(M_Z) ≈ 0.20 sits about ten to twelve percent below the measured 0.231 — the model inheriting "
+"both minimal unification's success and its standard non-SUSY imperfections (the M_Z miss, a scale below Planck). "
+"It is an imperfect but genuine dent in the report's reality-contact ceiling: a constant of nature, un-tuned.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2937,7 +2971,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion); "
 "test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent); "
 "test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach); "
-"test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples).")
+"test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples); "
+"test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; runs to data at the ~10% non-SUSY level).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
