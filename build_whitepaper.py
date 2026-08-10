@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-50")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-51")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -328,9 +328,12 @@ A=[
 "roughly one order-of-magnitude tension with the observed GZK cutoff, and then computing the composite-proton "
 "suppression the coefficient must pass through pulls the effective value down onto the bound — ξ_eff ≈ 0.5–1.5 times "
 "the GZK limit once real parton moments and their uncertainties are folded in, straddling the exclusion boundary "
-"rather than clearing it. The model's one empirical claim thus survives every test it has faced and sits exactly at "
-"the edge of ultra-high-energy sensitivity — its first real brush with falsification, and a concrete target for the "
-"next round of cosmic-ray data. Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
+"rather than clearing it — until the last uncomputed piece is supplied: running that composite coefficient to the "
+"operator's own ultraviolet scale (§8.61) suppresses it about thirteenfold, carrying ξ_eff to ≈ 0.04× the bound and "
+"resolving the tension in the model's favour, at the cost of pushing the prediction one-to-two orders below current "
+"reach. The model's one empirical claim thus survives every test it has faced — now including its GZK confrontation "
+"— though at the price of receding from the edge of ultra-high-energy sensitivity it briefly appeared to occupy. "
+"Gravity required one retraction before it yielded. Every elastic route fails on a measurement — the "
 "topological/curvature sector is unshieldable but its like charges repel with a force that grows with distance, and "
 "the tetrad graviton has a long-range 1/r^2 field yet is shieldable and exerts no force at all (Eshelby-Crum). The "
 "resolution came from applying the paper's own range principle to gravity's mediator for the first time: it is the "
@@ -2552,6 +2555,37 @@ result("Result 8.60 — an amorphous substrate does not make gravity Einstein; t
 "and does not carry to 3D. The induced-gravity route to Einstein, pursued since §8.12, is now closed from both ends "
 "— the field theory (§8.57, Sakharov) and the substrate (§8.60, crystalline and amorphous alike).")
 
+heading("8.61  The deciding UHE calculation: running the proton's LV coefficient to the ultraviolet", 2)
+body("Sections 8.54-8.56 left the model's one empirical claim straddling the GZK exclusion, with three numbers "
+"named as deciding — the lattice-versus-fit moment tension, a firm GZK bound, and, flagged as trending the answer "
+"safer but uncomputed, the Lorentz-violating operator's ultraviolet scale. This section computes that third number. "
+"The proton's LV coefficient is η_p = ξ ⟨x²⟩_P, where ⟨x²⟩_P is the second moment of the proton momentum density and "
+"ξ = 0.245/2 is the model's fundamental coefficient. That coefficient is a substrate-scale (ultraviolet) quantity, "
+"so consistency demands the operator matrix element at the same scale — not at the 2 GeV where parton distributions "
+"are measured. The LV term is a p⁴, dimension-six operator whose leading-twist part is the spin-3 twist-2 operator, "
+"whose forward proton matrix element is exactly ⟨x²⟩_P; and since QCD is Lorentz invariant, the dressing that "
+"renormalises it is the ordinary DGLAP running of that moment. Using ⟨x²⟩_P at 2 GeV with the ultraviolet ξ, as "
+"§8.56 did, mixes scales and overestimates — it is the conservative bound.")
+body("Evolving the moment (leading order, leading twist) validates on the momentum sum rule — the quark-plus-gluon "
+"momentum stays exactly one at every scale, the anomalous-dimension matrix's built-in check — and the running is "
+"substantial: ⟨x²⟩_P falls from ≈ 0.042 at 2 GeV to ≈ 0.003 at the Planck scale, a factor of about thirteen, as "
+"momentum leaks to soft partons. The effective coefficient therefore moves from ξ_eff ≈ 0.5× the GZK bound at 2 GeV "
+"— the frontier value of §8.56 — to ≈ 0.04× at the substrate scale: from straddling exclusion to safely inside. The "
+"conclusion is robust: across any ultraviolet matching scale from 10¹⁰ GeV to the Planck scale the coefficient stays "
+"below ≈ 0.1× the bound, and the suppression factor is ≈ 0.05-0.09 regardless of the starting distribution's "
+"normalisation or quark-gluon split.")
+result("Result 8.61 — running the LV operator to its ultraviolet scale resolves the GZK confrontation in the "
+"model's favour; the prediction survives but recedes below current reach.", "The calculation §8.56 named as deciding "
+"is done. Because the model's ξ is defined in the ultraviolet, the proton matrix element ⟨x²⟩_P must be taken there "
+"too, and standard DGLAP evolution suppresses it about thirteenfold between 2 GeV and the Planck scale (validated on "
+"exact momentum conservation). This carries the effective coefficient from ≈ 0.5× the GZK bound — §8.56's marginal, "
+"frontier value — down to ≈ 0.04×, safely inside, robustly across the matching scale (10¹⁰ GeV-Planck all below "
+"≈ 0.1×) and the input distribution. The honest reading cuts both ways: the tension §8.54 opened is genuinely "
+"resolved — the model is not in conflict with the Auger GZK spectrum or the LHAASO photons after all — but the same "
+"suppression pushes the prediction one-to-two orders below present sensitivity, so the program's most falsifiable "
+"claim survives at the price of becoming harder to test. The remaining external unknown is the GZK Lorentz-violation "
+"bound itself; the operator-scale uncertainty §8.56 flagged is now removed, and it removed in the safe direction.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2863,7 +2897,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_induced_transversality.py (§8.57, induced Einstein–Hilbert is Sakharov — γ=1 not a regulator-independent continuum fact); "
 "test_diffeo_substrate.py (§8.58, rank-4 substrate anisotropy — the crystal artifact behind γ=0, and the isotropic-substrate route to γ=1); "
 "test_diffeo_bz.py (§8.59, the rank-4 mechanism measured on the induced graviton — tuning the neighbour rank-4 tensor to zero leaves the split, so it is a whole-zone/substrate-scale effect; corrects §8.58's mechanism, confirms its amorphous conclusion); "
-"test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent).")
+"test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent); "
+"test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
