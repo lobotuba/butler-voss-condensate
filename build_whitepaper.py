@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-55")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-56")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2715,6 +2715,46 @@ result("Result 8.64 — γ = 0 is structural, not tunable: the medium's graviton
 "must not be a phonon of the rigid solid but a decoupled emergent gauge field whose disclinations are deconfined — a "
 "topologically ordered, qualitatively different substrate.")
 
+heading("8.65  The escape from the no-go: the elastic moduli are a graviton mass", 2)
+body("Section 8.64 named the escape from γ = 0 — a graviton that is not a phonon of the rigid solid — but did "
+"not walk it. This section takes the first step and identifies the escape precisely, through a reframing that "
+"makes §8.64 sharper still. The medium's would-be graviton is the strain, h_ij ∼ ε_ij ∼ ∂u (the identification "
+"§8.32–8.34 already used), so the elastic energy μ∫ε_ijε_ij is, written in the graviton variable, μ∫h_ijh_ij — a "
+"term with no derivatives on h. That is a graviton mass term (∫h²), not a kinetic term (∫(∂h)²). An elastic solid "
+"therefore carries a massive graviton, and a massive graviton has no diffeomorphism gauge invariance — which is "
+"exactly why γ ≠ 1. So §8.64's 'rigidity forbids γ = 1' is, precisely, 'the elastic moduli are a graviton mass.' "
+"Read in the graviton variable the transverse dispersion ω_T²(q) = [μ₁q² + κq⁴]/ρ becomes an energy per unit h² of "
+"μ₁ + κq²: the constant piece μ₁ is the graviton mass², the q² piece κ is the kinetic (Einstein–Hilbert-like) "
+"coefficient. A first-gradient solid is pure mass, no kinetic term.")
+body("The escape is then the one named in the world-crystal construction of Kleinert: a massless graviton — set "
+"the first-gradient moduli to zero (the mass off) and keep a second-gradient term κ∫(∂h)² (the kinetic term). "
+"Measured on the exact dispersions, this loophole is unique and constructible. At μ₁ = 0 with κ > 0 the graviton "
+"mass² is zero while the kinetic coefficient is κ > 0, and the transverse dispersion ω_T² = κq⁴/ρ stays positive at "
+"every q — the medium is stable though strain-floppy, held up by curvature stiffness rather than shear stiffness. "
+"The three preconditions for the vector-charge (Einstein) theory then hold jointly: the diffeomorphism mass is "
+"removed (gauge invariance restored), the disclinations deconfine (their confinement was area-law in the "
+"first-gradient Young modulus Y₁ = 4Kμ₁/(K+μ₁), which vanishes with μ₁), and the medium remains stable — a "
+"combination no first-gradient solid can achieve, because there μ₁ = 0 is the floppy wall of §8.64 (ω_T² ≡ 0). Only "
+"the second-gradient term opens the loophole. The honest cost is equally sharp: the massless-graviton condition "
+"μ₁ = 0 also kills the first-gradient transverse cone c_T = √(μ₁/ρ) — the very cone the model needs for its photon "
+"and its fermion (§8.1, §8.44, §8.45). So γ = 1 (which wants μ₁ = 0) and the matter cone (which wants μ₁ > 0) "
+"cannot come from the same elastic sector; the escape requires a substrate with two decoupled sectors, a "
+"curvature-stiff gravity sector and a strain-stiff matter sector.")
+result("Result 8.65 — the elastic moduli are a graviton mass; the escape is a massless (world-crystal) graviton, "
+"at the cost of a two-sector substrate.","In the graviton variable h ∼ ε ∼ ∂u, the elastic energy μ∫ε² = μ∫h² is a "
+"graviton mass term (∫h², no derivatives on h), not a kinetic term — so an elastic solid carries a massive "
+"graviton, which has no diffeomorphism invariance and hence γ ≠ 1. This is §8.64's obstruction, sharpened: the "
+"moduli are the mass. The unique escape is Kleinert's world crystal, a massless graviton — first-gradient moduli "
+"zero (mass off) plus a second-gradient kinetic term κ∫(∂h)². On the exact dispersions this is stable though "
+"strain-floppy (ω_T² = κq⁴/ρ > 0), restores the diffeomorphism gauge invariance (mass² = 0), and deconfines the "
+"disclinations (Y₁ = 0) — the vector-charge (Einstein) preconditions, holding jointly where no first-gradient solid "
+"can meet them (there μ₁ = 0 is the §8.64 floppy instability; only the κ term saves it). The cost is that a "
+"massless-graviton sector has zero moduli and so cannot carry the matter Lorentz cone (c_T = √(μ₁/ρ) = 0 at "
+"μ₁ = 0), so γ = 1 requires a substrate with two decoupled sectors. This is an exact structural analysis, not a "
+"measurement of γ: it proves the escape's preconditions unique and constructible and names the cost, reducing "
+"'reach γ = 1' to one construction — build emergent matter on the two-sector medium and ray-trace γ, where the "
+"world crystal predicts γ = 1. Preconditions proven here; the γ = 1 endpoint is cited, not yet measured in-model.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3030,7 +3070,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach); "
 "test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples); "
 "test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; two-loop running confronts it at the ~9% non-SUSY level); "
-"test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape).")
+"test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape); "
+"test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
