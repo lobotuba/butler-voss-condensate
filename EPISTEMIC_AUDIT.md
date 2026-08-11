@@ -97,7 +97,7 @@ than new predictions.
 | 8.41 | Electroweak breaking pattern + mass relations | **K** + C | Higgs mechanism instantiated; the mass relations (m_W/m_Z = cos θ_W) follow, but the group, representation and Y = ½ are inputs |
 | 8.42 | Hypercharges fixed by anomaly cancellation | **O**-given-inputs / K | the SM hypercharges come out uniquely *given the representations* — a real derivation of the charges, but reps are input; this is also a known property of the SM, here verified |
 | 8.43 | Gauge group + generations = band topology | **C** | a reframing, honestly flagged: the *category* is fixed (discrete, quantized), the specific group and number three are **not derived** |
-| 8.63 | sin²θ_W = 3/8, an un-tuned constant of nature | **O** (first un-tuned constant) | combines two things the model already had: induced couplings (1/g_a²∝Tr(T_a²), common loop — §8.5/§8.14) + anomaly-derived hypercharges (§8.42). For one SM generation the three Tr(T_a²) are equal in GUT norm (2,2,2), so the induced couplings unify and sin²θ_W = Tr(T₂²)/(Tr(T₂²)+Tr(Y²)) = 3/8 — no tuning, no GUT group. The SU(5) value by a different mechanism. One-loop confront: 3/8 at ~10¹³ GeV (three couplings meeting to ~13%), back-predicted sin²θ_W(M_Z)≈0.20 vs measured 0.231 (~12% off). Genuine but imperfect — inherits minimal unification's success and its non-SUSY blemishes (M_Z miss, scale below Planck). The first measured dimensionless constant to fall out unforced — dents the reality-contact ceiling |
+| 8.63 | sin²θ_W = 3/8, an un-tuned constant of nature (two-loop tightened) | **O** (first un-tuned constant) | combines two things the model already had: induced couplings (1/g_a²∝Tr(T_a²), common loop — §8.5/§8.14) + anomaly-derived hypercharges (§8.42). For one SM generation the three Tr(T_a²) are equal in GUT norm (2,2,2), so the induced couplings unify and sin²θ_W = Tr(T₂²)/(Tr(T₂²)+Tr(Y²)) = 3/8 — no tuning, no GUT group, exact and loop-order independent. The SU(5) value by a different mechanism. **Two-loop** confront (SM gauge two-loop matrix + top-Yukawa): 3/8 at ~10¹³ GeV (three couplings meeting to 11.6%, tightened from 13.1%), exact back-predicted sin²θ_W(M_Z) 0.2076→0.2107 vs measured 0.231 (gap 10.2%→8.9%, robust to Yukawa). Residual ~9% pinned as loop-robust non-SUSY deficit (the one MSSM closes). Genuine but imperfect — inherits minimal unification's success and its non-SUSY blemishes (M_Z miss, scale below Planck). The first measured dimensionless constant to fall out unforced — dents the reality-contact ceiling |
 | 8.44 | Fermion lattice requires angular rigidity | **O** | the honeycomb needs O(1) angular stiffness (λ* ≈ 0.57) *measured* by lattice sums + gated MD; could have come out otherwise. Does not derive *which* lattice |
 | 8.45 | One stiffness does three jobs | **O** + N | c_L/c_T = √3, ν = ⅓ match the medium's *own* measured elastic constants — a cross-consistency output; an earlier over-claim here was self-retracted |
 | 8.46 | Two cones, mismatch benign | **K** + O | phonon = pseudo-gauge field (Volovik); the boson rides v_F (ω_min/\|q\| → v_F measured) |
@@ -278,9 +278,13 @@ step against it, so the framing is updated rather than aspirational.
    (1/g_a² ∝ Tr(T_a²), a common loop — §8.5/§8.14) and the hypercharges are anomaly-derived
    (§8.42), so for one SM generation the three Tr(T_a²) are equal in GUT normalisation, the induced
    couplings unify, and sin²θ_W = 3/8 with no tuning and no GUT group assumed — the SU(5) value by a
-   different mechanism. Confronted by one-loop running it lands at the ~10-12% (non-SUSY) level:
-   3/8 at a unification scale ~10¹³ GeV (three couplings meeting to ~13%), back-predicting
-   sin²θ_W(M_Z) ≈ 0.20 vs measured 0.231. Genuine but imperfect — it inherits minimal unification's
-   success *and* its blemishes (the M_Z miss, a scale below the Planck substrate). Still open: an
-   *exact* constant, and broader reality-contact (the model remains thin — one near-Planckian LV
-   prediction now receded below reach, plus this one un-tuned-but-imperfect angle).
+   different mechanism. Confronted by **two-loop** running (full SM gauge two-loop matrix + top-Yukawa
+   feedback) it lands at the ~9% (non-SUSY) level: 3/8 at a unification scale ~10¹³ GeV (three couplings
+   meeting to 11.6%, tightened from 13.1% at one loop), and an *exact* three-coupling back-prediction of
+   sin²θ_W(M_Z) that moves from 0.2076 (one loop) to 0.2107 (two loop) vs measured 0.231 — the gap
+   tightening 10.2% → 8.9%, moving the right way and robust to the top-Yukawa treatment. The residual ~9%
+   is now pinned as a genuine *loop-robust* non-SUSY deficit (the one MSSM content is known to close), not a
+   one-loop artifact. Genuine but imperfect — it inherits minimal unification's success *and* its blemishes
+   (the M_Z miss, a scale below the Planck substrate). Still open: an *exact* constant, and broader
+   reality-contact (the model remains thin — one near-Planckian LV prediction now receded below reach, plus
+   this one un-tuned-but-imperfect angle).
