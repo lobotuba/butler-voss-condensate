@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-54")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-55")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2669,6 +2669,52 @@ result("Result 8.63 — sin²θ_W = 3/8 is an un-tuned output: the induced coupl
 "non-SUSY imperfections (the M_Z miss, a scale below Planck). It is an imperfect but genuine dent in the report's "
 "reality-contact ceiling: a constant of nature, un-tuned.")
 
+heading("8.64  Why γ = 0 is forced: the fracton-dual diagnosis of the graviton", 2)
+body("The report has measured γ = 0 — Nordström light-bending, half the general-relativistic value — in every "
+"channel it could reach: the source coupling (§8.32–8.34), the propagator and Poisson-ratio route (§8.29–8.30, "
+"§8.35), a second sublattice (§8.36), the renormalisation-group fate (§8.37), the topological disclination channel "
+"(§8.49), and an amorphous medium (§8.60). Each was a separate null. This section asks the structural question behind "
+"all of them and answers it, in the language of the elasticity–symmetric-tensor-gauge-theory (fracton) duality of "
+"Pretko and Radzihovsky. A two-dimensional elastic medium is dual to a symmetric-tensor gauge theory of one of two "
+"kinds. The scalar-charge theory has gauge parameter a scalar, δA_ij = ∂_i∂_j α, and its charges are immobile "
+"fractons — on the lattice, the disclinations; this is what ordinary elasticity duals to, and it is not a graviton. "
+"The vector-charge theory has gauge parameter a vector, δA_ij = ∂_iξ_j + ∂_jξ_i — and that is linearised gravity, "
+"because δg_ij = ∂_(iξ_j) is a linearised diffeomorphism. γ = 1 needs the vector-charge structure: its "
+"diffeomorphism gauge invariance is the Ward identity that trace-reverses the source, turning an isotropic mass into "
+"spatial curvature — precisely the coupling §8.32 measured to vanish.")
+body("The diagnostic is decisive because it is measurable. A linearised diffeomorphism δg_ij = ∂_(iξ_j) is, in the "
+"medium, a symmetric-gradient displacement: a homogeneous strain is a global affine diffeomorphism — a shear is a "
+"volume-preserving diffeomorphism, a dilation a scale diffeomorphism. In a diffeomorphism-invariant theory those "
+"cost zero energy (pure gauge); in the medium they cost the elastic moduli. So the elastic moduli literally are the "
+"energy cost of a diffeomorphism — the order parameter for diffeomorphism-non-invariance — and the shear modulus μ "
+"turns out to be triply load-bearing. It is required positive for the transverse Lorentz cone c_T = √(μ/ρ), i.e. for "
+"propagating photon and graviton polarisations to exist at all (§8.1, §8.45); it gives a positive two-dimensional "
+"Young modulus Y = 4Kμ/(K+μ), which confines disclinations (E ∼ Y R²) into immobile fractons — the scalar-charge "
+"dual, and the dual statement of §8.49's result that a mass nucleates no disclination charge; and it is exactly what "
+"γ = 1 requires to vanish, so that the shear-diffeomorphisms become gauge. One cannot have μ > 0 and μ = 0. Measured "
+"across every accessible knob — the triangular Cauchy solid, the honeycomb fermion lattice, and the whole angular-"
+"stiffness sweep — shear-rigidity (μ > 0) and the existence of a transverse cone (c_T > 0) coincide point by point, "
+"and the only place μ falls to zero is the floppy central-force honeycomb, which has no cone and a negative Young "
+"modulus: not a solid at all. So being a field-bearing solid forces the scalar-charge dual and γ = 0; reaching "
+"γ = 1 destroys the solid and with it the Lorentz cone and every emergent field. γ = 0 is the price of the rigidity "
+"the medium needs for everything else.")
+result("Result 8.64 — γ = 0 is structural, not tunable: the medium's graviton is a scalar-charge fracton gauge "
+"field, forced by the shear rigidity that also makes the Lorentz cone.","Read through the fracton–elasticity "
+"duality, the model's would-be graviton is the scalar-charge (fracton) symmetric-tensor gauge field, whose gauge "
+"parameter is a scalar (∂_i∂_j α) rather than the vector — the diffeomorphism ∂_(iξ_j) — that linearised gravity "
+"needs. The reason is one measured quantity: the shear modulus μ is the energy cost of a shear-diffeomorphism, and "
+"it is positive at every field-bearing point. That single μ locks three things together — the transverse Lorentz "
+"cone (μ > 0 so photon and graviton polarisations propagate, §8.1/§8.45), disclination confinement (Y > 0, immobile "
+"fractons = the scalar-charge dual = §8.49's mass-sources-no-disclination = γ = 0), and γ = 0 itself — while γ = 1 "
+"would require μ = 0, i.e. no solid, no cone, no fields. Across the triangular, honeycomb and full angular-stiffness "
+"sweep, μ > 0 and c_T > 0 coincide exactly; μ = 0 arrives only with c_T = 0 and Y < 0 (the floppy central-force "
+"honeycomb, not a medium). This unifies §8.30, §8.35, §8.36, §8.49 and §8.60 as one structural fact — the rigidity "
+"that lets the medium host photons, fermions and a Lorentz cone is the very thing that forbids Einstein statics — and "
+"it explains why no elastic tuning ever moved γ. The result is a no-go for the graviton-as-phonon route, not a proof "
+"that no substrate reaches γ = 1: it names the escape rather than walking it. To bend light like Einstein, the metric "
+"must not be a phonon of the rigid solid but a decoupled emergent gauge field whose disclinations are deconfined — a "
+"topologically ordered, qualitatively different substrate.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -2983,7 +3029,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_graviton_amorphous.py (§8.60, emergent Dirac + induced graviton on a genuine amorphous 3D medium via a KPM sea-energy engine — the amorphous induced action is Sakharov-suppressed AND non-transverse (T≈0.84 vs crystal 0.67), refuting the amorphous route: the obstruction to γ=1 is substrate-independent); "
 "test_lv_uv_running.py (§8.61, DGLAP running of the proton's LV coefficient to the UV — ⟨x²⟩_P suppressed ~13× from 2 GeV to the Planck scale, moving ξ_eff from ~0.5× to ~0.04× the GZK bound; resolves §8.56's confrontation in the model's favour, the prediction surviving but receding below current reach); "
 "test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples); "
-"test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; two-loop running confronts it at the ~9% non-SUSY level).")
+"test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; two-loop running confronts it at the ~9% non-SUSY level); "
+"test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
