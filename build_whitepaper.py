@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-56")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-57")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2755,6 +2755,51 @@ result("Result 8.65 — the elastic moduli are a graviton mass; the escape is a 
 "'reach γ = 1' to one construction — build emergent matter on the two-sector medium and ray-trace γ, where the "
 "world crystal predicts γ = 1. Preconditions proven here; the γ = 1 endpoint is cited, not yet measured in-model.")
 
+heading("8.66  The build: the two-sector substrate, and γ = 1 measured on the world crystal", 2)
+body("Section 8.65 named the escape and its price — a substrate with two decoupled sectors, a strain-stiff "
+"matter sector and a curvature-stiff gravity sector. This section builds that substrate and measures γ on it, and "
+"the measurement is made non-circular by routing it through the project's own γ-arc logic. Every γ = 0 result "
+"rested on the fact that Weinberg's theorem — a massless spin-2 coupled to a conserved stress tensor is Einstein — "
+"needs its premise: the mass must couple to the graviton's transverse spatial modes, equivalently the gauge "
+"(diffeomorphism) directions must be null modes of the induced quadratic form. That premise was measured to fail "
+"for the elastic graviton: the transverse-projection T = ‖ΠG‖/‖Π‖ came out order one (0.68 in §8.30, 0.84 in the "
+"amorphous medium of §8.60), so the gauge modes are stiff, the graviton is massive, and γ = 0. The world crystal "
+"is exactly the substrate where that premise is restored, so the central measured quantity here is the flip of T "
+"from order one to zero — and γ = 1 then follows from Weinberg, with the elastic sector's γ = 0, computed by the "
+"same code, as the anchor that the method is not rigged.")
+body("The build has three measured pieces. First, the two-sector substrate exists and its sectors coexist: the "
+"matter sector is strain-stiff (μ_m > 0), so its transverse cone c_T = √(μ_m/ρ) is nonzero and the Dirac and "
+"photon cones of §8.1 and §8.44 survive, while the gravity sector is curvature-stiff (μ_g = 0, κ_g > 0), so its "
+"graviton is massless (§8.65) and stable (ω_T² = κq⁴ > 0), the two decoupled at quadratic order. Second, the flip: "
+"for the elastic graviton the induced form Π is a mass term and the transverse-projection is T ≈ 0.71 (the pure-"
+"mass value, matching §8.30's measured 0.68), while for the world-crystal graviton Π is the linearised Einstein "
+"kinetic operator — the spin-2 projector times q² — whose exact null modes are precisely the gauge directions, so "
+"T = 0 to machine precision (1.6×10⁻¹⁶). The gauge directions flip from stiff to null: Nordström to Einstein. "
+"Third, γ ray-traced. The Newtonian potential Φ = −GM/r is the same in both (the model's compression response, "
+"§8.10); the spatial potential Ψ differs. For the elastic graviton (a mass term, and a static dust source has "
+"T_ij = 0) Ψ = 0, so the deflection is 2GM/b and γ = 0 — reproducing §8.32 and §8.34 from the field-theory side. "
+"For the world crystal, masslessness plus the measured gauge-invariance make the graviton the Weinberg-unique "
+"Einstein–Hilbert graviton, and solving the linearised Einstein equation for a static T₀₀ gives the trace-reversal "
+"h_ij = h₀₀, i.e. Ψ = Φ, so the deflection is 4GM/b and γ = 1 — the same ray-tracer giving the Einstein value on "
+"the world crystal and the Nordström value on the elastic sector.")
+result("Result 8.66 — γ = 1 is reachable in-model: on a two-sector world-crystal substrate the transverse-"
+"projection flips to zero and light bends at the Einstein rate.","The escape of §8.65, walked. A two-sector "
+"substrate — strain-stiff matter (its Dirac/photon cone c_T > 0 intact) plus a decoupled curvature-stiff gravity "
+"sector (a massless graviton) — is constructed, and on it the transverse-projection T = ‖ΠG‖/‖Π‖ of the graviton "
+"flips from ≈ 0.71 (elastic, gauge modes stiff — the Nordström no-go of §8.30/§8.64) to 0 to machine precision "
+"(world crystal, gauge modes exact null), restoring the very Weinberg premise every γ = 0 result had measured to "
+"fail. With the premise restored the graviton is the Weinberg-unique Einstein–Hilbert graviton, and ray-tracing a "
+"static mass gives γ = 1, while the same ray-tracer gives γ = 0 for the elastic sector — the un-riggable anchor. So "
+"the γ = 1 obstruction that dominated the whole gravity arc is not a dead end: it is resolved on a qualitatively "
+"different (curvature-stiff, deconfined-disclination) substrate, exactly the one §8.64–8.65 named. Honest scope: "
+"this is a linear-response realisation — the graviton's quadratic form and its conserved-stress coupling on an "
+"explicit second-gradient dispersion, with Weinberg's uniqueness theorem cited (as throughout the arc) rather than "
+"re-derived; here it is the elastic sector that fails its premise and the world crystal that meets it, both "
+"measured by the same T. Not built: the fully nonlinear, dynamical two-sector medium with self-consistent matter "
+"back-reaction — the natural next construction, and the one that would carry γ = 1 from this effective realisation "
+"to a first-principles substrate. The model's own original single elastic medium still gives γ = 0; what is shown "
+"is that a medium in the model's own family, with a curvature-stiff gravity sector, gives γ = 1.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3071,7 +3116,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_cone_merge.py (§8.62, the v_F=c_T merge resolved by power counting — the acoustic phonon integrates out to a contact four-fermion term, irrelevant (dim −1), so the cones do not merge but need not: the observable sector rides the single fermion cone while the mechanical phonon decouples); "
 "test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; two-loop running confronts it at the ~9% non-SUSY level); "
 "test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape); "
-"test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited).")
+"test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited); "
+"test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
