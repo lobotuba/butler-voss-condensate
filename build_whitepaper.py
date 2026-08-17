@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-57")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-58")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2800,6 +2800,40 @@ result("Result 8.66 — γ = 1 is reachable in-model: on a two-sector world-crys
 "to a first-principles substrate. The model's own original single elastic medium still gives γ = 0; what is shown "
 "is that a medium in the model's own family, with a curvature-stiff gravity sector, gives γ = 1.")
 
+heading("8.67  Building it for real — rung 1: the world crystal as an explicit lattice", 2)
+body("Sections 8.65 and 8.66 wrote the world-crystal dispersion down by hand (ω_T² = κq⁴). This section builds "
+"that medium as an actual lattice of nodes and measures its graviton on the lattice, so the substrate is a real "
+"thing rather than an assumed form — the first rung of the full construction. The lattice is triangular, and its "
+"energy penalises the curvature of atomic rows: for every collinear triple (n−e, n, n+e) along each of the three "
+"lattice directions it costs (κ/2)|u(n+e) − 2u(n) + u(n−e)|², a second difference, with no nearest-neighbour "
+"stretching springs at all. The point of that choice is that a uniform, affine displacement u(n) = A x_n has a "
+"vanishing second difference, so every homogeneous strain costs exactly zero — the moduli vanish, and by §8.65 the "
+"graviton is therefore massless — while any non-affine, curved deformation costs κ, so the medium is still a stable "
+"solid. The control is the ordinary first-gradient medium: the same triangular lattice with central stretching "
+"springs, whose homogeneous strains cost the moduli (a massive graviton, γ = 0, §8.64).")
+body("Three measurements on the lattice confirm it is the world crystal. The dispersion is massless with a "
+"two-derivative graviton's scaling: the log-log slope of ω² against |q| at small q is 3.999 in both the Γ–K and "
+"Γ–M directions — ω² ∝ q⁴ — against exactly 2.000 for the first-gradient control. The moduli vanish: ω²/q² extrapolates "
+"to 1.1×10⁻⁶ (zero q² stiffness — no shear and no bulk modulus) for the second-gradient lattice, against a finite "
+"0.375 for the control; this is §8.65's identity that the moduli are the graviton mass, now read straight off the "
+"lattice, with zero moduli meaning a massless graviton. And it is stable: the dynamical matrix is positive across "
+"the whole Brillouin zone (minimum eigenvalue ≥ 0, no negative modes), yet a uniform shear applied to a finite "
+"patch costs 9.6×10⁻³⁴ — machine zero — against 1.5×10⁻³ for the control. A stable solid whose homogeneous "
+"deformations cost nothing: strain-floppy, curvature-stiff, exactly the medium §8.65 required.")
+result("Result 8.67 — the world crystal is a concrete lattice: a massless graviton (ω² ∝ q⁴), zero moduli, and "
+"full stability, strain-floppy but curvature-stiff.","The gravity sector of §8.66's two-sector substrate, built "
+"as an explicit lattice rather than an assumed dispersion. A triangular lattice whose energy penalises row "
+"curvature (second differences) with no stretching springs has a massless graviton — the dispersion exponent is "
+"3.999 (ω² ∝ q⁴) against the first-gradient control's 2.000 — because its moduli vanish (ω²/q² → 1.1×10⁻⁶ vs a "
+"finite 0.375), which is §8.65's 'moduli = graviton mass' measured directly on the lattice: zero moduli, zero "
+"graviton mass. It is nonetheless a stable solid (dynamical matrix positive across the Brillouin zone) even though "
+"a uniform shear costs machine zero — strain-floppy, curvature-stiff. So the curvature-stiff, massless-graviton "
+"substrate that §8.65–§8.66 treated at the continuum level is a real lattice. Scope and next rungs: the isotropic "
+"row-curvature energy gives both graviton polarisations the same q⁴ dispersion; matching the exact Einstein–Hilbert "
+"tensor structure on the lattice (so γ = 1 follows on the lattice as it did in §8.66's linear response), adding the "
+"strain-stiff matter sector, and ray-tracing γ end-to-end with self-consistent back-reaction are the remaining "
+"rungs of the build.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3117,7 +3151,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_weinberg_angle.py (§8.63, an un-tuned constant of nature — induced couplings (1/g_a²∝Tr(T_a²)) plus the anomaly-derived hypercharges make Tr(T_a²) equal across the three SM groups, so sin²θ_W = 3/8 with no tuning and no GUT group; two-loop running confronts it at the ~9% non-SUSY level); "
 "test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape); "
 "test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited); "
-"test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited).")
+"test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited); "
+"test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
