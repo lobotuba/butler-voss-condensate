@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-58")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-59")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2834,6 +2834,44 @@ result("Result 8.67 — the world crystal is a concrete lattice: a massless grav
 "strain-stiff matter sector, and ray-tracing γ end-to-end with self-consistent back-reaction are the remaining "
 "rungs of the build.")
 
+heading("8.68  Rung 2: the graviton is the dual (disclination) field, not the strain", 2)
+body("Rung 2 set out to match the exact Einstein–Hilbert tensor structure onto the lattice graviton of rung 1, "
+"so that γ = 1 would follow on the lattice as it did in §8.66's linear response. Working that through surfaces "
+"something more fundamental than a tuning, and it is reported here rather than papered over. The linearised "
+"Einstein–Hilbert (Fierz–Pauli) graviton action is gauge-invariant — it is unchanged by h_ij → h_ij + ∂_iξ_j + "
+"∂_jξ_i, a linearised diffeomorphism. But a compatible elastic strain is exactly such a gauge transformation: "
+"h_ij = ∂_(i u_j) is the diffeomorphism with ξ = u. So the Einstein–Hilbert action annihilates every elastic "
+"strain: an elastic strain carries zero graviton energy — it is pure gauge, a change of coordinates. The massless "
+"strain-modes built in rung 1 are therefore coordinate modes, and the physical spin-2 graviton is not the strain. "
+"It is the incompatible part of h — the transverse-traceless sector — which is not the symmetrised gradient of any "
+"displacement, and which in the medium is carried by the defects: the disclination field, exactly the gauge charge "
+"that §8.64's fracton duality had already identified. Measured as exact linear algebra of the spin decomposition: "
+"a compatible strain sits in the diffeomorphism subspace to 7×10⁻¹⁶ and has spin-2 graviton energy 1×10⁻¹⁶, while "
+"a genuine spin-2 tensor is orthogonal to the entire strain subspace to 2×10⁻¹⁵ — graviton and strain are exact "
+"orthogonal complements.")
+body("This relocates the target and unifies the arc. 'Match Einstein–Hilbert on the lattice strain' was the wrong "
+"aim, because the strain is pure gauge; the right field is the dual, the disclination sector, and coupling matter "
+"to it is what rung 3 must do. And the two pictures of the whole gravity programme turn out to be one. In the "
+"primal picture §8.65 found the first-gradient moduli μ and K to be the graviton mass, zeroed by the world crystal. "
+"In the dual picture the same statement reads: the two-dimensional Young modulus Y = 4Kμ/(K+μ), which confines "
+"disclinations with an energy growing as Y R² (§8.64), is the mass of the dual graviton — and the world crystal, "
+"where μ → 0 forces Y → 0, deconfines the disclinations, making the dual graviton massless. For the honeycomb "
+"elastic solid Y = 7.6 (confined, a massive dual graviton, γ = 0); for the world crystal Y = 0 (deconfined, "
+"massless, the γ = 1 sector). Primal 'zero moduli' and dual 'deconfined disclinations' are one fact: the massless "
+"graviton of the world crystal.")
+result("Result 8.68 — the physical graviton is the dual/disclination field, not the strain; the primal and dual "
+"pictures of the massless graviton are one fact.","An honest correction of the rung-1 target. The linearised "
+"Einstein–Hilbert action is gauge-invariant, and a compatible elastic strain h_ij = ∂_(i u_j) is exactly a "
+"linearised diffeomorphism, so the action annihilates it — measured to machine precision: a strain sits in the "
+"diffeomorphism subspace (residual 7×10⁻¹⁶) with zero spin-2 graviton energy (1×10⁻¹⁶). The massless strain-modes "
+"of rung 1 are coordinate modes; the physical spin-2 graviton is the incompatible transverse-traceless field, "
+"orthogonal to the whole strain subspace (2×10⁻¹⁵) — the disclination/dual field of §8.64. This unifies the "
+"programme: §8.65's primal 'the moduli are the graviton mass' is the dual 'Young's modulus confines the "
+"disclinations' (Y = 7.6 elastic, massive, γ = 0; Y = 0 world crystal, deconfined, massless, γ = 1), one fact seen "
+"from two sides. It is a structural result — exact spin decomposition, not a measurement of γ — and it relocates "
+"the γ = 1 target to the deconfined dual graviton, the field rung 3 must couple matter's stress-energy to before "
+"ray-tracing γ.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3152,7 +3190,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_fracton_graviton.py (§8.64, why γ = 0 is forced — via the elasticity–fracton duality the medium's would-be graviton is a scalar-charge (fracton) gauge field; the shear modulus μ that makes the transverse Lorentz cone and confines disclinations is the same μ that γ = 1 needs to vanish, so a field-bearing solid cannot bend light like Einstein — a no-go for the graviton-as-phonon route that names the deconfined-disclination escape); "
 "test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited); "
 "test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited); "
-"test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice).")
+"test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice); "
+"test_graviton_is_dual.py (§8.68, the build rung 2 — the physical graviton is the DUAL/disclination field, not the strain: a compatible strain h=sym(∂u) is exactly a linearised diffeomorphism, so the gauge-invariant Einstein-Hilbert action annihilates it (spin-2 energy 1e-16, gauge-subspace residual 7e-16), while a genuine spin-2 graviton is orthogonal to the whole strain space (2e-15); unifies primal 'moduli=graviton mass' (S8.65) with dual 'Young's modulus Y confines disclinations' (Y=7.6 elastic massive γ=0, Y=0 world-crystal deconfined massless γ=1) — relocating the γ=1 target to the deconfined dual for rung 3).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
