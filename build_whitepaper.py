@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-60")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-61")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2906,6 +2906,47 @@ result("Result 8.69 — matter sources the dual graviton, and γ = 1 follows end
 "is Kleinert's matter→disclination coupling; deriving it from the model's emergent fermion sector is the final "
 "rung, after which γ = 1 would stand on a first-principles substrate rather than a prescribed vertex.")
 
+heading("8.70  Rung 4 (closer): the emergent fermion is a genuine gravitational source", 2)
+body("Rung 3 left one imposed link — Kleinert's coupling, matter stress-energy sourcing disclination density. "
+"Rung 4 asks whether that coupling is the model's own fermion's, by testing the sharp question behind it: is the "
+"emergent Dirac fermion a genuine gravitational source — does its stress-energy minimally couple to the emergent "
+"geometry, so it feeds the graviton — or is it a spectator? A relativistic Dirac fermion couples to geometry "
+"through the tetrad: deform the frame and the Dirac operator changes, so the fermion's Dirac-sea energy responds, "
+"and that response is its stress tensor T_ij = ∂²E_sea/∂h_ij² — the induced quadratic form Π of §8.32, the source "
+"that feeds the graviton. Computed on the model's Wilson–Dirac operator, it is robustly nonzero in the shear "
+"(traceless, spin-2) channel: the fermion couples to spatial geometry, a genuine gravitational source. The "
+"pure-trace channel is scale-suppressed — a massless Dirac cone is nearly scale-invariant, so it couples weakly to "
+"pure dilation, the mark of conformal matter, not a decoupling — and the traceless channel is exactly the one that "
+"feeds the spin-2 graviton. The vertex is relativistic where it must be: the coupling's lattice anisotropy falls "
+"from about 194 percent over the full band to about 16 percent near the Dirac point, emergent Lorentz (§8.1) "
+"making the gravitational coupling isotropic at low energy (a trend, not fully converged in this crude full-sea "
+"estimate).")
+body("This closes the matter side of the build and reconciles it with the null results of the elastic arc. §8.32 "
+"and §8.49 measured that a static energy density sources no spatial curvature (γ = 0) — but that is not the fermion "
+"failing to couple, which it manifestly does. It is the elastic medium's graviton being massive (§8.65: the moduli "
+"are a graviton mass), so it carries no trace-reversal, the operation that turns an energy density into spatial "
+"curvature. §8.66 showed the world crystal's massless Einstein–Hilbert graviton restores exactly that trace-"
+"reversal. So the same fermion source, on the world crystal instead of the elastic solid, sources Ψ = Φ and "
+"γ = 1: the switch between γ = 0 and γ = 1 is the medium (§8.69, γ = 1 iff Y = 0), not the matter — the matter was "
+"always a proper source. Rung 3's coupling is therefore the fermion's own minimal tetrad coupling, not an extra "
+"assumption. What is not settled, and is now the single remaining open item of the whole γ programme, is on the "
+"substrate side: the exact Einstein–Hilbert tensor structure of the world-crystal dual on the lattice (§8.68), on "
+"which the trace-reversal — and thus the exact γ = 1 rather than merely γ ≠ 0 — ultimately rests.")
+result("Result 8.70 — the emergent fermion is a genuine gravitational source; the build's matter side is closed, "
+"the γ = 0/γ = 1 switch is the medium, not the matter.","The closer. The emergent Dirac fermion's Dirac-sea energy "
+"responds to a deformation of the emergent frame — its stress-energy T_ij = ∂²E_sea/∂h_ij² (the §8.32 Π) is "
+"robustly nonzero in the spin-2 (shear) channel, so the fermion minimally couples to spatial geometry: a genuine "
+"gravitational source, not a spectator. The pure-trace coupling is scale-suppressed (a massless cone is nearly "
+"conformal), and the vertex's anisotropy falls from ~194% over the full band to ~16% near the cone — emergent "
+"Lorentz (§8.1) making it relativistic at low energy. So Kleinert's matter→disclination coupling of rung 3 is the "
+"fermion's own minimal tetrad coupling, not an imposed vertex. This reconciles the arc: §8.32/§8.49's γ = 0 is not "
+"the fermion failing to couple but the elastic medium's massive graviton lacking the trace-reversal (§8.65); the "
+"world crystal's massless Einstein–Hilbert graviton restores it (§8.66), so the same source gives γ = 1 there — the "
+"switch is the medium (§8.69, γ = 1 iff Y = 0). The matter side of the build is closed; the one remaining open item "
+"of the whole programme is on the substrate side — the exact Einstein–Hilbert tensor structure of the world-crystal "
+"dual on the lattice (§8.68), not the matter coupling. Scope: this is a crude full-sea estimate establishing the "
+"coupling and its low-energy relativistic trend, not a precision vertex.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3226,7 +3267,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited); "
 "test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice); "
 "test_graviton_is_dual.py (§8.68, the build rung 2 — the physical graviton is the DUAL/disclination field, not the strain: a compatible strain h=sym(∂u) is exactly a linearised diffeomorphism, so the gauge-invariant Einstein-Hilbert action annihilates it (spin-2 energy 1e-16, gauge-subspace residual 7e-16), while a genuine spin-2 graviton is orthogonal to the whole strain space (2e-15); unifies primal 'moduli=graviton mass' (S8.65) with dual 'Young's modulus Y confines disclinations' (Y=7.6 elastic massive γ=0, Y=0 world-crystal deconfined massless γ=1) — relocating the γ=1 target to the deconfined dual for rung 3); "
-"test_matter_sources_curvature.py (§8.69, the build rung 3 — matter sources the dual graviton, γ=1 end-to-end on the world crystal: a mass bends light only if it nucleates disclination charge (a smooth strain is pure gauge, S8.68); the elastic solid nucleates none (S8.49, disclination confined ~Y R², S8.64) so Ψ=0, γ=0; the world crystal (Y=0, deconfined) lets the mass source s∝ρ, giving ∇²Ψ=4πGρ (same Poisson as Φ) so Ψ=Φ and, with S8.66's EH coefficient, γ=1.000 ray-traced — γ=1 iff Y=0; the imposed link is Kleinert's matter→disclination coupling).")
+"test_matter_sources_curvature.py (§8.69, the build rung 3 — matter sources the dual graviton, γ=1 end-to-end on the world crystal: a mass bends light only if it nucleates disclination charge (a smooth strain is pure gauge, S8.68); the elastic solid nucleates none (S8.49, disclination confined ~Y R², S8.64) so Ψ=0, γ=0; the world crystal (Y=0, deconfined) lets the mass source s∝ρ, giving ∇²Ψ=4πGρ (same Poisson as Φ) so Ψ=Φ and, with S8.66's EH coefficient, γ=1.000 ray-traced — γ=1 iff Y=0; the imposed link is Kleinert's matter→disclination coupling); "
+"test_fermion_sources_gravity.py (§8.70, the build rung 4/closer — the emergent Dirac fermion is a genuine gravitational source: its Dirac-sea energy responds to a tetrad deformation (T_ij=∂²E_sea/∂h_ij², the S8.32 Π) robustly in the spin-2 shear channel (trace scale-suppressed, the cone nearly conformal), relativistic toward the cone (anisotropy 194%→16%, emergent Lorentz S8.1); so rung 3's coupling is the fermion's OWN minimal tetrad coupling, and S8.32/S8.49's γ=0 is the elastic medium's massive graviton (no trace-reversal), not a matter failure — same source, γ=0 elastic / γ=1 world crystal (S8.69); matter side closed, one open item remains on the substrate side (exact EH tensor structure of the world-crystal dual, S8.68)).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
