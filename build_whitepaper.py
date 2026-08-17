@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-61")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-62")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2947,6 +2947,45 @@ result("Result 8.70 — the emergent fermion is a genuine gravitational source; 
 "dual on the lattice (§8.68), not the matter coupling. Scope: this is a crude full-sea estimate establishing the "
 "coupling and its low-energy relativistic trend, not a precision vertex.")
 
+heading("8.71  The last calculation: gauge invariance forces the world-crystal graviton to be Einstein–Hilbert", 2)
+body("The build left one open item, flagged in §8.68 and §8.70: the exact Einstein–Hilbert tensor structure of "
+"the world-crystal dual graviton, on which the trace-reversal — and thus exact γ = 1 rather than merely γ ≠ 0 — "
+"ultimately rests. This section closes it, not by fine-tuning a lattice but by showing the structure is forced. "
+"The world crystal supplies a graviton that is massless (§8.67: ω² ∝ q⁴, zero moduli), two-derivative (§8.67: an "
+"ω² ∝ q⁴ dispersion in the displacement is a ∫(∂h)² kinetic term in the metric h ∼ ∂u), and diffeomorphism-"
+"invariant (§8.68: the physical graviton is the incompatible dual field, invariant under h → h + ∂ξ). The "
+"Fierz–Pauli/Weinberg uniqueness theorem states that a massless, two-derivative, diffeomorphism-invariant action "
+"for a symmetric tensor is uniquely linearised Einstein–Hilbert — so those three properties, all established for "
+"the world crystal, force the graviton to be Einstein–Hilbert, hence γ = 1. Gauge invariance is the Einstein–"
+"Hilbert condition; no tuning is available.")
+body("Demonstrated explicitly. The general two-derivative quadratic action for a symmetric tensor is a "
+"four-parameter family, a(∂h)² + b(∂·h)² + c(∂·h)(∂h_tr) + d(∂h_tr)². Imposing diffeomorphism invariance — that "
+"the action annihilate h_μν = ∂_μξ_ν + ∂_νξ_μ for every ξ at all momenta — leaves a constraint matrix on "
+"(a,b,c,d) with a one-dimensional null space: only the overall scale survives, and it fixes (a,b,c,d) = "
+"(1,−2,2,−1), exactly the Einstein–Hilbert/Fierz–Pauli ratios. That operator, gauge-fixed and coupled to a "
+"static energy density T₀₀, returns h₀₀ = h_xx = h_yy = h_zz — the trace-reversal — so Φ = Ψ and γ = 1, and its "
+"gauge-invariant form has exactly four zero modes (the diffeomorphism directions), leaving two propagating "
+"polarisations: a massless spin-2 graviton. So the disclination deconfinement of §8.64 (Y → 0) that makes the "
+"world-crystal graviton massless is the same fact that makes it gauge-invariant, and gauge invariance forces "
+"Einstein–Hilbert and γ = 1. The one honest caveat is that the world crystal's diffeomorphism invariance is "
+"emergent — a lattice breaks continuous diffeomorphisms, so γ = 1 holds in the long-wavelength limit with "
+"corrections at the lattice scale, exactly as the model's Lorentz invariance is emergent (§8.1).")
+result("Result 8.71 — γ = 1 is forced, not tuned: gauge invariance uniquely fixes the world-crystal graviton to "
+"Einstein–Hilbert.","The last open item of the γ programme, closed as a theorem. Imposing diffeomorphism "
+"invariance on the general two-derivative graviton action (four parameters a,b,c,d) leaves a one-dimensional null "
+"space — only the overall scale — and fixes (a,b,c,d) = (1,−2,2,−1), the linearised Einstein–Hilbert/Fierz–Pauli "
+"ratios; any other choice is not gauge-invariant. That Einstein–Hilbert operator, coupled to a static energy "
+"density, trace-reverses it into h_ij = h₀₀, giving Φ = Ψ and γ = 1 with exactly four gauge zero modes (two "
+"propagating polarisations, a massless spin-2 graviton). The world crystal's graviton is massless (§8.67), "
+"two-derivative (§8.67) and diffeomorphism-invariant (§8.68), so it is Einstein–Hilbert by this uniqueness and "
+"γ = 1 — forced by gauge invariance, not tuned: the disclination deconfinement (§8.64, Y → 0) that makes it "
+"massless is the same fact that makes it gauge-invariant, hence Einstein. Together with §8.70 (the matter is a "
+"genuine source) this closes the build: on the two-sector world crystal, the model's own matter bends light at "
+"the Einstein rate, γ = 1. Honest caveat: the diffeomorphism invariance is emergent, so γ = 1 is a "
+"long-wavelength result with lattice-scale corrections, on the same footing as the model's emergent Lorentz "
+"invariance (§8.1) — and the model's original single elastic medium still gives γ = 0; what is established is that "
+"a medium in the model's family, the deconfined world crystal, gives γ = 1.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3268,7 +3307,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice); "
 "test_graviton_is_dual.py (§8.68, the build rung 2 — the physical graviton is the DUAL/disclination field, not the strain: a compatible strain h=sym(∂u) is exactly a linearised diffeomorphism, so the gauge-invariant Einstein-Hilbert action annihilates it (spin-2 energy 1e-16, gauge-subspace residual 7e-16), while a genuine spin-2 graviton is orthogonal to the whole strain space (2e-15); unifies primal 'moduli=graviton mass' (S8.65) with dual 'Young's modulus Y confines disclinations' (Y=7.6 elastic massive γ=0, Y=0 world-crystal deconfined massless γ=1) — relocating the γ=1 target to the deconfined dual for rung 3); "
 "test_matter_sources_curvature.py (§8.69, the build rung 3 — matter sources the dual graviton, γ=1 end-to-end on the world crystal: a mass bends light only if it nucleates disclination charge (a smooth strain is pure gauge, S8.68); the elastic solid nucleates none (S8.49, disclination confined ~Y R², S8.64) so Ψ=0, γ=0; the world crystal (Y=0, deconfined) lets the mass source s∝ρ, giving ∇²Ψ=4πGρ (same Poisson as Φ) so Ψ=Φ and, with S8.66's EH coefficient, γ=1.000 ray-traced — γ=1 iff Y=0; the imposed link is Kleinert's matter→disclination coupling); "
-"test_fermion_sources_gravity.py (§8.70, the build rung 4/closer — the emergent Dirac fermion is a genuine gravitational source: its Dirac-sea energy responds to a tetrad deformation (T_ij=∂²E_sea/∂h_ij², the S8.32 Π) robustly in the spin-2 shear channel (trace scale-suppressed, the cone nearly conformal), relativistic toward the cone (anisotropy 194%→16%, emergent Lorentz S8.1); so rung 3's coupling is the fermion's OWN minimal tetrad coupling, and S8.32/S8.49's γ=0 is the elastic medium's massive graviton (no trace-reversal), not a matter failure — same source, γ=0 elastic / γ=1 world crystal (S8.69); matter side closed, one open item remains on the substrate side (exact EH tensor structure of the world-crystal dual, S8.68)).")
+"test_fermion_sources_gravity.py (§8.70, the build rung 4/closer — the emergent Dirac fermion is a genuine gravitational source: its Dirac-sea energy responds to a tetrad deformation (T_ij=∂²E_sea/∂h_ij², the S8.32 Π) robustly in the spin-2 shear channel (trace scale-suppressed, the cone nearly conformal), relativistic toward the cone (anisotropy 194%→16%, emergent Lorentz S8.1); so rung 3's coupling is the fermion's OWN minimal tetrad coupling, and S8.32/S8.49's γ=0 is the elastic medium's massive graviton (no trace-reversal), not a matter failure — same source, γ=0 elastic / γ=1 world crystal (S8.69); matter side closed, one open item remains on the substrate side (exact EH tensor structure of the world-crystal dual, S8.68)); "
+"test_fierz_pauli_uniqueness.py (§8.71, the last calculation — γ=1 is FORCED, not tuned: imposing diffeomorphism invariance on the general 2-derivative graviton action (a,b,c,d) leaves a 1-D null space fixing (1,−2,2,−1)=linearised Einstein-Hilbert (Fierz-Pauli uniqueness), which trace-reverses a static T₀₀ into h_ij=h₀₀ → γ=1 with 4 gauge zero modes (2 DOF); the world crystal's graviton is massless (S8.67)+2-derivative (S8.67)+diffeomorphism-invariant (S8.68), so it IS Einstein-Hilbert and γ=1 — the same deconfinement (S8.64, Y→0) that makes it massless makes it gauge-invariant; emergent/long-wavelength like Lorentz (S8.1), closing the last open item of the γ programme).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
