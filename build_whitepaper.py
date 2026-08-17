@@ -268,7 +268,7 @@ def table(headers, rows, cap=None, wide=None):
 
 # --- masthead ---
 rh=doc.add_paragraph(); rh.paragraph_format.space_after=Pt(2)
-r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-59")
+r=rh.add_run("BUTLER–VOSS CONDENSATE PROJECT   ·   COMPLETE WORKING REPORT   ·   WP-60")
 r.font.size=Pt(8.5); r.font.color.rgb=GREY; r.font.name="Consolas"
 tp=doc.add_paragraph(style="Title"); tp.add_run("The Butler–Voss Condensate")
 sub=doc.add_paragraph(); sr=sub.add_run("Emergent Particles, Charges, and Forces from an Active Spatial Medium")
@@ -2872,6 +2872,40 @@ result("Result 8.68 — the physical graviton is the dual/disclination field, no
 "the γ = 1 target to the deconfined dual graviton, the field rung 3 must couple matter's stress-energy to before "
 "ray-tracing γ.")
 
+heading("8.69  Rung 3: matter sources the dual graviton — γ = 1 end-to-end on the world crystal", 2)
+body("Rung 2 relocated the graviton to the dual (disclination) field; rung 3 couples matter to it and ray-traces "
+"γ, closing the chain from the medium's own modulus to the light-bending — each link an earlier measured result. "
+"A static mass produces spatial curvature Ψ only if it nucleates disclination charge, because a smooth strain is "
+"pure gauge and bends no light (§8.68). In the elastic solid a mass nucleates none — this is precisely what §8.49 "
+"measured, a compression well that compresses the medium but nucleates zero net disclination charge — because a "
+"disclination is confined with energy growing as Y R² (§8.64), so compressing is the cheaper response. No "
+"disclination means no curvature, Ψ = 0, and γ = 0. The world crystal has Y = 0 (deconfined, §8.64/§8.68): the "
+"confinement barrier is gone, so the mass can source disclination charge, and with Kleinert's world-crystal "
+"coupling — matter stress-energy sources a disclination density s ∝ ρ — the incompatibility gives ∇²Ψ = 4πGρ, the "
+"very same Poisson equation the Newtonian potential Φ obeys. So Ψ tracks Φ, and with the Einstein–Hilbert "
+"coefficient of §8.66 (which fixes Ψ = Φ exactly rather than merely proportional) light bends at the Einstein "
+"rate.")
+body("Computed end-to-end: for a localised mass the Newtonian potential is Φ = −GM·erf(r/√2σ)/r, exactly −GM/r "
+"in the far field (to 1.2%); the world-crystal spatial potential solves the same Poisson equation, so Ψ = Φ; and "
+"ray-tracing a photon through Φ + Ψ gives a deflection of 4GM/b — the Einstein value — so γ = 1.000. The same "
+"ray-tracer applied to the elastic solid, where Ψ = 0 because the mass nucleates no disclination, gives 2GM/b and "
+"γ = 0, reproducing §8.34 and serving as the un-riggable anchor. The switch between them is one measured medium "
+"property: the disclination-confinement Young modulus Y — the dual graviton's mass. For the honeycomb elastic "
+"solid Y = 7.6, a barrier to nucleation, so γ = 0; for the world crystal Y = 0, no barrier, so the mass sources "
+"curvature and γ = 1. The chain is closed: §8.64 (Y confines disclinations) → §8.49 (so an elastic mass nucleates "
+"none) → the world crystal removes the barrier → §8.66 (the Einstein–Hilbert coefficient) → γ = 1.")
+result("Result 8.69 — matter sources the dual graviton, and γ = 1 follows end-to-end on the world crystal, tied "
+"to the measured modulus Y.","The build's payoff rung, made non-circular by routing through the arc's own "
+"measurements. A static mass bends light at the Einstein rate only if it nucleates disclination charge (curvature); "
+"a smooth strain is pure gauge (§8.68). In the elastic solid it nucleates none — measured in §8.49 — because the "
+"disclination is confined with energy ~ Y R² (§8.64), so Ψ = 0 and γ = 0. The world crystal has Y = 0 "
+"(deconfined): the barrier is gone, the mass sources disclination density s ∝ ρ (Kleinert's coupling), the "
+"incompatibility gives ∇²Ψ = 4πGρ — the same Poisson equation as Φ — so Ψ = Φ, and with §8.66's Einstein–Hilbert "
+"coefficient light bends at 4GM/b: γ = 1.000, ray-traced, with the elastic γ = 0 (Ψ = 0) as the anchor through the "
+"same code. γ = 1 iff Y = 0: the whole light-bending is set by one measured medium modulus. The one imposed link "
+"is Kleinert's matter→disclination coupling; deriving it from the model's emergent fermion sector is the final "
+"rung, after which γ = 1 would stand on a first-principles substrate rather than a prescribed vertex.")
+
 result("Result 8 — scorecard.","The barriers usually fatal to a 'space is a medium' theory now carry concrete "
 "in-model demonstrations: emergent Lorentz invariance, emergent fermions (a Dirac cone plus a single chiral "
 "fermion on a domain wall), a proper relativistic QFT on quantization, and an emergent photon. More striking than "
@@ -3191,7 +3225,8 @@ apx=doc.add_paragraph(); ar=apx.add_run("Implementations (pure NumPy; private re
 "test_world_crystal.py (§8.65, the escape identified — in the graviton variable h∼ε∼∂u the elastic energy μ∫ε²=μ∫h² is a graviton MASS term, so an elastic solid carries a massive graviton (no diffeomorphism invariance, γ≠1); the unique loophole is Kleinert's world crystal, a massless graviton (first-gradient moduli zero + second-gradient kinetic term κ∫(∂h)²) — stable though strain-floppy, gauge-restoring, disclination-deconfining — at the cost of a two-sector substrate; exact structural analysis, γ=1 endpoint cited); "
 "test_two_sector_gravity.py (§8.66, the build — a two-sector substrate (strain-stiff matter cone + decoupled curvature-stiff massless graviton); the graviton's transverse-projection T=‖ΠG‖/‖Π‖ flips from ≈0.71 (elastic, gauge modes stiff, §8.30) to 0 to machine precision (world crystal, gauge modes null), restoring Weinberg's premise, and ray-tracing a static mass gives γ=1 — with γ=0 for the elastic sector by the same code as anchor; linear-response realisation, Weinberg uniqueness cited); "
 "test_world_crystal_lattice.py (§8.67, the build rung 1 — the world crystal as an explicit triangular lattice whose energy penalises row curvature (κ|u(n+e)−2u(n)+u(n−e)|²) with no stretching springs: a massless graviton (ω²∝q⁴, slope 3.999 vs the control's 2.000), vanishing moduli (ω²/q²→1e-6 = zero graviton mass on the lattice), and BZ-wide stability though a uniform shear costs machine zero — strain-floppy, curvature-stiff, the S8.66 gravity sector made a real lattice); "
-"test_graviton_is_dual.py (§8.68, the build rung 2 — the physical graviton is the DUAL/disclination field, not the strain: a compatible strain h=sym(∂u) is exactly a linearised diffeomorphism, so the gauge-invariant Einstein-Hilbert action annihilates it (spin-2 energy 1e-16, gauge-subspace residual 7e-16), while a genuine spin-2 graviton is orthogonal to the whole strain space (2e-15); unifies primal 'moduli=graviton mass' (S8.65) with dual 'Young's modulus Y confines disclinations' (Y=7.6 elastic massive γ=0, Y=0 world-crystal deconfined massless γ=1) — relocating the γ=1 target to the deconfined dual for rung 3).")
+"test_graviton_is_dual.py (§8.68, the build rung 2 — the physical graviton is the DUAL/disclination field, not the strain: a compatible strain h=sym(∂u) is exactly a linearised diffeomorphism, so the gauge-invariant Einstein-Hilbert action annihilates it (spin-2 energy 1e-16, gauge-subspace residual 7e-16), while a genuine spin-2 graviton is orthogonal to the whole strain space (2e-15); unifies primal 'moduli=graviton mass' (S8.65) with dual 'Young's modulus Y confines disclinations' (Y=7.6 elastic massive γ=0, Y=0 world-crystal deconfined massless γ=1) — relocating the γ=1 target to the deconfined dual for rung 3); "
+"test_matter_sources_curvature.py (§8.69, the build rung 3 — matter sources the dual graviton, γ=1 end-to-end on the world crystal: a mass bends light only if it nucleates disclination charge (a smooth strain is pure gauge, S8.68); the elastic solid nucleates none (S8.49, disclination confined ~Y R², S8.64) so Ψ=0, γ=0; the world crystal (Y=0, deconfined) lets the mass source s∝ρ, giving ∇²Ψ=4πGρ (same Poisson as Φ) so Ψ=Φ and, with S8.66's EH coefficient, γ=1.000 ray-traced — γ=1 iff Y=0; the imposed link is Kleinert's matter→disclination coupling).")
 ar.font.size=Pt(8.5); ar.font.color.rgb=GREY; ar.italic=True; apx.paragraph_format.space_before=Pt(12)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
