@@ -251,6 +251,64 @@ in a focused test file, lock it, *then* search the literature. Three hunts were 
 | **Residual dissipation of a dynamical particle** (`test_residual_dissipation.py`) | The medium is a superfluid condensate, so the **Landau criterion** applies: single-phonon emission is kinematically forbidden below v_c ≈ 0.72c, so lab matter (v/c ~ 10⁻⁶) is ~6 orders below threshold — the residual dissipation is strongly suppressed and the decoherence proceeds without measurable radiation. **Honest correction:** the Landau criterion is neither necessary nor sufficient — sub-critical channels (vortex nucleation, rotons, thermal normal fraction) leave a small, *uncomputed* residual, so this is **not** a proven exact zero. | Textbook / prior art (Landau 1941; Volovik's superfluid-vacuum emergent gravity; the decoherence-without-dissipation tension is Kafri–Taylor–Milburn + Diósi–Tilloy). Strengthens survival; the exact sub-critical rate is the honest open number. |
 | **Vortex-nucleation dissipation** (`test_vortex_nucleation.py`) | The dominant sub-critical channel is bounded: the vortex core = healing length = node spacing = l_Planck (§8.19), so the nucleation barrier is **Planck-scale**. The Arrhenius/tunneling suppression exponent E_b/E_drive is ≥10²⁶ for the model's core and stays forbidding down to a GeV core (16 orders below Planck) — so vortex dissipation is genuinely negligible in the bulk vacuum, closing the hunt-4 open number. **Honest residual:** homogeneous-bulk estimate; real apparatus matter nucleates vortices far more easily at surfaces/defects (lower barrier), an unmodelled channel. | Textbook / prior art (Iordanskii–Langer–Fisher nucleation; Feynman/Anderson phase-slip barrier E_b∝ln(v_c/v); Volovik's superfluid-vacuum vortices = cosmic strings). Survival is now robust; no novelty. |
 
+## Part IV.a — Hard audit of the decoherence thread
+
+A deliberate adversarial pass (requested): try to *break* the "universal `m²Δx²` decoherence, dissipationless,
+radiationless, survives Gran Sasso" story rather than defend it. The load-bearing assumptions, each stress-
+tested honestly:
+
+1. **The decoherence-rate scale (the "testable now" claim) assumes gravitational coupling strength.**
+   *This is the softest link in the entire thread.* The `m²Δx²` law and the phonon-bath mechanism are firm,
+   but the absolute rate — the thing that puts it in the seconds-to-hours experimental window rather than
+   Planck-buried like the LV coefficient — rests on *assuming* the which-path coupling is gravitational
+   strength (motivated by §8.10, not derived). If it is weaker, the prediction recedes below reach (dead like
+   LV); if stronger, it may already be excluded. **The headline "testable-scale prediction" is contingent on
+   an unfixed number.** Firm content survives; the testability does not, rigorously.
+
+2. **`v_c^bulk = 0.72c` is 2D, lattice-specific, and load-bearing for heavy-Z protection.** It came from one
+   triangular-lattice graph-Laplacian dispersion (hunt 4). In the continuum or on another lattice it could be
+   anywhere in ~[0.5c, c]. The claim "U 1s electron (0.67c) is protected" hinges on 0.67 < 0.72 — a **7%,
+   lattice-dependent margin**. If the true `v_c` were ~0.6c, the heaviest elements' inner-shell electrons
+   would sit *above* threshold and the model would predict they radiate. **Heavy-Z inner-shell protection is
+   not robust** — it is either a soft spot or (charitably) an untested falsifiable edge (anomalous X-rays from
+   the heaviest elements), but it is *not* "safe."
+
+3. **The Landau criterion is for UNIFORM motion; bound electrons ACCELERATE.** The Gran Sasso observable is
+   radiation from noise-*accelerated* charges, and a bound electron is in centripetal acceleration already.
+   Applying a steady-drift threshold (`v_c`) to a bound, accelerating particle is not rigorous — the actual
+   radiation mechanism (acceleration, not uniform drift) may not be Landau-protected at all. **The protection
+   argument may not cleanly cover the observable it claims to evade.** This is the most serious conceptual gap.
+
+4. **The bath is assumed T = 0.** "Dissipationless pure dephasing → no heating → no radiation" needs a genuine
+   zero-temperature equilibrium vacuum. §8.13 gives zero *pressure*, not zero *temperature*; a finite effective
+   medium temperature (or coupling to the CMB) reintroduces thermal phonons and some dissipation. Zero medium
+   temperature is assumed, not established.
+
+5. **Surface nucleation was distinguished as a "different regime" — partly too conveniently.** A levitated
+   nanoparticle *is* a macroscopic boundary moving through the condensate, so surface nucleation genuinely
+   applies to it (not only to individual electrons). What actually protects it is that it is **slow**
+   (v ~ 10⁻¹² c ≪ even the surface-reduced v_c^surf ~ 10⁻³ c), not that the regime is irrelevant. The
+   conclusion holds, but for the honest reason (low velocity), and the regime distinction should not be
+   oversold.
+
+6. **The "distinguishing signature" (decoherence without radiation) is not actually distinguishing.** The
+   dissipative-CSL and Diósi–Tilloy generalizations were *built* to suppress the radiation while keeping the
+   decoherence — they occupy the same space. So the model does not stand out even here; "collapse-like
+   decoherence with suppressed radiation" is a populated corner, not the model's own flag.
+
+**Bottom line of the hard audit.** The thread's *firm* content is narrow and honest: a universal `m²Δx²`
+decoherence law from the medium's phonon bath, dissipationless in the idealized (T=0, uniform-motion, bulk)
+limit, with the sub-critical channels (single-phonon, vortex) kinematically/energetically suppressed for slow
+matter. Everything that made it sound *exciting* — testable scale (#1), clean survival of the radiation bound
+(#3), a distinguishing signature (#6) — is soft under scrutiny. The model is **not excluded** by current data,
+but the stronger reading ("a testable, distinguishing, near-term falsification handle") does **not** survive a
+hard audit: the rate scale is assumed, the Landau protection may not apply to the accelerated-charge observable
+the bound actually measures, and the signature is shared with existing models. Honest net: a *consistent,
+not-excluded* reproduction of known collapse/decoherence physics, with one genuinely exposed edge (heavy-Z
+inner shells) and no established novelty or clean testability.
+
+## Part IV — what the hunt actually produced
+
 **What the hunt actually produced.** Not a novel mechanism — the pattern held: every checkable claim (Kleinert,
 Terazawa, bimetric-LV, DP/GPP decoherence) is already in the literature, which is strong evidence the
 framework is *sound*. But the decoherence direction produced something the project had lacked since the LV
