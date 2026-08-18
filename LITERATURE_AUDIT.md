@@ -237,6 +237,33 @@ lives, and both are hard for the same reason the field finds them hard.
 
 ---
 
+# Part IV — The novelty hunt (blind computations, then literature)
+
+After the audit above, we tested whether the validated platform could produce a *new* prediction — one the
+priors it reproduces did not already compute. Method (deliberate): compute the model's own answer **blind**
+in a focused test file, lock it, *then* search the literature. Three hunts were run.
+
+| Hunt | Blind result | Literature verdict |
+|---|---|---|
+| **Graviton–photon cone split** (`test_two_sector_dispersion.py`) | The two-sector world crystal splits the cones: photon is strain-elastic (ω²∝S), graviton is curvature-elastic (physical field h=∂u, ω²∝S₂/S), so ζ_g ≠ ζ_m **on the same lattice** — a signed split, graviton ~1.2× faster, Δv/c=+0.049(E/E_P)². Also resolved the §8.67 puzzle: the graviton is luminal in h, the q⁴ is only the strain u. | **Prior art.** Bimetric emergent gravity generically gives different cones for different fields (Volovik ³He-A); emergent photon+graviton LV is published (arXiv:1811.09578, 1709.02736; "Lorentz violation in Goldstone gravity", PRD 80); quartic graviton-dispersion LV is Hořava–Lifshitz + the GW-LV constraint literature; species-dependent LV coefficients are SME (gravitational Čerenkov). Not novel; also Planck-suppressed. |
+| **Universal decoherence scale** (`test_medium_decoherence_scale.py`) | A universal, unshieldable Γ ∝ m²·Δx² localization from the medium's own phonon bath (slopes 2.000, 2.000), with a nonzero T→0 vacuum floor; at gravitational coupling strength it lands in the **seconds-to-hours window** current matter-wave/levitated experiments probe — *not* Planck-buried. | **Prior art on mechanism.** Diósi–Penrose (gravitational m² collapse); Gambini–Porto–Pullin "fundamental decoherence from quantum spacetime" (universal, unshieldable — our exact framing); CSL (m²Δx² form). But — unlike every earlier result — it is at a **testable scale**, and the parameter-free DP version is already *falsified* (Gran Sasso 2020–21). |
+| **Evade-or-die: does it radiate?** (`test_collapse_radiation.py`) | **EVADE.** The medium's decoherence is dissipationless pure dephasing: the bath energy *saturates* (a one-time reorganization, dE/dt→0), because the medium is a T=0 equilibrium vacuum (§8.13). No continuous heating → no charge acceleration → **no spontaneous X-rays**. The model is *not* excluded by the Gran Sasso test that killed parameter-free DP. | Survival is **firm**; the "dissipationless/non-Markovian collapse" idea has cousins (dissipative CSL, Kafri–Taylor–Milburn), so it is not claimed novel — but the model **survives**, and offers a distinguishing signature. |
+
+**What the hunt actually produced.** Not a novel mechanism — the pattern held: every checkable claim (Kleinert,
+Terazawa, bimetric-LV, DP/GPP decoherence) is already in the literature, which is strong evidence the
+framework is *sound*. But the decoherence direction produced something the project had lacked since the LV
+coefficient receded (§8.61): a **genuine near-term falsification handle at a testable scale** — the model
+predicts universal *m²Δx²* decoherence **without** the spontaneous radiation that CSL/DP predict, a signature
+experiments can separate (see collapse-like decoherence *without* the X-rays → favours the model; find that
+even dissipationless collapse is excluded → the model dies with it). That is the healthy, honest place a
+validated toy model can reach: not a discovery, but a way to be tested and possibly killed by real apparatus.
+
+**Honest boundary.** The decoherence coefficient's absolute scale (hence "testable now") assumes gravitational
+coupling strength — motivated (the same compression coupling as §8.10) but not rigorously fixed; it is soft,
+like the LV ζ. The firm content is the *m²Δx²* law, the unshieldable vacuum floor, and the no-radiation
+(dissipationless) character. The remaining open number is the residual dissipation of a fully dynamical
+particle (beyond the exact pure-dephasing limit).
+
 ## Provenance of this audit
 
 Prior art established by systematic literature search (August 2026) over every
