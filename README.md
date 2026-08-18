@@ -238,6 +238,7 @@ Requires Python 3.11+.
 | `CHEATSHEET.md` | Full reference: equations, parameters, all hypotheses (H1–H10) + integration |
 | `EPISTEMIC_AUDIT.md` | Calibrates every §8 result by what it actually is (output / existence / known-physics / construction / honest-negative); coherence catches and the "what would raise the grade" ceiling |
 | `EXTERNAL_VALIDATION.md` | The one prediction against real data (§8.52–8.56): GW170817, the UHE frontier, the GZK threshold, and proton compositeness — the arc that put the model's coefficient on the GZK exclusion boundary, with its two self-corrections |
+| `LITERATURE_AUDIT.md` | Prior-art concordance for **every** result (systematic literature search): the gravity arc rediscovers Kleinert–Zaanen's world crystal move-for-move, sin²θ_W=3/8 is Terazawa–Akama–Chikashige (1976); nothing is discovery-novel. Plus the honest **simulation → laboratory results** framing — a validated reproduction platform (un-tuned matches to the GR radiation laws and GW170817), not a discovery |
 
 Simulation output goes to `condensate_runs/` (git-ignored); rendered figures to
 `figures/` (git-ignored). Personal documents (`*.docx`) are git-ignored.

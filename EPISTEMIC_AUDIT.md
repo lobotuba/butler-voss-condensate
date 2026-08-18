@@ -7,6 +7,13 @@ the model *measured* (an output that could have come out otherwise) from what it
 read back* (construction), or *walked back* (honest negative). This validates the
 project's **honesty**, not its contact with experiment — that gap is stated at the end.
 
+> **Companion — `LITERATURE_AUDIT.md`.** This audit calibrates results on the *internal*
+> axis. The literature audit does the *external* check: a systematic prior-art search over
+> every cluster. Its finding sharpens the K-tags below to a point — **no result is
+> discovery-novel**; the gravity arc (§8.64–§8.71) rediscovers Kleinert–Zaanen's world
+> crystal move-for-move and sin²θ_W=3/8 is Terazawa–Akama–Chikashige (1976). What survives
+> is a *validated reproduction platform*, framed honestly there (simulation → lab results).
+
 ## Taxonomy
 
 Each result carries a primary tag (and sometimes a secondary), on the axis of *how

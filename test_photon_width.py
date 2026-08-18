@@ -35,6 +35,9 @@ Measured here, three ways:
 from __future__ import annotations
 import numpy as np
 
+# numpy >= 2.0 renamed np.trapz -> np.trapezoid (same signature, incl. axis=)
+_trapz = getattr(np, "trapezoid", None) or np.trapz
+
 # ----------------------------------------------------------------------------- field
 MASS = 6.0            # weak-lensing strength (linear regime, so Born ~ exact)
 SOFT = 1.5            # core softening of the potential
@@ -54,7 +57,7 @@ def ray_deflection(b, zmax=400.0, nz=40001, gamma_index=0.0):
     """Zero-width ray: the Born deflection alpha = -integral d_x(n-1) dz along the straight path x=b.
     n - 1 = -(1 + gamma_index) Phi, so alpha = (1 + gamma_index) integral d_x Phi dz."""
     z = np.linspace(-zmax, zmax, nz)
-    alpha_newton = np.trapz(dphidx(b, z), z)         # the (1+gamma)=1 piece = "Newtonian" reference
+    alpha_newton = _trapz(dphidx(b, z), z)         # the (1+gamma)=1 piece = "Newtonian" reference
     return (1.0 + gamma_index) * alpha_newton, alpha_newton
 
 
@@ -67,11 +70,11 @@ def beam_deflection(b, w, gamma_index, zmax=400.0, nz=6001, nx=2001):
     isolates the width effect from diffraction (which only spreads the profile further, never adds
     a factor of two)."""
     x = np.linspace(b - 6 * w, b + 6 * w, nx)                  # transverse profile support
-    G = np.exp(-(x - b) ** 2 / (2 * w * w)); G /= np.trapz(G, x)
+    G = np.exp(-(x - b) ** 2 / (2 * w * w)); G /= _trapz(G, x)
     z = np.linspace(-zmax, zmax, nz)
     XX, ZZ = np.meshgrid(x, z, indexing="ij")
-    avg_force = np.trapz(G[:, None] * dphidx(XX, ZZ), x, axis=0)   # <d_x Phi>_beam (z)
-    return (1.0 + gamma_index) * np.trapz(avg_force, z)
+    avg_force = _trapz(G[:, None] * dphidx(XX, ZZ), x, axis=0)   # <d_x Phi>_beam (z)
+    return (1.0 + gamma_index) * _trapz(avg_force, z)
 
 
 if __name__ == "__main__":
